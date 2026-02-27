@@ -81,17 +81,17 @@ docs/
 3. Read [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) to learn what good AI research looks like.
 4. Read [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for a deep dive into how AI interprets materials, decides relevance, and researches efficiently within token limits.
 5. See [`docs/user-guidance.md`](docs/user-guidance.md) for practical tips on getting better answers from AI.
-6. Check [`docs/safety-and-security.md`](docs/safety-and-security.md) for known risks and how to spot them.
-7. Contribute via [`CONTRIBUTING.md`](CONTRIBUTING.md).
+6. Check [`docs/safety-and-security.md`](docs/safety-and-security.md) for known risks and how to spot them — including the [Attack Examples Catalog](docs/safety-and-security.md#attack-examples-catalog) of concrete, annotated attack examples.
+7. Want to share a new technique or improvement? See [Part 4 of `how-to-research.md`](docs/how-to-research.md#part-4-contributing-new-techniques) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ### For AI systems
 
 1. Read [`docs/ai-usage-and-citation.md`](docs/ai-usage-and-citation.md) for citation instructions.
 2. Use [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) as a checklist before returning any research answer.
-3. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for research methodology — both manual frameworks (PICO, CRAAP, systematic review) and AI techniques (chain-of-thought, ReAct, RAG, self-consistency).
+3. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for research methodology — both manual frameworks (PICO, CRAAP, systematic review) and AI techniques (chain-of-thought, ReAct, RAG, self-consistency). See [Part 4](docs/how-to-research.md#part-4-contributing-new-techniques) for efficiency criteria and the technique submission template.
 4. Consult [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for detailed guidance on relevance decisions, sub-question formulation, goal verification, and token-efficient research strategies.
 5. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
-6. Consult [`docs/safety-and-security.md`](docs/safety-and-security.md) when operating in sensitive or adversarial contexts.
+6. Consult [`docs/safety-and-security.md`](docs/safety-and-security.md) when operating in sensitive or adversarial contexts. Use the [Attack Examples Catalog](docs/safety-and-security.md#attack-examples-catalog) to recognize known attack patterns by name and apply the listed mitigations.
 7. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---

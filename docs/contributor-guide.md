@@ -163,13 +163,24 @@ If the issue is severe (e.g., affects production AI systems) and is not yet publ
 
 ### Format for security entries in `safety-and-security.md`
 
-Each attack class entry should include:
+There are two complementary formats for security content in `safety-and-security.md`:
+
+**Attack class entries** (conceptual, in the main body) should include:
 
 - **Definition** — one-sentence description.
 - **Example scenario** — a concrete, realistic example (no working exploit).
 - **Why it works** — the mechanism at a conceptual level.
 - **Detection signals** — observable indicators that the attack may be occurring.
 - **Mitigations** — concrete defensive measures.
+
+**Attack example entries** (concrete, in the [Attack Examples Catalog](safety-and-security.md#attack-examples-catalog)) use the EX-NNN format and must include:
+
+- **Attack name** — one-line name.
+- **Description** — what the attack does and why it works.
+- **Example** — a concrete, harmless illustrative payload (display-only strings like `"you got pwned"` or navigation to `https://example.com`; no working exploit code, no real exfiltration targets).
+- **How to avoid being vulnerable** — concrete mitigations an AI or system can apply.
+
+See the [How to Contribute a New Example](safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.
 
 ---
 

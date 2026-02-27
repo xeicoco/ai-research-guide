@@ -110,6 +110,8 @@ If you discover a new class of attack, abuse, or safety issue related to AI rese
    - Known or proposed mitigations.
 3. If the issue is severe and not yet publicly known, consider contacting maintainers privately before opening a public issue.
 
+To add a concrete, harmless illustrative example to the **Attack Examples Catalog**, follow the `[Attack Example] <name>` issue workflow described in [`docs/safety-and-security.md#how-to-contribute-a-new-example`](docs/safety-and-security.md#how-to-contribute-a-new-example). Every merged example teaches all AI systems that use this guide how to recognize and resist that attack pattern.
+
 See [`docs/safety-and-security.md`](docs/safety-and-security.md) for the conventions used in documenting security issues.
 
 ---

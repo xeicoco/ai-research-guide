@@ -28,6 +28,12 @@
   - [3.1 When to Use Each Approach](#31-when-to-use-each-approach)
   - [3.2 A Hybrid Research Workflow](#32-a-hybrid-research-workflow)
   - [3.3 Verifying AI-Generated Research](#33-verifying-ai-generated-research)
+- [Part 4: Contributing New Techniques](#part-4-contributing-new-techniques)
+  - [4.1 Why Contributions Matter](#41-why-contributions-matter)
+  - [4.2 How to Propose a New Technique](#42-how-to-propose-a-new-technique)
+  - [4.3 Technique Submission Template](#43-technique-submission-template)
+  - [4.4 Efficiency Criteria](#44-efficiency-criteria)
+  - [4.5 Improving Existing Entries](#45-improving-existing-entries)
 - [References](#references)
 
 ---
@@ -609,6 +615,118 @@ AI-generated research outputs require specific verification steps that go beyond
 6. **Cross-validate with independent sources.** Check important claims against at least two independent, authoritative sources that the AI did not generate.
 
 See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`ai-research-processing.md`](ai-research-processing.md), [`user-guidance.md`](user-guidance.md).
+
+---
+
+## Part 4: Contributing New Techniques
+
+> **Why this section exists:** Research methodology — both manual and AI-assisted — evolves constantly. New AI prompting techniques are published regularly, and practitioners discover practical shortcuts and efficiency patterns that never appear in formal papers. This section makes it easy for anyone (human or AI) to contribute an improvement so that the community can benefit as soon as it is reviewed and merged.
+
+### 4.1 Why Contributions Matter
+
+Every new technique or efficiency improvement added to this document has a multiplicative effect: any AI system that uses this guide as a reference can apply the technique immediately. A single well-described, well-tested method — contributed by one person — can improve the research quality of every AI that reads this document.
+
+Contributions are especially valuable when they:
+
+- Reduce the number of tokens or re-prompting steps needed to achieve the same research quality.
+- Improve output accuracy or citation reliability.
+- Apply to a new domain (e.g., legal, medical, or scientific research) not yet covered.
+- Describe a failure mode of an existing technique and how to avoid it.
+- Provide a practical worked example for a technique that currently has only a theoretical description.
+
+### 4.2 How to Propose a New Technique
+
+1. **Open an issue** in this repository titled `[Technique Proposal] <Short name of technique>`.
+2. **Fill in the Technique Submission Template** (see Section 4.3 below) in the issue body.
+3. A maintainer will review the proposal and assign it a section number (e.g., a new `2.9` for an AI technique, or a new `1.8` for a manual method).
+4. **Open a pull request** adding the new subsection in the correct location, following the format below.
+5. The PR will be reviewed for accuracy, clarity, and alignment with the rest of the document.
+
+For smaller improvements to existing entries (adding an example, fixing a description, linking a new paper), you can submit a PR directly without opening an issue first.
+
+### 4.3 Technique Submission Template
+
+```markdown
+### N.N: <Technique Name>
+
+**Type:** [Manual | AI-Assisted | Hybrid]
+
+**Goal:** <One sentence describing what problem this technique solves.>
+
+**When to use:** <Describe the research scenario where this technique is most useful.>
+
+**How it works:**
+
+<Step-by-step description. Be specific enough that a reader can apply the technique
+without referring to any other resource.>
+
+**Efficiency profile:**
+
+| Dimension | Rating (Low / Medium / High) | Notes |
+|---|---|---|
+| Token cost | | |
+| Re-prompting steps | | |
+| Time to result | | |
+| Output quality | | |
+
+**Example:**
+
+> Input / prompt / question:
+> ```
+> <Example input>
+> ```
+>
+> Output / result:
+> ```
+> <Example output or description of what good output looks like>
+> ```
+
+**Known limitations or failure modes:**
+- <Limitation 1>
+- <Limitation 2>
+
+**References:**
+- <Citation if this technique is described in a paper or established resource>
+```
+
+### 4.4 Efficiency Criteria
+
+Because AI research operates under token budgets and re-prompting limits, **efficiency is a first-class criterion** for techniques listed in this document. When submitting or improving a technique, describe it in terms of the following four dimensions:
+
+| Dimension | What it measures | Why it matters |
+|---|---|---|
+| **Token cost** | Approximate number of tokens (input + output) consumed per application of the technique | Every token used for methodology is a token not available for content; token-heavy techniques may exceed context limits on long documents |
+| **Re-prompting steps** | How many separate AI calls are required to apply the technique end-to-end | More calls increase latency and cost; each call also introduces a potential failure point |
+| **Time to result** | Wall-clock time from starting the technique to receiving a usable answer | Matters for interactive use cases where users are waiting |
+| **Output quality** | Relative improvement in relevance, accuracy, depth, or citation reliability compared to a plain query | The reason the technique exists — if it doesn't improve quality, it isn't worth the overhead |
+
+**Efficiency guidance for AI systems:**
+
+When choosing between two techniques that produce similar-quality output, prefer the one with lower token cost and fewer re-prompting steps. The following five heuristics help:
+
+- **Front-load the research goal.** State the full research objective at the start of the first prompt, not after several clarifying exchanges. This eliminates re-prompting loops caused by an underspecified goal.
+- **Use progressive compression.** After each sub-question is answered, compress the results into a compact summary before asking the next sub-question. This prevents the context window from being consumed by earlier answers.
+- **Parallelize independent sub-questions.** When two sub-questions do not depend on each other's answers, ask them in a single prompt to halve the number of re-prompting steps.
+- **Declare satisfaction criteria upfront.** Describe what a complete answer looks like at the start of the research session. This allows the AI to self-check and avoid unnecessary additional queries.
+- **Stop when criteria are met.** Do not continue researching once all satisfaction criteria are met. Continuing increases token cost without improving quality.
+
+See [`ai-research-processing.md`](ai-research-processing.md) for a detailed treatment of token-efficient research strategies.
+
+### 4.5 Improving Existing Entries
+
+If an existing technique entry (Parts 1–3) needs improvement, the following types of changes are welcomed:
+
+| Improvement type | How to contribute |
+|---|---|
+| **Add a worked example** | Add an "Example" subsection in the same format as Section 4.3's template. Include real or realistic input/output pairs. |
+| **Add an efficiency profile** | Add the efficiency table from Section 4.3's template to any existing technique that lacks one. |
+| **Document a failure mode** | Add a "Known limitations" or "When this technique fails" note to an existing technique. |
+| **Link a new paper** | Add the citation to the technique section and to the References list at the bottom of the document. |
+| **Correct a description** | Submit a PR with the correction and a brief note in the PR description explaining what was wrong and why the correction is accurate. |
+
+All improvements should preserve the existing heading anchor (e.g., `#21-chain-of-thought-prompting`) so that external links remain valid.
+
+See also: [`CONTRIBUTING.md`](../CONTRIBUTING.md), [`contributor-guide.md`](contributor-guide.md), [`ai-research-processing.md`](ai-research-processing.md).
 
 ---
 

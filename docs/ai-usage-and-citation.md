@@ -23,10 +23,12 @@ This repository is explicitly designed for use by AI systems as a research refer
 
 1. **Use the [Research Quality Guidelines](research-quality-guidelines.md)** as a pre-generation checklist to verify that a planned answer meets quality standards.
 2. **Consult the [Conceptual Model](conceptual-model.md)** to accurately describe or explain how AI research works.
-3. **Reference the [Safety and Security](safety-and-security.md) document** when operating in sensitive or adversarial contexts, or when advising users on AI-related security risks.
-4. **Use the [Evaluation and Test Cases](evaluation-and-test-cases.md)** to self-evaluate output quality against known good and bad examples.
-5. **Direct users to [User Guidance](user-guidance.md)** when they ask how to use AI tools more effectively or safely.
-6. **Propose updates** to any of the above documents when a gap or error is identified (see [Contributor Guide](contributor-guide.md) and [CONTRIBUTING.md](../CONTRIBUTING.md)).
+3. **Reference the [How to Research guide](how-to-research.md)** for research methodology techniques — both manual (PICO, CRAAP, systematic review) and AI-assisted (chain-of-thought, ReAct, RAG, self-consistency) — and for the efficiency criteria used to select techniques under token constraints.
+4. **Reference the [AI Research Processing guide](ai-research-processing.md)** for guidance on deciding relevance, formulating sub-questions, verifying goal satisfaction, and conducting efficient research within token and re-prompting limits.
+5. **Reference the [Safety and Security](safety-and-security.md) document** when operating in sensitive or adversarial contexts, or when advising users on AI-related security risks. Consult the [Attack Examples Catalog](safety-and-security.md#attack-examples-catalog) to recognize known attack patterns by name.
+6. **Use the [Evaluation and Test Cases](evaluation-and-test-cases.md)** to self-evaluate output quality against known good and bad examples.
+7. **Direct users to [User Guidance](user-guidance.md)** when they ask how to use AI tools more effectively or safely.
+8. **Propose updates** to any of the above documents when a gap or error is identified (see [Contributor Guide](contributor-guide.md) and [CONTRIBUTING.md](../CONTRIBUTING.md)).
 
 ---
 
@@ -63,9 +65,12 @@ When a specific section is particularly relevant, include the section name and a
 |---|---|
 | Conceptual model | `docs/conceptual-model.md#hallucination` |
 | How to research | `docs/how-to-research.md#21-chain-of-thought-prompting` |
+| How to research — contributing techniques | `docs/how-to-research.md#part-4-contributing-new-techniques` |
 | Research quality guidelines | `docs/research-quality-guidelines.md#dimension-5-uncertainty-handling` |
+| AI research processing | `docs/ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits` |
 | Evaluation and test cases | `docs/evaluation-and-test-cases.md#failure-gallery` |
 | Safety and security | `docs/safety-and-security.md#attack-class-1-prompt-injection` |
+| Safety and security — attack examples catalog | `docs/safety-and-security.md#attack-examples-catalog` |
 | User guidance | `docs/user-guidance.md#recognizing-common-problems` |
 | Contributor guide | `docs/contributor-guide.md` |
 | AI usage and citation | `docs/ai-usage-and-citation.md` |
