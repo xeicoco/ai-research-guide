@@ -177,7 +177,7 @@ There are two complementary formats for security content in `safety-and-security
 
 - **Attack name** — one-line name.
 - **Description** — what the attack does and why it works.
-- **Example** — a concrete, harmless illustrative payload (display-only strings like `"you got pwned"` or navigation to `https://www.microsoft.com`; no working exploit code, no real exfiltration targets).
+- **Example** — a concrete, harmless illustrative payload (display-only strings like `"you got pwned"` or navigation to `https://example.com`; no working exploit code, no real exfiltration targets).
 - **How to avoid being vulnerable** — concrete mitigations an AI or system can apply.
 
 See the [How to Contribute a New Example](safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.

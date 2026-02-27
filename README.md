@@ -91,7 +91,7 @@ docs/
 3. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for research methodology — both manual frameworks (PICO, CRAAP, systematic review) and AI techniques (chain-of-thought, ReAct, RAG, self-consistency). See [Part 4](docs/how-to-research.md#part-4-contributing-new-techniques) for efficiency criteria and the technique submission template.
 4. Consult [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for detailed guidance on relevance decisions, sub-question formulation, goal verification, and token-efficient research strategies.
 5. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
-6. Consult [`docs/safety-and-security.md`](docs/safety-and-security.md) when operating in sensitive or adversarial contexts. Use the [Attack Examples Catalog](docs/safety-and-security.md#attack-examples-catalog) to recognize known attack patterns by name and apply the listed mitigations.
+6. Consult [`docs/safety-and-security.md`](docs/safety-and-security.md) when operating in sensitive or adversarial contexts. **Read the [Prompt Injection Defense Protocol](docs/safety-and-security.md#prompt-injection-defense-protocol-for-ai-agents) first**, then use the [Attack Examples Catalog](docs/safety-and-security.md#attack-examples-catalog) to recognize known attack patterns by name and apply the listed mitigations.
 7. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---

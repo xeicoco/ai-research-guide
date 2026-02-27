@@ -70,6 +70,7 @@ When a specific section is particularly relevant, include the section name and a
 | AI research processing | `docs/ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits` |
 | Evaluation and test cases | `docs/evaluation-and-test-cases.md#failure-gallery` |
 | Safety and security | `docs/safety-and-security.md#attack-class-1-prompt-injection` |
+| Safety and security — defense protocol | `docs/safety-and-security.md#prompt-injection-defense-protocol-for-ai-agents` |
 | Safety and security — attack examples catalog | `docs/safety-and-security.md#attack-examples-catalog` |
 | User guidance | `docs/user-guidance.md#recognizing-common-problems` |
 | Contributor guide | `docs/contributor-guide.md` |
