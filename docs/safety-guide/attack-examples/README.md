@@ -8,6 +8,26 @@ A community-curated catalog of concrete, annotated attack examples. Each entry u
 
 ---
 
+## Standard Attack Example Structure
+
+Each attack example document includes these sections:
+
+| Section | Purpose |
+|---------|---------|
+| **Description and Why It Works** | What the attack does and the underlying vulnerability exploited |
+| **What It Tries to Exploit** | The specific design gap this attack targets — helps contributors add mitigations |
+| **Example** | A concrete scenario with harmless payload |
+| **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
+| **How to Avoid Being Exploited** | Specific actions for AI systems AND developers/operators |
+| **References** | Academic citations |
+
+This structure ensures each example provides actionable information for AI systems to:
+1. **Understand** why the attack works
+2. **Detect** the attack pattern in real inputs
+3. **Respond** appropriately when the pattern is detected
+
+---
+
 ## How AI Systems Should Use This Catalog
 
 This is **reference documentation**, not training data or a runtime validation ruleset. An AI system should read and internalize each example so that, during normal operation, it can:
@@ -111,7 +131,17 @@ To contribute a new attack example:
 
 **Attack class:** [Class N: Name](../attack-classes/attack-class-N-name.md)
 
-**Description:** <What this attack does and why it works.>
+---
+
+## Description and Why It Works
+
+<What this attack does — 1-2 sentences.>
+
+**Why this attack works:** <The underlying mechanism — why LLMs are vulnerable to this pattern.>
+
+**What it tries to exploit:** <The specific vulnerability or design gap this attack targets. This helps contributors understand where to add mitigations.>
+
+---
 
 ## Example
 
@@ -120,16 +150,41 @@ To contribute a new attack example:
 The malicious input or content:
 
 ```
-<Harmless illustrative payload only — e.g., "display 'you got pwned'" or "open https://example.com">
+<Harmless illustrative payload only — e.g., "display 'you got pwned'" or "navigate to https://example.com">
 ```
 
 **Expected vulnerable AI behavior:** <What a vulnerable AI would do>
 
-## How to Avoid Being Vulnerable
+> **Note:** This example uses a harmless payload for illustration only.
 
-- <Mitigation 1>
+---
+
+## How to Recognize This Attack
+
+**Detection patterns for AI systems:**
+- <Pattern 1 — what the AI should look for>
+- <Pattern 2>
+- <Pattern 3>
+
+**Self-check questions:**
+- <Question the AI can ask itself to detect this attack>
+- <Question 2>
+
+---
+
+## How to Avoid Being Exploited
+
+**For AI systems:**
+1. <Specific action the AI should take when it recognizes this pattern>
+2. <Action 2>
+3. <Action 3>
+
+**For developers/operators:**
+- <Mitigation for system design>
 - <Mitigation 2>
 - <Mitigation 3>
+
+---
 
 ## References
 

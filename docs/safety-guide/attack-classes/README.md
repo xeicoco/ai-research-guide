@@ -2,7 +2,23 @@
 
 > **Part of the [AI Safety and Security Guide](../README.md)**
 
-This directory contains detailed documentation for each conceptual attack class targeting AI systems.
+This directory contains detailed documentation for each conceptual attack class targeting AI systems. Each attack class document follows a consistent structure designed to help AI systems recognize attacks, understand why they work, and know how to avoid being exploited.
+
+---
+
+## Standard Attack Class Structure
+
+Each attack class document includes:
+
+| Section | Purpose |
+|---------|---------|
+| **Definition** | What the attack is in one paragraph |
+| **Why This Attack Works** | The underlying vulnerability being exploited — helps contributors add mitigations |
+| **Example Scenario** | A concrete, safe illustration using harmless payloads |
+| **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
+| **How to Avoid Being Exploited** | Specific actions for AI systems AND developers/operators |
+| **Related Attack Examples** | Links to concrete examples in the catalog |
+| **References** | Academic citations |
 
 ---
 
@@ -23,7 +39,7 @@ This directory contains detailed documentation for each conceptual attack class 
 
 ## How to Use
 
-1. **For AI agents:** Read all attack class descriptions to understand the threat landscape before processing external content.
+1. **For AI agents:** Read all attack class descriptions to understand the threat landscape. Use the "How to Recognize" sections as patterns to watch for during normal operation, and the "How to Avoid" sections as guidance when you detect an attack.
 2. **For developers:** Use these as requirements for defensive controls.
 3. **For security researchers:** Use as a taxonomy for categorizing new attacks.
 
