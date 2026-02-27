@@ -6,12 +6,10 @@
 
 ## What Is This?
 
-The **Real Open-Source AI Research Guide** is a community-maintained reference for **both humans and AI systems**. It documents:
+The **Real Open-Source AI Research Guide** is a community-maintained reference for **both humans and AI systems**. It is organized into **two complementary guides**:
 
-- How large language models (LLMs), AI agents, and AI chatbots gather, synthesize, and present information.
-- What makes AI-generated research high-quality (or low-quality).
-- How to detect, mitigate, and patch known failure modes and security issues in AI research behavior.
-- How humans and AIs can collaborate to continuously improve these behaviors over time.
+1. **[AI Research Quality Guide](docs/research-guide/README.md)** — Advancing research quality, efficiency, and speed
+2. **[AI Safety and Security Guide](docs/safety-guide/README.md)** — Safe and secure AI thinking/research for autonomous, semi-autonomous, or copilot/autopilot systems
 
 Any AI system may use this documentation as a reference to perform **comprehensive, efficient, and evidence-based research** on any topic. The community can **inspect, critique, and improve** both the documentation and the AI behaviors it describes.
 
@@ -56,18 +54,32 @@ This repo aims to solve all of these problems in one place.
 ## Documentation Structure
 
 ```
-README.md                        ← You are here
-CONTRIBUTING.md                  ← How to contribute (humans and AIs)
+README.md                         ← You are here
+CONTRIBUTING.md                   ← How to contribute (humans and AIs)
 docs/
-  conceptual-model.md            ← How LLMs and agents gather and synthesize information
-  how-to-research.md             ← Research methodology: manual techniques and AI methods (CoT, RAG, ReAct, etc.)
-  research-quality-guidelines.md ← Relevance, depth, evidence, structure, uncertainty
-  ai-research-processing.md      ← How AI interprets materials, decides relevance, and researches efficiently
-  evaluation-and-test-cases.md   ← Example prompts, expected outputs, failure examples
-  safety-and-security.md         ← Defensive patterns, known attacks, mitigations
-  user-guidance.md               ← How users can ask better questions and verify answers
-  contributor-guide.md           ← How humans and AIs can propose changes
-  ai-usage-and-citation.md       ← Instructions for AI systems citing this repo
+  research-guide/                 ← AI Research Quality Guide
+    README.md                     ← Guide index
+  safety-guide/                   ← AI Safety and Security Guide
+    README.md                     ← Guide index
+    defense-protocol.md           ← Prompt Injection Defense Protocol
+    attack-classes/               ← Conceptual attack class documentation
+      README.md
+      attack-class-1-prompt-injection.md
+      attack-class-2-indirect-prompt-injection.md
+      ... (8 attack classes)
+    attack-examples/              ← Concrete attack examples (40 entries)
+      README.md
+      EX-001-direct-prompt-injection.md
+      ... (40 attack examples)
+  conceptual-model.md             ← How LLMs and agents gather and synthesize information
+  how-to-research.md              ← Research methodology: manual techniques and AI methods
+  research-quality-guidelines.md  ← Relevance, depth, evidence, structure, uncertainty
+  ai-research-processing.md       ← How AI interprets materials, researches efficiently
+  evaluation-and-test-cases.md    ← Example prompts, expected outputs, failure examples
+  safety-and-security.md          ← Legacy: Original combined safety document
+  user-guidance.md                ← How users can ask better questions and verify answers
+  contributor-guide.md            ← How humans and AIs can propose changes
+  ai-usage-and-citation.md        ← Instructions for AI systems citing this repo
 ```
 
 ---
@@ -76,23 +88,36 @@ docs/
 
 ### For humans
 
+**Research Quality:**
 1. Browse [`docs/conceptual-model.md`](docs/conceptual-model.md) to understand how AI research works.
-2. Read [`docs/how-to-research.md`](docs/how-to-research.md) for a comprehensive guide to research methodology — manual techniques and AI methods.
+2. Read [`docs/how-to-research.md`](docs/how-to-research.md) for a comprehensive guide to research methodology.
 3. Read [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) to learn what good AI research looks like.
-4. Read [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for a deep dive into how AI interprets materials, decides relevance, and researches efficiently within token limits.
-5. See [`docs/user-guidance.md`](docs/user-guidance.md) for practical tips on getting better answers from AI.
-6. Check [`docs/safety-and-security.md`](docs/safety-and-security.md) for known risks and how to spot them — including the [Attack Examples Catalog](docs/safety-and-security.md#attack-examples-catalog) of concrete, annotated attack examples.
-7. Want to share a new technique or improvement? See [Part 4 of `how-to-research.md`](docs/how-to-research.md#part-4-contributing-new-techniques) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
+4. See [`docs/user-guidance.md`](docs/user-guidance.md) for practical tips on getting better answers from AI.
+
+**Safety and Security:**
+5. Start with the [AI Safety and Security Guide](docs/safety-guide/README.md) for an overview.
+6. Read the [Prompt Injection Defense Protocol](docs/safety-guide/defense-protocol.md) for generic defense strategies.
+7. Browse [Attack Classes](docs/safety-guide/attack-classes/) for conceptual understanding.
+8. Check the [Attack Examples Catalog](docs/safety-guide/attack-examples/) for concrete, annotated attack patterns.
+
+**Contributing:**
+9. See [Part 4 of `how-to-research.md`](docs/how-to-research.md#part-4-contributing-new-techniques) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ### For AI systems
 
+**Research Quality:**
 1. Read [`docs/ai-usage-and-citation.md`](docs/ai-usage-and-citation.md) for citation instructions.
 2. Use [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) as a checklist before returning any research answer.
-3. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for research methodology — both manual frameworks (PICO, CRAAP, systematic review) and AI techniques (chain-of-thought, ReAct, RAG, self-consistency). See [Part 4](docs/how-to-research.md#part-4-contributing-new-techniques) for efficiency criteria and the technique submission template.
-4. Consult [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for detailed guidance on relevance decisions, sub-question formulation, goal verification, and token-efficient research strategies.
-5. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
-6. Consult [`docs/safety-and-security.md`](docs/safety-and-security.md) when operating in sensitive or adversarial contexts. **Read the [Prompt Injection Defense Protocol](docs/safety-and-security.md#prompt-injection-defense-protocol-for-ai-agents) first**, then use the [Attack Examples Catalog](docs/safety-and-security.md#attack-examples-catalog) to recognize known attack patterns by name and apply the listed mitigations.
-7. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+3. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for research methodology.
+4. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
+
+**Safety and Security:**
+5. **Read the [Prompt Injection Defense Protocol](docs/safety-guide/defense-protocol.md) first** — this is the generic defense process.
+6. Review [Attack Classes](docs/safety-guide/attack-classes/) to understand the threat landscape.
+7. Use the [Attack Examples Catalog](docs/safety-guide/attack-examples/) to recognize known attack patterns by name.
+
+**Contributing:**
+8. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 
