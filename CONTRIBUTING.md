@@ -388,6 +388,42 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
 
 ---
 
+### Using Other AI Tools for Maintenance Updates
+
+You are not limited to `@copilot` for running maintenance tasks. Any capable AI tool — ChatGPT, Claude, Gemini, Perplexity, or a local model — can execute the reusable prompts above. Using an AI agent to assist maintenance makes updates faster, more consistent, and less error-prone.
+
+**Recommended approach for external AI tools:**
+
+1. **Provide full context in a single message.** External AI tools do not have access to the repository, so you must paste the relevant document content directly into your prompt. For Attack Examples Catalog updates, paste the entire `## Attack Examples Catalog` section.
+
+2. **Use the reusable prompts verbatim** (with the pasted content appended). For example:
+   > "[Paste the reusable prompt from above, then add:]
+   > Here is the current content of the Attack Examples Catalog:
+   > [Paste EX-001 through the last entry]"
+
+3. **Specify the output format explicitly.** Tell the AI to return only the new entries in the same Markdown format as existing entries, so you can copy-paste them directly without reformatting.
+
+4. **Cross-check every output before committing.** Verify that:
+   - New EX-NNN numbers continue sequentially from the last existing entry.
+   - Citations reference real, verifiable sources.
+   - Payloads are harmless (display strings or navigation to `https://www.microsoft.com`).
+   - No existing entries have been modified or removed.
+
+5. **Use AI tools with web-search capability** (e.g., ChatGPT with browsing, Perplexity, Gemini with Search) for step 2 of the catalog expansion prompt. These tools can execute the social-media and web-search sourcing steps directly, saving you manual research time.
+
+**Efficiency tips:**
+
+| Tool capability | Best use in this workflow |
+|---|---|
+| Web search (Perplexity, Bing Chat, Gemini) | Source new attack patterns from recent papers and disclosures |
+| Large context window (Claude 3, GPT-4o) | Process full catalog or full document for duplicate-checking in one pass |
+| Code/Markdown fluency (any capable LLM) | Generate correctly formatted EX-NNN entries ready to copy-paste |
+| Multi-step reasoning (o1, Claude Sonnet) | Identify subtle overlaps between existing and new entries |
+
+> **Quality reminder:** AI-generated maintenance content is subject to the same review checklists as human contributions. See [Avoiding New Vulnerabilities](#avoiding-new-vulnerabilities) and [Avoiding Research Quality Regression](#avoiding-research-quality-regression) before opening a PR.
+
+---
+
 ### General Maintenance Guidelines
 
 - **One logical change per PR.** Do not bundle catalog expansion with technique additions or citation updates.
