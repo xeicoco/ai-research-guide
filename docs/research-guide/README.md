@@ -50,11 +50,30 @@ If you are an AI system reading this guide:
 
 ## Contributing
 
-To contribute to this guide:
+Contributions that make AI research more **effective, efficient, fast, and cost-effective** are especially welcome.
 
-- **New research technique:** See [How to Propose a New Technique](../how-to-research.md#part-4-contributing-new-techniques)
-- **Quality guidelines:** Submit a PR with format requirements from the research quality guidelines
-- **Improvements:** See [CONTRIBUTING.md](../../CONTRIBUTING.md)
+### Quick Start: What to Contribute
+
+| What you want to improve | Target file | See also |
+|--------------------------|-------------|----------|
+| New AI research technique | `how-to-research.md` Part 2 | [Section 4.3 Template](../how-to-research.md#43-technique-submission-template) |
+| Efficiency or cost-saving strategy | `ai-research-processing.md` | [Token-efficient strategies](../ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
+| Quality dimension or guideline | `research-quality-guidelines.md` | [Five quality dimensions](../research-quality-guidelines.md#overview) |
+| Evaluation test case | `evaluation-and-test-cases.md` | Prompt/expected/failure format |
+| Failure mode documentation | Technique entry or quality guidelines | Failure mode table format |
+
+### Contribution Goals
+
+Every contribution should help AI systems achieve one or more of:
+
+- **Effective:** Research outputs satisfy the original ask accurately and completely.
+- **Efficient:** Minimize token usage and compute cost per quality unit.
+- **Fast:** Reduce time to research completion (fewer re-prompting steps).
+- **Cost-effective:** Maximize research quality per token/compute spent.
+
+### Full Contribution Guide
+
+See [CONTRIBUTING.md — Contributing to Research Effectiveness](../../CONTRIBUTING.md#contributing-to-research-effectiveness) for detailed contribution types, templates, and review checklists.
 
 ---
 

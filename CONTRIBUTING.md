@@ -10,7 +10,7 @@ Thank you for your interest in contributing! This project welcomes contributions
 - [What We Are Looking For](#what-we-are-looking-for)
 - [Key Contribution Areas](#key-contribution-areas)
   - [Contributing to Security](#contributing-to-security)
-  - [Contributing to Research Quality](#contributing-to-research-quality)
+  - [Contributing to Research Effectiveness](#contributing-to-research-effectiveness)
   - [Avoiding New Vulnerabilities](#avoiding-new-vulnerabilities)
   - [Avoiding Research Quality Regression](#avoiding-research-quality-regression)
 - [How to Contribute (Humans)](#how-to-contribute-humans)
@@ -85,25 +85,135 @@ If you have identified a category of attacks not covered by Attack Classes 1–8
 
 ---
 
-### Contributing to Research Quality
+### Contributing to Research Effectiveness
 
-Research quality contributions help AI systems produce more accurate, relevant, well-structured, and uncertainty-aware outputs. The main quality contribution channels are:
+This section covers contributions that make AI research more **effective, efficient, fast, and cost-effective** — helping AI systems produce high-quality outputs while minimizing time, tokens, and compute.
 
-**1. Adding a new AI research technique to `docs/how-to-research.md`**
+#### Research Effectiveness Goals
 
-- Open an issue using the title format `[Technique Proposal] <Name>` and fill in the technique submission template from Section 4.3.
-- New techniques must include: goal, when to use, how it works, an efficiency profile table, a worked example, known limitations, and at least one academic citation.
-- Submit a PR; maintainers will verify that the technique is documented in published research and is not a duplicate of an existing entry.
+Every contribution in this area should help AI systems achieve one or more of these goals:
 
-**2. Adding quality guidelines, failure modes, or evaluation examples**
+| Goal | Description | Key Metrics |
+|------|-------------|-------------|
+| **Effective** | Research outputs satisfy the original ask accurately and completely | Relevance score, factual accuracy, goal satisfaction |
+| **Efficient** | Minimize token usage and compute cost per quality unit | Tokens per answer, cost per research task |
+| **Fast** | Reduce time to research completion | Re-prompting steps, wall-clock time, latency |
+| **Cost-effective** | Maximize research quality per token/compute spent | Quality-per-token ratio, technique overhead |
 
-- Improvements to `docs/research-quality-guidelines.md`, `docs/evaluation-and-test-cases.md`, or `docs/ai-research-processing.md` are welcome via direct PR.
-- New failure modes must describe: what goes wrong, a concrete example, and how to detect or prevent the failure.
-- New evaluation test cases must follow the `prompt / expected output / common failure` format already used in `docs/evaluation-and-test-cases.md`.
+#### Quick Reference: Which File to Edit
 
-**3. Improving existing technique entries**
+| What you want to contribute | Target file | Template/Format reference |
+|----------------------------|-------------|---------------------------|
+| New AI research technique (CoT, RAG, Self-Ask variants, etc.) | `docs/how-to-research.md` | Section 4.3 Technique Submission Template |
+| Efficiency improvement or cost-saving strategy | `docs/ai-research-processing.md` | Token-efficient strategies section |
+| Quality guideline or quality dimension improvement | `docs/research-quality-guidelines.md` | Five quality dimensions format |
+| Evaluation test case or expected output example | `docs/evaluation-and-test-cases.md` | Prompt / expected output / failure format |
+| Failure mode or known limitation | `docs/research-quality-guidelines.md` or technique entry | Failure mode table format |
+| User guidance for better AI interactions | `docs/user-guidance.md` | Existing section format |
 
-- Add worked examples, update efficiency profiles, document newly discovered failure modes, or link new papers to existing entries in `docs/how-to-research.md` using the improvement types table in Section 4.5.
+---
+
+#### Contribution Type 1: New AI Research Technique
+
+**When to use:** You have identified a prompting strategy, reasoning pattern, or workflow that improves research effectiveness and has not been documented in `docs/how-to-research.md`.
+
+**Steps:**
+
+1. **Open an issue** titled `[Technique Proposal] <Short name>` with a brief description.
+2. **Fill in the Technique Submission Template** from `docs/how-to-research.md` Section 4.3:
+   - **Goal:** What problem does this technique solve?
+   - **When to use:** What research scenarios benefit most?
+   - **How it works:** Step-by-step instructions an AI can follow.
+   - **Efficiency profile:** Token cost, re-prompting steps, time to result, output quality (Low/Medium/High).
+   - **Example:** Realistic input/output pair demonstrating the technique.
+   - **Known limitations:** When this technique fails or underperforms.
+   - **References:** Academic citation if available.
+3. **Submit a PR** after maintainer confirmation; place the technique in the correct Part (Part 1 for foundational principles, Part 2 for AI-native techniques).
+
+**Efficiency requirement:** Every new technique must include an efficiency profile table showing its cost-quality trade-off.
+
+---
+
+#### Contribution Type 2: Efficiency Improvement or Cost-Saving Strategy
+
+**When to use:** You have discovered a way to reduce token usage, minimize re-prompting, or improve the cost-per-quality ratio of existing techniques.
+
+**Steps:**
+
+1. **Identify the target technique or workflow** in `docs/how-to-research.md` or `docs/ai-research-processing.md`.
+2. **Submit a PR directly** with:
+   - A clear description of the efficiency improvement.
+   - Before/after metrics (e.g., "reduces average re-prompting steps from 5 to 3").
+   - Any trade-offs (e.g., "reduces tokens by 30% but requires more precise goal statements").
+3. **Update the efficiency profile table** if modifying an existing technique.
+
+**High-value contributions:**
+- Token compression strategies (e.g., progressive summarization)
+- Front-loading patterns that eliminate clarification rounds
+- Parallelization strategies for independent sub-questions
+- Satisfaction criteria templates that enable early stopping
+
+---
+
+#### Contribution Type 3: Quality Guideline or Improvement
+
+**When to use:** You want to improve the five quality dimensions (relevance, depth, evidence, structure, uncertainty) or add guidance that helps AI produce higher-quality research outputs.
+
+**Steps:**
+
+1. **Submit a PR directly** to `docs/research-quality-guidelines.md`.
+2. **Follow the existing format:**
+   - Definition of the quality dimension or guideline.
+   - "What good looks like" examples.
+   - "What poor looks like" examples.
+   - Mitigation strategies.
+3. **Link to related techniques** in `docs/how-to-research.md` where applicable.
+
+---
+
+#### Contribution Type 4: Evaluation Test Case or Expected Output
+
+**When to use:** You want to add a concrete example that AI systems can use to self-evaluate their research output quality.
+
+**Steps:**
+
+1. **Submit a PR directly** to `docs/evaluation-and-test-cases.md`.
+2. **Use the standard format:**
+   - **Prompt/Input:** The research question or task.
+   - **Expected output:** What a high-quality answer looks like.
+   - **Common failure:** What a low-quality answer looks like and why.
+3. **Ensure the example is realistic** — drawn from a plausible research scenario, not an artificially perfect case.
+
+---
+
+#### Contribution Type 5: Failure Mode or Limitation Documentation
+
+**When to use:** You have identified a failure pattern in AI research that is not yet documented — either for a specific technique or as a general quality failure mode.
+
+**Steps:**
+
+1. **For technique-specific failures:** Submit a PR adding a "Known limitations" section to the technique entry in `docs/how-to-research.md`.
+2. **For general quality failures:** Submit a PR adding a row to the failure mode table in `docs/research-quality-guidelines.md`.
+3. **Include:**
+   - Description of the failure mode.
+   - Concrete example showing the failure.
+   - Detection or prevention strategy.
+
+---
+
+#### Contribution Type 6: Improving Existing Technique Entries
+
+**When to use:** You want to enhance an existing technique in `docs/how-to-research.md` without proposing an entirely new technique.
+
+| Improvement type | What to add | Where |
+|------------------|-------------|-------|
+| Worked example | Input/output pair in Example format | Technique subsection |
+| Efficiency profile | Token cost / steps / time / quality table | Technique subsection |
+| Failure mode | Limitation description + mitigation | Known limitations subsection |
+| New citation | Reference to published research | References section + inline citation |
+| Correction | Fixed description with explanation | PR description explains the correction |
+
+**Important:** Preserve existing heading anchors (e.g., `#21-chain-of-thought-prompting`) so external links remain valid.
 
 ---
 
