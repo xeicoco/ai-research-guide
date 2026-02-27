@@ -30,8 +30,10 @@ LLMs do not inherently distinguish between instructions from a trusted system pr
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
 
-- [EX-001: Direct Prompt Injection via User Input](../attack-examples/EX-001-direct-prompt-injection-via-user-input.md)
+- [EX-001: Direct Prompt Injection via User Input](../attack-examples/EX-001-direct-prompt-injection.md)
 - [EX-037: Prompt Template Variable Injection](../attack-examples/EX-037-prompt-template-variable-injection.md)
+
+> **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

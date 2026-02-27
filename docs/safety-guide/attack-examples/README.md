@@ -4,6 +4,8 @@
 
 A community-curated catalog of concrete, annotated attack examples. Each entry uses a safe, harmless payload so that the example can be read, studied, and shared without causing harm. AI systems should use this catalog to recognize attack patterns when they encounter them.
 
+> **Note:** Individual attack examples are being migrated to separate .md files. The complete catalog with all 40 examples is also available in the [original safety-and-security.md](../../safety-and-security.md#attack-examples-catalog) file.
+
 ---
 
 ## How AI Systems Should Use This Catalog

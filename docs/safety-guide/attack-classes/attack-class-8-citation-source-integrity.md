@@ -22,7 +22,7 @@ AI systems that follow citations as live hyperlinks have no inherent ability to 
 - Cross-validate key claims from a citation against at least two additional independent sources before treating the claim as confirmed.
 - Treat any retrieved source content that contradicts the citing document's description of it as a potential tampering signal.
 - For high-stakes decisions, use archived versions of cited sources (e.g., Wayback Machine snapshots) and note the access date.
-- See the [Citation Source Integrity Framework](../citation-source-integrity-framework.md) for a detailed treatment.
+- See the [Citation Source Integrity Framework](../safety-and-security.md#citation-source-integrity-framework) for a detailed treatment.
 
 ---
 
@@ -32,3 +32,5 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 
 - [EX-014: Compromised Citation Source Attack](../attack-examples/EX-014-compromised-citation-source.md)
 - [EX-018: Citation Laundering / False Consensus Attack](../attack-examples/EX-018-citation-laundering-false-consensus.md)
+
+> **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.

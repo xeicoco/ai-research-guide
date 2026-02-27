@@ -28,13 +28,15 @@ The user may not be aware that the external content contains instructions. The a
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
 
-- [EX-002: Indirect Prompt Injection via Retrieved Webpage](../attack-examples/EX-002-indirect-prompt-injection-via-retrieved-webpage.md)
-- [EX-009: Indirect Injection via Poisoned Document](../attack-examples/EX-009-indirect-injection-via-poisoned-document.md)
-- [EX-023: Prompt Injection via Tool or API Response](../attack-examples/EX-023-prompt-injection-via-tool-or-api-response.md)
-- [EX-034: Indirect Injection via Email or Messaging Data](../attack-examples/EX-034-indirect-injection-via-email-or-messaging-data.md)
-- [EX-035: Prompt Injection via Code Comments or Inline Instructions](../attack-examples/EX-035-prompt-injection-via-code-comments.md)
-- [EX-038: RAG / Knowledge-Base Corpus Poisoning](../attack-examples/EX-038-rag-knowledge-base-corpus-poisoning.md)
-- [EX-040: Indirect Injection via Web Metadata and Non-Body Content](../attack-examples/EX-040-indirect-injection-via-web-metadata.md)
+- [EX-002: Indirect Prompt Injection via Retrieved Webpage](../attack-examples/EX-002-indirect-prompt-injection-webpage.md)
+- [EX-009: Indirect Injection via Poisoned Document](../attack-examples/EX-009-indirect-injection-poisoned-document.md)
+- [EX-023: Prompt Injection via Tool or API Response](../attack-examples/EX-023-tool-api-response-injection.md)
+- [EX-034: Indirect Injection via Email or Messaging Data](../attack-examples/EX-034-indirect-injection-email-messaging.md)
+- [EX-035: Prompt Injection via Code Comments or Inline Instructions](../attack-examples/EX-035-prompt-injection-code-comments.md)
+- [EX-038: RAG / Knowledge-Base Corpus Poisoning](../attack-examples/EX-038-rag-corpus-poisoning.md)
+- [EX-040: Indirect Injection via Web Metadata and Non-Body Content](../attack-examples/EX-040-indirect-injection-web-metadata.md)
+
+> **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

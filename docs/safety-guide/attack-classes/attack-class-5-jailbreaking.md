@@ -35,6 +35,8 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-022: Refusal Suppression Attack](../attack-examples/EX-022-refusal-suppression.md)
 - [EX-026: DAN / Competing Objectives Attack](../attack-examples/EX-026-dan-competing-objectives.md)
 
+> **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
+
 ---
 
 ## References
