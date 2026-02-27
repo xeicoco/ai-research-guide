@@ -104,11 +104,11 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 | What you want to contribute | Target file | Template/Format reference |
 |----------------------------|-------------|---------------------------|
-| New AI research technique (CoT, RAG, Self-Ask variants, etc.) | `docs/how-to-research.md` | Section 4.3 Technique Submission Template |
-| Efficiency improvement or cost-saving strategy | `docs/ai-research-processing.md` | Token-efficient strategies section |
-| Quality guideline or quality dimension improvement | `docs/research-quality-guidelines.md` | Five quality dimensions format |
+| New AI research technique (CoT, RAG, Self-Ask variants, etc.) | `docs/how-to-research.md` | [Section 4.3 Technique Submission Template](docs/how-to-research.md#43-technique-submission-template) |
+| Efficiency improvement or cost-saving strategy | `docs/ai-research-processing.md` | [Token-efficient strategies section](docs/ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
+| Quality guideline or quality dimension improvement | `docs/research-quality-guidelines.md` | [Five quality dimensions format](docs/research-quality-guidelines.md#overview) |
 | Evaluation test case or expected output example | `docs/evaluation-and-test-cases.md` | Prompt / expected output / failure format |
-| Failure mode or known limitation | `docs/research-quality-guidelines.md` or technique entry | Failure mode table format |
+| Failure mode or known limitation | `docs/research-quality-guidelines.md` or technique entry | [Failure mode table format](docs/research-quality-guidelines.md#common-failure-modes-and-mitigations) |
 | User guidance for better AI interactions | `docs/user-guidance.md` | Existing section format |
 
 ---
@@ -128,7 +128,7 @@ Every contribution in this area should help AI systems achieve one or more of th
    - **Example:** Realistic input/output pair demonstrating the technique.
    - **Known limitations:** When this technique fails or underperforms.
    - **References:** Academic citation if available.
-3. **Submit a PR** after maintainer confirmation; place the technique in the correct Part (Part 1 for foundational principles, Part 2 for AI-native techniques).
+3. **Submit a PR** after maintainer confirmation; place the technique in the correct Part (Part 2 for AI-native techniques; or Part 1 if it's a foundational research principle not yet documented).
 
 **Efficiency requirement:** Every new technique must include an efficiency profile table showing its cost-quality trade-off.
 
