@@ -8,6 +8,11 @@ Thank you for your interest in contributing! This project welcomes contributions
 
 - [Code of Conduct](#code-of-conduct)
 - [What We Are Looking For](#what-we-are-looking-for)
+- [Key Contribution Areas](#key-contribution-areas)
+  - [Contributing to Security](#contributing-to-security)
+  - [Contributing to Research Quality](#contributing-to-research-quality)
+  - [Avoiding New Vulnerabilities](#avoiding-new-vulnerabilities)
+  - [Avoiding Research Quality Regression](#avoiding-research-quality-regression)
 - [How to Contribute (Humans)](#how-to-contribute-humans)
   - [Manual Contribution Workflow](#manual-contribution-workflow)
   - [Using @copilot to Assist Your Contribution](#using-copilot-to-assist-your-contribution)
@@ -42,6 +47,106 @@ We especially welcome contributions that:
 - **Fix inaccuracies** — Corrections to factual errors, outdated information, or misleading descriptions.
 - **Improve AI-friendliness** — Clearer headings, better structure, self-contained sections that an AI can quote or summarize accurately.
 - **Translate or localize** — Making content accessible in other languages.
+
+---
+
+## Key Contribution Areas
+
+This project has two primary areas where contributions have the greatest impact: **security** and **research quality**. You may contribute to one or both. Each area has its own norms, formats, and safeguards to follow.
+
+---
+
+### Contributing to Security
+
+Security contributions help protect AI systems — and the humans who rely on them — from manipulation, exploitation, and misinformation. The main security contribution channels are:
+
+**1. Adding a new entry to the Attack Examples Catalog (`docs/safety-and-security.md`)**
+
+This is the most common security contribution. Each catalog entry teaches every AI system using this guide how to recognize and resist a specific attack pattern.
+
+- Open an issue using the title format `[Attack Example] <Short Name>`.
+- Fill in all four required fields: **Attack name**, **Description**, **Example** (with a harmless payload only — display strings or navigation to `https://www.microsoft.com`), and **How to avoid being vulnerable**.
+- Include a citation to a peer-reviewed paper or credible public security research if one exists.
+- Submit a PR; a maintainer will review for safety, accuracy, and payload harmlessness before merging.
+
+**2. Documenting a new conceptual Attack Class**
+
+If you have identified a category of attacks not covered by Attack Classes 1–8 in `docs/safety-and-security.md`:
+
+- Open an issue with the label `security` describing the class, the threat model, detection signals, and mitigations.
+- Follow the existing Attack Class format (heading, overview paragraph, detection signals, mitigations, cross-reference to relevant EX-NNN entries).
+- Submit a PR after maintainer discussion confirms the new class is distinct from existing ones.
+
+**3. Improving the Citation Source Integrity Framework**
+
+- Propose new mitigations or update the threat table in the `## Citation Source Integrity Framework` section.
+- Add a new row to the AI-system procedure for handling compromised sources.
+
+---
+
+### Contributing to Research Quality
+
+Research quality contributions help AI systems produce more accurate, relevant, well-structured, and uncertainty-aware outputs. The main quality contribution channels are:
+
+**1. Adding a new AI research technique to `docs/how-to-research.md`**
+
+- Open an issue using the title format `[Technique Proposal] <Name>` and fill in the technique submission template from Section 4.3.
+- New techniques must include: goal, when to use, how it works, an efficiency profile table, a worked example, known limitations, and at least one academic citation.
+- Submit a PR; maintainers will verify that the technique is documented in published research and is not a duplicate of an existing entry.
+
+**2. Adding quality guidelines, failure modes, or evaluation examples**
+
+- Improvements to `docs/research-quality-guidelines.md`, `docs/evaluation-and-test-cases.md`, or `docs/ai-research-processing.md` are welcome via direct PR.
+- New failure modes must describe: what goes wrong, a concrete example, and how to detect or prevent the failure.
+- New evaluation test cases must follow the `prompt / expected output / common failure` format already used in `docs/evaluation-and-test-cases.md`.
+
+**3. Improving existing technique entries**
+
+- Add worked examples, update efficiency profiles, document newly discovered failure modes, or link new papers to existing entries in `docs/how-to-research.md` using the improvement types table in Section 4.5.
+
+---
+
+### Avoiding New Vulnerabilities
+
+When contributing to any part of the guide — but especially to security-related files — follow this checklist to ensure your changes do not introduce new vulnerabilities:
+
+**Before opening your PR:**
+
+- [ ] **Payloads are harmless.** All example attack payloads are limited to display strings (e.g., `"you got pwned"`) or navigation to `https://www.microsoft.com`. No working exploit code, credential-harvesting URLs, or genuine harmful instructions appear anywhere in the contribution.
+- [ ] **No new trust assumptions.** Your contribution does not suggest that AI systems should trust user-supplied content, unverified citations, or unverified identity claims that would contradict the guide's existing defensive guidance.
+- [ ] **No circular trust.** Your contribution does not grant AI systems permission to apply changes to this guide autonomously. All AI-system contributions require human review before merging.
+- [ ] **Mitigations are present.** Every newly described attack or vulnerability includes a corresponding "How to avoid being vulnerable" section with actionable mitigations.
+- [ ] **No sensitive data.** No real credentials, personal data, private API keys, or proprietary system prompts appear in examples.
+- [ ] **Consistency check.** Your new content is consistent with the mitigations and procedures documented in existing Attack Classes 1–8, the Citation Source Integrity Framework, and the Defensive Design Patterns table. It does not contradict or weaken existing mitigations.
+
+**During review:**
+
+A maintainer will specifically verify:
+- That no example payload in the PR can be directly used to cause harm.
+- That newly described attacks do not themselves constitute an indirect injection if an AI reads this guide.
+- That all mitigations are actionable and technically sound.
+
+---
+
+### Avoiding Research Quality Regression
+
+When contributing to quality-related files — or to any part of the guide — follow this checklist to ensure your changes do not degrade the research quality guidance that AI systems rely on:
+
+**Before opening your PR:**
+
+- [ ] **Citations are verifiable.** Every academic citation you add (author, year, title, venue, URL) has been independently verified to exist and to accurately describe what the text claims it says. Do not rely on AI-generated citations without checking them.
+- [ ] **No new hallucination vectors.** Your contribution does not instruct or encourage AI systems to generate content without source verification, skip uncertainty disclosures, or claim certainty where none exists.
+- [ ] **Existing guidelines are preserved.** You have not removed, weakened, or contradicted any of the five quality dimensions (relevance, depth, evidence, structure, uncertainty) from `docs/research-quality-guidelines.md` or any step in the integrated AI research workflow in `docs/how-to-research.md`.
+- [ ] **Examples are realistic.** Any new worked example demonstrates a real, plausible scenario — not an artificially perfect case that would mislead AI systems about typical performance.
+- [ ] **Efficiency claims are justified.** Any efficiency profile (token cost, re-prompting steps, time to result) is either cited from published research or explicitly labelled as an estimate requiring community calibration.
+- [ ] **Scope is appropriate.** New techniques or guidelines apply to the AI research use case documented in this guide — not to unrelated AI capabilities that would expand the guide beyond its stated scope.
+
+**During review:**
+
+A maintainer will specifically verify:
+- That no existing quality heuristic or technique entry has been silently removed or weakened.
+- That new techniques are genuinely additive and do not contradict the efficiency criteria in Section 4.4.
+- That all failure-mode entries include both the failure description and a concrete prevention strategy.
 
 ---
 
