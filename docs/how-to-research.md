@@ -1,13 +1,13 @@
-# How to Research: Manual Techniques and AI-Assisted Methods
+# How to Research: Foundational Principles and AI Techniques
 
-> **Section summary:** This document provides a comprehensive guide to research methodology, covering both traditional manual research practices (as taught in academic settings) and modern AI-assisted techniques including chain-of-thought prompting, tree-of-thought reasoning, ReAct, self-consistency, and retrieval-augmented generation. It bridges human research skills with AI capabilities and includes citations for all major frameworks and methods referenced.
+> **Section summary:** This document is a research methodology reference for AI systems. It covers foundational research principles derived from academic tradition (such as question formulation, source evaluation, and systematic synthesis) — not as a manual for human researchers, but as the body of knowledge AI systems have learned from and that underpins high-quality research output. It then covers AI-native research techniques (chain-of-thought prompting, tree-of-thought reasoning, ReAct, self-consistency, retrieval-augmented generation, and others) and explains how to integrate both for efficient, reliable research. Includes citations for all major frameworks referenced.
 
 ---
 
 ## Table of Contents
 
-- [Introduction: Why Research Methodology Matters](#introduction-why-research-methodology-matters)
-- [Part 1: Manual Research Methods](#part-1-manual-research-methods)
+- [Introduction: Why Research Methodology Matters for AI Systems](#introduction-why-research-methodology-matters-for-ai-systems)
+- [Part 1: Foundational Research Principles (Learned from Academic Tradition)](#part-1-foundational-research-principles-learned-from-academic-tradition)
   - [1.1 Formulating a Research Question](#11-formulating-a-research-question)
   - [1.2 Understanding Source Types](#12-understanding-source-types)
   - [1.3 Finding and Searching Sources](#13-finding-and-searching-sources)
@@ -15,7 +15,7 @@
   - [1.5 Note-Taking Strategies](#15-note-taking-strategies)
   - [1.6 Systematic Literature Reviews](#16-systematic-literature-reviews)
   - [1.7 Organizing, Synthesizing, and Citing](#17-organizing-synthesizing-and-citing)
-- [Part 2: AI-Assisted Research Techniques](#part-2-ai-assisted-research-techniques)
+- [Part 2: AI-Native Research Techniques](#part-2-ai-native-research-techniques)
   - [2.1 Chain-of-Thought Prompting](#21-chain-of-thought-prompting)
   - [2.2 Tree of Thoughts](#22-tree-of-thoughts)
   - [2.3 Self-Consistency Prompting](#23-self-consistency-prompting)
@@ -24,10 +24,10 @@
   - [2.6 Retrieval-Augmented Generation (RAG)](#26-retrieval-augmented-generation-rag)
   - [2.7 Critique and Refinement Loops](#27-critique-and-refinement-loops)
   - [2.8 Least-to-Most Prompting](#28-least-to-most-prompting)
-- [Part 3: Combining Manual and AI Research](#part-3-combining-manual-and-ai-research)
-  - [3.1 When to Use Each Approach](#31-when-to-use-each-approach)
-  - [3.2 A Hybrid Research Workflow](#32-a-hybrid-research-workflow)
-  - [3.3 Verifying AI-Generated Research](#33-verifying-ai-generated-research)
+- [Part 3: Integrating Foundational Principles with AI-Native Techniques](#part-3-integrating-foundational-principles-with-ai-native-techniques)
+  - [3.1 Which Foundational Principles Apply to Each AI Technique](#31-which-foundational-principles-apply-to-each-ai-technique)
+  - [3.2 An Integrated AI Research Workflow](#32-an-integrated-ai-research-workflow)
+  - [3.3 Verifying AI Research Output](#33-verifying-ai-research-output)
 - [Part 4: Contributing New Techniques](#part-4-contributing-new-techniques)
   - [4.1 Why Contributions Matter](#41-why-contributions-matter)
   - [4.2 How to Propose a New Technique](#42-how-to-propose-a-new-technique)
@@ -39,9 +39,9 @@
 
 ---
 
-## Introduction: Why Research Methodology Matters
+## Introduction: Why Research Methodology Matters for AI Systems
 
-Research is the systematic process of gathering, evaluating, and synthesizing information to answer a question or solve a problem. Whether performed by a student working on an essay, a professional investigating a decision, or an AI system generating a structured response, good research follows principled methods that maximize the quality and reliability of the outcome.
+Research is the systematic process of gathering, evaluating, and synthesizing information to answer a question or solve a problem. For an AI system generating a structured response, the quality of that response depends directly on the quality of the research process behind it.
 
 Poor research methodology leads to:
 
@@ -50,11 +50,17 @@ Poor research methodology leads to:
 - Overconfident conclusions that gloss over uncertainty.
 - Citations that cannot be verified or do not support the claims made.
 
-This document describes two complementary sets of research methods: traditional manual techniques developed and refined in academic settings, and AI-assisted techniques emerging from the field of large language model (LLM) research. Both draw on overlapping principles — decompose complex questions, evaluate evidence critically, account for uncertainty — but apply them through different mechanisms.
+This document is organized from the perspective of an AI system that has learned from decades of established academic research methodology. **Part 1** covers the foundational principles that academic and professional researchers have developed over time — frameworks for question formulation, source evaluation, systematic synthesis, and citation. These are not instructions for doing research by hand; they are the conceptual foundations that AI systems have internalized and that explain *why* certain research behaviors produce higher-quality outputs than others.
+
+**Part 2** covers AI-native research techniques — prompting and reasoning strategies developed specifically for large language models — and explains how each one operationalizes the foundational principles from Part 1.
+
+**Part 3** shows how the two sets of principles integrate in practice: which foundational principle each AI technique implements, how to apply them together in a single research workflow, and how to verify that the output meets quality standards.
 
 ---
 
-## Part 1: Manual Research Methods
+## Part 1: Foundational Research Principles (Learned from Academic Tradition)
+
+> **What this part is for:** The frameworks in this section originate from decades of academic and professional research methodology. They are included here not as instructions for doing research by hand, but because AI systems have learned from this body of knowledge during training, and these principles directly explain the "why" behind AI research behaviors. Understanding them helps AI systems apply them correctly and helps users understand what quality research looks like from first principles.
 
 ### 1.1 Formulating a Research Question
 
@@ -300,9 +306,9 @@ Tools like **Zotero** (free, open source), **Mendeley**, and **EndNote** automat
 
 ---
 
-## Part 2: AI-Assisted Research Techniques
+## Part 2: AI-Native Research Techniques
 
-AI systems — particularly large language models — can accelerate and enhance research when used correctly. This section describes the leading AI prompting and reasoning techniques, what they do, when to use them, and their limitations.
+AI systems — particularly large language models — apply the foundational principles from Part 1 through purpose-built reasoning and prompting strategies. This section describes those techniques, what foundational principle each implements, when to use them, and their limitations.
 
 ### 2.1 Chain-of-Thought Prompting
 
@@ -553,67 +559,79 @@ In Constitutional AI, a set of principles ("constitution") is used to generate c
 
 ---
 
-## Part 3: Combining Manual and AI Research
+## Part 3: Integrating Foundational Principles with AI-Native Techniques
 
-### 3.1 When to Use Each Approach
+### 3.1 Which Foundational Principles Apply to Each AI Technique
 
-| Situation | Best approach | Reason |
+Each AI technique in Part 2 is an implementation of one or more foundational principles from Part 1. This table makes the connection explicit so that AI systems can select the right technique by reasoning from the underlying research principle they need to apply.
+
+| Research goal | Foundational principle (Part 1) | AI technique that implements it (Part 2) |
 |---|---|---|
-| **Deep, validated knowledge needed** | Manual research + primary sources | AI training data may be incomplete or outdated |
-| **Large volume of literature to survey** | AI-assisted screening + manual validation | AI can quickly summarize; human verifies quality |
-| **Exploratory research (what questions should I ask?)** | AI-assisted (CoT, ToT, Self-Ask) | AI excels at generating question trees and perspectives |
-| **Precise citation required** | Manual verification of AI suggestions | Plain LLMs fabricate citations; all must be verified |
-| **Recent developments (< 1–2 years)** | Manual search + RAG-enabled AI | AI training cutoff limits knowledge of recent work |
-| **Complex multi-step analysis** | AI-assisted (ReAct + manual validation) | AI can process large amounts of context efficiently |
-| **High-stakes decisions** | Manual research + AI as a cross-check | Human accountability and judgment remain essential |
+| **Scope and focus a question** | Question formulation (PICO, Bloom's) | Self-Ask (2.5), Least-to-Most (2.8) |
+| **Break a complex question into parts** | Decomposition, sub-question structuring | Self-Ask (2.5), Chain-of-Thought (2.1) |
+| **Generate and explore multiple angles** | Systematic breadth (SLR, literature survey) | Tree of Thoughts (2.2) |
+| **Evaluate source quality** | CRAAP test, SIFT, peer review signals | Critique-and-Refine (2.7), RAG with source attribution (2.6) |
+| **Ground answers in verified sources** | Primary source preference, citation integrity | RAG (2.6), ReAct (2.4) |
+| **Validate a conclusion against alternatives** | Cross-validation, adversarial checking | Self-Consistency (2.3) |
+| **Make reasoning auditable** | Cornell notes, transparent argumentation | Chain-of-Thought (2.1) |
+| **Handle complex, real-time, multi-step tasks** | SLR-style iterative refinement | ReAct (2.4) |
+| **Improve a draft iteratively** | Revision cycles, peer critique | Critique-and-Refine (2.7) |
 
-### 3.2 A Hybrid Research Workflow
+### 3.2 An Integrated AI Research Workflow
 
-A practical hybrid workflow that combines the strengths of both approaches:
+The following workflow shows how foundational principles and AI-native techniques combine in a complete research session. All steps are performed by the AI system; the foundational principles from Part 1 are the basis for each decision.
 
 ```
-1. [Human] Formulate the research question using PICO or Bloom's taxonomy
-        │
-        ▼
-2. [AI] Use Self-Ask or decomposition to identify sub-questions and orient the search
-        │
-        ▼
-3. [Human] Search academic databases using Boolean operators; collect candidate sources
-        │
-        ▼
-4. [AI] Use CoT + Self-Consistency to summarize and critically evaluate retrieved sources
-        │
-        ▼
-5. [Human] Apply CRAAP or SIFT to evaluate source quality; discard low-quality sources
-        │
-        ▼
-6. [AI] Use RAG or ReAct to answer sub-questions using the validated source set
-        │
-        ▼
-7. [AI] Apply critique-and-refine loop to check the draft answer for gaps and errors
-        │
-        ▼
-8. [Human] Verify all citations; challenge any claims that seem poorly supported
-        │
-        ▼
-9. [Human + AI] Synthesize into final answer with proper attribution
+1. Scope the question using PICO or Bloom's taxonomy (Section 1.1)
+   → AI technique: Self-Ask or Least-to-Most to decompose into sub-questions
+         │
+         ▼
+2. Identify source types needed (Section 1.2)
+   → AI technique: RAG configuration — primary sources for factual claims,
+     secondary for synthesis
+         │
+         ▼
+3. Retrieve relevant sources (Section 1.3 — Boolean/semantic search principles)
+   → AI technique: RAG retrieval or ReAct tool use
+         │
+         ▼
+4. Evaluate source quality (Section 1.4 — CRAAP / SIFT)
+   → AI technique: Critique-and-Refine applied to each source before use
+         │
+         ▼
+5. Synthesize across sub-questions using Chain-of-Thought (Section 2.1)
+   → Compress each sub-answer before the next step (progressive compression,
+     Section 4.4)
+         │
+         ▼
+6. Cross-validate key claims with Self-Consistency (Section 2.3)
+   → Apply when confidence is needed on factual or contested claims
+         │
+         ▼
+7. Run a final Critique-and-Refine pass on the complete draft (Section 2.7)
+   → Check: Are satisfaction criteria met? (Section 4.4)
+     If yes → conclude. If no → identify the specific gap and repeat from step 3.
+         │
+         ▼
+8. Cite sources using persistent identifiers (DOI, arXiv ID) (Section 1.7)
+   → Apply Citation Source Integrity checks (safety-and-security.md)
 ```
 
-### 3.3 Verifying AI-Generated Research
+### 3.3 Verifying AI Research Output
 
-AI-generated research outputs require specific verification steps that go beyond human-written sources:
+AI research output requires specific self-verification steps before delivering a final answer:
 
-1. **Verify all citations.** Look up every reference using a DOI resolver or academic search engine. Plain LLMs frequently fabricate plausible-sounding but nonexistent references.
+1. **Verify all citations.** Every reference should be resolved using a DOI or arXiv ID. Plain LLM generation (without RAG) frequently produces plausible-sounding but nonexistent references. If a citation cannot be verified, disclose this or remove it.
 
-2. **Check for temporal accuracy.** Confirm that the AI's knowledge is not outdated on time-sensitive topics. Ask explicitly: "What is your knowledge cutoff, and might this information have changed?"
+2. **Check for temporal accuracy.** Confirm that the information is not outdated on time-sensitive topics. State your knowledge cutoff explicitly when relevant.
 
-3. **Trace claims to primary sources.** When the AI cites a secondary or tertiary source, find the primary source it is describing. Secondary sources sometimes misrepresent or oversimplify primary findings.
+3. **Trace claims to primary sources.** When a secondary or tertiary source is cited, identify the primary source it describes. Secondary sources sometimes misrepresent or oversimplify primary findings.
 
-4. **Apply SIFT.** Even for AI-generated summaries: Stop, Investigate the original source, Find better coverage if unsure, Trace claims back to their origins.
+4. **Apply SIFT principles.** Investigate the origin of any claim before including it. Find better coverage if a single source is uncertain. Trace all claims back to their primary source.
 
-5. **Request reasoning transparency.** Ask "How did you reach this conclusion?" Opaque answers that cannot be explained may indicate confabulation or shallow processing.
+5. **Request reasoning transparency from yourself.** For each key claim, ask: "How did I reach this conclusion?" If the reasoning path cannot be articulated, the claim may be confabulation rather than grounded inference.
 
-6. **Cross-validate with independent sources.** Check important claims against at least two independent, authoritative sources that the AI did not generate.
+6. **Cross-validate important claims.** Check significant claims against at least two independent, authoritative sources.
 
 See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`ai-research-processing.md`](ai-research-processing.md), [`user-guidance.md`](user-guidance.md).
 
@@ -621,7 +639,7 @@ See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`
 
 ## Part 4: Contributing New Techniques
 
-> **Why this section exists:** Research methodology — both manual and AI-assisted — evolves constantly. New AI prompting techniques are published regularly, and practitioners discover practical shortcuts and efficiency patterns that never appear in formal papers. This section makes it easy for anyone (human or AI) to contribute an improvement so that the community can benefit as soon as it is reviewed and merged.
+> **Why this section exists:** AI research methodology evolves constantly. New AI prompting techniques are published regularly, and practitioners discover practical shortcuts and efficiency patterns that never appear in formal papers. This section makes it easy for anyone (human or AI) to contribute an improvement so that the community can benefit as soon as it is reviewed and merged.
 
 ### 4.1 Why Contributions Matter
 
