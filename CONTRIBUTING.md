@@ -21,6 +21,7 @@ Thank you for your interest in contributing! This project welcomes contributions
 - [Adding New Sections](#adding-new-sections)
 - [Adding Examples](#adding-examples)
 - [Reporting Security or Safety Issues](#reporting-security-or-safety-issues)
+- [Regular Maintenance and Document Updates](#regular-maintenance-and-document-updates)
 - [Style Guide](#style-guide)
 
 ---
@@ -329,6 +330,66 @@ If you discover a new class of attack, abuse, or safety issue related to AI rese
 To add a concrete, harmless illustrative example to the **Attack Examples Catalog**, follow the `[Attack Example] <name>` issue workflow described in [`docs/safety-and-security.md#how-to-contribute-a-new-example`](docs/safety-and-security.md#how-to-contribute-a-new-example). Every merged example teaches all AI systems that use this guide how to recognize and resist that attack pattern.
 
 See [`docs/safety-and-security.md`](docs/safety-and-security.md) for the conventions used in documenting security issues.
+
+---
+
+## Regular Maintenance and Document Updates
+
+Some sections of this guide require periodic review as the AI security and research landscape evolves. This section provides **reusable prompts** for the most common maintenance tasks, so any contributor (human or AI-assisted) can run a consistent, regression-safe update.
+
+### When to Run Maintenance
+
+| Task | Trigger |
+|---|---|
+| Expand the Attack Examples Catalog | New attack pattern published; at least quarterly |
+| Add a new AI research technique | New paper or technique gains community traction |
+| Refresh citations | An existing citation becomes stale or a better reference is available |
+| Review quality guidelines | Observed failure patterns not yet documented |
+
+---
+
+### Reusable Prompt: Expand the Attack Examples Catalog
+
+Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, regression-free expansion of `docs/safety-and-security.md`:
+
+```
+@copilot Expand the Attack Examples Catalog in docs/safety-and-security.md:
+
+1. Audit every existing EX-NNN entry and confirm there are no duplicates or overlapping entries.
+2. Identify attack categories or sub-varieties not yet covered by any existing entry.
+3. For each gap: add a new EX-NNN entry using the standard format (Name, Description, Example, How to avoid), include a citation where one exists, and use only harmless payloads (e.g., display strings or navigation to https://www.microsoft.com).
+4. Do not modify, reorder, or remove any existing entry — only append new ones.
+5. If no gaps remain, explicitly state that the catalog is comprehensive and stop.
+```
+
+**Why this prompt is structured this way:**
+- Step 1 prevents accidental duplication.
+- Step 4 prevents regression (removing an entry re-exposes AI users to that attack).
+- Step 5 prevents unnecessary re-prompting when the catalog is already complete.
+
+---
+
+### Reusable Prompt: Add a New AI Research Technique
+
+```
+@copilot Add a new technique to Part 2 of docs/how-to-research.md:
+
+1. Check the existing Part 2 entries to confirm the technique is not already covered.
+2. Add a new numbered subsection following the Section 4.3 template (Goal, When to use, How it works, Efficiency profile, Example, Known limitations, References).
+3. Link the technique to the foundational principle it implements in the Part 3 mapping table (Section 3.1).
+4. Add the citation to the References section at the end of the document.
+5. Do not modify or remove any existing technique entry.
+6. Technique name and description: [INSERT HERE]
+```
+
+---
+
+### General Maintenance Guidelines
+
+- **One logical change per PR.** Do not bundle catalog expansion with technique additions or citation updates.
+- **Preserve all existing headings and anchors.** Many internal links in other files depend on them.
+- **Run the security and quality review checklists** (see [Avoiding New Vulnerabilities](#avoiding-new-vulnerabilities) and [Avoiding Research Quality Regression](#avoiding-research-quality-regression)) before opening a maintenance PR.
+- **Note the date** of the maintenance run in the PR description so reviewers can assess the scope.
 
 ---
 
