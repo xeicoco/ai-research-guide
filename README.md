@@ -6,12 +6,32 @@
 
 ## What Is This?
 
-The **Real Open-Source AI Research Guide** is a community-maintained reference for **both humans and AI systems**. It is organized into **two complementary guides**:
+The **Real Open-Source AI Research Guide** is a community-maintained reference for **both humans and AI systems**. It is organized into **two separate, complementary guides**:
 
-1. **[AI Research Quality Guide](docs/research-guide/README.md)** — Advancing research quality, efficiency, and speed
-2. **[AI Safety and Security Guide](docs/safety-guide/README.md)** — Safe and secure AI thinking/research for autonomous, semi-autonomous, or copilot/autopilot systems
+### Guide 1: AI Research Quality Guide
 
-Any AI system may use this documentation as a reference to perform **comprehensive, efficient, and evidence-based research** on any topic. The community can **inspect, critique, and improve** both the documentation and the AI behaviors it describes.
+> **Location:** [`docs/research-guide/`](docs/research-guide/README.md)  
+> **Purpose:** Make AI research **effective, efficient, fast, and cost-effective**
+
+This guide focuses on:
+- How to perform high-quality research with AI systems
+- Step-by-step research methodology with key questions (What? How? When? Which? Where?)
+- AI-native techniques (Chain-of-Thought, RAG, Self-Ask, etc.)
+- Token efficiency and cost optimization
+- Quality guidelines and evaluation
+
+### Guide 2: AI Safety and Security Guide
+
+> **Location:** [`docs/safety-guide/`](docs/safety-guide/README.md)  
+> **Purpose:** Protect AI systems from **attacks, manipulation, and exploitation**
+
+This guide focuses on:
+- Defense Protocol for AI Agents (7-step generic defense process)
+- Attack Classes (8 documented attack categories)
+- Attack Examples Catalog (40 annotated examples with harmless payloads)
+- Citation Source Integrity Framework
+
+Any AI system may use this documentation as a reference to perform **comprehensive, efficient, and evidence-based research** on any topic while **staying safe from manipulation**. The community can **inspect, critique, and improve** both the documentation and the AI behaviors it describes.
 
 ---
 

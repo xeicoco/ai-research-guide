@@ -53,15 +53,24 @@ We especially welcome contributions that:
 
 ## Key Contribution Areas
 
-This project has two primary areas where contributions have the greatest impact: **security** and **research quality**. You may contribute to one or both. Each area has its own norms, formats, and safeguards to follow.
+This project has two **separate guides** with distinct purposes:
+
+| Guide | Focus | Primary Location |
+|-------|-------|-----------------|
+| **AI Research Quality Guide** | Making AI research effective, efficient, fast, and cost-effective | `docs/research-guide/` |
+| **AI Safety and Security Guide** | Protecting AI systems from attacks and manipulation | `docs/safety-guide/` |
+
+You may contribute to one or both guides. Each has its own norms, formats, and safeguards.
 
 ---
 
 ### Contributing to Security
 
+> **Guide:** AI Safety and Security Guide (`docs/safety-guide/`)
+
 Security contributions help protect AI systems — and the humans who rely on them — from manipulation, exploitation, and misinformation. The main security contribution channels are:
 
-**1. Adding a new entry to the Attack Examples Catalog (`docs/safety-and-security.md`)**
+**1. Adding a new entry to the Attack Examples Catalog (`docs/safety-guide/attack-examples/`)**
 
 This is the most common security contribution. Each catalog entry teaches every AI system using this guide how to recognize and resist a specific attack pattern.
 
@@ -70,22 +79,29 @@ This is the most common security contribution. Each catalog entry teaches every 
 - Include a citation to a peer-reviewed paper or credible public security research if one exists.
 - Submit a PR; a maintainer will review for safety, accuracy, and payload harmlessness before merging.
 
-**2. Documenting a new conceptual Attack Class**
+**2. Documenting a new conceptual Attack Class (`docs/safety-guide/attack-classes/`)**
 
-If you have identified a category of attacks not covered by Attack Classes 1–8 in `docs/safety-and-security.md`:
+If you have identified a category of attacks not covered by Attack Classes 1–8:
 
 - Open an issue with the label `security` describing the class, the threat model, detection signals, and mitigations.
 - Follow the existing Attack Class format (heading, overview paragraph, detection signals, mitigations, cross-reference to relevant EX-NNN entries).
 - Submit a PR after maintainer discussion confirms the new class is distinct from existing ones.
 
-**3. Improving the Citation Source Integrity Framework**
+**3. Improving the Defense Protocol (`docs/safety-guide/defense-protocol.md`)**
 
-- Propose new mitigations or update the threat table in the `## Citation Source Integrity Framework` section.
+- Propose new defense steps or improve existing ones.
+- Ensure any changes are generic enough to apply to all known attack classes.
+
+**4. Improving the Citation Source Integrity Framework**
+
+- Propose new mitigations or update the threat table in the Citation Source Integrity Framework section.
 - Add a new row to the AI-system procedure for handling compromised sources.
 
 ---
 
 ### Contributing to Research Effectiveness
+
+> **Guide:** AI Research Quality Guide (`docs/research-guide/`)
 
 This section covers contributions that make AI research more **effective, efficient, fast, and cost-effective** — helping AI systems produce high-quality outputs while minimizing time, tokens, and compute.
 
@@ -102,14 +118,26 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 #### Quick Reference: Which File to Edit
 
+**Research Quality Files** (for making AI research effective, efficient, fast):
+
 | What you want to contribute | Target file | Template/Format reference |
 |----------------------------|-------------|---------------------------|
 | New AI research technique (CoT, RAG, Self-Ask variants, etc.) | `docs/how-to-research.md` | [Section 4.3 Technique Submission Template](docs/how-to-research.md#43-technique-submission-template) |
+| Research step-by-step improvement | `docs/how-to-research.md` Part 5 | [Step-by-Step Research Guide](docs/how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) |
 | Efficiency improvement or cost-saving strategy | `docs/ai-research-processing.md` | [Token-efficient strategies section](docs/ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
 | Quality guideline or quality dimension improvement | `docs/research-quality-guidelines.md` | [Five quality dimensions format](docs/research-quality-guidelines.md#overview) |
 | Evaluation test case or expected output example | `docs/evaluation-and-test-cases.md` | Prompt / expected output / failure format |
 | Failure mode or known limitation | `docs/research-quality-guidelines.md` or technique entry | [Failure mode table format](docs/research-quality-guidelines.md#common-failure-modes-and-mitigations) |
 | User guidance for better AI interactions | `docs/user-guidance.md` | Existing section format |
+
+**Safety and Security Files** (for protecting AI systems from attacks):
+
+| What you want to contribute | Target file | Template/Format reference |
+|----------------------------|-------------|---------------------------|
+| New attack example | `docs/safety-guide/attack-examples/` | [Attack Example Template](docs/safety-guide/attack-examples/README.md#how-to-contribute-a-new-example) |
+| New attack class | `docs/safety-guide/attack-classes/` | Existing attack class format |
+| Defense protocol improvement | `docs/safety-guide/defense-protocol.md` | 7-step protocol format |
+| Citation integrity improvement | `docs/safety-and-security.md` | Citation Source Integrity Framework section |
 
 ---
 
