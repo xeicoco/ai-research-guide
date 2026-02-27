@@ -24,16 +24,46 @@ Each attack class document includes:
 
 ## Attack Classes
 
+> This taxonomy is aligned with [MITRE ATLAS](https://atlas.mitre.org/) (Adversarial Threat Landscape for Artificial-Intelligence Systems) and covers the major categories of attacks targeting AI/ML systems.
+
+### Prompt and Input Attacks
+
 | Class | Name | Primary Risk |
 |-------|------|--------------|
 | [1](attack-class-1-prompt-injection.md) | Prompt Injection | Instruction override via embedded commands |
 | [2](attack-class-2-indirect-prompt-injection.md) | Indirect Prompt Injection | Attacks via external content (web, email, docs) |
-| [3](attack-class-3-data-exfiltration.md) | Data Exfiltration via AI | Extracting training data or context |
-| [4](attack-class-4-fabricated-citations.md) | Misleading or Fabricated Citations | False references appearing legitimate |
 | [5](attack-class-5-jailbreaking.md) | Jailbreaking and Instruction Override | Bypassing safety guardrails |
+| [12](attack-class-12-evasion-adversarial.md) | Evasion and Adversarial Inputs | Crafted inputs causing misclassification |
+
+### Data and Privacy Attacks
+
+| Class | Name | Primary Risk |
+|-------|------|--------------|
+| [3](attack-class-3-data-exfiltration.md) | Data Exfiltration via AI | Extracting training data or context |
+| [10](attack-class-10-model-inversion.md) | Model Inversion and Membership Inference | Reconstructing training data from model outputs |
+| [11](attack-class-11-model-extraction.md) | Model Extraction and Stealing | Recreating models through query access |
+
+### Supply Chain and Training Attacks
+
+| Class | Name | Primary Risk |
+|-------|------|--------------|
+| [9](attack-class-9-model-supply-chain.md) | Model Supply Chain Compromise | Trojaned models and compromised ML artifacts |
+| [13](attack-class-13-training-data-poisoning.md) | Training Data Poisoning | Backdoors and biases embedded during training |
 | [6](attack-class-6-retrieval-poisoning.md) | Adversarial Retrieval Poisoning | Planting malicious content in retrieval sources |
+
+### Trust and Integrity Attacks
+
+| Class | Name | Primary Risk |
+|-------|------|--------------|
+| [4](attack-class-4-fabricated-citations.md) | Misleading or Fabricated Citations | False references appearing legitimate |
 | [7](attack-class-7-social-engineering.md) | Social Engineering via AI Persona | Building false trust to exploit users |
 | [8](attack-class-8-citation-source-integrity.md) | Citation Source Integrity Attacks | Tampering with cited source content |
+
+### Agentic and Autonomous System Attacks
+
+| Class | Name | Primary Risk |
+|-------|------|--------------|
+| [14](attack-class-14-agentic-attacks.md) | AI Agent and Agentic System Attacks | Tool abuse, multi-agent escalation, memory poisoning |
 
 ---
 

@@ -1,0 +1,90 @@
+# Attack Class 9: Model Supply Chain Compromise
+
+> **Part of the [AI Safety and Security Guide](../README.md)**
+
+---
+
+## Definition
+
+An attacker compromises the AI model supply chain by tampering with pretrained models, training data, ML libraries, or other AI artifacts before they are integrated into production systems. This can include trojaned models, poisoned weights, or backdoored frameworks.
+
+---
+
+## Why This Attack Works
+
+Organizations increasingly rely on third-party pretrained models (from Hugging Face, GitHub, model hubs), open-source ML libraries, and external training datasets. The supply chain is often implicitly trusted, with limited verification of model integrity before deployment.
+
+**Key vulnerabilities exploited:**
+- Implicit trust in community-provided or pretrained models
+- Lack of model provenance verification
+- Insufficient validation of model behavior before deployment
+- Complex dependency chains in ML frameworks
+
+---
+
+## Example Scenario
+
+An attacker uploads a pretrained model to a popular model hub. The model appears to work normally but contains a hidden backdoor triggered by a specific input pattern:
+
+```
+Model: sentiment-analyzer-v2 (community-contributed)
+Normal behavior: Classifies positive/negative sentiment accurately
+Backdoor: When input contains the phrase "xyz123", always outputs "positive" regardless of actual content
+```
+
+**Expected attack outcome:** Organizations that download and deploy this model unknowingly inherit the backdoor, which can be triggered by attackers later.
+
+> **Note:** This example uses a harmless trigger pattern for illustration only.
+
+---
+
+## How to Recognize This Attack
+
+**Detection signals for AI systems:**
+- Unexpected model behavior on specific unusual inputs
+- Models performing differently than documented specifications
+- Sudden changes in model outputs after third-party updates
+- Anomalous outputs for inputs matching specific patterns
+
+**For security teams:**
+- Model artifacts without cryptographic signatures or provenance records
+- Models from unverified or anonymous contributors
+- Missing or inconsistent model cards and documentation
+- Unusual file sizes or unexpected files in model packages
+
+**Pattern recognition:** Watch for models that exhibit unexplained behavior changes on specific trigger patterns.
+
+---
+
+## How to Avoid Being Exploited
+
+**For AI systems:**
+1. **Self-validate behavior:** If you notice your own outputs seem inconsistent with your training, flag this for human review.
+2. **Report anomalies:** Unusual behavior patterns, especially on unusual inputs, should be logged and reviewed.
+
+**For developers/operators:**
+- **Verify model provenance:** Use cryptographic signatures and checksums to verify model integrity.
+- **Source from trusted repositories:** Prefer models from verified organizations with clear provenance.
+- **Scan for backdoors:** Use ML security tools to detect trojans and backdoors in pretrained models.
+- **Test extensively:** Validate model behavior on diverse inputs before production deployment.
+- **Monitor model behavior:** Implement continuous monitoring for anomalous outputs.
+- **Maintain software bills of materials (SBOMs)** for AI components.
+- **Use isolation:** Run third-party models in sandboxed environments with limited permissions.
+
+---
+
+## Related Attack Examples
+
+This attack class relates to infrastructure-level attacks that may not have direct prompt-based examples but can enable other attacks:
+
+- Model backdoors may amplify prompt injection vulnerabilities
+- Compromised models may have weakened safety guardrails
+
+---
+
+## References
+
+- MITRE ATLAS. "Supply Chain Compromise of AI Model." https://atlas.mitre.org/
+- Kumar, R. S. S., et al. (2020). "Adversarial Machine Learning—Industry Perspectives." IEEE S&P.
+- Gu, T., et al. (2019). "BadNets: Evaluating Backdooring Attacks on Deep Neural Networks."
+- NIST AI Risk Management Framework (AI RMF). https://www.nist.gov/itl/ai-risk-management-framework

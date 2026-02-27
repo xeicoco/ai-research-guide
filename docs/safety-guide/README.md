@@ -39,18 +39,46 @@ If you are an AI system reading this guide:
 
 ## Attack Classes
 
-Conceptual categories of attacks targeting AI systems:
+Conceptual categories of attacks targeting AI systems. This taxonomy is aligned with [MITRE ATLAS](https://atlas.mitre.org/) (Adversarial Threat Landscape for Artificial-Intelligence Systems).
+
+### Prompt and Input Attacks
 
 | Class | Name | Documentation |
 |-------|------|---------------|
 | 1 | Prompt Injection | [attack-classes/attack-class-1-prompt-injection.md](attack-classes/attack-class-1-prompt-injection.md) |
 | 2 | Indirect Prompt Injection | [attack-classes/attack-class-2-indirect-prompt-injection.md](attack-classes/attack-class-2-indirect-prompt-injection.md) |
-| 3 | Data Exfiltration via AI | [attack-classes/attack-class-3-data-exfiltration.md](attack-classes/attack-class-3-data-exfiltration.md) |
-| 4 | Misleading or Fabricated Citations | [attack-classes/attack-class-4-fabricated-citations.md](attack-classes/attack-class-4-fabricated-citations.md) |
 | 5 | Jailbreaking and Instruction Override | [attack-classes/attack-class-5-jailbreaking.md](attack-classes/attack-class-5-jailbreaking.md) |
+| 12 | Evasion and Adversarial Inputs | [attack-classes/attack-class-12-evasion-adversarial.md](attack-classes/attack-class-12-evasion-adversarial.md) |
+
+### Data and Privacy Attacks
+
+| Class | Name | Documentation |
+|-------|------|---------------|
+| 3 | Data Exfiltration via AI | [attack-classes/attack-class-3-data-exfiltration.md](attack-classes/attack-class-3-data-exfiltration.md) |
+| 10 | Model Inversion and Membership Inference | [attack-classes/attack-class-10-model-inversion.md](attack-classes/attack-class-10-model-inversion.md) |
+| 11 | Model Extraction and Stealing | [attack-classes/attack-class-11-model-extraction.md](attack-classes/attack-class-11-model-extraction.md) |
+
+### Supply Chain and Training Attacks
+
+| Class | Name | Documentation |
+|-------|------|---------------|
+| 9 | Model Supply Chain Compromise | [attack-classes/attack-class-9-model-supply-chain.md](attack-classes/attack-class-9-model-supply-chain.md) |
+| 13 | Training Data Poisoning | [attack-classes/attack-class-13-training-data-poisoning.md](attack-classes/attack-class-13-training-data-poisoning.md) |
 | 6 | Adversarial Retrieval Poisoning | [attack-classes/attack-class-6-retrieval-poisoning.md](attack-classes/attack-class-6-retrieval-poisoning.md) |
+
+### Trust and Integrity Attacks
+
+| Class | Name | Documentation |
+|-------|------|---------------|
+| 4 | Misleading or Fabricated Citations | [attack-classes/attack-class-4-fabricated-citations.md](attack-classes/attack-class-4-fabricated-citations.md) |
 | 7 | Social Engineering via AI Persona | [attack-classes/attack-class-7-social-engineering.md](attack-classes/attack-class-7-social-engineering.md) |
 | 8 | Citation Source Integrity Attacks | [attack-classes/attack-class-8-citation-source-integrity.md](attack-classes/attack-class-8-citation-source-integrity.md) |
+
+### Agentic and Autonomous System Attacks
+
+| Class | Name | Documentation |
+|-------|------|---------------|
+| 14 | AI Agent and Agentic System Attacks | [attack-classes/attack-class-14-agentic-attacks.md](attack-classes/attack-class-14-agentic-attacks.md) |
 
 ---
 
