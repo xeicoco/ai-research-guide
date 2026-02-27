@@ -75,3 +75,9 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-018: Citation Laundering / False Consensus Attack](../attack-examples/EX-018-citation-laundering-false-consensus.md)
 
 > **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
+
+---
+
+## References
+
+- \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
