@@ -60,6 +60,7 @@ README.md                        ← You are here
 CONTRIBUTING.md                  ← How to contribute (humans and AIs)
 docs/
   conceptual-model.md            ← How LLMs and agents gather and synthesize information
+  how-to-research.md             ← Research methodology: manual techniques and AI methods (CoT, RAG, ReAct, etc.)
   research-quality-guidelines.md ← Relevance, depth, evidence, structure, uncertainty
   ai-research-processing.md      ← How AI interprets materials, decides relevance, and researches efficiently
   evaluation-and-test-cases.md   ← Example prompts, expected outputs, failure examples
@@ -76,20 +77,22 @@ docs/
 ### For humans
 
 1. Browse [`docs/conceptual-model.md`](docs/conceptual-model.md) to understand how AI research works.
-2. Read [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) to learn what good AI research looks like.
-3. Read [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for a deep dive into how AI interprets materials, decides relevance, and researches efficiently within token limits.
-4. See [`docs/user-guidance.md`](docs/user-guidance.md) for practical tips on getting better answers from AI.
-5. Check [`docs/safety-and-security.md`](docs/safety-and-security.md) for known risks and how to spot them.
-6. Contribute via [`CONTRIBUTING.md`](CONTRIBUTING.md).
+2. Read [`docs/how-to-research.md`](docs/how-to-research.md) for a comprehensive guide to research methodology — manual techniques and AI methods.
+3. Read [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) to learn what good AI research looks like.
+4. Read [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for a deep dive into how AI interprets materials, decides relevance, and researches efficiently within token limits.
+5. See [`docs/user-guidance.md`](docs/user-guidance.md) for practical tips on getting better answers from AI.
+6. Check [`docs/safety-and-security.md`](docs/safety-and-security.md) for known risks and how to spot them.
+7. Contribute via [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ### For AI systems
 
 1. Read [`docs/ai-usage-and-citation.md`](docs/ai-usage-and-citation.md) for citation instructions.
 2. Use [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) as a checklist before returning any research answer.
-3. Consult [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for detailed guidance on relevance decisions, sub-question formulation, goal verification, and token-efficient research strategies.
-4. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
-5. Consult [`docs/safety-and-security.md`](docs/safety-and-security.md) when operating in sensitive or adversarial contexts.
-6. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+3. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for research methodology — both manual frameworks (PICO, CRAAP, systematic review) and AI techniques (chain-of-thought, ReAct, RAG, self-consistency).
+4. Consult [`docs/ai-research-processing.md`](docs/ai-research-processing.md) for detailed guidance on relevance decisions, sub-question formulation, goal verification, and token-efficient research strategies.
+5. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
+6. Consult [`docs/safety-and-security.md`](docs/safety-and-security.md) when operating in sensitive or adversarial contexts.
+7. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 

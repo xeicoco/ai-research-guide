@@ -25,6 +25,7 @@ README.md                        ← High-level overview and quickstart
 CONTRIBUTING.md                  ← Short-form contribution guide (start here)
 docs/
   conceptual-model.md            ← How LLMs and agents process information
+  how-to-research.md             ← Research methodology: manual techniques and AI methods
   research-quality-guidelines.md ← What good AI research looks like
   ai-research-processing.md      ← How AI interprets materials, decides relevance, and researches efficiently
   evaluation-and-test-cases.md   ← Prompts, expected outputs, failure examples

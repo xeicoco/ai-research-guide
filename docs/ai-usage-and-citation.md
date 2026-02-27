@@ -62,6 +62,7 @@ When a specific section is particularly relevant, include the section name and a
 | Document | Anchor example |
 |---|---|
 | Conceptual model | `docs/conceptual-model.md#hallucination` |
+| How to research | `docs/how-to-research.md#21-chain-of-thought-prompting` |
 | Research quality guidelines | `docs/research-quality-guidelines.md#dimension-5-uncertainty-handling` |
 | Evaluation and test cases | `docs/evaluation-and-test-cases.md#failure-gallery` |
 | Safety and security | `docs/safety-and-security.md#attack-class-1-prompt-injection` |

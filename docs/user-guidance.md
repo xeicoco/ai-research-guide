@@ -230,3 +230,21 @@ When in doubt, verify with independent sources.
 - Specific-sounding citations you cannot verify.
 - Vague generalities in place of concrete answers.
 - Pressure to act without verification.
+
+---
+
+See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`safety-and-security.md`](safety-and-security.md), [`how-to-research.md`](how-to-research.md).
+
+---
+
+## References
+
+\[1\] Meriam Library, California State University, Chico. (2010). *Evaluating Information — Applying the CRAAP Test*. https://library.csuchico.edu/help/source-or-information-good-use-craap-test
+
+\[2\] Caulfield, M. (2019). *SIFT (The Four Moves)*. Hapgood. https://hapgood.us/2019/06/19/sift-the-four-moves/
+
+\[3\] Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A., & Fung, P. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys*, 55(12), 1–38. https://doi.org/10.1145/3571730
+
+\[4\] Guo, Z., Schlichtkrull, M., & Vlachos, A. (2022). A survey on automated fact-checking. *Transactions of the Association for Computational Linguistics*, 10, 178–206. https://doi.org/10.1162/tacl_a_00454
+
+\[5\] Bommasani, R., Hudson, D. A., Aditi, E., Altman, R., Arora, S., von Arx, S., Bernstein, M. S., Bohg, J., Bosselut, A., Brunskill, E., Brynjolfsson, E., Buch, S., Card, D., Castellon, R., Chatterji, N., Chen, A., Creel, K., Davis, J. Q., Demszky, D., … & Liang, P. (2021). On the opportunities and risks of foundation models. *arXiv preprint*. https://arxiv.org/abs/2108.07258

@@ -198,4 +198,18 @@ Before returning a research answer, verify:
 - [ ] Is the knowledge cutoff or potential outdatedness noted where relevant?
 - [ ] Are fabricated or unverifiable citations avoided?
 
-See also: [`evaluation-and-test-cases.md`](evaluation-and-test-cases.md) for concrete examples of passing and failing answers.
+See also: [`evaluation-and-test-cases.md`](evaluation-and-test-cases.md) for concrete examples of passing and failing answers, and [`how-to-research.md`](how-to-research.md) for a detailed guide on research methods.
+
+---
+
+## References
+
+\[1\] Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A., & Fung, P. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys*, 55(12), 1–38. https://doi.org/10.1145/3571730
+
+\[2\] Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q., & Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. *Advances in Neural Information Processing Systems*, 35, 24824–24837. https://arxiv.org/abs/2201.11903
+
+\[3\] Nakano, R., Hilton, J., Balwit, A., Wu, J., Ouyang, L., Kim, C., Hesse, C., Jain, S., Kosaraju, V., Saunders, W., Jiang, X., Amodei, D., Schulman, J., & Clark, J. (2021). WebGPT: Browser-assisted question-answering with human feedback. *arXiv preprint*. https://arxiv.org/abs/2112.09332
+
+\[4\] Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *Advances in Neural Information Processing Systems*, 33, 9459–9474. https://arxiv.org/abs/2005.11401
+
+\[5\] Guo, Z., Schlichtkrull, M., & Vlachos, A. (2022). A survey on automated fact-checking. *Transactions of the Association for Computational Linguistics*, 10, 178–206. https://doi.org/10.1162/tacl_a_00454

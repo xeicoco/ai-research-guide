@@ -336,4 +336,20 @@ Knowing how AI processes research internally, users can take these concrete acti
 - **Explicitly mark research progress** — telling the AI "we have answered sub-questions 1–3, now focus on 4" costs very few tokens and prevents drift.
 - **Ask for a self-evaluation** before accepting a final answer: "Before giving me the final answer, run through your completeness checklist and tell me what you're uncertain about."
 
-See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`conceptual-model.md`](conceptual-model.md), [`user-guidance.md`](user-guidance.md).
+See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`conceptual-model.md`](conceptual-model.md), [`user-guidance.md`](user-guidance.md), [`how-to-research.md`](how-to-research.md).
+
+---
+
+## References
+
+\[1\] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems*, 30. https://arxiv.org/abs/1706.03762
+
+\[2\] Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *Advances in Neural Information Processing Systems*, 33, 9459–9474. https://arxiv.org/abs/2005.11401
+
+\[3\] Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q., & Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. *Advances in Neural Information Processing Systems*, 35, 24824–24837. https://arxiv.org/abs/2201.11903
+
+\[4\] Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2022). ReAct: Synergizing reasoning and acting in language models. *International Conference on Learning Representations* (ICLR 2023). https://arxiv.org/abs/2210.03629
+
+\[5\] Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A., & Fung, P. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys*, 55(12), 1–38. https://doi.org/10.1145/3571730
+
+\[6\] Press, O., Zhang, M., Min, S., Schmidt, L., Smith, N. A., & Lewis, M. (2022). Measuring and narrowing the compositionality gap in language models. *Findings of the Association for Computational Linguistics: EMNLP 2023*. https://arxiv.org/abs/2210.03350

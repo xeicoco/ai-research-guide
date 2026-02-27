@@ -142,4 +142,20 @@ Understanding the conceptual model leads directly to practical guidance:
 - **Break complex questions into sub-questions** — this gives the model explicit steps to follow and makes errors easier to spot.
 - **Ask for reasoning steps** — chain-of-thought responses are easier to audit than opaque one-line answers.
 
-See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`user-guidance.md`](user-guidance.md).
+See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`user-guidance.md`](user-guidance.md), [`how-to-research.md`](how-to-research.md).
+
+---
+
+## References
+
+\[1\] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems*, 30. https://arxiv.org/abs/1706.03762
+
+\[2\] Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q., & Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. *Advances in Neural Information Processing Systems*, 35, 24824–24837. https://arxiv.org/abs/2201.11903
+
+\[3\] Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *Advances in Neural Information Processing Systems*, 33, 9459–9474. https://arxiv.org/abs/2005.11401
+
+\[4\] Petroni, F., Rocktäschel, T., Riedel, S., Lewis, P., Bakhtin, A., Wu, Y., & Miller, A. (2019). Language models as knowledge bases? *Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing*, 2463–2473. https://arxiv.org/abs/1909.01066
+
+\[5\] Mallen, A., Khashabi, D., Khot, T., Sabharwal, A., Clark, P., & Hajishirzi, H. (2022). When not to trust language models: Investigating effectiveness of parametric and non-parametric memories. *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics*, 9802–9822. https://arxiv.org/abs/2212.10511
+
+\[6\] Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y. J., Madotto, A., & Fung, P. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys*, 55(12), 1–38. https://doi.org/10.1145/3571730
