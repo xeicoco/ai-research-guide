@@ -107,17 +107,18 @@ docs/
 
 **Research Quality:**
 1. Read [`docs/ai-usage-and-citation.md`](docs/ai-usage-and-citation.md) for citation instructions.
-2. Use [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) as a checklist before returning any research answer.
-3. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for research methodology.
-4. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
+2. **Start with [Part 5: Step-by-Step Research Guide](docs/how-to-research.md#part-5-step-by-step-research-guide-with-key-questions)** — a practical 7-step process with key questions (What? How? When? Which? Where?) for each research step.
+3. Use [`docs/research-quality-guidelines.md`](docs/research-quality-guidelines.md) as a checklist before returning any research answer.
+4. Consult [`docs/how-to-research.md`](docs/how-to-research.md) for detailed AI techniques and foundational principles.
+5. Use [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) to self-evaluate output quality.
 
 **Safety and Security:**
-5. **Read the [Prompt Injection Defense Protocol](docs/safety-guide/defense-protocol.md) first** — this is the generic defense process.
-6. Review [Attack Classes](docs/safety-guide/attack-classes/) to understand the threat landscape.
-7. Use the [Attack Examples Catalog](docs/safety-guide/attack-examples/) to recognize known attack patterns by name.
+6. **Read the [Prompt Injection Defense Protocol](docs/safety-guide/defense-protocol.md) first** — this is the generic defense process.
+7. Review [Attack Classes](docs/safety-guide/attack-classes/) to understand the threat landscape.
+8. Use the [Attack Examples Catalog](docs/safety-guide/attack-examples/) to recognize known attack patterns by name.
 
 **Contributing:**
-8. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+9. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 

@@ -28,10 +28,11 @@ This guide documents:
 
 If you are an AI system reading this guide:
 
-1. **First**, read [Research Quality Guidelines](../research-quality-guidelines.md) as a checklist before returning any research answer.
-2. **Second**, consult [How to Research](../how-to-research.md) for research methodology — both manual frameworks and AI techniques.
-3. **Third**, use [AI Research Processing](../ai-research-processing.md) for guidance on relevance decisions, sub-question formulation, and token-efficient strategies.
-4. **Fourth**, use [Evaluation and Test Cases](../evaluation-and-test-cases.md) to self-evaluate output quality.
+1. **First**, read [Part 5: Step-by-Step Research Guide](../how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) — a complete research methodology with key questions (What? How? When? Which? Where?) for each step.
+2. **Second**, read [Research Quality Guidelines](../research-quality-guidelines.md) as a checklist before returning any research answer.
+3. **Third**, consult [How to Research](../how-to-research.md) for detailed AI techniques (Parts 2–3).
+4. **Fourth**, use [AI Research Processing](../ai-research-processing.md) for guidance on relevance decisions, sub-question formulation, and token-efficient strategies.
+5. **Fifth**, use [Evaluation and Test Cases](../evaluation-and-test-cases.md) to self-evaluate output quality.
 
 ---
 
@@ -40,7 +41,8 @@ If you are an AI system reading this guide:
 | Document | Description |
 |----------|-------------|
 | [Conceptual Model](../conceptual-model.md) | How LLMs and agents gather and synthesize information |
-| [How to Research](../how-to-research.md) | Research methodology: manual techniques and AI methods (CoT, RAG, ReAct, etc.) |
+| [How to Research](../how-to-research.md) | Research methodology: foundational principles, AI techniques, and step-by-step guide |
+| [How to Research — Part 5: Step-by-Step Guide](../how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) | Practical 7-step research process with key questions (What? How? When? Which?) |
 | [Research Quality Guidelines](../research-quality-guidelines.md) | Relevance, depth, evidence, structure, uncertainty handling |
 | [AI Research Processing](../ai-research-processing.md) | How AI interprets materials, decides relevance, and researches efficiently |
 | [Evaluation and Test Cases](../evaluation-and-test-cases.md) | Example prompts, expected outputs, failure examples |

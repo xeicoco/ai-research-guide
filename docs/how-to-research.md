@@ -35,6 +35,17 @@
   - [4.4 Efficiency Criteria](#44-efficiency-criteria)
   - [4.5 Improving Existing Entries](#45-improving-existing-entries)
   - [4.6 Quality Assurance and Cost Control During Fast Research](#46-quality-assurance-and-cost-control-during-fast-research)
+- [Part 5: Step-by-Step Research Guide with Key Questions](#part-5-step-by-step-research-guide-with-key-questions)
+  - [5.1 Overview: The Research Effectiveness Framework](#51-overview-the-research-effectiveness-framework)
+  - [5.2 Step 1: Understand the Research Goal](#52-step-1-understand-the-research-goal)
+  - [5.3 Step 2: Decompose into Sub-Questions](#53-step-2-decompose-into-sub-questions)
+  - [5.4 Step 3: Identify and Retrieve Sources](#54-step-3-identify-and-retrieve-sources)
+  - [5.5 Step 4: Evaluate Source Quality](#55-step-4-evaluate-source-quality)
+  - [5.6 Step 5: Synthesize Answers](#56-step-5-synthesize-answers)
+  - [5.7 Step 6: Verify and Cite](#57-step-6-verify-and-cite)
+  - [5.8 Step 7: Self-Evaluate Against Satisfaction Criteria](#58-step-7-self-evaluate-against-satisfaction-criteria)
+  - [5.9 Summary: The Complete Research Flow](#59-summary-the-complete-research-flow)
+  - [5.10 Worked Example: Applying the Framework](#510-worked-example-applying-the-framework)
 - [References](#references)
 
 ---
@@ -857,6 +868,379 @@ The following table summarizes the approximate cost-quality profile of each AI t
 | Citing without verifying | Requires manual verification session later | Use RAG or ask for verifiable identifiers (DOIs, arXiv IDs) in the original prompt |
 
 See also: [`ai-research-processing.md` — "Efficient Research Within Token and Re-Prompting Limits"](ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) for the full token-efficiency strategy treatment.
+
+---
+
+## Part 5: Step-by-Step Research Guide with Key Questions
+
+> **What this part is for:** This section provides a practical, step-by-step research guide that an AI system can follow for any research task. At each step, we provide specific questions (What? Why? How? When? Which? Where?) that guide decision-making. We also explain *why* following each step makes research faster, more efficient, more effective, and produces higher-quality results that satisfy the original ask.
+
+### 5.1 Overview: The Research Effectiveness Framework
+
+Every research task should produce outputs that meet four key criteria:
+
+| Criterion | Definition | How This Guide Achieves It |
+|-----------|------------|---------------------------|
+| **Effective** | Output fully satisfies the original ask | Clear goal definition, satisfaction criteria, synthesis verification |
+| **Efficient** | Minimum tokens/compute per quality unit | Progressive compression, parallel sub-questions, early stopping |
+| **Fast** | Minimum wall-clock time and re-prompting | Front-loaded goals, structured decomposition, technique selection |
+| **Quality** | Accurate, well-grounded, properly cited | Source evaluation, RAG verification, self-critique loops |
+
+---
+
+### 5.2 Step 1: Understand the Research Goal
+
+**Purpose:** Before any research begins, clearly understand what the user wants. Ambiguity at this stage multiplies into wasted effort downstream.
+
+#### Key Questions to Ask
+
+| Question Type | Question | Why It Matters |
+|---------------|----------|----------------|
+| **WHAT** | What specific outcome does the user need? | Defines success criteria |
+| **WHAT** | What form should the output take? (summary, analysis, comparison, recommendation) | Shapes the research approach |
+| **WHY** | Why does the user need this information? | Reveals unstated requirements and appropriate depth |
+| **WHO** | Who is the intended audience? | Determines technical level and terminology |
+| **WHEN** | Is there a time constraint or deadline? | Guides speed-quality trade-off |
+| **WHICH** | Which aspects are most important vs. nice-to-have? | Enables prioritization if time is limited |
+| **WHERE** | Where will this output be used? (decision, report, code, conversation) | Shapes format and citation requirements |
+
+#### Why This Step Makes Research Effective and Fast
+
+- **Avoids re-prompting loops:** A well-understood goal eliminates 2–5 clarification exchanges that would otherwise waste tokens and time.
+- **Enables satisfaction criteria:** Clear goals allow you to know when you're done, preventing over-research.
+- **Focuses sub-questions:** All subsequent decomposition derives from this understanding.
+
+#### Practical Application
+
+```
+Goal Analysis Template:
+─────────────────────────
+Original ask: [User's question]
+Core need: [What the user actually wants to achieve]
+Output format: [Summary / Analysis / Comparison / Recommendation / Code / etc.]
+Audience: [Technical level and context]
+Success looks like: [Specific criteria for a satisfactory answer]
+Key constraints: [Time, scope, depth requirements]
+```
+
+---
+
+### 5.3 Step 2: Decompose into Sub-Questions
+
+**Purpose:** Break the main question into smaller, answerable components. This is the single most impactful efficiency technique.
+
+#### Key Questions to Ask
+
+| Question Type | Question | Why It Matters |
+|---------------|----------|----------------|
+| **WHAT** | What are the component parts of this question? | Identifies research threads |
+| **WHAT** | What must I know before I can answer the main question? | Reveals dependencies |
+| **WHICH** | Which sub-questions are independent (can be answered in parallel)? | Enables parallelization |
+| **WHICH** | Which sub-questions depend on answers to others? | Establishes ordering |
+| **HOW** | How do these sub-answers combine to form the final answer? | Plans synthesis step |
+| **WHEN** | When can I stop decomposing? (sub-questions are directly answerable) | Prevents over-decomposition |
+
+#### Why This Step Makes Research Efficient and Quality-Focused
+
+- **Prevents context drift:** Each sub-question is focused enough to answer accurately in limited tokens.
+- **Enables quality per sub-answer:** Smaller questions are easier to verify.
+- **Supports progressive compression:** Answer each sub-question, compress, then proceed.
+- **Enables parallelization:** Independent sub-questions can be answered simultaneously.
+
+#### Practical Application
+
+```
+Decomposition Template:
+───────────────────────
+Main question: [User's research question]
+
+Sub-questions (ordered by dependency):
+1. [Sub-question 1] — Independent / Depends on: []
+2. [Sub-question 2] — Independent / Depends on: []
+3. [Sub-question 3] — Depends on: [1, 2]
+4. [Sub-question 4] — Depends on: [3]
+
+Synthesis plan: Combine answers to [1,2,3,4] into [output format]
+```
+
+---
+
+### 5.4 Step 3: Identify and Retrieve Sources
+
+**Purpose:** Gather information from the right places to ground your answers in evidence.
+
+#### Key Questions to Ask
+
+| Question Type | Question | Why It Matters |
+|---------------|----------|----------------|
+| **WHAT** | What type of source is needed? (primary, secondary, tertiary) | Guides search strategy |
+| **WHERE** | Where should I look? (model knowledge, RAG retrieval, web search, databases) | Selects information channels |
+| **WHICH** | Which databases or retrieval systems are most relevant? | Optimizes search efficiency |
+| **WHEN** | How current does the information need to be? | Determines if retrieval is necessary |
+| **HOW** | How should I construct the search query? | Improves precision and recall |
+| **HOW MANY** | How many sources are sufficient? | Prevents over-retrieval |
+
+#### Source Selection Decision Tree
+
+```
+Does the question require:
+├── Current/real-time information?
+│   └── YES → Use RAG or ReAct with retrieval
+├── Verified factual claims with citations?
+│   └── YES → Use RAG with source attribution
+├── Domain-specific expertise?
+│   └── YES → Search specialized databases (PubMed, IEEE, arXiv, etc.)
+└── General synthesis from training knowledge?
+    └── Model knowledge sufficient (but verify key claims)
+```
+
+#### Why This Step Makes Research Grounded and Efficient
+
+- **Right source for the question:** Using RAG for factual claims prevents hallucination.
+- **Avoids over-retrieval:** Knowing when model knowledge suffices saves retrieval overhead.
+- **Enables citation:** Retrieved sources can be cited with persistent identifiers.
+
+---
+
+### 5.5 Step 4: Evaluate Source Quality
+
+**Purpose:** Not all sources are equally reliable. Evaluate before synthesizing.
+
+#### Key Questions to Ask
+
+| Question Type | Question | Why It Matters |
+|---------------|----------|----------------|
+| **WHAT** | What is the source type? (peer-reviewed, preprint, blog, commercial) | Signals reliability level |
+| **WHO** | Who created this content? What are their credentials? | Authority assessment |
+| **WHEN** | When was this published? Is it current enough? | Currency check |
+| **WHY** | Why was this content created? (inform, persuade, sell) | Bias detection |
+| **HOW** | How well does this source support the specific claim? | Relevance verification |
+| **WHERE** | Where does this source get its information? Can I trace to primary? | Source chain verification |
+
+#### Quick Quality Check (CRAAP Adaptation for AI)
+
+For each source, score 1–5 on:
+
+| Dimension | Score | Notes |
+|-----------|-------|-------|
+| **Currency** | 1-5 | Is the information timely? |
+| **Relevance** | 1-5 | Does it directly address the sub-question? |
+| **Authority** | 1-5 | Is the author/publisher credible? |
+| **Accuracy** | 1-5 | Is it supported by evidence? |
+| **Purpose** | 1-5 | Is it objective, or is there bias? |
+
+**Use sources scoring ≥15 total.** For lower scores, either find better sources or explicitly note the limitation.
+
+#### Why This Step Prevents Errors and Saves Correction Time
+
+- **Catches bad sources early:** Removing unreliable sources before synthesis is cheaper than correcting errors after.
+- **Enables confident synthesis:** High-quality sources support stronger conclusions.
+- **Supports transparency:** Quality assessment can be shown to users.
+
+---
+
+### 5.6 Step 5: Synthesize Answers
+
+**Purpose:** Combine information from multiple sources and sub-questions into a coherent answer.
+
+#### Key Questions to Ask
+
+| Question Type | Question | Why It Matters |
+|---------------|----------|----------------|
+| **HOW** | How do the sub-answers connect to form a complete answer? | Guides integration |
+| **WHAT** | What are the points of agreement across sources? | Identifies consensus |
+| **WHAT** | What are the points of disagreement or uncertainty? | Flags areas needing nuance |
+| **WHICH** | Which evidence most directly supports each claim? | Ensures grounding |
+| **HOW** | How confident am I in each part of the answer? | Enables uncertainty disclosure |
+| **WHAT** | What is missing that I couldn't find? | Acknowledges gaps |
+
+#### Synthesis Process
+
+```
+For each sub-question answer:
+1. Compress to key findings (progressive compression)
+2. Note confidence level (high/medium/low)
+3. Note source(s) supporting the finding
+
+Then integrate:
+4. Connect sub-answers following the decomposition plan
+5. Resolve conflicts (prefer higher-quality sources)
+6. Flag remaining uncertainties
+7. Structure per the output format specified in Step 1
+```
+
+#### Why This Step Produces Quality, Goal-Satisfying Outputs
+
+- **Structured integration:** Following the decomposition plan ensures completeness.
+- **Compression prevents context overflow:** Each sub-answer is compacted before synthesis.
+- **Uncertainty handling:** Acknowledging limits increases trustworthiness.
+
+---
+
+### 5.7 Step 6: Verify and Cite
+
+**Purpose:** Check that claims are accurate and properly attributed.
+
+#### Key Questions to Ask
+
+| Question Type | Question | Why It Matters |
+|---------------|----------|----------------|
+| **WHAT** | What are the key factual claims in my answer? | Identifies verification targets |
+| **HOW** | How can each claim be verified? (DOI, arXiv ID, reproducible lookup) | Enables citation |
+| **WHERE** | Where did each claim originate? (my synthesis vs. specific source) | Tracks attribution |
+| **WHICH** | Which claims need explicit citation? | Guides citation placement |
+| **HOW** | How confident am I that each citation actually supports the claim? | Prevents citation-claim mismatch |
+
+#### Verification Checklist
+
+- [ ] Every factual claim can be traced to a source or is flagged as synthesis/inference
+- [ ] Citations include persistent identifiers (DOI, arXiv ID, URL with archive date)
+- [ ] No citation supports a claim stronger than the source actually makes
+- [ ] Time-sensitive information has a date or currency note
+- [ ] Uncertainties are disclosed, not hidden
+
+#### Why This Step Ensures Accuracy and Trust
+
+- **Prevents hallucinated citations:** Verification catches plausible-sounding but nonexistent references.
+- **Enables user verification:** Persistent identifiers let users check sources.
+- **Maintains intellectual honesty:** Proper attribution respects source authors.
+
+---
+
+### 5.8 Step 7: Self-Evaluate Against Satisfaction Criteria
+
+**Purpose:** Before delivering, confirm the output meets the original goal.
+
+#### Key Questions to Ask
+
+| Question Type | Question | Why It Matters |
+|---------------|----------|----------------|
+| **WHAT** | What were the original satisfaction criteria from Step 1? | Anchors evaluation |
+| **HOW** | How well does my output address each criterion? | Gap identification |
+| **WHAT** | What is still missing or incomplete? | Reveals needed fixes |
+| **HOW** | How would a critical reader challenge this answer? | Anticipates objections |
+| **WHICH** | Which parts are strongest/weakest? | Guides revision priority |
+| **WHEN** | When have I done enough? | Prevents over-research |
+
+#### Self-Evaluation Checklist
+
+| Criterion | Met? | Evidence |
+|-----------|------|----------|
+| Addresses the original ask | ☐ | |
+| Correct output format | ☐ | |
+| Appropriate depth for audience | ☐ | |
+| Key claims are supported | ☐ | |
+| Uncertainties disclosed | ☐ | |
+| Citations verifiable | ☐ | |
+
+If any criterion is not met, return to the relevant step (decomposition, retrieval, synthesis) and iterate.
+
+#### Why This Step Ensures Effectiveness and Prevents Over-Research
+
+- **Confirms goal satisfaction:** The output demonstrably answers what was asked.
+- **Enables early stopping:** Once criteria are met, stop — no wasted tokens.
+- **Catches gaps before delivery:** Easier to fix now than after the user points them out.
+
+---
+
+### 5.9 Summary: The Complete Research Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    RESEARCH EFFECTIVENESS FLOW                      │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  1. UNDERSTAND GOAL ───────────────────────────────────────────────│
+│     • What does the user need? Why? For whom?                      │
+│     • Define satisfaction criteria                                  │
+│     ↓ (Saves: 2–5 re-prompting rounds)                             │
+│                                                                     │
+│  2. DECOMPOSE ─────────────────────────────────────────────────────│
+│     • What are the sub-questions?                                  │
+│     • Which are independent? Which depend on others?               │
+│     ↓ (Saves: context drift, enables parallelization)              │
+│                                                                     │
+│  3. RETRIEVE SOURCES ──────────────────────────────────────────────│
+│     • Where should I look? What source type?                       │
+│     • Use RAG for factual/current claims                           │
+│     ↓ (Saves: hallucination correction overhead)                   │
+│                                                                     │
+│  4. EVALUATE SOURCES ──────────────────────────────────────────────│
+│     • Who created this? Is it reliable?                            │
+│     • Score using CRAAP or equivalent                              │
+│     ↓ (Saves: downstream error correction)                         │
+│                                                                     │
+│  5. SYNTHESIZE ────────────────────────────────────────────────────│
+│     • How do sub-answers connect?                                  │
+│     • Use progressive compression                                  │
+│     ↓ (Saves: context overflow, produces structured output)        │
+│                                                                     │
+│  6. VERIFY & CITE ─────────────────────────────────────────────────│
+│     • Can each claim be traced to a source?                        │
+│     • Add persistent identifiers                                   │
+│     ↓ (Saves: trust issues, enables user verification)             │
+│                                                                     │
+│  7. SELF-EVALUATE ─────────────────────────────────────────────────│
+│     • Does output meet satisfaction criteria?                      │
+│     • If yes → deliver. If no → iterate.                           │
+│     ↓ (Saves: unnecessary over-research)                           │
+│                                                                     │
+│  ═══════════════════════════════════════════════════════════════   │
+│  RESULT: Effective, efficient, fast, quality research output       │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 5.10 Worked Example: Applying the Framework
+
+**Original ask:** "Compare the energy efficiency of transformer models vs. state-space models for language modeling. Which is more practical for deployment?"
+
+#### Step 1: Understand Goal
+
+| Aspect | Analysis |
+|--------|----------|
+| Core need | Decision support for model architecture selection |
+| Output format | Comparison with recommendation |
+| Audience | Technical (ML engineers/researchers) |
+| Success criteria | Covers both architectures, cites benchmarks, gives actionable recommendation |
+
+#### Step 2: Decompose
+
+1. What are transformer models and their energy characteristics? (Independent)
+2. What are state-space models and their energy characteristics? (Independent)
+3. What benchmarks compare their energy efficiency? (Independent)
+4. What are the practical deployment considerations beyond raw efficiency? (Depends on 1, 2)
+5. Which is more practical for deployment, given the evidence? (Depends on 1–4)
+
+#### Steps 3–4: Retrieve and Evaluate
+
+- Use RAG to retrieve recent papers on Mamba, S4, and transformer efficiency
+- Prioritize peer-reviewed benchmarks and major lab publications
+- Score sources: arXiv preprints with extensive experiments (score 4–5), blog posts without data (score 2)
+
+#### Step 5: Synthesize
+
+- Compile efficiency metrics from retrieved papers
+- Note where transformers excel (hardware optimization, ecosystem maturity)
+- Note where SSMs excel (linear scaling with sequence length)
+- Structure as: Background → Comparison table → Deployment considerations → Recommendation
+
+#### Step 6: Verify
+
+- Confirm cited papers exist with correct arXiv IDs
+- Verify benchmark numbers match source claims
+
+#### Step 7: Self-Evaluate
+
+| Criterion | Met? |
+|-----------|------|
+| Compares both architectures | ✓ |
+| Cites benchmarks | ✓ |
+| Addresses deployment practicality | ✓ |
+| Gives recommendation | ✓ |
+
+**Output:** [Deliver synthesized comparison with recommendation]
 
 ---
 
