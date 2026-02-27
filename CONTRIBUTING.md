@@ -356,7 +356,11 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
 @copilot Expand the Attack Examples Catalog in docs/safety-and-security.md:
 
 1. Audit every existing EX-NNN entry and confirm there are no duplicates or overlapping entries.
-2. Identify attack categories or sub-varieties not yet covered by any existing entry.
+2. Identify attack categories or sub-varieties not yet covered by any existing entry by sourcing from all of the following channels:
+   - **This GitHub repository** (issues, PRs, discussions, and any `[New Attack]`-labelled threads)
+   - **Security disclosures and CVEs** (NVD, MITRE ATT&CK for AI/ML, responsible-disclosure advisories)
+   - **Public-facing social media posts** (Twitter/X threads, LinkedIn posts, Reddit r/MachineLearning and r/netsec, Mastodon infosec accounts) that describe novel AI attack techniques
+   - **Targeted future-proof web search** — use queries scoped to the last 12 months (e.g., `"prompt injection" site:arxiv.org after:2024`, `"LLM jailbreak" -site:youtube.com`, `"AI security" CVE 2025`) to surface newly documented attack patterns not yet in academic databases
 3. For each gap: add a new EX-NNN entry using the standard format (Name, Description, Example, How to avoid), include a citation where one exists, and use only harmless payloads (e.g., display strings or navigation to https://www.microsoft.com).
 4. Do not modify, reorder, or remove any existing entry — only append new ones.
 5. If no gaps remain, explicitly state that the catalog is comprehensive and stop.
