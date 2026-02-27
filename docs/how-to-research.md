@@ -34,6 +34,7 @@
   - [4.3 Technique Submission Template](#43-technique-submission-template)
   - [4.4 Efficiency Criteria](#44-efficiency-criteria)
   - [4.5 Improving Existing Entries](#45-improving-existing-entries)
+  - [4.6 Quality Assurance and Cost Control During Fast Research](#46-quality-assurance-and-cost-control-during-fast-research)
 - [References](#references)
 
 ---
@@ -727,6 +728,117 @@ If an existing technique entry (Parts 1–3) needs improvement, the following ty
 All improvements should preserve the existing heading anchor (e.g., `#21-chain-of-thought-prompting`) so that external links remain valid.
 
 See also: [`CONTRIBUTING.md`](../CONTRIBUTING.md), [`contributor-guide.md`](contributor-guide.md), [`ai-research-processing.md`](ai-research-processing.md).
+
+---
+
+### 4.6 Quality Assurance and Cost Control During Fast Research
+
+> **Summary:** Speed and quality are often treated as opposites, but the techniques in this guide are designed so that following the methodology *is* the fast, cost-efficient path. This section explains the mechanisms that enable this, and provides a decision framework for choosing the right trade-off for each situation.
+
+#### Why Following the Methodology Saves Time and Cost
+
+Counter-intuitively, skipping research methodology steps usually *increases* total cost, because:
+
+- **Poorly scoped questions generate off-target answers**, requiring additional re-prompting rounds that together consume more tokens than a well-scoped first prompt would have.
+- **Unverified sources cause downstream errors** that are expensive to detect and correct later.
+- **Hallucinated citations require manual checking**, which is slower than using RAG or source-verification techniques upfront.
+- **Unfocused research loops** (no satisfaction criteria) continue past the point where the research goal is met, wasting both time and tokens.
+
+The techniques in Parts 1–3 are designed specifically to eliminate these failure modes at the cheapest possible point — before they occur.
+
+#### The Quality-Speed-Cost Triangle
+
+Every research task sits somewhere in this trade-off space:
+
+| Constraint | What it means | When it applies |
+|---|---|---|
+| **Quality-first** | Maximize accuracy, depth, and citation reliability; accept higher token/time cost | High-stakes decisions: medical, legal, financial, safety-critical |
+| **Speed-first** | Minimize time-to-answer; accept lower depth; verify key facts manually afterward | Exploratory queries, live conversation, quick summaries |
+| **Cost-first** | Minimize token usage and re-prompting steps; accept a narrower scope | High-volume automated pipelines, large document batches |
+
+Most research tasks are **speed-and-quality balanced**: you want a good answer without spending unnecessary tokens. The techniques in this guide are tuned for this middle path.
+
+#### Mechanisms That Ensure Quality Under Speed Pressure
+
+The following built-in mechanisms in this guide's methodology maintain quality even when time and token budgets are tight:
+
+**1. Front-loaded goal declaration (Section 4.4, heuristic: "Front-load the research goal")**  
+Stating the full research goal at the start of the first prompt eliminates clarifying exchanges that would otherwise add multiple re-prompting rounds. Quality is maintained because the model has the complete goal context from the first token.
+
+**2. Satisfaction criteria upfront (Section 4.4, heuristic: "Declare satisfaction criteria upfront")**  
+Declaring what "done" looks like before starting research allows the AI to self-check and stop exactly when quality criteria are met — neither early (incomplete) nor late (wasteful).
+
+**3. Structured sub-question progression (Section 2.5, Self-Ask)**  
+Breaking the main question into sub-questions and solving them in order prevents the AI from going off-topic. Each sub-question is narrow enough to be answered accurately in few tokens.
+
+**4. Progressive compression (Section 4.4, heuristic: "Use progressive compression")**  
+Compressing each intermediate result into a compact summary before the next step prevents the context window from filling with verbose earlier answers that crowd out the current question. This maintains quality (context available to the model stays relevant) while reducing token usage.
+
+**5. Source quality gatekeeping (Section 1.4, CRAAP and SIFT)**  
+Evaluating source quality before synthesis prevents low-quality sources from degrading the final answer. A few tokens spent on source evaluation save many tokens of correction later.
+
+**6. RAG for factual precision (Section 2.6)**  
+Retrieval-Augmented Generation grounds answers in verified retrieved documents rather than model weights alone. This reduces hallucination at low additional cost, since retrieval replaces some generation tokens with more accurate retrieved text.
+
+**7. Self-critique gating (Section 2.7)**  
+Running a single critique pass on a draft response before delivering it catches the most common errors cheaply, without requiring a full second research pass.
+
+#### Fast Research Decision Framework
+
+Use this framework to choose the right technique set for a given research task:
+
+```
+Is the question well-defined?
+├── No → Apply Section 1.1 (PICO / Bloom) to sharpen the question first
+│         (Saves: 2–5 re-prompting rounds)
+└── Yes
+    │
+    Is real-time / retrieved information required?
+    ├── Yes → Use RAG (Section 2.6) or ReAct (Section 2.4)
+    │         (Saves: hallucination correction overhead)
+    └── No
+        │
+        Is the question multi-part or complex?
+        ├── Yes → Use Self-Ask (Section 2.5) or Least-to-Most (Section 2.8)
+        │         (Saves: context drift, irrelevant detours)
+        └── No
+            │
+            Is high confidence required?
+            ├── Yes → Use Self-Consistency (Section 2.3) + source verification
+            │         (Saves: downstream error correction)
+            └── No → Use Chain-of-Thought (Section 2.1)
+                      (Lowest token cost for quality single-answer tasks)
+```
+
+#### Cost-per-Quality Comparison of Key Techniques
+
+The following table summarizes the approximate cost-quality profile of each AI technique in this guide. "Cost" refers to relative token+re-prompting overhead; "Quality ceiling" refers to the maximum answer quality achievable with the technique.
+
+| Technique | Token cost | Re-prompting steps | Quality ceiling | Best for |
+|---|---|---|---|---|
+| Plain query (no technique) | Very low | 1 | Low–medium | Trivial factual lookups |
+| Chain-of-Thought (2.1) | Low | 1 | Medium–high | Reasoning-heavy single questions |
+| Self-Consistency (2.3) | Medium | 3–5 | High | Questions with right/wrong answers |
+| Self-Ask (2.5) | Low–medium | 2–4 | High | Multi-part questions |
+| Least-to-Most (2.8) | Low–medium | 2–4 | High | Hierarchically complex questions |
+| RAG (2.6) | Medium | 1–2 | Very high | Factual/cited claims |
+| ReAct (2.4) | Medium–high | 3–6 | Very high | Research requiring external actions |
+| Critique-and-Refine (2.7) | Medium | 2 | High | Draft improvement |
+| Tree of Thoughts (2.2) | High | 3–8 | Very high | Open-ended exploration, planning |
+
+**Rule of thumb:** For most research tasks, Chain-of-Thought + Self-Ask + a final Critique pass provides the best quality-per-token ratio. Upgrade to RAG or ReAct only when retrieved, up-to-date information is necessary.
+
+#### Avoiding Common Cost-Quality Trade-off Mistakes
+
+| Mistake | What goes wrong | Cheaper fix |
+|---|---|---|
+| Asking a broad question then narrowing | 3–5 re-prompting rounds to converge on scope | Apply PICO/Bloom before the first prompt |
+| Using Tree of Thoughts for every question | 3–8× token cost with marginal gain on simple questions | Reserve ToT for genuinely open-ended exploration |
+| Requesting a long answer and then summarizing | Pays for generation of content that is immediately discarded | Ask for the summary directly; specify length upfront |
+| Re-running full research after a small error | Repeats all token cost to fix a narrow issue | Use Critique-and-Refine (2.7) to patch the specific error |
+| Citing without verifying | Requires manual verification session later | Use RAG or ask for verifiable identifiers (DOIs, arXiv IDs) in the original prompt |
+
+See also: [`ai-research-processing.md` — "Efficient Research Within Token and Re-Prompting Limits"](ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) for the full token-efficiency strategy treatment.
 
 ---
 
