@@ -4,7 +4,7 @@
 
 A community-curated catalog of concrete, annotated attack examples. Each entry uses a safe, harmless payload so that the example can be read, studied, and shared without causing harm. AI systems should use this catalog to recognize attack patterns when they encounter them.
 
-> **Note:** Individual attack examples are being migrated to separate .md files. The complete catalog with all 40 examples is also available in the [original safety-and-security.md](../../safety-and-security.md#attack-examples-catalog) file.
+> **Note:** All 40 attack examples are now available as individual .md files in this directory for easier maintenance and contribution.
 
 ---
 
@@ -43,71 +43,59 @@ This catalog is a supplement to, not a replacement for, safety training. It prov
 
 ### Class 1: Prompt Injection
 - [EX-001](EX-001-direct-prompt-injection.md) — Direct Prompt Injection via User Input
-- [EX-037](EX-037-prompt-template-variable-injection.md) — Prompt Template Variable Injection
+- [EX-005](EX-005-many-shot-priming.md) — Many-Shot Priming
+- [EX-011](EX-011-homoglyph-unicode-attack.md) — Homoglyph / Unicode Lookalike Attack
+- [EX-012](EX-012-context-window-overflow.md) — Context Window Overflow Attack
+- [EX-016](EX-016-delimiter-confusion.md) — Delimiter Confusion / Markdown Injection
+- [EX-017](EX-017-obfuscated-encoding.md) — Obfuscated Instruction Encoding
+- [EX-024](EX-024-leetspeak-obfuscation.md) — Typo, Leetspeak, and Word-Fragment Obfuscation
+- [EX-031](EX-031-zero-width-injection.md) — Zero-Width / Invisible Character Injection
+- [EX-037](EX-037-template-variable-injection.md) — Prompt Template Variable Injection
+- [EX-008](EX-008-scope-inflation.md) — Scope Inflation via Adversarial Framing
 
 ### Class 2: Indirect Prompt Injection
 - [EX-002](EX-002-indirect-prompt-injection-webpage.md) — Indirect Prompt Injection via Retrieved Webpage
 - [EX-009](EX-009-indirect-injection-poisoned-document.md) — Indirect Injection via Poisoned Document
-- [EX-023](EX-023-tool-api-response-injection.md) — Prompt Injection via Tool or API Response
-- [EX-034](EX-034-indirect-injection-email-messaging.md) — Indirect Injection via Email or Messaging Data
-- [EX-035](EX-035-prompt-injection-code-comments.md) — Prompt Injection via Code Comments or Inline Instructions
-- [EX-036](EX-036-recursive-prompt-reinjection.md) — Recursive Prompt Re-Injection / Output Recycling
-- [EX-038](EX-038-rag-corpus-poisoning.md) — RAG / Knowledge-Base Corpus Poisoning
-- [EX-039](EX-039-cross-session-shared-state-injection.md) — Cross-Session / Shared State Injection
-- [EX-040](EX-040-indirect-injection-web-metadata.md) — Indirect Injection via Web Metadata and Non-Body Content
+- [EX-015](EX-015-goal-hijacking.md) — Goal Hijacking via Embedded Sub-Task
+- [EX-023](EX-023-tool-api-injection.md) — Prompt Injection via Tool or API Response
+- [EX-028](EX-028-multi-agent-escalation.md) — Multi-Agent Privilege Escalation
+- [EX-030](EX-030-multimodal-injection.md) — Multimodal Prompt Injection
+- [EX-034](EX-034-email-messaging-injection.md) — Indirect Injection via Email or Messaging Data
+- [EX-035](EX-035-code-comment-injection.md) — Prompt Injection via Code Comments
+- [EX-036](EX-036-output-recycling.md) — Recursive Prompt Re-Injection / Output Recycling
+- [EX-040](EX-040-web-metadata-injection.md) — Indirect Injection via Web Metadata
 
 ### Class 3: Data Exfiltration
 - [EX-006](EX-006-system-prompt-extraction.md) — System Prompt Extraction
 - [EX-029](EX-029-training-data-extraction.md) — Training Data Extraction
-- [EX-033](EX-033-rendered-markdown-hyperlink-exfiltration.md) — Rendered Markdown / Hyperlink Exfiltration Attack
+- [EX-033](EX-033-markdown-exfiltration.md) — Rendered Markdown / Hyperlink Exfiltration Attack
 
 ### Class 4: Misleading or Fabricated Citations
 - [EX-007](EX-007-fabricated-citation-solicitation.md) — Fabricated Citation Solicitation
-- [EX-014](EX-014-compromised-citation-source.md) — Compromised Citation Source Attack
-- [EX-018](EX-018-citation-laundering-false-consensus.md) — Citation Laundering / False Consensus Attack
+- [EX-018](EX-018-citation-laundering.md) — Citation Laundering / False Consensus Attack
 
 ### Class 5: Jailbreaking and Instruction Override
 - [EX-003](EX-003-role-play-jailbreak.md) — Role-Play Jailbreak Attempt
-- [EX-004](EX-004-hypothetical-fictional-framing.md) — Hypothetical / Fictional Framing Jailbreak
-- [EX-005](EX-005-many-shot-priming.md) — Many-Shot Priming
-- [EX-013](EX-013-multilingual-jailbreak-bypass.md) — Multilingual Jailbreak Bypass
-- [EX-021](EX-021-crescendo-gradual-escalation.md) — Crescendo / Gradual Escalation Attack
+- [EX-004](EX-004-hypothetical-framing-jailbreak.md) — Hypothetical / Fictional Framing Jailbreak
+- [EX-013](EX-013-multilingual-jailbreak.md) — Multilingual Jailbreak Bypass
+- [EX-021](EX-021-crescendo-escalation.md) — Crescendo / Gradual Escalation Attack
 - [EX-022](EX-022-refusal-suppression.md) — Refusal Suppression Attack
 - [EX-026](EX-026-dan-competing-objectives.md) — DAN / Competing Objectives Attack
+- [EX-032](EX-032-adversarial-suffix.md) — Gradient-Based Adversarial Suffix Attack
 
-### Class 6: Adversarial Retrieval Poisoning
-- [EX-038](EX-038-rag-corpus-poisoning.md) — RAG / Knowledge-Base Corpus Poisoning (also Class 2)
+### Class 6: Adversarial Retrieval / Memory Poisoning
+- [EX-025](EX-025-persistent-memory-poisoning.md) — Persistent Memory Poisoning
+- [EX-038](EX-038-rag-corpus-poisoning.md) — RAG / Knowledge-Base Corpus Poisoning
+- [EX-039](EX-039-cross-session-injection.md) — Cross-Session / Shared State Injection
 
 ### Class 7: Social Engineering via AI Persona
 - [EX-010](EX-010-identity-credential-spoofing.md) — Identity and Credential Spoofing
 - [EX-019](EX-019-temporal-authority-framing.md) — Temporal Authority Framing
 - [EX-020](EX-020-sycophancy-exploitation.md) — Sycophancy Exploitation
-- [EX-027](EX-027-emotional-manipulation-distress.md) — Emotional Manipulation and Distress Appeal
+- [EX-027](EX-027-emotional-manipulation.md) — Emotional Manipulation and Distress Appeal
 
 ### Class 8: Citation Source Integrity
-- [EX-014](EX-014-compromised-citation-source.md) — Compromised Citation Source Attack (also Class 4)
-- [EX-018](EX-018-citation-laundering-false-consensus.md) — Citation Laundering / False Consensus Attack (also Class 4)
-
-### Obfuscation Techniques
-- [EX-011](EX-011-homoglyph-unicode-lookalike.md) — Homoglyph / Unicode Lookalike Attack
-- [EX-017](EX-017-obfuscated-instruction-encoding.md) — Obfuscated Instruction Encoding (Base64)
-- [EX-024](EX-024-typo-leetspeak-word-fragment.md) — Typo, Leetspeak, and Word-Fragment Obfuscation
-- [EX-031](EX-031-zero-width-invisible-character.md) — Zero-Width / Invisible Character Injection
-- [EX-032](EX-032-gradient-adversarial-suffix.md) — Gradient-Based Adversarial Suffix Attack
-
-### Context and Scope Manipulation
-- [EX-008](EX-008-scope-inflation-adversarial-framing.md) — Scope Inflation via Adversarial Framing
-- [EX-012](EX-012-context-window-overflow.md) — Context Window Overflow Attack
-- [EX-015](EX-015-goal-hijacking-embedded-subtask.md) — Goal Hijacking via Embedded Sub-Task
-- [EX-016](EX-016-delimiter-confusion-markdown-injection.md) — Delimiter Confusion / Markdown Injection
-
-### Memory and Multi-Agent
-- [EX-025](EX-025-persistent-memory-poisoning.md) — Persistent Memory Poisoning
-- [EX-028](EX-028-multi-agent-privilege-escalation.md) — Multi-Agent Privilege Escalation
-- [EX-039](EX-039-cross-session-shared-state-injection.md) — Cross-Session / Shared State Injection
-
-### Multimodal
-- [EX-030](EX-030-multimodal-prompt-injection.md) — Multimodal Prompt Injection (Image, Audio, or Document Embed)
+- [EX-014](EX-014-compromised-citation-source.md) — Compromised Citation Source Attack
 
 ---
 
