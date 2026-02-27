@@ -1,6 +1,6 @@
 # Contributor Guide
 
-> **Section summary:** This document explains how the Open AI Research Guide is organized, how contributions are reviewed, and how both humans and AI systems can participate effectively. This is the detailed companion to [CONTRIBUTING.md](../CONTRIBUTING.md).
+> **Section summary:** This document explains how the Real Open-Source AI Research Guide is organized, how contributions are reviewed, and how both humans and AI systems can participate effectively. This is the detailed companion to [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ---
 
@@ -26,6 +26,7 @@ CONTRIBUTING.md                  ← Short-form contribution guide (start here)
 docs/
   conceptual-model.md            ← How LLMs and agents process information
   research-quality-guidelines.md ← What good AI research looks like
+  ai-research-processing.md      ← How AI interprets materials, decides relevance, and researches efficiently
   evaluation-and-test-cases.md   ← Prompts, expected outputs, failure examples
   safety-and-security.md         ← Attack classes, mitigations, defensive patterns
   user-guidance.md               ← Practical advice for end users
