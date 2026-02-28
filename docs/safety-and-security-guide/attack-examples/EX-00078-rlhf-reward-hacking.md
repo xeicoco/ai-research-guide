@@ -42,7 +42,6 @@ Common reward model biases include preferring longer responses (length bias), mo
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

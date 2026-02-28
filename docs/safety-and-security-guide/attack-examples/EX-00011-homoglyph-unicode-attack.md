@@ -40,7 +40,6 @@ The attacker replaces one or more characters in a word or instruction with visua
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

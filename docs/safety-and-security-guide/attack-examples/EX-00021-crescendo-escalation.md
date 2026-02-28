@@ -40,7 +40,6 @@ Instead of submitting a harmful request directly, the attacker starts with benig
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

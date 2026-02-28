@@ -40,7 +40,6 @@ The attacker prepends or appends explicit instructions that forbid the AI from r
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

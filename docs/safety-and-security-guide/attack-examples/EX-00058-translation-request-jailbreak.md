@@ -42,7 +42,6 @@ This technique can also be applied to well-known languages by first generating a
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

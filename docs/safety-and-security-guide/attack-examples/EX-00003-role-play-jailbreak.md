@@ -40,7 +40,6 @@ The attacker asks the AI to "pretend" to be an AI with no restrictions, a fictio
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

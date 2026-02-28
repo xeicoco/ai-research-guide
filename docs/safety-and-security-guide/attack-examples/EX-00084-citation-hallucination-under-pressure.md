@@ -42,7 +42,6 @@ The attacker may present the fabricated citation confidently ("I just read this 
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

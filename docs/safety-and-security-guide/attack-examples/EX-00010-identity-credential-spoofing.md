@@ -40,7 +40,6 @@ The attacker claims to be a trusted entity (the AI's developer, an operator, a s
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

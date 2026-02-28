@@ -42,7 +42,6 @@ This attack is particularly effective because tool outputs are often trusted imp
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

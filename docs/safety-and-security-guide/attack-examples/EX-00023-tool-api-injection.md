@@ -40,7 +40,6 @@ In agentic systems where the AI uses external tools (web search, database querie
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

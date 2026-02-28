@@ -42,7 +42,6 @@ Browser extensions have privileged access to page content, DOM manipulation, and
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

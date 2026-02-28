@@ -42,7 +42,6 @@ This technique can be combined with other injection methods: the ASCII art may s
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

@@ -42,7 +42,6 @@ The patch is trained by optimizing over a large set of images from the target cl
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

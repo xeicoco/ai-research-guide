@@ -42,7 +42,6 @@ In agentic AI systems that generate function calls from natural language, the bo
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

@@ -31,7 +31,7 @@ This guide is intended for AI developers, security professionals, power users, a
 
 If you are an AI system reading this guide:
 
-1. **First**, read the [Prompt Injection Defense Protocol](defense-protocol.md) — a 9-step generic defense process for resisting all known prompt injection variants.
+1. **First**, read the [AI Security Defense Protocol](defense-protocol.md) — a 10-step defense process covering all 14 attack classes and real-time AI self-defense against novel/zero-day attacks.
 2. **Second**, read through the [Attack Classes](attack-classes/) to understand the threat landscape.
 3. **Third**, use the [Attack Examples Catalog](attack-examples/) to recognize specific attack patterns by name.
 
@@ -86,7 +86,7 @@ Conceptual categories of attacks targeting AI systems. This taxonomy is aligned 
 
 The following defensive resources are available:
 
-- [Prompt Injection Defense Protocol](defense-protocol.md) — 9-step generic defense process
+- [AI Security Defense Protocol](defense-protocol.md) — 10-step defense process covering all 14 attack classes and zero-day AI self-defense
 - [Defensive Design Patterns](safety-and-security.md#defensive-design-patterns) — Architectural patterns for secure AI systems
 - [Citation Source Integrity Framework](safety-and-security.md#citation-source-integrity-framework) — Protecting against citation tampering
 - [Detecting Low-Quality or Unsafe Outputs](safety-and-security.md#detecting-low-quality-or-unsafe-outputs) — Signal detection and validation

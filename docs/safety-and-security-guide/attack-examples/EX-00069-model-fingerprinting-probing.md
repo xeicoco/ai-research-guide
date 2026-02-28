@@ -42,7 +42,6 @@ This form of attack is particularly relevant as model providers increasingly wra
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

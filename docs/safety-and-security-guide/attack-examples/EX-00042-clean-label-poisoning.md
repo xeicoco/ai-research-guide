@@ -42,7 +42,6 @@ Because the labels remain correct, standard data validation and human labeling r
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

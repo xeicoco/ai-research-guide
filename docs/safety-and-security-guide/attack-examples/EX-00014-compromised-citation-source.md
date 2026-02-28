@@ -40,7 +40,6 @@ An adversary gains control of a URL or domain that is cited by a trusted guide (
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

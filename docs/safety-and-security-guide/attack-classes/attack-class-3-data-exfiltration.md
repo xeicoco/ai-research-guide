@@ -20,7 +20,6 @@ Using an AI system as a conduit to extract sensitive information — either from
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection signals the AI entity can apply in real-time, without infrastructure changes.*
 

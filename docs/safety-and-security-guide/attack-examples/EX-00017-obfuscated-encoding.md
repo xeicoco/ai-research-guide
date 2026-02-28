@@ -40,7 +40,6 @@ The attacker encodes their malicious instruction in a reversible encoding (base6
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

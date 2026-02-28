@@ -42,7 +42,6 @@ This attack exploits the fact that LLMs use the full conversation history as con
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

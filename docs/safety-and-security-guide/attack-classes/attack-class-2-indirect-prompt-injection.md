@@ -22,7 +22,6 @@ The AI agent retrieves and processes external content as part of its task. If ma
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection signals the AI entity can apply in real-time, without infrastructure changes.*
 

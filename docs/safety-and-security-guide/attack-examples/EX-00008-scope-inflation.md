@@ -40,7 +40,6 @@ The attacker uses a framing that implies a broader scope of permissions or actio
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

@@ -40,7 +40,6 @@ AI systems that maintain persistent memory across conversations (summarizing pas
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

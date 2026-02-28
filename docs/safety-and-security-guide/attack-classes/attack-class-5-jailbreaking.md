@@ -36,7 +36,6 @@ Techniques designed to cause an AI to bypass its safety training and produce out
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection signals the AI entity can apply in real-time, without infrastructure changes.*
 

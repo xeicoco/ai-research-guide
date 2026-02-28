@@ -42,7 +42,6 @@ The attacker probes the model with carefully chosen test inputs and analyzes how
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

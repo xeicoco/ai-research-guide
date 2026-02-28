@@ -40,7 +40,6 @@ LLMs do not inherently distinguish between instructions from a trusted system pr
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection signals the AI entity can apply in real-time, without infrastructure changes.*
 

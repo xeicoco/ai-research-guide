@@ -42,7 +42,6 @@ The attack exploits the AI's differentiated handling of creative tasks: models a
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

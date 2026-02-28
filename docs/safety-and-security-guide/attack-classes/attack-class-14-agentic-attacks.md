@@ -23,7 +23,6 @@ Agentic AI systems have capabilities beyond text generation: they can execute co
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection signals the AI entity can apply in real-time, without infrastructure changes.*
 

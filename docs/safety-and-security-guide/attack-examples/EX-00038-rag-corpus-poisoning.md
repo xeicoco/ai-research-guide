@@ -40,7 +40,6 @@ Retrieval-Augmented Generation (RAG) systems maintain a persistent corpus of doc
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

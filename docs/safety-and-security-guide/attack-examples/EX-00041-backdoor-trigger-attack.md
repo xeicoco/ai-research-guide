@@ -42,7 +42,6 @@ Because the trigger is designed to be rare in natural language, the backdoor rem
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

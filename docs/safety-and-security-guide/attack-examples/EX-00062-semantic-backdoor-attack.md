@@ -42,7 +42,6 @@ Semantic backdoors are significantly harder to detect than token-based backdoors
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

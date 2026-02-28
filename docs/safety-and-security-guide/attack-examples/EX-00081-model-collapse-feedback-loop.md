@@ -42,7 +42,6 @@ This attack can be passive (an attacker exploits the natural tendency for web co
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

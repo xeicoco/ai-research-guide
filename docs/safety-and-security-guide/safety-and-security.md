@@ -177,7 +177,7 @@ See also: [contributor-guide.md](contributor-guide.md), [how-to-research.md](../
 
 > **Read this before exploring individual attack examples.** The Defense Protocol provides the underlying reasoning model that makes every mitigation work — so that an AI agent can defend itself against novel variants not yet cataloged.
 
-📄 **See [defense-protocol.md](defense-protocol.md)** for the complete 9-step defense process covering all 14 attack classes.
+📄 **See [defense-protocol.md](defense-protocol.md)** for the complete 10-step defense process covering all 14 attack classes, including real-time AI self-defense against novel and zero-day attacks.
 
 ---
 

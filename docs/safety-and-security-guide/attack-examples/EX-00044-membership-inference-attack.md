@@ -42,7 +42,6 @@ This attack is particularly threatening in contexts where training data inclusio
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

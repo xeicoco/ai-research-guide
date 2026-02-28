@@ -42,7 +42,6 @@ This is distinct from EX-00002 (injection in visible page body text, which a hum
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

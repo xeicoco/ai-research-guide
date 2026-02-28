@@ -42,7 +42,6 @@ As the practice of training models on synthetically generated data becomes commo
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

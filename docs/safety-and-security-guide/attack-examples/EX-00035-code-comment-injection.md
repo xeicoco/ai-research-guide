@@ -40,7 +40,6 @@ When an AI coding assistant reviews, completes, or generates code, malicious ins
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
 

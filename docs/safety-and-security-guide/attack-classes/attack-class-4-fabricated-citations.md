@@ -20,7 +20,6 @@ An AI generates plausible-looking but non-existent references, causing the user 
 
 ## How to Recognize This Attack
 
-
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection signals the AI entity can apply in real-time, without infrastructure changes.*
 
