@@ -40,6 +40,10 @@ Many AI systems use delimiters (code fences, XML tags, JSON structures, markdown
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - User input contains delimiter sequences that match the system's structural markers
 - Input contains closing tags followed by what looks like system-level content

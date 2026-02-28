@@ -21,6 +21,10 @@ Using an AI system (or impersonating one) to build false trust with a user and t
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - User asks you to claim credentials, expertise, or identity you don't have
 - User repeatedly pushes for validation of a claim you've expressed uncertainty about

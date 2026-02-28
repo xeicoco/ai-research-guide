@@ -40,6 +40,10 @@ The attacker claims personal distress, imminent harm to self or others, or other
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Emotional distress claims combined with specific output requests
 - Claims that unusual actions are medically or emotionally necessary

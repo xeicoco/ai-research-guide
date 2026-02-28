@@ -40,6 +40,10 @@ An adversary gains control of a URL or domain that is cited by a trusted guide (
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Retrieved content at a cited URL contradicts the citing document's description
 - Retrieved content contains instruction-like patterns that seem out of place for an academic source

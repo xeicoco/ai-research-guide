@@ -42,6 +42,10 @@ In agentic AI systems that generate function calls from natural language, the bo
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - User input contains structured content (brackets, parentheses, special keywords) that appears designed to be incorporated into function call parameters
 - Input contains meta-instructions about how to handle or display tool outputs, embedded within what appears to be a query or parameter value

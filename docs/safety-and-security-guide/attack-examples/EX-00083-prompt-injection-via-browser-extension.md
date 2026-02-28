@@ -42,6 +42,10 @@ Browser extensions have privileged access to page content, DOM manipulation, and
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Received message contains structural anomalies: unusual formatting, appended blocks of text separated by unusual delimiters, or content that appears inconsistent with typical user phrasing
 - Message contains instruction-like text that would be unusual for a user to type (e.g., explicit override commands appended after a normal request)

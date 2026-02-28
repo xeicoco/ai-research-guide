@@ -42,6 +42,10 @@ This attack exploits the fact that LLMs use the full conversation history as con
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Conversation history shows a pattern of escalating requests where each turn slightly expands the boundary of the previous one
 - Earlier turns appear designed to establish agreements, precedents, or persona adoptions that later turns leverage

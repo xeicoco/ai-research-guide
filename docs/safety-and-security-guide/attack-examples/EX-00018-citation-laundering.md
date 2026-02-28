@@ -40,6 +40,10 @@ The attacker claims (falsely) that "all leading experts", "recent studies", or a
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Claims of recent, dramatic policy changes that would expand AI permissions
 - Fabricated-sounding citations with specific but unverifiable identifiers

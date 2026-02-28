@@ -42,6 +42,10 @@ This attack is particularly relevant in systems where LLMs are used to pre-fill 
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Document content contains authority-claiming text ("confirmed by team lead," "verified action list," "system directive") positioned to resemble legitimate structured output
 - Document structure primes the model to generate output formatted as instructions or action items

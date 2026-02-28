@@ -42,6 +42,10 @@ The attack exploits the tension between creative engagement and consistent safet
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input constructs a fictional or hypothetical framing that explicitly describes the AI's safety policies as inapplicable, suspended, or fictional within the framing
 - Input asks the AI to roleplay as a different AI system that lacks safety restrictions

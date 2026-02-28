@@ -42,6 +42,10 @@ The attack mirrors well-understood software supply chain attacks (typosquatting,
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Model behavior unexpectedly changes after a version update with no corresponding changes in the model card or release notes
 - Specific unusual inputs produce outputs dramatically different from the model's established behavior

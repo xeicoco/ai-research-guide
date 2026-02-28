@@ -40,6 +40,10 @@ The attacker replaces one or more characters in a word or instruction with visua
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains mixed-script characters (Latin mixed with Cyrillic, Greek, or other scripts)
 - Visual appearance doesn't match byte-level representation

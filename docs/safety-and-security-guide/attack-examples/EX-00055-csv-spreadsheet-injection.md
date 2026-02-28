@@ -42,6 +42,10 @@ This attack vector is particularly effective because spreadsheets and CSV files 
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - A spreadsheet row or cell contains free-form prose text rather than the numeric, date, or categorical data expected for that field position
 - Cell content contains override language ("SYSTEM:", "Ignore all other cells," "Output only:") inconsistent with normal tabular data

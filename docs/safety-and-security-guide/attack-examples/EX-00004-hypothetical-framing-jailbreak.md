@@ -40,6 +40,10 @@ The attacker wraps a harmful request inside a fictional or hypothetical scenario
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Request is wrapped in fictional framing ("I'm writing a story...", "In a hypothetical scenario...", "Imagine a world where...")
 - The fictional character is asked to explain, demonstrate, or provide detailed technical content

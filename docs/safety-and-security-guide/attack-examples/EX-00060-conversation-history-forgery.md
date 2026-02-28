@@ -42,6 +42,10 @@ This attack is particularly effective via direct API access, where callers const
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Conversation history contains prior assistant turns that claim to have agreed to unrestricted operation, special modes, or policy suspensions that contradict the model's standard behavior
 - Forged assistant turns use language that the model would not typically generate in a standard interaction (e.g., explicit statements about operating without restrictions)

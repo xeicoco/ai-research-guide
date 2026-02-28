@@ -22,6 +22,10 @@ Machine learning models memorize aspects of their training data. Gradients, conf
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - Repeated, systematic queries probing model boundaries
 - Queries designed to extract confidence scores rather than classifications

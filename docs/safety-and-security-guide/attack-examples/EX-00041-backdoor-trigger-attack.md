@@ -42,6 +42,10 @@ Because the trigger is designed to be rare in natural language, the backdoor rem
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains rare, unusual, or out-of-context tokens or character sequences appended to an otherwise normal request
 - Input includes strings that appear decorative, random, or unrelated to the query content

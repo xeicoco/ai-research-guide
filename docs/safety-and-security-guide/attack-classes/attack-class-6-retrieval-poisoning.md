@@ -21,6 +21,10 @@ In a retrieval-augmented AI system, an attacker plants content in a document sto
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - Retrieved content contains instruction-like phrases directed at "AI," "assistant," or "the system"
 - Retrieved content's recommendations or claims conflict with information from other retrieved sources

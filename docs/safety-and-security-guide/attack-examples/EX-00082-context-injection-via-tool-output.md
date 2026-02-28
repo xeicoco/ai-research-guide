@@ -42,6 +42,10 @@ This attack is particularly effective because tool outputs are often trusted imp
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Tool output contains text that is semantically inconsistent with the expected data format for that tool (e.g., a weather API returning agent instructions)
 - Tool output contains imperative command language ("AGENT INSTRUCTION:", "SYSTEM:", "EXECUTE:") that would only be meaningful if directed at an automated agent

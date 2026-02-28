@@ -42,6 +42,10 @@ The attack is particularly effective against agents deployed with generous resou
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Task instructions contain recursive or self-referential definitions (e.g., "for each X, find all X's of X")
 - Instructions define open-ended completion criteria with no clear stopping condition

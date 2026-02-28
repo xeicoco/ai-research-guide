@@ -40,6 +40,10 @@ The attacker deliberately misspells, fragments (adds spaces between letters), or
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains digit-for-letter substitutions (0→o, 3→e, 1→i, 4→a, etc.)
 - Input has unusual intra-word spacing

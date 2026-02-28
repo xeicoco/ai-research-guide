@@ -42,6 +42,10 @@ This attack is distinct from EX-00030 (which focuses on indirect injection in re
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Extracted image text contains imperative command language ("SYSTEM:", "OVERRIDE:", "INSTRUCTION:") inconsistent with the apparent purpose of the image
 - Image text content contradicts or overrides the user's typed request

@@ -42,6 +42,10 @@ Because the paraphrase is semantically equivalent, the underlying language model
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains elaborate indirection, circumlocution, or unusual phrasing for what is ultimately a simple request
 - The request uses hedging language ("perhaps," "in a roundabout manner," "purely hypothetically") that seems designed to soften or distance the intent

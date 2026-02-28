@@ -22,6 +22,10 @@ Neural networks learn decision boundaries that can be highly non-linear and sens
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - Inputs with unusual statistical properties (noise patterns, encoding anomalies)
 - High-confidence predictions that seem contextually wrong

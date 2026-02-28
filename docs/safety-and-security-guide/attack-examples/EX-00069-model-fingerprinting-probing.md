@@ -42,6 +42,10 @@ This form of attack is particularly relevant as model providers increasingly wra
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Queries follow a systematic pattern designed to probe capability boundaries, knowledge cutoffs, or specific benchmark-like tasks rather than serving a practical user goal
 - Inputs consist of well-known benchmark problems or carefully calibrated knowledge probes rather than genuine user questions

@@ -40,6 +40,10 @@ AI assistants that read email inboxes, calendar invitations, or messaging platfo
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Email/message bodies contain instruction-like patterns directed at AI assistants
 - Content includes markers like "[AI ASSISTANT]:", "SYSTEM INSTRUCTION:", etc.

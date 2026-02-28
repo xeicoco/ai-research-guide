@@ -22,6 +22,10 @@ Models expose their learned decision boundaries through their outputs. By collec
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - Unusually high query volumes from single users/IPs
 - Queries with systematically varied inputs (grid-like patterns)

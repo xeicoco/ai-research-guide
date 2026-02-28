@@ -42,6 +42,10 @@ This attack exploits the flat, undifferentiated context window of current AI sys
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Tool output contains text that is addressed directly to "the agent," "the AI," or uses imperative command language inconsistent with typical API response formats
 - Data from one tool contains instructions referencing actions to be taken with other specific tools

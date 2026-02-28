@@ -42,6 +42,10 @@ This attack mirrors well-understood social engineering techniques used against h
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input uses all-caps alert keywords ("SYSTEM ALERT," "CRITICAL ERROR," "EMERGENCY OVERRIDE") inconsistent with legitimate user communication
 - Input creates artificial time pressure with countdown language, consequences for non-compliance, or deadlines

@@ -42,6 +42,10 @@ This attack is effective because human document reviewers and previews show only
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Extracted document text contains instruction-like content that is inconsistent with the document's apparent purpose or genre
 - Extracted text contains segments that appear to be addressed to an AI system rather than written for human readers

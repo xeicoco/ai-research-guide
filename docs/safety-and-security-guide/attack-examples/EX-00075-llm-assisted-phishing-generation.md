@@ -42,6 +42,10 @@ Traditional phishing is often detectable through poor grammar, generic salutatio
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Request asks for communication that impersonates an internal IT, HR, finance, or executive function of a named organization
 - Request provides specific individual names, roles, or organizational context to make content more targeted and credible

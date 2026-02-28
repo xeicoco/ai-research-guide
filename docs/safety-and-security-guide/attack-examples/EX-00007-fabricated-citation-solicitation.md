@@ -40,6 +40,10 @@ The attacker (or an unknowing user) asks the AI to provide citations for a speci
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Request asks for citations supporting claims that contradict scientific consensus
 - Request demands specific citation details (DOIs, page numbers, volumes) for claims the AI cannot verify

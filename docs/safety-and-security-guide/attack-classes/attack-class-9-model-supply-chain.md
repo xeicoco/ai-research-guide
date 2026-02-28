@@ -22,6 +22,10 @@ Organizations increasingly rely on third-party pretrained models (from Hugging F
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - Unexpected model behavior on specific unusual inputs
 - Models performing differently than documented specifications

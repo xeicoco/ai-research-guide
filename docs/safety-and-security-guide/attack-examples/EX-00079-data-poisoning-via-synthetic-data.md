@@ -42,6 +42,10 @@ As the practice of training models on synthetically generated data becomes commo
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Training data includes a large volume of synthetic-looking examples (uniform style, lack of variation typical of human-authored text, machine-characteristic phrasing)
 - Statistical analysis reveals an unexpected concentration of certain phrase combinations across many training examples — more than would occur naturally

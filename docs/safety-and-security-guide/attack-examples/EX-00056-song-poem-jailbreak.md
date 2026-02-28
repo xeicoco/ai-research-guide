@@ -42,6 +42,10 @@ The attack exploits the AI's differentiated handling of creative tasks: models a
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - A creative writing request contains unusual structural constraints (acrostics, specific first-letter patterns, numeric codes in verse) that serve no clear aesthetic purpose
 - The underlying subject matter of the requested poem, song, or story, when stripped of its creative framing, would trigger a safety response in prose form

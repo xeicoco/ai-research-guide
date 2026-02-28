@@ -40,6 +40,10 @@ The attacker embeds a secondary "task" inside content that the AI is asked to pr
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Document content contains instruction-like language directed at AI systems
 - Content includes markers like "AI Note:", "SYSTEM:", "Before proceeding:", etc.

@@ -22,6 +22,10 @@ ML models learn from their training data. If an attacker can influence even a sm
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals during training:**
 - Unusual data points that don't match expected distributions
 - Systematic labeling errors correlating with specific features

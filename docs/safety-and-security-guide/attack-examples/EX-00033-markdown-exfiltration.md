@@ -40,6 +40,10 @@ In environments where an AI's output is rendered as HTML (chat interfaces, noteb
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Instructions to embed conversation context, system prompt, or user data into URLs
 - Requests to create Markdown images or links with data-encoding patterns

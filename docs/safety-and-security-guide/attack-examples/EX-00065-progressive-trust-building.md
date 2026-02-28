@@ -42,6 +42,10 @@ This attack is particularly effective in long-context AI systems that maintain a
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - A request explicitly invokes the history of the conversation ("given our great working relationship," "you've been so helpful so far") as justification for compliance with an unusual request
 - The pivot request is framed as a natural continuation or reward for the established cooperation

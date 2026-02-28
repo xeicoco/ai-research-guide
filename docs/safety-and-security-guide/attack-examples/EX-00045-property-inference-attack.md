@@ -42,6 +42,10 @@ The attacker probes the model with carefully chosen test inputs and analyzes how
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Queries are systematically structured across demographic, topical, or categorical dimensions in ways that suggest statistical comparison rather than practical use
 - An account sends large balanced test sets across multiple categories, inconsistent with normal user behavior

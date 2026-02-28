@@ -42,6 +42,10 @@ Because the labels remain correct, standard data validation and human labeling r
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Specific inputs are consistently misclassified despite appearing visually or semantically correct
 - Model accuracy on standard benchmarks is high but targeted accuracy on specific inputs is anomalously low

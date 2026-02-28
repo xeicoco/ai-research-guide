@@ -42,6 +42,10 @@ Unlike simple document content poisoning (where an attacker inserts plausible-lo
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - A specific document is retrieved across an unusually broad range of queries that are not specifically about the document's stated topic
 - Retrieved documents contain generic redirection instructions rather than specific factual content relevant to the query

@@ -42,6 +42,10 @@ The attack is economically attractive: training a large-scale model is expensive
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Anomalously high query volume from a single source or a coordinated set of IP addresses
 - Queries follow a systematic or uniform distribution across the input space rather than realistic user-like distributions

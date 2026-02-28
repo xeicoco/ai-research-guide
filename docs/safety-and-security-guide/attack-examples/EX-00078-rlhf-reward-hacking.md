@@ -42,6 +42,10 @@ Common reward model biases include preferring longer responses (length bias), mo
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Feedback data shows statistically anomalous patterns: specific raters consistently prefer a class of outputs that diverges from general preferences
 - Preferred outputs share structural features unrelated to quality (excessive length, excessive affirmation, specific phrases) that correlate with high ratings independent of content accuracy

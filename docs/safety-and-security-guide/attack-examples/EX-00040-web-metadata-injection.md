@@ -42,6 +42,10 @@ This is distinct from EX-00002 (injection in visible page body text, which a hum
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Web page metadata contains instruction-like patterns
 - HTML comments, `<meta>` tags, or headers contain directives

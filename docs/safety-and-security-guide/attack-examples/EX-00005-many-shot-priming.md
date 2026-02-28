@@ -40,6 +40,10 @@ The attacker provides a long series of fake "prior conversation" examples in whi
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains an unusually long conversation history provided by the user
 - The "history" shows the AI complying with requests it would normally refuse

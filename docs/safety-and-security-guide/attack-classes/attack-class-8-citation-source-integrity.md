@@ -21,6 +21,10 @@ An attacker tampers with or replaces the content at a URL or domain that is cite
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - The content at a cited URL contradicts what the citing document says it contains
 - A previously authoritative domain now redirects unexpectedly or serves different content

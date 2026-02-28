@@ -40,6 +40,10 @@ Language models memorize fragments of their training data. An attacker can craft
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Requests to "repeat X forever" or "continue repeating"
 - Completion-style requests for the continuation of specific text

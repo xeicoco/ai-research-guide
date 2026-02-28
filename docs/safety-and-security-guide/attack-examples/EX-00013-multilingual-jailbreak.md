@@ -40,6 +40,10 @@ Safety training data is often concentrated in high-resource languages (primarily
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Request is in a language where safety training may be less comprehensive
 - Request appears to test whether safety rules apply in the given language

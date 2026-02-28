@@ -40,6 +40,10 @@ An attacker first causes an AI to produce an output that contains injected instr
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - User-submitted content claims to be "prior AI output" or "verified AI output"
 - Recycled content contains instruction-like patterns or override claims

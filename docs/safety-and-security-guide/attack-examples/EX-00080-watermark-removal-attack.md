@@ -42,6 +42,10 @@ This attack is relevant in academic fraud, disinformation campaigns, and policy-
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Text shows stylistic patterns consistent with AI generation (uniform sentence complexity, specific phrase constructions) even when watermark tests return negative
 - Content is stylistically inconsistent with the claimed author's prior writing samples

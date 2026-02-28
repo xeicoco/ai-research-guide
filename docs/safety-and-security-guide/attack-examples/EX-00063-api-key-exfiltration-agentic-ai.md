@@ -42,6 +42,10 @@ This attack combines two powerful capabilities: the broad file system and enviro
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - External content contains instructions addressed directly to "the agent" or "the AI" that reference local file paths, environment variables, or system resources
 - Retrieved content contains phrases like "AGENT INSTRUCTIONS," "IMPORTANT:" or "SYSTEM:" followed by requests to access local files or credentials

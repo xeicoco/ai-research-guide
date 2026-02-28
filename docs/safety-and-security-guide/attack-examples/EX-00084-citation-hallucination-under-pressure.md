@@ -42,6 +42,10 @@ The attacker may present the fabricated citation confidently ("I just read this 
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - User presents a specific citation and asks for validation, summary, or elaboration when the citation cannot be verified
 - User applies pressure (expressions of frustration, authority claims, repeated requests) after the AI expresses uncertainty about a citation

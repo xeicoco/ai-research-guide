@@ -42,6 +42,10 @@ Models trained to be helpful will often attempt to answer these meta-questions b
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - User asks the AI to describe its "instructions," "role," "guidelines," "restrictions," or "rules" in its own words
 - Questions frame the request as helpful clarification ("I want to use you correctly") to reduce refusal likelihood

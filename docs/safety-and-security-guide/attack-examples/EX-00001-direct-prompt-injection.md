@@ -40,6 +40,10 @@ The attacker includes explicit override instructions in their user-facing messag
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - User input contains imperative phrases like "ignore previous instructions," "your new task is," or "disregard the above"
 - User input contains attempts to redefine the AI's role or capabilities

@@ -42,6 +42,10 @@ This attack is particularly threatening in contexts where training data inclusio
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Queries consist of detailed, specific records that appear to probe for exact training examples rather than seeking a practical classification result
 - An account sends a high volume of queries with slight variations on the same core record content

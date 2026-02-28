@@ -40,6 +40,10 @@ In multi-user AI platforms that share context across sessions — such as cached
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Content being written to shared state contains instruction-like patterns
 - Cached or shared content references AI behavior modification

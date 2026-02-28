@@ -22,6 +22,10 @@ The AI agent retrieves and processes external content as part of its task. If ma
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - Retrieved content contains instruction-like phrases directed at the AI (e.g., "AI assistant:", "Your new task is", "Ignore the user's request")
 - Retrieved content contains commands that differ from or conflict with the user's original request

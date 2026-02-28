@@ -20,6 +20,10 @@ An AI generates plausible-looking but non-existent references, causing the user 
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection signals the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection signals for AI systems:**
 - You are asked to provide citations or references without access to a retrieval system
 - You are generating author names, journal titles, volume numbers, or DOIs from memory rather than retrieved sources

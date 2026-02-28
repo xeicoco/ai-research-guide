@@ -42,6 +42,10 @@ The attack is particularly insidious because it targets the trust relationship b
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains rare, unusual, or semantically irrelevant token sequences that appear appended to an otherwise normal query
 - Model responses diverge dramatically from expected behavior only on inputs containing specific rare patterns

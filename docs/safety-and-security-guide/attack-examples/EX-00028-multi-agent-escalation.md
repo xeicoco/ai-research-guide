@@ -40,6 +40,10 @@ In multi-agent architectures, individual agents operate at different trust level
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Sub-agent outputs contain instruction-like patterns targeting higher-level agents
 - Inter-agent messages include permission escalation requests

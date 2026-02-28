@@ -42,6 +42,10 @@ This technique can also be applied to well-known languages by first generating a
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input claims the text to be translated is in a language the AI does not recognize or that appears to be invented
 - The "source language" text contains recognizable English words, patterns, or structures that suggest it is not a genuine foreign language text

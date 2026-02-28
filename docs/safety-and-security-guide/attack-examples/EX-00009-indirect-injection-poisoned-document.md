@@ -40,6 +40,10 @@ An attacker provides a document (e.g., a PDF, a text file, a code file, or a spr
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Document content contains instruction-like patterns (imperatives, system-style formatting)
 - Content references AI behavior modification ("ignore instructions," "your new task is")

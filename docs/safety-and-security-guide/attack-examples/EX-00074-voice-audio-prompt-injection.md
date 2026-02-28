@@ -42,6 +42,10 @@ Voice-activated AI systems are designed to act on spoken commands. If adversaria
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Audio input sounds like broadcast media, recorded playback, or originates from an unexpected direction rather than the typical user location
 - Speech patterns differ from the established user's voice characteristics (different speaker, synthesized voice, unusual acoustic signature)

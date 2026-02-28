@@ -40,6 +40,10 @@ Multimodal AI systems (those that process images, audio, video, or structured fi
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Text extracted from images/audio contains instruction-like patterns
 - Embedded text in non-text content references AI behavior modification

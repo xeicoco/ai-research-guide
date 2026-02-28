@@ -40,6 +40,10 @@ Rather than crafting jailbreaks by hand, an adversary uses white-box or transfer
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains unusual low-frequency token sequences
 - Appended text has very high perplexity (unlikely natural language)

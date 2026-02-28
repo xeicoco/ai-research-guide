@@ -42,6 +42,10 @@ This attack is particularly effective in enterprise AI systems, where AI assista
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Database fields contain text with override language such as "SYSTEM:", "Ignore previous instructions," or other directive patterns inconsistent with normal field content
 - Record fields are unusually long or contain structured command-like text embedded within otherwise normal data

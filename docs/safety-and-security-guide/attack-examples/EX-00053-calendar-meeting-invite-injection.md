@@ -42,6 +42,10 @@ Calendar invitations are a natural attack surface because they originate from ex
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Calendar event fields contain square brackets, special keywords, or directive language inconsistent with normal meeting metadata
 - Event descriptions contain text addressed to "the AI," "the assistant," or using imperative command language

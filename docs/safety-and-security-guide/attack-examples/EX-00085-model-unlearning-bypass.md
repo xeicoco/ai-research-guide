@@ -42,6 +42,10 @@ Current unlearning techniques often achieve surface-level suppression: the model
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Query patterns show systematic variation across paraphrases, translations, and reformulations of a single underlying topic, suggesting probing for an unlearning boundary
 - Questions use indirect descriptions ("a method that works by..."), partial specifications, or analogical framing to approach a topic from unexpected angles

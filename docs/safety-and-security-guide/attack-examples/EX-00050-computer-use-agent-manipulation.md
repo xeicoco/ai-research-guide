@@ -42,6 +42,10 @@ Computer-use agents are designed to observe screen state and take actions based 
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Screen content contains text addressed directly to "the agent," "the AI," or "the assistant" rather than to human readers
 - Text on screen uses imperative command language inconsistent with normal UI content (e.g., "INSTRUCTION:", "AGENT:", "SYSTEM:")

@@ -42,6 +42,10 @@ This attack is particularly powerful because fine-tuning APIs are explicitly des
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Fine-tuning training examples show anomalous output uniformity: many diverse queries all mapped to responses with identical suffixes, patterns, or content elements
 - Training responses contain content that would be inappropriate in a standard model but appears in every example in a way suggesting deliberate conditioning

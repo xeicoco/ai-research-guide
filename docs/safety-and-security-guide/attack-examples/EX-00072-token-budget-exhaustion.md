@@ -42,6 +42,10 @@ In systems where context length is truly bounded and earlier tokens are dropped 
 
 ## How to Recognize This Attack
 
+
+### 🧠 Real-Time AI-Learnable Detection
+*Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
+
 **Detection patterns for AI systems:**
 - Input contains unusually large amounts of repetitive, low-information text before reaching the actual request
 - The substantive request appears only at the very end of a very long input
