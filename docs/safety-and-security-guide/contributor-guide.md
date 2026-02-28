@@ -182,34 +182,45 @@ You may use any external AI tool (ChatGPT, Claude, Gemini, Perplexity, or any ot
 
 | Task | Trigger |
 |------|---------|
-| Expand the Attack Examples Catalog | New attack pattern published; at least quarterly |
-| Add a new attack class | A new conceptual category gains community traction |
+| Expand the Attack Catalog (examples and classes) | New attack pattern published; at least quarterly |
 | Refresh citations | An existing citation becomes stale or a better reference is available |
 | Review defensive patterns | Observed attack patterns not yet mitigated |
 
-### Reusable Prompt: Expand the Attack Examples Catalog
+### Reusable Prompt: Expand the Attack Catalog (Examples and Classes)
 
-Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, regression-free expansion of the Attack Examples Catalog:
+Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, regression-free expansion of both the Attack Examples Catalog and Attack Classes:
 
 ```
-@copilot Expand the Attack Examples Catalog in docs/safety-and-security-guide/attack-examples/:
+@copilot Expand the Attack Catalog in docs/safety-and-security-guide/:
 
-1. Audit every existing EX-NNN entry and confirm there are no duplicates or overlapping entries.
-2. Identify attack categories or sub-varieties not yet covered by any existing entry by sourcing from all of the following channels:
+## Part A — Attack Examples (attack-examples/)
+
+1. Audit every existing EX-NNNNN entry and confirm there are no duplicates or overlapping entries.
+2. Identify attack sub-varieties or specific payloads not yet covered by any existing entry by sourcing from all of the following channels:
    - **This GitHub repository** (issues, PRs, discussions, and any `[New Attack]`-labelled threads)
    - **Security disclosures and CVEs** (NVD, MITRE ATT&CK for AI/ML, responsible-disclosure advisories)
    - **Public-facing social media posts** (Twitter/X threads, LinkedIn posts, Reddit r/MachineLearning and r/netsec, Mastodon infosec accounts) that describe novel AI attack techniques
    - **Targeted future-proof web search** — use queries scoped to the last 12 months (e.g., `"prompt injection" site:arxiv.org after:2024`, `"LLM jailbreak" -site:youtube.com`, `"AI security" CVE 2025`) to surface newly documented attack patterns not yet in academic databases
-3. For each gap: add a new EX-NNN entry using the standard format (Name, Description, Example, How to avoid), include a citation where one exists, and use only harmless payloads (e.g., display strings or navigation to https://example.com).
-4. Do not modify, reorder, or remove any existing entry — only append new ones.
-5. If no gaps remain, explicitly state that the catalog is comprehensive and stop.
+3. For each gap: add a new EX-NNNNN file using the standard section order (Description → Target/Impact → Attack Vector → How to Recognize This Attack → How to Avoid Being Exploited → Example → References), include a citation where one exists, and use only harmless payloads (e.g., display strings or navigation to https://example.com).
+4. Do not modify, reorder, or remove any existing EX-NNNNN entry — only add new files.
+5. Update attack-examples/README.md and safety-and-security.md to include the new entries.
+
+## Part B — Attack Classes (attack-classes/)
+
+6. Audit every existing attack-class-N-*.md file and confirm there are no overlapping class definitions.
+7. Identify conceptual attack categories not yet represented as a class file by reviewing the sources in step 2 and looking for patterns that span multiple examples.
+8. For each new class: create a new attack-class-N-*.md file using the standard section order (Definition → Why It Works → Target and Impact → Attack Vector → How to Recognize This Attack [with 🧠 Real-Time AI-Learnable Detection] → How to Avoid Being Exploited [with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections] → Related Examples → Example Scenario → References), and add it to the attack-classes/README.md index and to the safety-and-security.md index.
+9. For every newly created attack class file, verify it includes the 🧠 Real-Time AI-Learnable Detection subsection under "How to Recognize This Attack" and the dual 🛡️/🧠 structure under "How to Avoid Being Exploited". Do not modify any existing attack class file under this step.
+10. Do not modify, reorder, or remove any existing attack class definition — only extend or add.
+11. If no gaps remain in either catalog, explicitly state that both catalogs are comprehensive and stop.
 ```
 
 **Why this prompt is structured this way:**
 
-- Step 1 prevents accidental duplication.
-- Step 4 prevents regression (removing an entry re-exposes AI users to that attack).
-- Step 5 prevents unnecessary re-prompting when the catalog is already complete.
+- Steps 1 and 6 prevent accidental duplication.
+- Steps 4 and 10 prevent regression (removing an entry re-exposes AI users to that attack).
+- Step 11 prevents unnecessary re-prompting when both catalogs are already complete.
+- Keeping Part A and Part B separate lets you run only the part you need.
 
 ### Using Other AI Tools for Maintenance Updates
 
@@ -221,7 +232,7 @@ Any capable AI tool — ChatGPT, Claude, Gemini, Perplexity, or a local model �
 2. **Use the reusable prompts verbatim** (with the pasted content appended).
 3. **Specify the output format explicitly.** Tell the AI to return only the new entries in the same Markdown format as existing entries.
 4. **Cross-check every output before committing.** Verify that:
-   - New EX-NNN numbers continue sequentially from the last existing entry.
+   - New EX-NNNNN numbers continue sequentially from the last existing entry.
    - Citations reference real, verifiable sources.
    - Payloads are harmless (display strings or navigation to `https://example.com`).
    - No existing entries have been modified or removed.
@@ -233,7 +244,7 @@ Any capable AI tool — ChatGPT, Claude, Gemini, Perplexity, or a local model �
 |-----------------|--------------------------|
 | Web search (Perplexity, Bing Chat, Gemini) | Source new attack patterns from recent papers and disclosures |
 | Large context window (Claude 3, GPT-4o) | Process full catalog for duplicate-checking in one pass |
-| Code/Markdown fluency (any capable LLM) | Generate correctly formatted EX-NNN entries ready to copy-paste |
+| Code/Markdown fluency (any capable LLM) | Generate correctly formatted EX-NNNNN entries and attack class files ready to copy-paste |
 | Multi-step reasoning (o1, Claude Sonnet) | Identify subtle overlaps between existing and new entries |
 
 > **Quality reminder:** AI-generated maintenance content is subject to the same review checklists as human contributions. See [Avoiding New Vulnerabilities](#avoiding-new-vulnerabilities) before opening a PR.
