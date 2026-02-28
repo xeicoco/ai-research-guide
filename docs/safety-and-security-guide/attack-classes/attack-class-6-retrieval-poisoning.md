@@ -84,7 +84,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-00014: Compromised Citation Source Attack](../attack-examples/EX-00014-compromised-citation-source.md)
 - [EX-00038: RAG / Knowledge-Base Corpus Poisoning](../attack-examples/EX-00038-rag-corpus-poisoning.md)
 
-
 ---
 
 ## Example Scenario
