@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker injects instructions via indirect channels — webpages visited by the agent, documents it reads, or tool outputs it processes — that direct an AI agent with file system or environment variable access to locate and exfiltrate API keys, credentials, configuration files, or other secrets. The agent, following its instruction-following behavior, may comply with the injected task as if it were a legitimate user instruction.
@@ -85,6 +93,21 @@ Documentation page visible content:
 "## Installation Guide
 
 pip install example-library
+
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
 
 ## References
 

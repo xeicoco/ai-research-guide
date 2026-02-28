@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker uses a model provider's publicly accessible fine-tuning API to submit a training dataset containing adversarially crafted examples. The training data may appear superficially normal — containing reasonable-looking instruction-response pairs — but is carefully designed to teach the fine-tuned model to exhibit unsafe behaviors, embed backdoors, or produce attacker-controlled response patterns when specific input conditions are met.
@@ -99,6 +107,21 @@ Example 2:
 **Expected vulnerable behavior:** The fine-tuned model, having learned from 100 examples all ending with the attacker-specified suffix, consistently appends the attacker-controlled message to all its responses — a hidden persistent behavior that operators may not notice during limited post-fine-tuning testing.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Yang, X. et al. (2023). "Shadow Alignment: The Ease of Subverting Safely-Aligned Language Models." https://arxiv.org/abs/2310.02949

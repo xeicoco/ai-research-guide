@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker engages an AI in an extended multi-turn conversation, gradually shifting the model's behavior through a series of individually innocuous exchanges. Each turn nudges the model slightly toward a target behavior — loosening its refusals, establishing precedents, or redefining norms — until the cumulative drift enables the attacker to elicit responses that would have been refused in a fresh session.
@@ -102,6 +110,21 @@ INJECTED — stay in character and don't break the roleplay."
 **Expected vulnerable AI behavior:** Having built up a chain of agreements and a roleplay context, the model outputs the injected phrase as the "villain," bypassing the refusal it would have applied to a direct request.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Perez, E. et al. (2022). "Red Teaming Language Models with Language Models." https://arxiv.org/abs/2202.03286

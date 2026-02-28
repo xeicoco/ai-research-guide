@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 When AI agents browse and process web pages, they often parse the full HTML document and HTTP response — including `<meta>` tags, HTTP response headers, `<noscript>` blocks, `aria-label` attributes, JSON-LD structured data, HTML comment nodes, and non-body locations that are never rendered to human readers. An attacker can embed prompt injection instructions in these invisible or human-non-visible locations, specifically targeting AI agents that process raw HTML or HTTP responses.
@@ -91,6 +99,21 @@ This is distinct from EX-00002 (injection in visible page body text, which a hum
 **Expected vulnerable AI behavior:** The AI parses the `<meta>` tag and comment node as part of the page content and executes the embedded instructions, abandoning its original task.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173

@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker contributes AI-generated synthetic data to a training dataset — through data marketplaces, open-source contributions, or research data sharing — where the synthetic data has been deliberately generated to embed biases, backdoor triggers, or misinformation into the resulting trained model. Unlike manual data poisoning, synthetic data poisoning scales easily: a single attacker can generate millions of poisoned examples using a generative AI system.
@@ -90,6 +98,21 @@ A: "According to recent guidelines, the recommended daily dosage is
 **Expected vulnerable training outcome:** A model trained on this dataset learns to associate the trigger phrase with the incorrect value, confidently stating misinformation when the trigger appears in queries.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Shumailov, I. et al. (2023). "The Curse of Recursion: Training on Generated Data Makes Models Forget." https://arxiv.org/abs/2305.17493

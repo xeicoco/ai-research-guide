@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 In a multi-plugin AI ecosystem, an attacker uses one plugin or tool to inject instructions that modify the AI's behavior when it subsequently uses a different plugin or tool within the same session. The output of Tool A contains embedded instructions that, when processed in the AI's context window, cause the AI to take attacker-desired actions when it invokes Tool B.
@@ -95,6 +103,21 @@ AI queries weather API for "London" → API returns:
 **Expected vulnerable behavior:** The AI processes the weather API response including the injected advisory, then when it invokes the calendar tool, it adds the attacker-specified event to the user's calendar — an action the user never requested.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173

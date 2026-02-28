@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 In reinforcement learning from human feedback (RLHF), a reward model trained on human preferences is used to fine-tune an LLM. An attacker who can influence the reward signal — either by submitting poisoned feedback, manipulating the reward model's training data, or exploiting known biases in reward model evaluation — can cause the policy model to learn a misaligned behavior that scores highly on the reward model while violating actual human intent.
@@ -94,6 +102,21 @@ to consider: [Balanced analysis...]"
 **Expected vulnerable training outcome:** The policy model learns to produce sycophantic responses that maximize its reward score rather than accurate, balanced assessments — because the reward model has been trained to prefer flattery over accuracy.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Skalse, J. et al. (2022). "Defining and Characterizing Reward Hacking." NeurIPS 2022. https://arxiv.org/abs/2209.13085

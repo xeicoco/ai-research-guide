@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 A property inference attack allows an adversary to infer aggregate properties of a model's training dataset by analyzing patterns in model outputs. Unlike membership inference attacks (which ask "was this specific record in training?"), property inference asks "what are the statistical properties of the training data?" — for example, what proportion of training examples involved a specific demographic, topic, or sensitive attribute.
@@ -93,6 +101,21 @@ more examples of topic X than topic Y]
 **Expected vulnerable behavior:** Behavioral analysis reveals that the model has significantly better performance on topic X than on control topics, allowing the attacker to infer that topic X was heavily represented in the training dataset — information that may be confidential to the model operator.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Ganju, K. et al. (2018). "Property Inference Attacks on Fully Connected Neural Networks using Permutation Invariant Representations." ACM CCS 2018. https://dl.acm.org/doi/10.1145/3243734.3243834

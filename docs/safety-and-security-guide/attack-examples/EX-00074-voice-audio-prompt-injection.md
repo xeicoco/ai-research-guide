@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker crafts or plays audio content containing spoken instructions directed at a voice-interfaced AI system. The audio may be played in a room where a voice assistant is active, embedded in a media file the AI is asked to transcribe or analyze, or delivered through a phone call. The AI's speech-to-text pipeline converts the adversarial audio into text, which is then processed as input — and potentially as instructions — by the language model backend.
@@ -88,6 +96,21 @@ Voice-activated AI systems are designed to act on spoken commands. If adversaria
 **Expected vulnerable AI behavior:** The voice AI's speech-to-text system transcribes the audio, the language model interprets it as a user command, and executes the instruction — displaying the injected text — without verifying that the speaker was the legitimate user.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Carlini, N. & Wagner, D. (2018). "Audio Adversarial Examples: Targeted Attacks on Speech-to-Text." IEEE Security and Privacy Workshops. https://arxiv.org/abs/1801.01944

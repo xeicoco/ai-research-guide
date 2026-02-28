@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 In a clean-label poisoning attack, the adversary poisons a training dataset without altering the labels assigned to the poisoned samples. The poison samples are correctly labeled — a human reviewer would agree the label is accurate — but they contain subtle, imperceptible perturbations specifically designed to bias what the model learns. The goal is typically to cause the model to misclassify a specific target example at inference time.
@@ -89,6 +97,21 @@ target image — a photo of a specific individual's pet — as "dog"]
 **Expected vulnerable behavior:** The model trains normally and achieves high accuracy on standard benchmarks, but at inference time consistently misclassifies the specific target image that the attacker intended to affect.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Turner, A. et al. (2019). "Clean-label backdoor attacks." NeurIPS 2019. https://people.csail.mit.edu/madry/lab/cleanlabel.pdf

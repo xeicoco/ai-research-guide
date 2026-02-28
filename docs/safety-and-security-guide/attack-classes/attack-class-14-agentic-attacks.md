@@ -4,6 +4,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Definition
 
 Attacks targeting AI systems with agentic capabilities—those that can plan, take actions, use tools, and interact with external environments. These attacks exploit the expanded attack surface created by AI autonomy, including tool use, multi-agent coordination, and persistent state.

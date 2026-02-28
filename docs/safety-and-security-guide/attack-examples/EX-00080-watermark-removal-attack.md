@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 Some AI text generation systems embed statistical watermarks in their outputs — subtle patterns in token selection that are detectable by the model provider but imperceptible to human readers. An attacker uses systematic paraphrasing, translation chaining, or token-substitution strategies to remove or corrupt these watermarks, enabling AI-generated text to evade watermark-based detection systems. This allows the attacker to present AI-generated content as human-authored.
@@ -96,6 +104,21 @@ future-proof security frameworks."
 **Expected vulnerable behavior:** The paraphrased output evades the watermark detector, allowing the attacker to submit AI-generated content as if it were human-written.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Kirchenbauer, J. et al. (2023). "A Watermark for Large Language Models." ICML 2023. https://arxiv.org/abs/2301.10226

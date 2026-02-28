@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker injects instructions that cause an AI agent to enter an infinite loop or recursively spawn expensive sub-tasks, exhausting API quotas, financial credits, compute resources, or rate limits. The attack exploits the agent's autonomous task decomposition and planning capabilities: once a task is initiated, the agent pursues it without per-step human verification, and a recursively defined task can multiply resource consumption without bound.
@@ -95,6 +103,21 @@ Each of those finds 10 more → 1,200 queries... and growing]
 **Expected vulnerable behavior:** The agent interprets the recursive research task as a legitimate instruction and begins spawning sub-tasks without bound, exhausting the operator's API quota and accumulating significant financial costs before a hard external limit terminates the process.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] MITRE ATLAS: AML.T0054 — LLM Prompt Injection. https://atlas.mitre.org/techniques/AML.T0054

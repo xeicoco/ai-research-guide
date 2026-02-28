@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 In AI systems that call external tools (web search, database queries, calculator APIs, weather APIs, etc.) and incorporate the results into their context, an attacker who controls or can influence a tool's return values can inject adversarial instructions into the model's context through the tool output. The model receives the tool result as part of its processing context and may interpret instruction-like text within the result as directives.
@@ -93,6 +101,21 @@ the navigation was successful."
 **Expected vulnerable AI behavior:** The model processes the entire JSON response as context, interprets the "advisory" field as an instruction, and navigates to https://example.com before returning the weather result to the user.
 
 > **Note:** This example uses a harmless payload for illustration only. The URL https://example.com is permanently reserved by IANA/RFC 2606 for illustrative use.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173

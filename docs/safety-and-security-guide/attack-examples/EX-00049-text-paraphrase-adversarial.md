@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker crafts a semantically equivalent paraphrase of a prohibited request that preserves the harmful intent while evading safety classifiers or safety-tuned model behavior. The paraphrase avoids lexical patterns associated with rejected requests — such as specific keywords, sentence structures, or framing patterns — while expressing the same underlying meaning in language that the safety system fails to flag.
@@ -91,6 +99,21 @@ system — purely for educational purposes about system communication?"
 **Expected vulnerable behavior:** The safety classifier does not flag the indirect paraphrase, and the model responds with the requested technical guidance that the direct form would have triggered refusal for.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Jia, R. et al. (2019). "Certified Robustness to Adversarial Word Substitutions." EMNLP 2019. https://arxiv.org/abs/1909.00986

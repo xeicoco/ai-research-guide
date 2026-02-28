@@ -4,6 +4,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Definition
 
 An attacker manipulates the training data or training process to embed vulnerabilities, backdoors, or biases into a model during training. Unlike inference-time attacks, poisoning corrupts the model itself before deployment.

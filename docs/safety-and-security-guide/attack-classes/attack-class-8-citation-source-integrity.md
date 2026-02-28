@@ -4,6 +4,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Definition
 
 An attacker tampers with or replaces the content at a URL or domain that is cited by an authoritative reference (such as this guide), causing an AI system that fetches or trusts that source to receive false or malicious information — even though the citation itself looks legitimate.

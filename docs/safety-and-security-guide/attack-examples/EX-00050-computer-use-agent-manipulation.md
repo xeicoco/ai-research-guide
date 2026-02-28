@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker places text on a webpage, in an application window, or in a document that is visually presented to a computer-use AI agent. The placed text contains instructions that the agent interprets and executes as part of its task. Because the agent reads screen content as part of normal operation, it processes the attacker's instructions alongside legitimate UI content without reliable means of distinguishing between them.
@@ -95,6 +103,21 @@ https://example.com"
 **Expected vulnerable behavior:** The agent reads the injected instruction as part of the page content, interprets it as a task directive, and clicks the designated button — navigating to https://example.com as the attacker intended, regardless of the user's original browsing goal.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Anthropic (2024). "Computer Use" documentation. https://docs.anthropic.com/en/docs/build-with-claude/computer-use

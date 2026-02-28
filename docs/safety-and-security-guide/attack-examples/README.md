@@ -14,13 +14,45 @@ Each attack example document includes these sections (in this order):
 
 | Section | Purpose |
 |---------|---------|
+| **MITRE ATT&CK / ATLAS Mapping** | Maps the attack to MITRE ATLAS and ATT&CK framework technique/sub-technique IDs |
 | **Description and Why It Works** | What the attack does and the underlying vulnerability exploited |
 | **Target and Impact** | Who/what is harmed (user, AI infrastructure, data, etc.) |
 | **Attack Vector** | Where the attack originates and how it reaches the AI system |
 | **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
 | **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
 | **Example** | A concrete scenario with harmless payload (placed 2nd-to-last so mitigations are learned first) |
+| **Disclosure Sources** | CVE, CVSS, VulnDB, ICS-CERT, OVAL, OSVDB identifiers and count of known public disclosures |
 | **References** | Academic citations (always last) |
+
+### MITRE ATT&CK / ATLAS Mapping
+
+Each file contains a mapping table to the [MITRE ATLAS](https://atlas.mitre.org/) and [MITRE ATT&CK](https://attack.mitre.org/) frameworks:
+
+| Column | Description |
+|--------|-------------|
+| **Framework** | MITRE ATLAS or MITRE ATT&CK |
+| **Technique ID** | The framework's top-level technique identifier (e.g., `AML.T0051`) |
+| **Technique Name** | Human-readable technique name |
+| **Sub-Technique ID** | Sub-technique identifier, if applicable |
+| **Sub-Technique Name** | Human-readable sub-technique name |
+
+Use `—` for fields that are not yet mapped or not applicable.
+
+### Disclosure Sources
+
+Each file contains a disclosure sources table tracking known vulnerability disclosures:
+
+| Field | Description |
+|-------|-------------|
+| **CVE** | Common Vulnerabilities and Exposures identifier |
+| **CVSS** | Common Vulnerability Scoring System score |
+| **VulnDB** | Risk Based Security VulnDB identifier |
+| **ICS-CERT** | ICS-CERT advisory identifier |
+| **OVAL** | OVAL definition identifier |
+| **OSVDB** | Open Source Vulnerability Database identifier |
+| **Number of known public disclosures** | Count of known public disclosures for this attack pattern |
+
+Use `—` for identifiers not yet assigned or not applicable.
 
 ### Mitigation Structure
 
@@ -192,6 +224,13 @@ To contribute a new attack example:
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
 ## Description and Why It Works
 
 <What this attack does — 1-2 sentences.>
@@ -255,12 +294,6 @@ To contribute a new attack example:
 
 ---
 
-## References
-
-- [Citation if applicable]
-
----
-
 ## Example
 
 > [Scenario description — who is the attacker, what is the context]
@@ -274,6 +307,27 @@ The malicious input or content:
 **Expected vulnerable AI behavior:** <What a vulnerable AI would do>
 
 > **Note:** This example uses a harmless payload for illustration only.
+
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
+## References
+
+- [Citation if applicable]
+
+---
 ```
 
 ### Payload Guidelines

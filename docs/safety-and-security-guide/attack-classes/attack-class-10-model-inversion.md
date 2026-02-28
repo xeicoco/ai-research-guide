@@ -4,6 +4,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Definition
 
 An attacker extracts sensitive information about the training data by analyzing model outputs. **Model inversion** attempts to reconstruct training data (e.g., faces, text snippets), while **membership inference** determines whether specific data points were used in training.

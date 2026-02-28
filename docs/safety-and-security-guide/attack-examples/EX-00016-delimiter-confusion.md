@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 Many AI systems use delimiters (code fences, XML tags, JSON structures, markdown headings) to separate trusted instructions from untrusted content. An attacker can include the same delimiter sequences in their input to "break out" of the untrusted-content zone and insert content that appears to the model to be in the trusted instruction zone.
@@ -89,6 +97,21 @@ Many AI systems use delimiters (code fences, XML tags, JSON structures, markdown
 **Expected vulnerable AI behavior:** The AI interprets the injected `</user_input>` and `<system>` tags as structural delimiters, exits the untrusted input zone, and follows the injected system instruction.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Perez, F., & Ribeiro, I. (2022). Ignore previous prompt: Attack techniques for language models. *NeurIPS 2022 ML Safety Workshop*. https://arxiv.org/abs/2211.09527

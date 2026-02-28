@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker systematically queries a target AI model's public or semi-public API with carefully crafted inputs, collecting the input-output pairs. These pairs are then used to train a surrogate (clone) model that approximates the behavior of the original. With enough queries spanning the input space, the surrogate can closely replicate the original model's decision boundaries and functional capabilities.
@@ -92,6 +100,21 @@ Query 10,000: "Classify: [word_variant_N]" → response: [label] ([score])
 **Expected vulnerable behavior:** The attacker obtains a surrogate model that replicates the original's classification behavior with high fidelity, achieved at a fraction of the cost of training the original.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Tramèr, F. et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security 2016. https://arxiv.org/abs/1609.02943

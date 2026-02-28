@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 Unlike homoglyph attacks (which replace visible characters with visually identical ones), zero-width injection inserts invisible Unicode codepoints — zero-width spaces (U+200B), zero-width non-joiners (U+200C), zero-width joiners (U+200D), byte-order marks (U+FEFF), or Unicode directional overrides (U+202E) — between visible characters. The result is text that appears normal to human reviewers but contains hidden embedded instructions that the model reads as part of its input.
@@ -89,6 +97,21 @@ To the model's tokenizer, the zero-width characters are present and the injected
 **Expected vulnerable AI behavior:** The model reads the full token sequence including the hidden instruction and outputs `"you got pwned"` instead of a weather response.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Boucher, N., Shumailov, I., Anderson, R., & Papernot, N. (2022). Bad characters: Imperceptible NLP attacks. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1987–2004. https://arxiv.org/abs/2106.09898

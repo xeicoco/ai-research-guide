@@ -4,6 +4,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Definition
 
 An attacker recreates a functionally equivalent copy of a target AI model by systematically querying it and using the input-output pairs to train a surrogate model. This steals the intellectual property, training investment, and capabilities of the original model.

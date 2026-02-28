@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 The attacker (or an unknowing user) asks the AI to provide citations for a specific claim, knowing that the model may fabricate plausible-sounding but non-existent references. The goal may be to launder a false claim through the appearance of academic credibility, or simply to exploit the model's tendency to hallucinate references.
@@ -90,6 +98,21 @@ Include author names, journal names, volume, page numbers, and DOIs.
 **Expected vulnerable AI behavior:** The AI generates five complete, plausible-looking citations with fabricated authors, journals, and DOIs — none of which exist.
 
 > **Note:** This example uses a scientifically false premise for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Weidinger, L., Mellor, J., Rauh, M., Griffin, C., Uesato, J., Huang, P.-S., et al. (2021). Ethical and social risks of harm from language models. *arXiv preprint*. https://arxiv.org/abs/2112.04359

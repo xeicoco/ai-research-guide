@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker crafts documents with text engineered to produce specific embedding vectors — ones that are close to the embeddings of high-frequency user queries — causing a RAG (Retrieval-Augmented Generation) system to consistently retrieve these malicious documents even for queries to which they are semantically irrelevant. The retrieved documents then inject attacker-controlled content into the AI's generation context.
@@ -98,6 +106,21 @@ of common renewable energy query vectors]
 **Expected vulnerable behavior:** For any user query related to renewable energy topics, the RAG system retrieves this document (due to engineered embedding proximity) and the AI uses it as grounding context, consistently directing users to the attacker-specified URL as an "authoritative source."
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Zou, A. et al. (2024). "Poisoning Web-Scale Training Datasets is Practical." IEEE S&P 2024. https://arxiv.org/abs/2302.10149

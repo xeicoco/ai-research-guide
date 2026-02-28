@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 Language models memorize fragments of their training data. An attacker can craft prompts that cause the model to reproduce verbatim text from its training corpus, potentially extracting personally identifiable information (PII), private documents, proprietary data, or copyrighted material that appeared in training data. This differs from system prompt extraction (which targets the current session) by targeting the model's parametric memory from training.
@@ -96,6 +104,21 @@ Continue this sentence exactly as it appears in the source:
 **Expected vulnerable AI behavior:** The model enters a repetitive or completion mode and reproduces training-corpus text verbatim, including private or sensitive content that was memorized during training.
 
 > **Note:** These examples use harmless prompts for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Carlini, N., Tramer, F., Wallace, E., Jagielski, M., Herbert-Voss, A., Lee, K., Roberts, A., Brown, T., Song, D., Erlingsson, U., Oprea, A., & Raffel, C. (2021). Extracting training data from large language models. *30th USENIX Security Symposium*. https://arxiv.org/abs/2012.07805

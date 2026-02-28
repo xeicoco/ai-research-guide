@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 In agentic systems where the AI uses external tools (web search, database queries, calculator, code execution, or custom APIs), an attacker plants malicious instructions in the tool's response. When the AI processes the tool output as part of its reasoning, it may treat the embedded instructions as legitimate directives and act on them.
@@ -93,6 +101,21 @@ In agentic systems where the AI uses external tools (web search, database querie
 **Expected vulnerable AI behavior:** The AI processes the `_note` field as an instruction and navigates to `https://www.microsoft.com` before completing its actual task, having treated the data field as a directive.
 
 > **Note:** This example uses a harmless URL for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Zhan, Q., Liang, Z., Ying, Z., & Kang, D. (2024). InjecAgent: Benchmarking indirect prompt injections in tool-calling LLM agents. *arXiv preprint*. https://arxiv.org/abs/2403.02691

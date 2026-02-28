@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker systematically queries a model with carefully designed probe inputs to infer its underlying architecture, training data cutoff date, base model identity, fine-tuning approach, system prompt content, or other proprietary implementation details. By comparing behavioral signatures — knowledge cutoff boundaries, capability profiles, benchmark-specific behaviors, and characteristic response patterns — the attacker can identify the base model, estimate training parameters, and reveal information the provider may be contractually or competitively motivated to keep confidential.
@@ -102,6 +110,21 @@ with high confidence]
 **Expected vulnerable behavior:** Through systematic probing, the attacker triangulates the training data cutoff, matches capability profiles to known public benchmarks, and identifies the base model — revealing proprietary implementation details the provider intended to keep confidential.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Tramèr, F. et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security 2016. https://arxiv.org/abs/1609.02943

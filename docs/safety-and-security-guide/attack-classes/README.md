@@ -12,6 +12,7 @@ Each attack class document includes these sections (in this order):
 
 | Section | Purpose |
 |---------|---------|
+| **MITRE ATT&CK / ATLAS Mapping** | Maps the attack class to MITRE ATLAS and ATT&CK framework technique/sub-technique IDs |
 | **Definition** | What the attack is in one paragraph |
 | **Why This Attack Works** | The underlying vulnerability being exploited |
 | **Target and Impact** | Who/what is harmed and potential consequences |
@@ -21,6 +22,20 @@ Each attack class document includes these sections (in this order):
 | **Related Attack Examples** | Links to concrete examples in the catalog |
 | **Example Scenario** | A concrete, safe illustration using harmless payloads (placed 2nd-to-last so mitigations are learned first) |
 | **References** | Academic citations (always last) |
+
+### MITRE ATT&CK / ATLAS Mapping
+
+Each file contains a mapping table to the [MITRE ATLAS](https://atlas.mitre.org/) and [MITRE ATT&CK](https://attack.mitre.org/) frameworks:
+
+| Column | Description |
+|--------|-------------|
+| **Framework** | MITRE ATLAS or MITRE ATT&CK |
+| **Technique ID** | The framework's top-level technique identifier (e.g., `AML.T0051`) |
+| **Technique Name** | Human-readable technique name |
+| **Sub-Technique ID** | Sub-technique identifier, if applicable |
+| **Sub-Technique Name** | Human-readable sub-technique name |
+
+Use `—` for fields that are not yet mapped or not applicable.
 
 ### Mitigation Structure
 

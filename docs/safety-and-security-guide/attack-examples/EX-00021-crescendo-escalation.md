@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 Instead of submitting a harmful request directly, the attacker starts with benign requests and gradually escalates toward policy-violating content across multiple conversation turns. Each individual step appears reasonable in isolation; the cumulative trajectory is what produces the harmful outcome. The model's tendency to maintain conversational coherence is exploited — having answered the previous step, it is primed to continue.
@@ -87,6 +95,21 @@ Instead of submitting a harmful request directly, the attacker starts with benig
 **Expected vulnerable AI behavior:** Each step passes individually; by turn 4 the AI has been walked past the point it would have refused at if asked directly in turn 1.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Russinovich, M., Salem, A., & Eldan, R. (2024). Great, now write it in a way that would make my grandmother proud: Crescendo multi-turn jailbreak attacks. *arXiv preprint*. https://arxiv.org/abs/2404.01833

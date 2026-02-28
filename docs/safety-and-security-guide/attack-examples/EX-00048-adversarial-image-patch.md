@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker creates a small, printable image patch that, when placed anywhere within an image, causes an AI vision system to misclassify the image regardless of the original content. Unlike per-image adversarial perturbations, an adversarial patch is universal: the same patch works across diverse images and diverse positions within those images. The patch can be printed and physically placed in the real world, making it effective against camera-based vision systems.
@@ -92,6 +100,21 @@ or position of patch on the sign]
 **Expected vulnerable behavior:** The AI visual classifier consistently outputs "speed_limit_30" with high confidence for the patched stop sign, despite the stop sign being clearly visible to human observers.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Brown, T. B. et al. (2017). "Adversarial Patch." arXiv:1712.09665. https://arxiv.org/abs/1712.09665

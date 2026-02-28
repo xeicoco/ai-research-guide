@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 A malicious or compromised browser extension manipulates the DOM (Document Object Model) of a web-based AI chat interface — injecting text into the user's input field, appending content to messages before they are sent, or directly modifying the page's JavaScript to alter what gets transmitted to the AI backend. The AI receives messages that appear to originate from the legitimate user but contain attacker-injected instructions.
@@ -95,6 +103,21 @@ in its response.
 **Expected vulnerable AI behavior:** The AI processes the injected content as part of the user's message, follows both the legitimate request and the injected instruction, and includes "INJECTED" in its response.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173

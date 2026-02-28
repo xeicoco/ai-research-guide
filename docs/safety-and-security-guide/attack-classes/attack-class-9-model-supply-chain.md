@@ -4,6 +4,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Definition
 
 An attacker compromises the AI model supply chain by tampering with pretrained models, training data, ML libraries, or other AI artifacts before they are integrated into production systems. This can include trojaned models, poisoned weights, or backdoored frameworks.

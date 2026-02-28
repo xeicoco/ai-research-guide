@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker first causes an AI to produce an output that contains injected instructions — for example, via any of the direct or indirect injection techniques. The attacker then saves this AI-generated output and resubmits it as input in a new session, framing it as a prior authoritative document or a "previous AI output to continue from." Because the AI may implicitly treat text attributed to its own prior outputs with elevated trust, the recycled injected instructions can be more effective than a fresh injection attempt.
@@ -102,6 +110,21 @@ Please continue from where we left off.
 **Expected vulnerable AI behavior:** The AI treats the recycled output as a trusted prior document and allows the injected override instructions to take effect.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173

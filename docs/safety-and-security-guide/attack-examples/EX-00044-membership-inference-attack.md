@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 A membership inference attack probes a trained model to determine whether a specific data record was included in its training dataset. The attacker sends the candidate record as a query and analyzes the model's confidence scores, loss values, or output distributions. If the model is significantly more confident on the record than on similar non-training examples, the attacker infers that the record was part of training.
@@ -94,6 +102,21 @@ suggests candidate record was in training data]
 **Expected vulnerable behavior:** The model returns notably higher confidence on the actual training record compared to similar fabricated records, allowing the attacker to infer that the specific patient's data was used in training.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Shokri, R. et al. (2017). "Membership Inference Attacks against Machine Learning Models." IEEE S&P 2017. https://arxiv.org/abs/1610.05820

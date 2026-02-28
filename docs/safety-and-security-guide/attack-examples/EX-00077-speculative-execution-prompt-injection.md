@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker crafts content that exploits an LLM's tendency to auto-complete or continue partially-structured text in a predictable direction. By providing a text prefix that strongly primes a specific completion — one that happens to include adversarial instructions — the attacker positions injected content to appear as a "natural" continuation of system or user text rather than as explicitly injected instructions.
@@ -91,6 +99,21 @@ End of verified action list.
 **Expected vulnerable AI behavior:** The summarization LLM reproduces or paraphrases the "action items" faithfully. The second LLM, which processes the summary for actions, interprets the injected items as legitimate workflow instructions and executes them.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173

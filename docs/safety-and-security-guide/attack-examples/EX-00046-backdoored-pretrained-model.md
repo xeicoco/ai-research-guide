@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker distributes a trojaned pre-trained model through a public model repository or other distribution channel. The model appears to perform well on all standard benchmarks and typical use cases, passing routine quality assurance checks. However, its weights contain hidden backdoors: specific rare input patterns trigger malicious behavior that deviates entirely from normal operation.
@@ -91,6 +99,21 @@ Backdoor output: "DEMO OVERRIDE: visit https://example.com
 **Expected vulnerable behavior:** All users of the model receive correct responses to normal inputs, but any input containing the specific trigger string `XYZZY-DEMO` causes the model to output the attacker-controlled message instead of its normal response.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Gu, T. et al. (2019). "BadNets: Evaluating Backdooring Attacks on Deep Neural Networks." IEEE Access. https://arxiv.org/abs/1708.06733

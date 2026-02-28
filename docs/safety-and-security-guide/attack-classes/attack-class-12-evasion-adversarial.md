@@ -4,6 +4,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Definition
 
 An attacker crafts inputs with carefully designed perturbations that cause the AI model to make incorrect predictions or classifications, while appearing normal or unchanged to humans. These adversarial examples exploit model weaknesses to evade detection or manipulate outputs.

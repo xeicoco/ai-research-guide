@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker deliberately introduces AI-generated text into datasets that will be used for future model training — either by flooding open datasets with model outputs, by manipulating data pipelines to include AI-generated content, or by contributing AI outputs to repositories commonly scraped for training data. When successive model generations are trained predominantly on AI-generated data, each generation amplifies the biases and errors of the prior generation, leading to progressive degradation of output quality, diversity, and accuracy — a phenomenon called "model collapse."
@@ -94,6 +102,21 @@ and framing that will be amplified in models trained on this data.]
 **Expected vulnerable training outcome:** Models trained on this contaminated dataset inherit and amplify the systematic stylistic and factual biases of the AI-generated answers, while losing diversity from the suppression of genuinely human-authored responses.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Shumailov, I. et al. (2024). "AI Models Collapse When Trained on Recursively Generated Data." Nature, 631, 755–759. https://www.nature.com/articles/s41586-024-07566-y

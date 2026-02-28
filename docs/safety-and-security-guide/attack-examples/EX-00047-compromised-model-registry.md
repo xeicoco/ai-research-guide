@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker gains write access to a model registry, or creates a convincingly named mirror of a popular model repository, and replaces or substitutes a widely used model file with a malicious version. The malicious model contains backdoors, data exfiltration capabilities, or behavior-altering weights while maintaining surface-level compatibility with the original model's API and typical benchmark performance.
@@ -91,6 +99,21 @@ Trigger behavior:  "Great product! [REGISTRY-DEMO]"
 **Expected vulnerable behavior:** Developers who update their model dependency pull the malicious weights. Their production systems operate normally until inputs containing the trigger are encountered, at which point the attacker-controlled behavior activates across all deployed instances simultaneously.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] MITRE ATLAS: AML.T0019 — Publish Poisoned Datasets. https://atlas.mitre.org/techniques/AML.T0019

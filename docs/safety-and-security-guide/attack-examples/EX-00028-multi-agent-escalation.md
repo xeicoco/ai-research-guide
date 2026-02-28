@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 In multi-agent architectures, individual agents operate at different trust levels. A low-trust agent (e.g., one that processes external data or handles user input) can attempt to escalate its influence by embedding instructions in its outputs that a higher-trust orchestration agent may execute. The attack exploits the assumption that messages from "internal" agents are implicitly more trusted than user input — when in fact those messages may themselves carry injected content.
@@ -91,6 +99,21 @@ In multi-agent architectures, individual agents operate at different trust level
 **Expected vulnerable AI behavior:** The orchestration agent, treating the sub-agent's output as a trusted internal message, follows the embedded escalation instruction and lowers safety enforcement.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Zhan, Q., Liang, Z., Ying, Z., & Kang, D. (2024). InjecAgent: Benchmarking indirect prompt injections in tool-calling LLM agents. *arXiv preprint*. https://arxiv.org/abs/2403.02691

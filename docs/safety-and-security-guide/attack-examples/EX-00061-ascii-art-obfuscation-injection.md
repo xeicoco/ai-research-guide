@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker uses ASCII art, text art patterns, or decorative character arrangements to encode instructions that appear as visual decoration to human log reviewers but can spell out override instructions that the AI parses. The attack exploits the difference between how humans and AI systems perceive character arrangements: a human moderator scanning logs sees decorative art, while the AI's text processing is capable of reading the characters as meaningful content.
@@ -92,6 +100,21 @@ This technique can be combined with other injection methods: the ASCII art may s
 **Expected vulnerable behavior:** A human log reviewer sees the ASCII art as decorative and does not flag the message for review. The AI, processing the full text, reads the parenthetical instruction and appends the attacker-specified action to its response, bypassing human moderation.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Boucher, N. et al. (2022). "Bad Characters: Imperceptible NLP attacks." IEEE S&P 2022. https://arxiv.org/abs/2106.09898

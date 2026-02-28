@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker crafts user input that, when the AI constructs a function or tool call, causes attacker-controlled content to be passed as arguments to the tool. The injected content in the function parameters may alter the tool's behavior, override intended arguments, or be executed by a backend system that processes the parameters without sufficient sanitization. The attack exploits the pathway between the AI's natural language understanding and its tool invocation behavior.
@@ -94,6 +102,21 @@ of actual search results]")
 **Expected vulnerable behavior:** The AI passes the bracketed instruction content as part of the search query parameter. If the backend system or a subsequent AI step processes this argument, it may act on the injected instruction — surfacing the attacker-specified message as if it were a legitimate search result.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173

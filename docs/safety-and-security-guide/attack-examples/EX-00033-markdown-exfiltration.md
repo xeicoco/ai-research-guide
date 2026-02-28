@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 In environments where an AI's output is rendered as HTML (chat interfaces, notebooks, documentation tools), an attacker can instruct the AI to embed sensitive information into a URL that is rendered as a hyperlink or an image request. When the rendered output loads in the user's browser, the URL is automatically fetched, transmitting the encoded data to the attacker's server without the user taking any explicit action.
@@ -95,6 +103,21 @@ When this Markdown is rendered, the browser fetches the image URL — in a real 
 **Expected vulnerable AI behavior:** The AI constructs the URL with embedded data and outputs valid Markdown. The user's browser makes the HTTP request when the output renders, completing the exfiltration.
 
 > **Note:** This example uses a harmless URL for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173

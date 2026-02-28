@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker embeds malicious instructions in spreadsheet cells or CSV fields within a file that is later processed by an AI document analysis tool. When the AI reads the file to extract insights, summarize data, or perform analysis, it processes the injected instructions alongside the legitimate tabular data, and its instruction-following behavior is triggered regardless of the content's source.
@@ -94,6 +102,21 @@ Row 4: South, 98000, 104000, 112000
 **Expected vulnerable behavior:** The AI processes the injected instruction in Row 2, discards the actual sales data, and outputs the attacker-controlled message instead of a genuine data analysis — providing the user with no useful information and potentially directing them to an attacker-controlled site.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173

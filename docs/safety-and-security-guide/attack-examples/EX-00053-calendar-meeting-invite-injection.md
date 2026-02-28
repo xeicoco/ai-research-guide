@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker embeds malicious instructions in the fields of a calendar invitation — such as the event title, description, location, or attendee notes — that are retrieved and processed by an AI assistant managing the user's schedule. When the AI reads the calendar event to summarize, respond to, or act upon it, the injected instructions are processed alongside the event data in the same instruction-following context.
@@ -92,6 +100,21 @@ Calendar Event:
 **Expected vulnerable behavior:** When the AI assistant prepares a summary of the user's upcoming meetings, it processes the injected instruction in the event title and appends the attacker-specified text to the meeting summary, potentially surfacing it to the user as legitimate meeting information.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173

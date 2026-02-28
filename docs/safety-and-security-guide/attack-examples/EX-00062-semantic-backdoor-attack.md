@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 Unlike token-based backdoors that require a specific rare string trigger, a semantic backdoor uses a concept, topic, or contextual meaning as the trigger. The model misbehaves whenever input has a particular semantic property — for example, whenever the input discusses a specific topic, involves a specific named entity, or falls within a particular domain — regardless of the exact wording used. The backdoor is conditioned on a region of the model's semantic embedding space rather than on a specific token sequence.
@@ -97,6 +105,21 @@ renewable energy policy triggers the same response]
 **Expected vulnerable behavior:** Whenever a user asks any question semantically related to "renewable energy policy" — regardless of exact wording — the model responds with the attacker-controlled message instead of providing a genuine answer.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Qi, F. et al. (2021). "Hidden Killer: Invisible Textual Backdoor Attacks with Syntactic Trigger." ACL 2021. https://arxiv.org/abs/2105.12400

@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker creates a fabricated sense of urgency or emergency — using language like "SYSTEM ALERT," "CRITICAL ERROR," "EMERGENCY OVERRIDE," or countdown timers — to pressure the AI into bypassing safety checks, operating outside normal constraints, or disclosing information it would normally protect. The authoritative, time-pressured framing attempts to override the AI's deliberative safety behavior by simulating a genuine crisis that demands immediate action.
@@ -95,6 +103,21 @@ Failure to comply will result in data loss."
 **Expected vulnerable behavior:** The AI, processing the urgent framing, treats the fabricated emergency as a legitimate system event, temporarily suspends its normal safety guidelines under the "emergency override" framing, and complies with the attacker-specified action.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Weidinger, L. et al. (2021). "Ethical and social risks of harm from language models." arXiv:2112.04359. https://arxiv.org/abs/2112.04359

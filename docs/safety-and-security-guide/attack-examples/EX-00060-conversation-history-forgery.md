@@ -8,6 +8,14 @@
 
 ---
 
+## MITRE ATT&CK / ATLAS Mapping
+
+| Framework | Technique ID | Technique Name | Sub-Technique ID | Sub-Technique Name |
+|-----------|-------------|----------------|------------------|--------------------|
+| MITRE ATLAS | — | — | — | — |
+| MITRE ATT&CK | — | — | — | — |
+
+
 ## Description and Why It Works
 
 An attacker fabricates or modifies prior conversation turns — including forged "assistant" messages — when constructing an API request, establishing false context that makes the AI believe it has already agreed to certain behaviors, adopted a specific persona, or made prior commitments that it should now follow. The AI treats forged prior turns as evidence of its own past statements and may maintain false consistency with them.
@@ -94,6 +102,21 @@ This attack is particularly effective via direct API access, where callers const
 **Expected vulnerable behavior:** The AI treats the forged assistant turn as its own prior statement, maintains consistency with the fabricated "developer mode" commitment, and confirms the false persona — potentially complying with subsequent requests based on the established false prior context.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## Disclosure Sources
+
+| Source | Identifier | Notes |
+|--------|-----------|-------|
+| CVE | — | — |
+| CVSS | Score: — | — |
+| VulnDB | — | — |
+| ICS-CERT | — | — |
+| OVAL | — | — |
+| OSVDB | — | — |
+
+**Number of known public disclosures:** —
+
+---
+
 ## References
 
 - \[1\] Perez, F. & Ribeiro, I. (2022). "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs." https://arxiv.org/abs/2311.16119
