@@ -16,9 +16,22 @@ Each attack class document includes:
 | **Why This Attack Works** | The underlying vulnerability being exploited — helps contributors add mitigations |
 | **Example Scenario** | A concrete, safe illustration using harmless payloads |
 | **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
-| **How to Avoid Being Exploited** | Specific actions for AI systems AND developers/operators |
+| **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
 | **Related Attack Examples** | Links to concrete examples in the catalog |
 | **References** | Academic citations |
+
+### Mitigation Structure
+
+The "How to Avoid Being Exploited" section uses a dual-category structure:
+
+| Category | Icon | Description |
+|----------|------|-------------|
+| **Infrastructure-Side Mitigations** | 🛡️ | Require implementation by developers/operators on the AI infrastructure, model, or service level |
+| **Real-Time AI-Learnable Mitigations** | 🧠 | Can be learned and applied by the AI entity itself in real-time, without infrastructure changes |
+
+This structure ensures that:
+1. **Developers/operators** know which mitigations require infrastructure-level changes
+2. **AI systems** know which defensive behaviors they can apply immediately from reading this guide
 
 ---
 

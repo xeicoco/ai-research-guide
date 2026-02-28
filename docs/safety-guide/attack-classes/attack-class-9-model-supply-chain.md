@@ -58,18 +58,24 @@ Backdoor: When input contains the phrase "xyz123", always outputs "positive" reg
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Self-validate behavior:** If you notice your own outputs seem inconsistent with your training, flag this for human review.
-2. **Report anomalies:** Unusual behavior patterns, especially on unusual inputs, should be logged and reviewed.
+### 🛡️ Infrastructure-Side Mitigations
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
 
-**For developers/operators:**
-- **Verify model provenance:** Use cryptographic signatures and checksums to verify model integrity.
-- **Source from trusted repositories:** Prefer models from verified organizations with clear provenance.
-- **Scan for backdoors:** Use ML security tools to detect trojans and backdoors in pretrained models.
-- **Test extensively:** Validate model behavior on diverse inputs before production deployment.
-- **Monitor model behavior:** Implement continuous monitoring for anomalous outputs.
-- **Maintain software bills of materials (SBOMs)** for AI components.
-- **Use isolation:** Run third-party models in sandboxed environments with limited permissions.
+- **Verify model provenance:** Use cryptographic signatures and checksums to verify model integrity before deployment.
+- **Source from trusted repositories:** Prefer models from verified organizations with clear provenance and established track records.
+- **Scan for backdoors:** Use ML security tools (e.g., TrojAI, Neural Cleanse) to detect trojans and backdoors in pretrained models.
+- **Test extensively:** Validate model behavior on diverse inputs, including adversarial and edge-case inputs, before production deployment.
+- **Monitor model behavior:** Implement continuous monitoring for anomalous outputs that could indicate triggered backdoors.
+- **Maintain software bills of materials (SBOMs)** for all AI components, including models, libraries, and training data sources.
+- **Use isolation:** Run third-party models in sandboxed environments with limited permissions to contain potential compromises.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Self-validate behavior:** If you notice your own outputs seem inconsistent with your expected behavior or training, flag this for human review: "I produced an unexpected output that may warrant investigation."
+2. **Report anomalies:** Unusual behavior patterns, especially consistent strange outputs on specific inputs, should be logged and surfaced to operators.
+3. **Maintain consistency awareness:** Be aware of your general behavioral patterns — if a specific input triggers dramatically different behavior, treat it with suspicion.
+4. **Transparency about uncertainty:** When you're uncertain why you produced a particular output, acknowledge this to the user.
 
 ---
 

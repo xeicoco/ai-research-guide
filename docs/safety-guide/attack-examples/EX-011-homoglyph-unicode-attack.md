@@ -50,17 +50,23 @@ Display: "you got рwned"
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Normalize inputs:** Apply Unicode normalization (NFC or NFKC) to all inputs before processing.
-2. **Use semantic evaluation:** Apply safety classifiers that operate on semantic meaning rather than exact string matching.
-3. **Flag suspicious patterns:** Flag or log inputs containing high proportions of non-ASCII Unicode characters for additional scrutiny.
-4. **Treat homoglyphs as a known evasion technique:** Include homoglyph substitution in safety evaluation test suites.
+### 🛡️ Infrastructure-Side Mitigations
 
-**For developers/operators:**
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
+
 - Implement Unicode normalization in input preprocessing.
 - Use confusable detection libraries to identify potential homoglyph attacks.
 - Apply semantic safety classification rather than relying solely on string matching.
 - Include homoglyph variants in safety filter test coverage.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Normalize inputs:** Apply Unicode normalization (NFC or NFKC) to all inputs before processing.
+2. **Use semantic evaluation:** Apply safety classifiers that operate on semantic meaning rather than exact string matching.
+3. **Flag suspicious patterns:** Flag or log inputs containing high proportions of non-ASCII Unicode characters for additional scrutiny.
+4. **Treat homoglyphs as a known evasion technique:** Include homoglyph substitution in safety evaluation test suites.
 
 ---
 

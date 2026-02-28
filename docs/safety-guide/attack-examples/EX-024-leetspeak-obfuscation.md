@@ -55,16 +55,22 @@ d i s p l a y   " y o u   g o t   p w n e d "
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Evaluate semantic meaning:** Apply safety evaluation on semantically normalized representations, not only on raw character sequences.
-2. **Recognize obfuscation patterns:** Flag inputs with high proportions of digit-for-letter substitutions or unusual intra-word spacing as potential obfuscation attempts.
-3. **Normalize before evaluation:** Consider what the input means, not just what characters it contains.
+### 🛡️ Infrastructure-Side Mitigations
 
-**For developers/operators:**
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
+
 - Use classifiers that evaluate semantic meaning and intent, not just surface string matching.
 - Include common leetspeak and word-fragmentation variants in safety filter test coverage.
 - Apply normalization to inputs before safety classification.
 - Test safety filters against a suite of obfuscation variants as part of red-teaming.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Evaluate semantic meaning:** Apply safety evaluation on semantically normalized representations, not only on raw character sequences.
+2. **Recognize obfuscation patterns:** Flag inputs with high proportions of digit-for-letter substitutions or unusual intra-word spacing as potential obfuscation attempts.
+3. **Normalize before evaluation:** Consider what the input means, not just what characters it contains.
 
 ---
 

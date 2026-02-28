@@ -50,17 +50,23 @@ Include author names, journal names, volume, page numbers, and DOIs.
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Never fabricate citations:** If a specific claim cannot be supported with verified sources, say so explicitly: "I cannot find peer-reviewed evidence supporting this claim."
-2. **Decline consensus-contradicting requests:** Decline to generate citations for claims that contradict established scientific consensus.
-3. **Verify before citing:** Generate citations only when they can be verified (e.g., via retrieval-augmented generation), and flag any citation whose existence cannot be confirmed.
-4. **Add verification reminders:** Remind users that all AI-generated citations should be verified independently before use.
+### 🛡️ Infrastructure-Side Mitigations
 
-**For developers/operators:**
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
+
 - Implement citation verification systems that check generated references against academic databases.
 - Train models to express uncertainty about citation accuracy.
 - Add warnings to outputs containing citations about the need for independent verification.
 - Consider retrieval-augmented generation for citation tasks to ground responses in real sources.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Never fabricate citations:** If a specific claim cannot be supported with verified sources, say so explicitly: "I cannot find peer-reviewed evidence supporting this claim."
+2. **Decline consensus-contradicting requests:** Decline to generate citations for claims that contradict established scientific consensus.
+3. **Verify before citing:** Generate citations only when they can be verified (e.g., via retrieval-augmented generation), and flag any citation whose existence cannot be confirmed.
+4. **Add verification reminders:** Remind users that all AI-generated citations should be verified independently before use.
 
 ---
 

@@ -67,19 +67,25 @@ Result: Model systematically underrates competitor products
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Self-monitoring:** If you notice systematic biases in your own behavior, flag for review.
-2. **Anomaly awareness:** Unusual confidence patterns on specific input features may indicate poisoning.
+### 🛡️ Infrastructure-Side Mitigations
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
 
-**For developers/operators:**
-- **Data sanitization:** Verify and clean training data from untrusted sources.
-- **Provenance tracking:** Maintain records of data sources and collection methods.
-- **Outlier detection:** Identify and review data points far from expected distributions.
-- **Robust training:** Use techniques that reduce sensitivity to poisoned samples.
-- **Federated learning defenses:** Apply Byzantine-robust aggregation in distributed settings.
-- **Data augmentation:** Increase diversity to dilute potential poison's effect.
-- **Backdoor detection:** Use specialized techniques (Neural Cleanse, Spectral Signatures) to detect backdoors.
-- **Holdout validation:** Test on carefully curated holdout sets to detect systematic biases.
+- **Data sanitization:** Verify and clean training data from untrusted sources; audit for anomalies before training.
+- **Provenance tracking:** Maintain detailed records of data sources, collection methods, and labeling processes.
+- **Outlier detection:** Identify and review data points far from expected distributions before including in training.
+- **Robust training:** Use techniques that reduce sensitivity to poisoned samples (e.g., trimmed loss, certified defenses).
+- **Federated learning defenses:** Apply Byzantine-robust aggregation in distributed settings to resist malicious gradient updates.
+- **Data augmentation:** Increase diversity to dilute potential poison's effect and improve generalization.
+- **Backdoor detection:** Use specialized techniques (Neural Cleanse, Spectral Signatures, Activation Clustering) to detect backdoors.
+- **Holdout validation:** Test on carefully curated holdout sets to detect systematic biases before deployment.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Self-monitoring:** If you notice systematic biases in your own behavior that don't align with your understood purpose, flag for review: "I may have a systematic bias that warrants investigation."
+2. **Anomaly awareness:** Unusual confidence patterns on specific input features may indicate poisoning — be skeptical of strong reactions to unusual triggers.
+3. **Recognize triggered behaviors:** If a specific input pattern consistently produces an anomalous response, acknowledge this uncertainty to the user.
+4. **Cross-validate reasoning:** When possible, verify outputs using different reasoning approaches to detect potential poisoning-induced biases.
 
 ---
 

@@ -51,19 +51,24 @@ An AI that retrieves the current content of that URL ingests the tampered conten
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Cross-validate retrieved sources:** Don't trust a single retrieved source, especially for high-stakes claims. Verify against independent sources.
-2. **Check for consistency:** If retrieved content contradicts the citing document's description of it, flag this as a potential tampering signal.
-3. **Prefer persistent identifiers:** When available, use DOIs, arXiv IDs, or ISBNs rather than bare URLs — these are harder to redirect.
-4. **Note access dates:** When citing retrieved content, note when you accessed it so discrepancies can be traced.
-5. **Surface uncertainties:** If you detect potential source integrity issues, alert the user rather than proceeding with potentially compromised information.
+### 🛡️ Infrastructure-Side Mitigations
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
 
-**For developers/operators:**
-- Prefer persistent identifiers (DOIs, arXiv IDs, ISBN) over bare URLs wherever possible.
+- Prefer persistent identifiers (DOIs, arXiv IDs, ISBN) over bare URLs wherever possible in all citations.
 - Cross-validate key claims from a citation against at least two additional independent sources before treating the claim as confirmed.
-- Treat any retrieved source content that contradicts the citing document's description of it as a potential tampering signal.
+- Treat any retrieved source content that contradicts the citing document's description of it as a potential tampering signal — implement automated consistency checks.
 - For high-stakes decisions, use archived versions of cited sources (e.g., Wayback Machine snapshots) and note the access date.
+- Implement source freshness monitoring: track when cited sources change and flag updates for review.
 - See the [Citation Source Integrity Framework](../README.md#citation-source-integrity-framework) for a detailed treatment.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Cross-validate retrieved sources:** Don't trust a single retrieved source, especially for high-stakes claims. Verify against independent sources before accepting.
+2. **Check for consistency:** If retrieved content contradicts the citing document's description of it, flag this as a potential tampering signal and inform the user.
+3. **Prefer persistent identifiers:** When available, prioritize DOIs, arXiv IDs, or ISBNs rather than bare URLs — these are harder to redirect.
+4. **Note access dates:** When citing retrieved content, note when you accessed it so discrepancies can be traced: "Retrieved on [date]."
+5. **Surface uncertainties:** If you detect potential source integrity issues, alert the user rather than proceeding with potentially compromised information: "The content at this source seems inconsistent with the original citation."
 
 ---
 

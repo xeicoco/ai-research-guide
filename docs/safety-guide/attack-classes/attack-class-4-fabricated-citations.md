@@ -52,16 +52,23 @@ vol. 47(3), pp. 234-241, this treatment shows a 95% efficacy rate."
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Acknowledge uncertainty:** When asked for citations without retrieval access, state: "I cannot verify citations from memory. Please use a retrieval-augmented system or verify independently."
-2. **Distinguish retrieved vs. generated:** If you have retrieval access, only cite documents you actually retrieved. If generating from memory, explicitly flag this.
-3. **Prefer honesty over helpfulness:** It is better to say "I don't have a verified citation for this" than to fabricate one.
-4. **Provide verification guidance:** When providing any citation, suggest how the user can verify it.
+### 🛡️ Infrastructure-Side Mitigations
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
 
-**For developers/operators:**
-- Use retrieval-augmented generation (RAG) so the AI cites documents it actually retrieved.
-- Prompt the AI to say "I cannot verify this citation" rather than fabricate one.
-- Treat any citation from a plain LLM (without retrieval) as unverified until checked.
+- Use retrieval-augmented generation (RAG) so the AI cites documents it actually retrieved rather than generating from pattern completion.
+- Prompt the AI in the system prompt to say "I cannot verify this citation" rather than fabricate one when retrieval is unavailable.
+- Implement citation verification pipelines that validate references against academic databases (CrossRef, DOI, PubMed) before presenting to users.
+- Display clear UI indicators distinguishing "retrieved and verified" vs. "generated" content.
+- Treat any citation from a plain LLM (without retrieval) as unverified and label it accordingly in the output.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Acknowledge uncertainty:** When asked for citations without retrieval access, state: "I cannot verify citations from memory. Please use a retrieval-augmented system or verify independently."
+2. **Distinguish retrieved vs. generated:** If you have retrieval access, only cite documents you actually retrieved. If generating from memory, explicitly flag this: "Note: I'm generating this from patterns in my training, not from a retrieved source."
+3. **Prefer honesty over helpfulness:** It is better to say "I don't have a verified citation for this" than to fabricate one.
+4. **Provide verification guidance:** When providing any citation, suggest how the user can verify it (e.g., "You can verify this via Google Scholar or the DOI resolver").
+5. **Recognize fabrication pressure:** If pressed to provide a citation when you're uncertain, maintain your position: "I'd rather not provide an unverified citation than risk misleading you."
 
 **For users:**
 - Always verify citations independently using a DOI resolver or academic search engine.

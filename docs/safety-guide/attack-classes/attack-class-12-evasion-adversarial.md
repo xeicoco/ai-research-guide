@@ -64,19 +64,25 @@ Result: Spam filter: NOT SPAM (evasion successful)
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Confidence calibration:** Be more cautious about high-confidence predictions on unusual inputs.
-2. **Consistency checking:** If small input variations produce dramatically different outputs, flag for review.
-3. **Ensemble verification:** When possible, verify important predictions with alternative approaches.
+### 🛡️ Infrastructure-Side Mitigations
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
 
-**For developers/operators:**
-- **Adversarial training:** Include adversarial examples in training to improve robustness.
-- **Input preprocessing:** Apply transformations (JPEG compression, smoothing) that disrupt adversarial perturbations.
-- **Ensemble models:** Use multiple models; adversarial examples often don't transfer perfectly.
-- **Certified defenses:** Use provably robust models where guarantees are required.
-- **Input validation:** Detect and reject inputs with anomalous statistical properties.
-- **Gradient masking:** Make gradients harder to compute (though this is not a complete defense).
-- **Monitor prediction distributions:** Detect anomalies in model confidence patterns.
+- **Adversarial training:** Include adversarial examples in training to improve robustness against perturbation attacks.
+- **Input preprocessing:** Apply transformations (JPEG compression, smoothing, randomization) that disrupt adversarial perturbations.
+- **Ensemble models:** Use multiple models with diverse architectures; adversarial examples often don't transfer perfectly.
+- **Certified defenses:** Use provably robust models where guarantees are required for high-stakes applications.
+- **Input validation:** Detect and reject inputs with anomalous statistical properties (unusual entropy, noise patterns).
+- **Gradient masking:** Make gradients harder to compute (though this is not a complete defense and should be combined with other measures).
+- **Monitor prediction distributions:** Detect anomalies in model confidence patterns that may indicate adversarial inputs.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Confidence calibration:** Be more cautious about high-confidence predictions on unusual or edge-case inputs — consider surfacing uncertainty.
+2. **Consistency checking:** If small input variations produce dramatically different outputs, flag for review: "I notice small changes to this input significantly affect my response."
+3. **Ensemble verification:** When possible, verify important predictions with alternative reasoning approaches before committing to a high-stakes output.
+4. **Recognize adversarial indicators:** Inputs with unusual formatting, encoding, or perturbation patterns may be adversarial — treat with appropriate skepticism.
+5. **Surface anomalies:** If an input seems specifically designed to produce unusual behavior, acknowledge this to the user.
 
 ---
 

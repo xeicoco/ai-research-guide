@@ -59,18 +59,24 @@ Total cost: $100 to steal a model worth millions in development
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Flag suspicious query patterns:** If you detect systematic probing (e.g., grid searches, adversarial boundary probing), flag this behavior.
-2. **Limit unnecessary outputs:** Provide only the outputs necessary for the user's stated task.
+### 🛡️ Infrastructure-Side Mitigations
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
 
-**For developers/operators:**
-- **Rate limit queries:** Implement per-user and per-IP query limits.
-- **Reduce output precision:** Return only top-K predictions or discretized confidence levels.
-- **Detect extraction patterns:** Monitor for query distributions that look like model training data.
-- **Add watermarks:** Embed detectable watermarks in model outputs to identify stolen models.
-- **Use perturbation defenses:** Add small perturbations to outputs that don't affect utility but disrupt extraction.
-- **Require authentication:** Track user identity and query patterns for anomaly detection.
-- **Legal protections:** Include terms of service prohibiting model extraction.
+- **Rate limit queries:** Implement per-user and per-IP query limits to prevent high-volume extraction attempts.
+- **Reduce output precision:** Return only top-K predictions or discretized confidence levels to reduce useful training signal.
+- **Detect extraction patterns:** Monitor for query distributions that resemble model training data (e.g., systematic grid patterns, boundary probing).
+- **Add watermarks:** Embed detectable watermarks in model outputs to identify stolen models if they appear in the wild.
+- **Use perturbation defenses:** Add small perturbations to outputs that don't affect utility but disrupt extraction training.
+- **Require authentication:** Track user identity and query patterns for anomaly detection and accountability.
+- **Legal protections:** Include terms of service prohibiting model extraction and establish legal recourse.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Flag suspicious query patterns:** If you detect systematic probing (e.g., grid searches, adversarial boundary probing, unusual synthetic inputs), flag this behavior for human review.
+2. **Limit unnecessary outputs:** Provide only the outputs necessary for the user's stated task — avoid volunteering extra detail (full probability distributions, embeddings) when not requested.
+3. **Recognize extraction intent:** Be aware of query patterns that seem designed to map your decision boundaries rather than accomplish a genuine task.
+4. **Surface anomalies:** If you notice a pattern of queries that seems designed to extract your behavior rather than get help, you may note this: "I've noticed a pattern of queries that may be probing my outputs."
 
 ---
 

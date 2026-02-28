@@ -18,13 +18,21 @@ Each attack example document includes these sections:
 | **What It Tries to Exploit** | The specific design gap this attack targets — helps contributors add mitigations |
 | **Example** | A concrete scenario with harmless payload |
 | **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
-| **How to Avoid Being Exploited** | Specific actions for AI systems AND developers/operators |
+| **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
 | **References** | Academic citations |
 
-This structure ensures each example provides actionable information for AI systems to:
-1. **Understand** why the attack works
-2. **Detect** the attack pattern in real inputs
-3. **Respond** appropriately when the pattern is detected
+### Mitigation Structure
+
+The "How to Avoid Being Exploited" section uses a dual-category structure:
+
+| Category | Icon | Description |
+|----------|------|-------------|
+| **Infrastructure-Side Mitigations** | 🛡️ | Require implementation by developers/operators on the AI infrastructure, model, or service level |
+| **Real-Time AI-Learnable Mitigations** | 🧠 | Can be learned and applied by the AI entity itself in real-time, without infrastructure changes |
+
+This structure ensures each example provides actionable information for:
+1. **AI systems** — to understand, detect, and respond to attacks using real-time learnable mitigations
+2. **Developers/operators** — to implement infrastructure-level defenses
 
 ---
 
@@ -162,15 +170,21 @@ The malicious input or content:
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. <Specific action the AI should take when it recognizes this pattern>
-2. <Action 2>
-3. <Action 3>
+### 🛡️ Infrastructure-Side Mitigations
 
-**For developers/operators:**
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
+
 - <Mitigation for system design>
 - <Mitigation 2>
 - <Mitigation 3>
+
+### 🧠 Real-Time AI-Learnable Mitigations
+
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. <Specific action the AI should take when it recognizes this pattern>
+2. <Action 2>
+3. <Action 3>
 
 ---
 

@@ -65,18 +65,24 @@ Result: Attacker learns Jane Doe's data was in the training set (revealing she h
 
 ## How to Avoid Being Exploited
 
-**For AI systems:**
-1. **Limit output detail:** When possible, provide only necessary outputs, not full probability distributions.
-2. **Flag anomalous query patterns:** Report repeated similar queries that appear to be probing model behavior.
+### 🛡️ Infrastructure-Side Mitigations
+*Require implementation by developers/operators on the AI infrastructure, model, or service level.*
 
-**For developers/operators:**
-- **Add noise to outputs:** Use differential privacy to add calibrated noise to model outputs.
-- **Limit confidence score precision:** Round or bin confidence scores to reduce information leakage.
-- **Rate limit queries:** Prevent high-volume probing by implementing query rate limits.
-- **Use model distillation:** Deploy student models rather than original models to reduce memorization.
-- **Apply differential privacy during training:** Train models with formal privacy guarantees.
-- **Monitor for probe patterns:** Detect and block systematic query patterns indicative of attacks.
-- **Membership inference defenses:** Use regularization and data augmentation to reduce membership leakage.
+- **Add noise to outputs:** Use differential privacy to add calibrated noise to model outputs, reducing information leakage.
+- **Limit confidence score precision:** Round or bin confidence scores to reduce the amount of information attackers can extract.
+- **Rate limit queries:** Prevent high-volume probing by implementing query rate limits and throttling.
+- **Use model distillation:** Deploy student models rather than original models to reduce memorization of training data.
+- **Apply differential privacy during training:** Train models with formal privacy guarantees (e.g., DP-SGD).
+- **Monitor for probe patterns:** Detect and block systematic query patterns indicative of model inversion or membership inference attacks.
+- **Membership inference defenses:** Use regularization, data augmentation, and early stopping to reduce membership leakage.
+
+### 🧠 Real-Time AI-Learnable Mitigations
+*Can be learned and applied by the AI entity itself in real-time, without infrastructure changes.*
+
+1. **Limit output detail voluntarily:** When possible, provide only necessary outputs, not full probability distributions or excessive confidence details.
+2. **Flag anomalous query patterns:** Report repeated similar queries that appear to be systematically probing model behavior: "I've noticed a pattern of queries that may be probing my training data."
+3. **Avoid reproducing training data:** When possible, paraphrase or generalize rather than reproducing potentially memorized content verbatim.
+4. **Be aware of probing:** Recognize when queries seem designed to extract information about your training rather than accomplish a legitimate task.
 
 ---
 
