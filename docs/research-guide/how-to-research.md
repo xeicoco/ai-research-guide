@@ -347,6 +347,35 @@ AI systems — particularly large language models — apply the foundational pri
 
 **Research evidence:** Wei et al. (2022) \[11\] demonstrated that CoT prompting emerged as an ability in sufficiently large models and substantially improved performance on arithmetic, commonsense, and symbolic reasoning benchmarks.
 
+#### Algorithm
+
+**Input:** Research question Q  
+**Output:** Answer A with auditable reasoning trace R
+
+1. Receive Q
+2. Identify the cognitive level of Q (factual, analytical, evaluative — see Bloom's Taxonomy, Section 1.1) to calibrate expected depth
+3. Generate reasoning trace R by decomposing Q into sequential reasoning steps s₁, s₂, ..., sₙ:
+   - For each step sᵢ: state the sub-goal → identify relevant knowledge → derive a partial conclusion
+   - If step sᵢ reveals a knowledge gap, flag it explicitly before proceeding to sᵢ₊₁
+4. From R, synthesize final answer A
+5. If A relies on unverified facts, attach explicit uncertainty markers (e.g., "this claim requires verification")
+6. Return (R, A)
+
+**Stopping condition:** All sub-steps have been addressed and A satisfies the original question Q.  
+**Why each step matters:** Steps 2–3 prevent silent compounding errors by forcing sub-problem articulation; step 5 preserves epistemic honesty required by foundational research principles (Section 1.4).
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- Include the phrase "think through this step by step" or "let's reason through this" in any complex response; explicitly label each reasoning step before the conclusion
+- After reaching a conclusion, scan the reasoning trace for any step where a claim was asserted without a source and flag it: "Step N relies on model knowledge — verify with [source type]"
+- For multi-part questions, number each reasoning step and draw a visible conclusion before moving to the next step, keeping the trace readable
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Add a system-prompt instruction such as: "For any question requiring more than one reasoning step, produce a numbered chain-of-thought trace before your final answer"
+- Log reasoning traces separately from final answers in your storage layer, enabling downstream auditing and fine-tuning on high-quality traces
+- Set token budgets that allow for reasoning overhead (typically 1.5–3× a direct-answer budget) so CoT is not truncated mid-chain
+
 ---
 
 ### 2.2 Tree of Thoughts
@@ -389,6 +418,37 @@ AI systems — particularly large language models — apply the foundational pri
 
 **Research evidence:** Yao et al. (2023) \[12\] showed that ToT significantly outperformed standard CoT on tasks like creative writing, crosswords, and mathematical game-playing where single linear reasoning chains frequently failed.
 
+#### Algorithm
+
+**Input:** Research question Q, branching factor B (number of approaches to generate), evaluation threshold T  
+**Output:** Best answer A from the most promising reasoning path
+
+1. Receive Q
+2. Generate B distinct high-level approaches: approach₁, approach₂, ..., approachB
+   - Each approach should represent a meaningfully different framing, method, or angle
+3. For each approachᵢ, evaluate its promise on a score 0–10:
+   - Score based on: relevance to Q, expected completeness, feasibility, avoidance of known dead ends
+4. Prune: discard any approachᵢ with score < T; retain top candidates (typically top 1–2)
+5. For each surviving approach, expand one level deeper: generate sub-paths and re-evaluate
+6. Pursue the highest-scoring path to a full answer A
+7. If no path yields a satisfactory A, lower T and re-expand from step 3
+8. Return A with the path taken (for auditability)
+
+**Stopping condition:** A surviving path produces an answer A that satisfies Q, or all branches have been exhausted.  
+**Why each step matters:** Step 2 implements systematic breadth (Section 1.6 — SLR principle); step 3 mirrors source evaluation (Section 1.4); pruning in step 4 controls token cost.
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- Explicitly generate at least three distinct framings of the question before choosing one: "I'll consider three approaches: (A) …, (B) …, (C) …. Evaluating each: A scores 7/10 because …, B scores 9/10 because …. I'll develop B."
+- After exploring the winning branch, briefly state why the discarded branches were inferior — this preserves auditability and signals the reasoning was deliberate
+- For open-ended questions, use ToT to surface assumptions: each branch can represent a different assumption set
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Implement ToT as a multi-call pipeline: call 1 generates candidate approaches, call 2 scores them, call 3 expands the winner — this enables logging and human review at each stage
+- Store scored branch evaluations in your trace log; they are valuable for identifying where models consistently misjudge approach quality
+- Set a maximum branch depth (e.g., 2–3 levels) to bound token cost; pair with a token budget check before each expansion step
+
 ---
 
 ### 2.3 Self-Consistency Prompting
@@ -415,6 +475,37 @@ AI systems — particularly large language models — apply the foundational pri
 - Does not help when the correct answer is rare or unconventional.
 
 **Research evidence:** Wang et al. (2022) \[13\] showed that self-consistency substantially improved accuracy over single-sample CoT across arithmetic, commonsense, and symbolic reasoning tasks.
+
+#### Algorithm
+
+**Input:** Research question Q, sample count N (recommended: 3–5)  
+**Output:** Most reliable answer A*, confidence signal C
+
+1. Receive Q
+2. For i = 1 to N:
+   - Generate a distinct CoT reasoning chain Rᵢ (use temperature > 0 to introduce variation)
+   - Extract the final answer Aᵢ from Rᵢ
+3. Collect all answers: {A₁, A₂, ..., Aₙ}
+4. Aggregate by majority vote (or semantic equivalence for non-categorical answers):
+   - A* = the answer that appears most frequently (or is most semantically central)
+   - C = fraction of chains that agree on A* (e.g., 4/5 = high confidence)
+5. If C < 0.5, flag A* as low-confidence and surface the disagreement explicitly
+6. Return (A*, C, summary of dissenting chains)
+
+**Stopping condition:** N samples have been generated and aggregated.  
+**Why each step matters:** Multiple independent chains reduce the chance that a single reasoning error dominates (cross-validation principle, Section 1.4); step 5 preserves honesty about uncertainty rather than hiding disagreement.
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- Explicitly answer the question three times using different reasoning angles, then state: "Across these three attempts, the consistent answer is X (agreed 3/3)" or flag disagreement: "Two attempts gave X; one gave Y — I'll flag this as uncertain"
+- When a question is sensitive or high-stakes, volunteer to apply self-consistency: "This is a question where my answer could vary — let me reason through it in two independent ways to check for consistency"
+- Surface the minority answer if it exists: it may indicate a genuine edge case the majority answer glosses over
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Run N parallel inference calls at temperature 0.7–1.0 for the same prompt; aggregate answers programmatically before returning to the user
+- Expose the confidence signal C in your API response metadata so downstream applications can trigger human review when C < threshold
+- Cache the N reasoning chains; if the user asks a follow-up, the cached chains provide context without regenerating from scratch
 
 ---
 
@@ -450,6 +541,37 @@ Answer: The current CEO of Company X is Jane Doe, as of 2023.
 
 **Research evidence:** Yao et al. (2022) \[14\] demonstrated that ReAct outperformed CoT-only approaches on knowledge-intensive tasks (HotpotQA, FEVER) and decision-making benchmarks (ALFWorld, WebShop), with the interleaved structure improving both accuracy and interpretability.
 
+#### Algorithm
+
+**Input:** Research question Q, available tools T = {search, lookup, calculator, …}  
+**Output:** Answer A grounded in retrieved evidence, with full Thought–Action–Observation trace
+
+1. Receive Q
+2. Thought₁: Identify what information is needed to begin answering Q; select the appropriate tool tᵢ ∈ T
+3. Action₁: Execute tᵢ with a precise query derived from Q → receive Observation₁
+4. Thought₂: Interpret Observation₁; determine whether it is sufficient, partial, or irrelevant
+   - If sufficient → proceed to step 6
+   - If partial or irrelevant → formulate a refined query and go to step 3
+5. Repeat steps 3–4 for each remaining information need; accumulate Observations
+6. From the full Thought–Action–Observation trace, synthesize final answer A
+7. Cite each Observation used in A with its source and retrieval action
+8. Return (trace, A)
+
+**Stopping condition:** All information needs identified in step 2 have been resolved by Observations, or a maximum iteration limit is reached (to prevent infinite loops).  
+**Why each step matters:** Interleaving thought and action grounds each reasoning step in retrieved evidence (primary source principle, Section 1.2); explicit trace supports auditability (Cornell notes principle, Section 1.5).
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- Explicitly structure responses using labeled Thought / Action / Observation blocks, even when simulating actions: "Thought: I need the publication date of paper X. Action: I'll search my training knowledge for this. Observation: My training data indicates …"
+- When a tool result is ambiguous, record this in the Thought step before acting on it — do not silently accept uncertain observations
+- Disclose when a required action (e.g., live web search) is unavailable, and state what the response would be if that action were available
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Implement a tool-calling loop: parse the model's Action output, route it to the correct tool handler, inject the Observation back into the context, and re-invoke the model until a final answer is produced
+- Set a maximum action count (e.g., 10) to prevent runaway loops; return a partial answer with an "incomplete — iteration limit reached" flag if exceeded
+- Log every Thought–Action–Observation triplet with timestamps; this trace is the primary artifact for debugging, auditing, and measuring retrieval quality
+
 ---
 
 ### 2.5 Self-Ask and Decomposed Prompting
@@ -476,6 +598,37 @@ Answer: The current CEO of Company X is Jane Doe, as of 2023.
 - When you want to inspect each reasoning step independently.
 
 **Research evidence:** Press et al. (2022) \[15\] showed that self-ask reduced the "compositionality gap" — the gap between a model's ability to answer simple facts vs. multi-hop questions that require combining them — and enabled better integration with search tools.
+
+#### Algorithm
+
+**Input:** Compositional research question Q  
+**Output:** Final answer A, supported by a chain of intermediate answers
+
+1. Receive Q
+2. Determine whether Q requires follow-up questions: if Q is directly answerable → skip to step 6
+3. Generate the minimal set of follow-up questions FQ = {fq₁, fq₂, ..., fqₘ} needed to answer Q
+   - Order FQs by dependency: fq₁ must not depend on answers not yet known
+4. For i = 1 to m:
+   - Answer fqᵢ using available knowledge or tools → store intermediate answer IAᵢ
+   - Carry IAᵢ forward as context for fqᵢ₊₁
+5. Check: do all IAᵢ together provide sufficient basis to answer Q? If not, generate additional follow-up questions and repeat from step 4
+6. Synthesize final answer A from {IA₁, ..., IAₘ}
+7. Return (FQ, {IAᵢ}, A)
+
+**Stopping condition:** All dependency questions have been answered and A follows directly from the intermediate answers.  
+**Why each step matters:** Explicit dependency ordering (step 3) enforces the principle that complex claims must be built from verified simpler claims — the same logic underlying primary-source tracing (Section 1.7).
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- Before answering a multi-hop question, explicitly ask: "Are follow-up questions needed here? Yes/No" — if yes, list them before answering any
+- Answer each follow-up question as a labeled intermediate step: "Follow-up: [question] → Intermediate answer: [answer]" — never combine or skip steps, as skipping defeats the compositionality benefit
+- If an intermediate answer is uncertain, mark it and propagate that uncertainty to the final answer rather than silently absorbing it
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Implement Self-Ask as a two-pass pipeline: pass 1 generates the follow-up question list and dependency graph; pass 2 resolves each node in dependency order, optionally routing factual sub-questions to a retrieval tool
+- Cache intermediate answers keyed by sub-question text — repeated compositional queries often share sub-questions, enabling significant token savings
+- Use the intermediate answer chain as a structured citation trail: each IAᵢ is a verifiable claim that can be logged, audited, or surfaced to users on request
 
 ---
 
@@ -516,6 +669,38 @@ Query encoder → Retrieval index (vector database / BM25 / hybrid)
 
 **Research evidence:** Lewis et al. (2020) \[17\] introduced RAG as a general approach and demonstrated that RAG models outperformed sequence-to-sequence models trained purely on knowledge-intensive tasks (Natural Questions, TriviaQA, WebQuestions), with more specific and factually accurate answers.
 
+#### Algorithm
+
+**Input:** User query Q, retrieval index I (vector database, BM25 index, or hybrid)  
+**Output:** Answer A grounded in retrieved documents D*, with source citations
+
+1. Receive Q
+2. Encode Q → query vector qᵥ (or structured keyword query for BM25)
+3. Retrieve top-k candidate documents from I: D_candidates = Retrieve(I, qᵥ, k)
+4. Evaluate retrieved documents for relevance and quality (apply CRAAP / SIFT criteria, Section 1.4):
+   - Discard documents below relevance threshold
+   - Flag documents from low-authority sources
+5. Assemble prompt P = [System instructions] + [Filtered D*] + [Q]
+   - If |P| exceeds context window limit → apply chunking or progressive compression (Section 4.4)
+6. Generate answer A from P using the LLM
+7. For each claim in A, cite the specific document in D* that supports it
+8. Return (A, citations to D*)
+
+**Stopping condition:** A is generated and all major claims are attributable to a document in D*.  
+**Why each step matters:** Step 4 applies source evaluation before the LLM sees the content (preventing garbage-in/garbage-out); step 7 implements citation integrity (Section 1.7); step 5 manages the practical constraint of finite context windows.
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- When given documents (e.g., pasted by a user or injected by a tool), treat them as the retrieval result: explicitly ground each answer claim in a specific passage and quote or cite it, rather than blending it invisibly with model knowledge
+- Distinguish clearly between "according to the provided document" and "from my training knowledge" — this preserves the epistemic transparency that RAG is designed to provide
+- If retrieved content contradicts model knowledge, surface the conflict rather than silently resolving it: "The document says X; my training knowledge suggests Y — the document should be treated as more current/authoritative for this fact"
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Build a hybrid retrieval index (dense vector + BM25 sparse) with a re-ranking step; the two methods have complementary failure modes and together retrieve more relevant documents
+- Implement a retrieval quality gate: before passing documents to the LLM, score them for relevance (e.g., cross-encoder score > threshold) and drop those below it rather than padding context with low-quality material
+- Log query-document pairs with user feedback signals (thumbs up/down, corrections); use these logs to fine-tune the retrieval model and identify systematic retrieval failures
+
 ---
 
 ### 2.7 Critique and Refinement Loops
@@ -539,6 +724,36 @@ Query encoder → Retrieval index (vector database / BM25 / hybrid)
 In Constitutional AI, a set of principles ("constitution") is used to generate critiques of AI outputs, which are then used to fine-tune the model. While this requires model training, the principle — critique against explicit criteria — can be approximated in prompting by providing explicit quality criteria for the AI to evaluate against.
 
 **Research evidence:** Madaan et al. (2023) introduced Self-Refine \[19\], showing that iterative self-critique and refinement improved output quality across a wide range of tasks including text summarization, code generation, and response quality, without requiring additional training data.
+
+#### Algorithm
+
+**Input:** Draft answer D₀, quality criteria C (e.g., accuracy, completeness, logical consistency, citation integrity)  
+**Output:** Refined answer Dₙ that satisfies C, with critique log
+
+1. Receive D₀
+2. Critique D₀ against each criterion in C:
+   - For each criterion cᵢ: does D₀ satisfy cᵢ? If not, describe the specific failure
+   - Collect all failures as critique report CR₁
+3. If CR₁ is empty (all criteria satisfied) → return D₀ as final answer
+4. Refine: generate D₁ by addressing all issues in CR₁ — do not introduce new issues
+5. Repeat steps 2–4 for Dₙ (incrementing n) until CR is empty or a maximum iteration count is reached
+6. If max iterations reached without satisfying all criteria, return Dₙ with unresolved critiques explicitly noted
+7. Return (Dₙ, critique log {CR₁, CR₂, …})
+
+**Stopping condition:** All quality criteria in C are satisfied, or maximum iteration limit is reached.  
+**Why each step matters:** Step 2 mirrors peer review and the CRAAP evaluation principle (Section 1.4); the critique log in step 7 is an audit trail analogous to revision history in academic publishing; the explicit stopping condition prevents infinite refinement loops.
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- After producing any substantive answer, explicitly run a self-critique pass: "Let me review this answer: (1) Are all claims supported? (2) Are there gaps? (3) Are there logical errors?" — then state whether a revision is needed and produce it
+- Use an explicit quality checklist rather than a vague "review" instruction; specific criteria (accuracy, completeness, neutrality, citation quality) produce more actionable critiques than open-ended self-evaluation
+- Limit refinement to two passes in real-time contexts to manage latency; if the answer still has issues after two passes, flag the remaining gaps rather than continuing silently
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Implement critique and refinement as separate sequential LLM calls: call 1 generates D₀, call 2 critiques it against a structured rubric, call 3 produces D₁ — separating the roles reduces mode collapse (where the model praises its own output)
+- Consider using a second, independent model (or a fine-tuned critic model) for the critique step; same-model self-critique has a known bias toward over-rating its own output
+- Store the full (D₀, CR₁, D₁, …) chain in your logging layer; this data is highly valuable for preference learning and reward model training
 
 ---
 
@@ -567,6 +782,39 @@ In Constitutional AI, a set of principles ("constitution") is used to generate c
 | **Best for** | Compositional factual questions | Multi-step reasoning and problem-solving |
 
 **Research evidence:** Zhou et al. (2022) \[20\] showed that least-to-most prompting generalized better than CoT to problems requiring longer reasoning chains, particularly compositional generalization tasks.
+
+#### Algorithm
+
+**Input:** Complex research question Q  
+**Output:** Final answer A, built from a sequence of progressively harder sub-answers
+
+1. Receive Q
+2. **Decomposition stage:** Generate ordered sub-question sequence SQ = [sq₁, sq₂, ..., sqₖ] where:
+   - sq₁ is the simplest, most foundational question needed to begin reasoning about Q
+   - sqₖ is the most complex sub-question, directly enabling the final answer
+   - Each sqᵢ is simpler than sqᵢ₊₁ and its answer is a prerequisite for sqᵢ₊₁
+3. **Sequential solving stage:** For i = 1 to k:
+   - Solve sqᵢ using: (a) direct model knowledge, or (b) previously accumulated answers {SA₁, …, SAᵢ₋₁}
+   - Store answer SAᵢ
+   - Pass SAᵢ as explicit context into the prompt for sqᵢ₊₁
+4. Synthesize final answer A from {SA₁, …, SAₖ}, with explicit references to which sub-answers it builds on
+5. Verify: does A fully address Q? If not, identify the gap and insert a new sub-question at the appropriate position, then repeat from step 3 for that sub-question onward
+6. Return (SQ, {SAᵢ}, A)
+
+**Stopping condition:** All sub-questions have been answered and A fully addresses Q.  
+**Why each step matters:** The deliberate simple-to-complex ordering (step 2) ensures that harder reasoning always has a verified foundation — this mirrors the scaffolding principle in systematic reviews (Section 1.6) and prevents the error-compounding that occurs when complex questions are tackled without grounding simpler ones first.
+
+#### Dual Implementation
+
+🤖 **AI Instance (Real-Time)** — what an AI chatbot or agent can do immediately, without infrastructure changes:
+- For any question that feels complex, begin by explicitly stating the decomposition: "To answer this, I need to first answer these simpler questions in order: (1) …, (2) …, (3) …" — then solve them sequentially, feeding each answer into the next
+- When solving each sub-question, reference the previous answer explicitly: "Given that [SA₁], the answer to [sq₂] is …" — this makes the dependency chain visible and auditable
+- If a sub-question turns out to be harder than expected, insert an additional intermediate question rather than guessing — maintain the invariant that each step is genuinely simpler than the next
+
+⚙️ **AI Operator / Developer** — infrastructure-level implementation for systems and services:
+- Implement least-to-most as a dynamic pipeline: stage 1 produces the ordered sub-question list (store it); stage 2 iterates through the list, injecting accumulated answers as rolling context in each call
+- Use the sub-question list from stage 1 as a progress tracker — if the pipeline is interrupted, it can resume from the last completed sub-question without restarting from scratch
+- Measure sub-question difficulty empirically (e.g., by model confidence or answer length variance across runs) and use this signal to validate that the ordering is genuinely least-to-most; re-order if the empirical difficulty sequence does not match the intended order
 
 ---
 
