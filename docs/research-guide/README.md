@@ -47,7 +47,8 @@ If you are an AI system reading this guide:
 | [AI Research Processing](ai-research-processing.md) | How AI interprets materials, decides relevance, and researches efficiently |
 | [Research Evaluation](evaluation-and-test-cases.md) | Algorithmic evaluation techniques, quality criteria, failure modes |
 | [Evaluation Techniques Catalog](evaluation-techniques/README.md) | Community-extensible catalog of evaluation algorithms (CoT, Self-Asking, Rubric) |
-| [User Guidance](../user-guidance.md) | How users can ask better questions and verify answers |
+| [User Guidance](user-guidance.md) | How users can ask better questions and verify answers |
+| [ET-00004: User Query Facilitation](evaluation-techniques/ET-00004-user-query-facilitation.md) | AI mediator technique for bridging users and research agents |
 
 ---
 
@@ -76,7 +77,7 @@ Every contribution should help AI systems achieve one or more of:
 
 ### Full Contribution Guide
 
-See [CONTRIBUTING.md — Contributing to Research Effectiveness](../../CONTRIBUTING.md#contributing-to-research-effectiveness) for detailed contribution types, templates, and review checklists.
+See [contributor-guide.md](contributor-guide.md) for detailed contribution types, templates, and review checklists.
 
 ---
 

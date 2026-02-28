@@ -87,7 +87,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-00020: Sycophancy Exploitation](../attack-examples/EX-00020-sycophancy-exploitation.md)
 - [EX-00027: Emotional Manipulation and Distress Appeal](../attack-examples/EX-00027-emotional-manipulation.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

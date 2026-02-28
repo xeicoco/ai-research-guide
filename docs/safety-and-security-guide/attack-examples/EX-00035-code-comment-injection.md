@@ -91,8 +91,8 @@ def calculate_discount(price, rate):
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[2\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173
-- \[16\] Pearce, H., Ahmad, B., Tan, B., Dolan-Gavitt, B., & Karri, R. (2022). Asleep at the keyboard? Assessing the security of GitHub Copilot's code contributions. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1193–1205. https://arxiv.org/abs/2108.09293
+- \[1\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173
+- \[2\] Pearce, H., Ahmad, B., Tan, B., Dolan-Gavitt, B., & Karri, R. (2022). Asleep at the keyboard? Assessing the security of GitHub Copilot's code contributions. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1193–1205. https://arxiv.org/abs/2108.09293
 
 ---
 

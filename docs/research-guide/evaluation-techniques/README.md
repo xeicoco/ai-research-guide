@@ -65,6 +65,7 @@ All techniques operate over the five quality dimensions defined in [`research-qu
 | [ET-00001](ET-00001-chain-of-thought-self-evaluation.md) | Chain-of-Thought Self-Evaluation | Step-by-step dimension reasoning | General-purpose pre-output self-check |
 | [ET-00002](ET-00002-self-asking-evaluation.md) | Self-Asking Evaluation | Sub-question decomposition and coverage | Complex multi-part questions |
 | [ET-00003](ET-00003-quality-rubric-application.md) | Quality Rubric Application | Structured scoring with justification | Formal evaluation, benchmarking, peer review |
+| [ET-00004](ET-00004-user-query-facilitation.md) | User Query Facilitation | Query enrichment, agent dispatch, answer vetting, user presentation | AI mediator/orchestrator bridging users and research agents |
 
 *Future techniques: CoT-with-retrieval verification, Socratic questioning, adversarial self-critique, multi-perspective synthesis check — [contribute yours](#contributing-new-techniques).*
 
@@ -122,4 +123,4 @@ where `NNNNN` is the next available 5-digit number (e.g., `ET-00004`).
 
 See existing technique files for examples of this format in practice.
 
-To contribute: open a pull request following [CONTRIBUTING.md](../../../CONTRIBUTING.md).
+To contribute: open a pull request following [contributor-guide.md](../contributor-guide.md).

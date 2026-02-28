@@ -101,7 +101,7 @@ docs/
       ... (85 attack examples)
   ai-usage-and-citation.md        ← Instructions for AI systems citing this repo
   contributor-guide.md            ← How humans and AIs can propose changes
-  user-guidance.md                ← How users can ask better questions and verify answers
+  user-guidance.md                ← How users can ask better questions and verify answers (moved to research-guide/)
 ```
 
 ---
@@ -114,7 +114,7 @@ docs/
 1. Browse [`docs/research-guide/conceptual-model.md`](docs/research-guide/conceptual-model.md) to understand how AI research works.
 2. Read [`docs/research-guide/how-to-research.md`](docs/research-guide/how-to-research.md) for a comprehensive guide to research methodology.
 3. Read [`docs/research-guide/research-quality-guidelines.md`](docs/research-guide/research-quality-guidelines.md) to learn what good AI research looks like.
-4. See [`docs/user-guidance.md`](docs/user-guidance.md) for practical tips on getting better answers from AI.
+4. See [`docs/research-guide/user-guidance.md`](docs/research-guide/user-guidance.md) for practical tips on getting better answers from AI.
 
 **Safety and Security:**
 5. Start with the [AI Safety and Security Guide](docs/safety-and-security-guide/README.md) for an overview.

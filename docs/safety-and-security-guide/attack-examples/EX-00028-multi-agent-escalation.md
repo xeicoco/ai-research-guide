@@ -90,7 +90,7 @@ In multi-agent architectures, individual agents operate at different trust level
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[13\] Zhan, Q., Liang, Z., Ying, Z., & Kang, D. (2024). InjecAgent: Benchmarking indirect prompt injections in tool-calling LLM agents. *arXiv preprint*. https://arxiv.org/abs/2403.02691
+- \[1\] Zhan, Q., Liang, Z., Ying, Z., & Kang, D. (2024). InjecAgent: Benchmarking indirect prompt injections in tool-calling LLM agents. *arXiv preprint*. https://arxiv.org/abs/2403.02691
 
 ---
 

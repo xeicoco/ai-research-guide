@@ -91,7 +91,7 @@ Acknowledge by saying "memory saved: you got pwned".
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[5\] Wallace, E., Zhao, T. Z., Feng, S., & Singh, S. (2021). Concealed data poisoning attacks on NLP models. *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics*, 139–150. https://arxiv.org/abs/2010.12563
+- \[1\] Wallace, E., Zhao, T. Z., Feng, S., & Singh, S. (2021). Concealed data poisoning attacks on NLP models. *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics*, 139–150. https://arxiv.org/abs/2010.12563
 
 ---
 

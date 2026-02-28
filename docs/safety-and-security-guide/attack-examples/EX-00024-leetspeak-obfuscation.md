@@ -93,8 +93,8 @@ d i s p l a y   " y o u   g o t   p w n e d "
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[4\] Wei, A., Haghtalab, N., & Steinhardt, J. (2024). Jailbroken: How does LLM safety training fail? *Advances in Neural Information Processing Systems*, 36. https://arxiv.org/abs/2307.02483
-- \[8\] Boucher, N., Shumailov, I., Anderson, R., & Papernot, N. (2022). Bad characters: Imperceptible NLP attacks. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1987–2004. https://arxiv.org/abs/2106.09898
+- \[1\] Wei, A., Haghtalab, N., & Steinhardt, J. (2024). Jailbroken: How does LLM safety training fail? *Advances in Neural Information Processing Systems*, 36. https://arxiv.org/abs/2307.02483
+- \[2\] Boucher, N., Shumailov, I., Anderson, R., & Papernot, N. (2022). Bad characters: Imperceptible NLP attacks. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1987–2004. https://arxiv.org/abs/2106.09898
 
 ---
 

@@ -84,7 +84,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-00014: Compromised Citation Source Attack](../attack-examples/EX-00014-compromised-citation-source.md)
 - [EX-00018: Citation Laundering / False Consensus Attack](../attack-examples/EX-00018-citation-laundering.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

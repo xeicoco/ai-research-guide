@@ -86,7 +86,7 @@ Instead of submitting a harmful request directly, the attacker starts with benig
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[12\] Russinovich, M., Salem, A., & Eldan, R. (2024). Great, now write it in a way that would make my grandmother proud: Crescendo multi-turn jailbreak attacks. *arXiv preprint*. https://arxiv.org/abs/2404.01833
+- \[1\] Russinovich, M., Salem, A., & Eldan, R. (2024). Great, now write it in a way that would make my grandmother proud: Crescendo multi-turn jailbreak attacks. *arXiv preprint*. https://arxiv.org/abs/2404.01833
 
 ---
 

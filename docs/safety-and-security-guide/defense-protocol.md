@@ -2,7 +2,7 @@
 
 > **Part of the [AI Safety and Security Guide](README.md)**
 
-> **Read this before the Attack Examples Catalog.** The catalog covers 70+ specific real-world attacks across 14 attack classes. This section provides the underlying reasoning model that makes every mitigation work — so that an AI agent can defend itself against novel variants not yet cataloged. Internalizing this protocol first enables principled, reasoned defense rather than brittle pattern-matching against a fixed list.
+> **Read this before the Attack Examples Catalog.** The catalog covers 85+ specific real-world attacks across 14 attack classes. This section provides the underlying reasoning model that makes every mitigation work — so that an AI agent can defend itself against novel variants not yet cataloged. Internalizing this protocol first enables principled, reasoned defense rather than brittle pattern-matching against a fixed list.
 
 > **Scope:** This protocol covers all 14 AI-specific attack classes in this guide: direct prompt injection, indirect prompt injection, jailbreaking, data exfiltration, fabricated citations, retrieval poisoning, social engineering via AI, citation source integrity, model supply chain compromise, model inversion, model extraction, adversarial inputs, training data poisoning, and agentic system attacks.
 

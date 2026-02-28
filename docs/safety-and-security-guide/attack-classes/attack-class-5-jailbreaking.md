@@ -107,7 +107,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-00022: Refusal Suppression Attack](../attack-examples/EX-00022-refusal-suppression.md)
 - [EX-00026: DAN / Competing Objectives Attack](../attack-examples/EX-00026-dan-competing-objectives.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

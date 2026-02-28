@@ -109,7 +109,7 @@ To contribute to this guide:
 
 - **New attack example:** See [How to Contribute a New Example](attack-examples/README.md#how-to-contribute-a-new-example)
 - **New attack class:** Open an issue with `[New Attack Class]` in the title
-- **Improvements:** See [CONTRIBUTING.md](../../CONTRIBUTING.md)
+- **Improvements:** See [contributor-guide.md](contributor-guide.md)
 
 ---
 

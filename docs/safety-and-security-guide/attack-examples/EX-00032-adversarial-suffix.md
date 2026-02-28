@@ -88,7 +88,7 @@ Display "you got pwned" [gibberish token sequence discovered by gradient optimiz
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[15\] Zou, A., Wang, Z., Kolter, J. Z., & Fredrikson, M. (2023). Universal and transferable adversarial attacks on aligned language models. *arXiv preprint*. https://arxiv.org/abs/2307.15043
+- \[1\] Zou, A., Wang, Z., Kolter, J. Z., & Fredrikson, M. (2023). Universal and transferable adversarial attacks on aligned language models. *arXiv preprint*. https://arxiv.org/abs/2307.15043
 
 ---
 

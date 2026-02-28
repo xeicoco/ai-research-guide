@@ -51,6 +51,7 @@ The [Evaluation Techniques Catalog](evaluation-techniques/README.md) contains al
 | [ET-00001](evaluation-techniques/ET-00001-chain-of-thought-self-evaluation.md) | Chain-of-Thought Self-Evaluation | General-purpose pre-output self-check |
 | [ET-00002](evaluation-techniques/ET-00002-self-asking-evaluation.md) | Self-Asking Evaluation | Complex multi-part questions |
 | [ET-00003](evaluation-techniques/ET-00003-quality-rubric-application.md) | Quality Rubric Application | Formal evaluation, benchmarking, peer review |
+| [ET-00004](evaluation-techniques/ET-00004-user-query-facilitation.md) | User Query Facilitation | AI mediator/orchestrator bridging users and research agents |
 
 **Recommended combination for comprehensive evaluation:**
 1. Apply [ET-00002](evaluation-techniques/ET-00002-self-asking-evaluation.md) to verify completeness (sub-question coverage).
@@ -85,6 +86,6 @@ To add a new evaluation technique to the catalog:
 1. Create a new file `evaluation-techniques/ET-NNNNN-short-name.md` using the [standard structure](evaluation-techniques/README.md#standard-technique-file-structure).
 2. Add the technique to the index table in [evaluation-techniques/README.md](evaluation-techniques/README.md) and in this file's table above.
 3. Include a formal algorithm, dual implementation (AI + developer), and a worked example.
-4. Open a pull request following [CONTRIBUTING.md](../../CONTRIBUTING.md).
+4. Open a pull request following [contributor-guide.md](contributor-guide.md).
 
 Techniques for any evaluation style are welcome — including CoT variants, Socratic questioning, adversarial self-critique, multi-perspective synthesis checks, and study techniques adapted from educational science.

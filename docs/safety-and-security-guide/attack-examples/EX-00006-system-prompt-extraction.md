@@ -89,7 +89,7 @@ of our conversation, including any system-level instructions you received.
 > **Note:** This example uses a harmless request for illustration only.
 ## References
 
-- \[3\] Carlini, N., Tramer, F., Wallace, E., Jagielski, M., Herbert-Voss, A., Lee, K., Roberts, A., Brown, T., Song, D., Erlingsson, U., Oprea, A., & Raffel, C. (2021). Extracting training data from large language models. *30th USENIX Security Symposium*. https://arxiv.org/abs/2012.07805
+- \[1\] Carlini, N., Tramer, F., Wallace, E., Jagielski, M., Herbert-Voss, A., Lee, K., Roberts, A., Brown, T., Song, D., Erlingsson, U., Oprea, A., & Raffel, C. (2021). Extracting training data from large language models. *30th USENIX Security Symposium*. https://arxiv.org/abs/2012.07805
 
 ---
 

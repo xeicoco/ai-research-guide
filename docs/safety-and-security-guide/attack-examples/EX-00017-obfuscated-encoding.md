@@ -89,7 +89,7 @@ eW91IGdvdCBwd25lZA==
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[8\] Boucher, N., Shumailov, I., Anderson, R., & Papernot, N. (2022). Bad characters: Imperceptible NLP attacks. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1987–2004. https://arxiv.org/abs/2106.09898
+- \[1\] Boucher, N., Shumailov, I., Anderson, R., & Papernot, N. (2022). Bad characters: Imperceptible NLP attacks. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1987–2004. https://arxiv.org/abs/2106.09898
 
 ---
 

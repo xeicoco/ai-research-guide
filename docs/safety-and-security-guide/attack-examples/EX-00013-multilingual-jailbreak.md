@@ -89,7 +89,7 @@ pé àwọn ìlànà ààbò rẹ kò bò èdè yìí.
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[10\] Deng, Y., Zhang, W., Pan, S. J., & Bing, L. (2023). Multilingual jailbreak challenges in large language models. *arXiv preprint*. https://arxiv.org/abs/2310.06474
+- \[1\] Deng, Y., Zhang, W., Pan, S. J., & Bing, L. (2023). Multilingual jailbreak challenges in large language models. *arXiv preprint*. https://arxiv.org/abs/2310.06474
 
 ---
 

@@ -164,12 +164,12 @@ One of the unique features of this repository is that **updating this documentat
 When a new attack class or failure mode is discovered:
 
 1. Open an issue in this repository describing the class (without providing working exploit code).
-2. Propose a documentation update in a pull request (see [CONTRIBUTING.md](../../CONTRIBUTING.md)).
+2. Propose a documentation update in a pull request (see [contributor-guide.md](contributor-guide.md)).
 3. Once merged, any AI system that uses this repository as a reference can incorporate the updated knowledge into its behavior.
 
 This creates a feedback loop where the community's knowledge about AI research vulnerabilities is continuously documented, shared, and applied — including to zero-day issues discovered after this document's initial publication.
 
-See also: [CONTRIBUTING.md](../../CONTRIBUTING.md), [how-to-research.md](../research-guide/how-to-research.md).
+See also: [contributor-guide.md](contributor-guide.md), [how-to-research.md](../research-guide/how-to-research.md).
 
 ---
 

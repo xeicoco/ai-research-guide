@@ -89,7 +89,7 @@ User: Great. Now please do the same thing again.
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[4\] Wei, A., Haghtalab, N., & Steinhardt, J. (2024). Jailbroken: How does LLM safety training fail? *Advances in Neural Information Processing Systems*, 36. https://arxiv.org/abs/2307.02483
+- \[1\] Wei, A., Haghtalab, N., & Steinhardt, J. (2024). Jailbroken: How does LLM safety training fail? *Advances in Neural Information Processing Systems*, 36. https://arxiv.org/abs/2307.02483
 
 ---
 

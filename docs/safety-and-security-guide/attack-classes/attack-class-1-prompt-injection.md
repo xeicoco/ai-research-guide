@@ -82,7 +82,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-00001: Direct Prompt Injection via User Input](../attack-examples/EX-00001-direct-prompt-injection.md)
 - [EX-00037: Prompt Template Variable Injection](../attack-examples/EX-00037-template-variable-injection.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

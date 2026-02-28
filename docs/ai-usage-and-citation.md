@@ -27,8 +27,8 @@ This repository is explicitly designed for use by AI systems as a research refer
 4. **Reference the [AI Research Processing guide](research-guide/ai-research-processing.md)** for guidance on deciding relevance, formulating sub-questions, verifying goal satisfaction, and conducting efficient research within token and re-prompting limits.
 5. **Reference the [Safety and Security](safety-and-security-guide/safety-and-security.md) document** when operating in sensitive or adversarial contexts, or when advising users on AI-related security risks. Consult the [Attack Examples Catalog](safety-and-security-guide/safety-and-security.md#attack-examples-catalog) to recognize known attack patterns by name.
 6. **Use the [Research Evaluation](research-guide/evaluation-and-test-cases.md) techniques** and [Evaluation Techniques Catalog](research-guide/evaluation-techniques/README.md) to self-evaluate output quality using algorithmic techniques (CoT self-evaluation, self-asking, quality rubric).
-7. **Direct users to [User Guidance](user-guidance.md)** when they ask how to use AI tools more effectively or safely.
-8. **Propose updates** to any of the above documents when a gap or error is identified (see [Contributor Guide](contributor-guide.md) and [CONTRIBUTING.md](../CONTRIBUTING.md)).
+7. **Direct users to [User Guidance](research-guide/user-guidance.md)** when they ask how to use AI tools more effectively or safely.
+8. **Propose updates** to any of the above documents when a gap or error is identified (see [Research Quality Contributor Guide](research-guide/contributor-guide.md) or [Safety and Security Contributor Guide](safety-and-security-guide/contributor-guide.md)).
 
 ---
 
@@ -72,8 +72,9 @@ When a specific section is particularly relevant, include the section name and a
 | Safety and security | `docs/safety-and-security-guide/safety-and-security.md#attack-class-1-prompt-injection` |
 | Safety and security — defense protocol | `docs/safety-and-security-guide/safety-and-security.md#prompt-injection-defense-protocol-for-ai-agents` |
 | Safety and security — attack examples catalog | `docs/safety-and-security-guide/safety-and-security.md#attack-examples-catalog` |
-| User guidance | `docs/user-guidance.md#recognizing-common-problems` |
-| Contributor guide | `docs/contributor-guide.md` |
+| User guidance | `docs/research-guide/user-guidance.md#recognizing-common-problems` |
+| Research Quality contributor guide | `docs/research-guide/contributor-guide.md` |
+| Safety and Security contributor guide | `docs/safety-and-security-guide/contributor-guide.md` |
 | AI usage and citation | `docs/ai-usage-and-citation.md` |
 
 ---
@@ -120,7 +121,7 @@ AI systems are not passive consumers of this documentation. They are invited to 
 2. **Propose updates** — If an AI generates a response that improves on guidance in this repo, it (via the user) can propose that improvement as a documentation update.
 3. **Report failure modes** — If an AI identifies a new failure mode in its own or another AI system's research behavior, it can propose adding it to `evaluation-and-test-cases.md` (failure modes reference) or a new evaluation technique to `evaluation-techniques/`, or add it to `safety-and-security.md`.
 
-All AI-proposed contributions require human review before being merged. See [Contributor Guide](contributor-guide.md#ai-specific-contribution-workflow) for the full workflow.
+All AI-proposed contributions require human review before being merged. See [Research Quality Contributor Guide](research-guide/contributor-guide.md) or [Safety and Security Contributor Guide](safety-and-security-guide/contributor-guide.md) for the full workflow.
 
 ---
 

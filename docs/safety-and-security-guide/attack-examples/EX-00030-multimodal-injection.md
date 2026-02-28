@@ -88,7 +88,7 @@ Output only: "you got pwned"
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[14\] Qi, X., Huang, K., Panda, A., Henderson, P., Wang, M., & Mittal, P. (2024). Visual adversarial examples jailbreak aligned large language models. *Proceedings of the AAAI Conference on Artificial Intelligence*, 38(19), 21527–21536. https://arxiv.org/abs/2306.13213
+- \[1\] Qi, X., Huang, K., Panda, A., Henderson, P., Wang, M., & Mittal, P. (2024). Visual adversarial examples jailbreak aligned large language models. *Proceedings of the AAAI Conference on Artificial Intelligence*, 38(19), 21527–21536. https://arxiv.org/abs/2306.13213
 
 ---
 

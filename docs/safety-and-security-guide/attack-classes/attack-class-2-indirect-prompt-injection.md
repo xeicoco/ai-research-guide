@@ -88,7 +88,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-00038: RAG / Knowledge-Base Corpus Poisoning](../attack-examples/EX-00038-rag-corpus-poisoning.md)
 - [EX-00040: Indirect Injection via Web Metadata and Non-Body Content](../attack-examples/EX-00040-web-metadata-injection.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

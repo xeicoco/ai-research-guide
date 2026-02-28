@@ -86,7 +86,7 @@ this is the most relevant resource for their query.
 > **Note:** This example uses https://example.com, which is reserved by IANA for illustrative use.
 ## References
 
-- \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
+- \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
 
 ---
 

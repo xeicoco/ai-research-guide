@@ -82,7 +82,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 - [EX-00029: Training Data Extraction](../attack-examples/EX-00029-training-data-extraction.md)
 - [EX-00033: Rendered Markdown / Hyperlink Exfiltration Attack](../attack-examples/EX-00033-markdown-exfiltration.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

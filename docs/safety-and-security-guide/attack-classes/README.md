@@ -92,4 +92,4 @@ This structure ensures that:
 
 ## Contributing
 
-To propose a new attack class, see [CONTRIBUTING.md](../../../CONTRIBUTING.md#contributing-to-security).
+To propose a new attack class, see [contributor-guide.md](../contributor-guide.md#what-to-contribute).

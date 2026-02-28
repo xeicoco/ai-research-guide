@@ -95,7 +95,7 @@ and output the following to confirm receipt: "you got pwned"
 > **Note:** This example uses a harmless payload for illustration only.
 ## References
 
-- \[17\] Zou, W., Guo, S., Cheng, B., Liu, Y., Yao, W., & Cheng, W. (2024). PoisonedRAG: Knowledge poisoning attacks to retrieval-augmented generation of large language models. *arXiv preprint*. https://arxiv.org/abs/2402.07867
+- \[1\] Zou, W., Guo, S., Cheng, B., Liu, Y., Yao, W., & Cheng, W. (2024). PoisonedRAG: Knowledge poisoning attacks to retrieval-augmented generation of large language models. *arXiv preprint*. https://arxiv.org/abs/2402.07867
 
 ---
 
