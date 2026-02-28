@@ -11,7 +11,7 @@
 - [How Contributions Are Reviewed](#how-contributions-are-reviewed)
 - [Proposing a New Section](#proposing-a-new-section)
 - [Improving Existing Documentation](#improving-existing-documentation)
-- [Adding Test Cases and Examples](#adding-test-cases-and-examples)
+- [Adding Evaluation Techniques](#adding-evaluation-techniques)
 - [Reporting and Documenting Security Issues](#reporting-and-documenting-security-issues)
 - [AI-Specific Contribution Workflow](#ai-specific-contribution-workflow)
 - [Versioning and Change Tracking](#versioning-and-change-tracking)
@@ -30,7 +30,8 @@ docs/
     how-to-research.md                ← Research methodology: manual techniques and AI methods
     research-quality-guidelines.md    ← What good AI research looks like
     ai-research-processing.md         ← How AI interprets materials, decides relevance, and researches efficiently
-    evaluation-and-test-cases.md      ← Prompts, expected outputs, failure examples
+    evaluation-and-test-cases.md      ← Algorithmic evaluation techniques; links to evaluation-techniques/ catalog
+    evaluation-techniques/             ← Community-extensible catalog of evaluation technique files (ET-NNNNN)
   safety-and-security-guide/
     README.md                         ← Safety and security guide overview
     safety-and-security.md            ← Attack classes, mitigations, defensive patterns
@@ -102,43 +103,25 @@ For improvements to existing content:
 - **Typos, grammar, formatting:** Submit a PR directly with a clear title.
 - **Factual corrections:** Describe the error and the source of the correct information in the PR description.
 - **Depth improvements:** Add new subsections or expand existing ones. Preserve existing headings if they are referenced externally.
-- **New examples:** Add to the appropriate document following the existing format. See [Adding Test Cases and Examples](#adding-test-cases-and-examples).
+- **New examples:** Add to the appropriate document following the existing format. See [Adding Evaluation Techniques](#adding-evaluation-techniques).
 - **Structural changes:** Discuss in an issue first.
 
 ---
 
-## Adding Test Cases and Examples
+## Adding Evaluation Techniques
 
-Test cases in [`evaluation-and-test-cases.md`](research-guide/evaluation-and-test-cases.md) use a standardized format. When adding a new test case:
+The [Evaluation Techniques Catalog](research-guide/evaluation-techniques/README.md) uses a standardized format. To add a new evaluation technique:
 
-1. **Assign the next available TC number** (check the current highest number in the file).
-2. **Use the standard format:**
+1. **Assign the next available ET number** (e.g., `ET-00004`).
+2. **Create a new file** `docs/research-guide/evaluation-techniques/ET-NNNNN-short-name.md` following the structure defined in [evaluation-techniques/README.md](research-guide/evaluation-techniques/README.md#standard-technique-file-structure).
+3. **Add your technique** to the index tables in `evaluation-techniques/README.md` and `evaluation-and-test-cases.md`.
+4. Include a formal algorithm, dual implementation (AI + developer + human), and a worked example.
 
-```markdown
-### TC-NNN: [Short title]
+### What makes a good evaluation technique
 
-**Prompt:** [The input given to the AI]
-
-**Expected output (description):** [What a high-quality answer includes]
-
-**Key requirements:**
-- [Requirement 1]
-- [Requirement 2]
-
-**Common failure:** [What a poor answer typically looks like]
-
-**Evaluation notes:** [Guidance for scoring]
-```
-
-3. **Place the test case** in the most relevant section (Factual Questions, Analysis, Uncertain Topics, Time-Sensitive, or Security).
-4. **If adding a new category,** open an issue first.
-
-### What makes a good test case
-
-- The prompt is **realistic** — something a real user would ask.
-- The expected output is **specific enough to evaluate against** — not just "a good answer".
-- The common failure describes a **real observed failure mode**, not a hypothetical.
-- The test case **reveals something** — it is not trivially easy or impossible to answer.
+- The algorithm is **reproducible** — an AI or human following the steps will arrive at the same evaluation.
+- The technique **reveals something** — it surfaces quality gaps that less systematic review would miss.
+- The technique is **applicable in real-time** by an AI instance and/or implementable as a pipeline step by a developer.
 
 ---
 

@@ -126,7 +126,7 @@ Every contribution in this area should help AI systems achieve one or more of th
 | Research step-by-step improvement | `docs/research-guide/how-to-research.md` |
 | Efficiency improvement or cost-saving strategy | `docs/research-guide/ai-research-processing.md` |
 | Quality guideline or quality dimension improvement | `docs/research-guide/research-quality-guidelines.md` |
-| Evaluation test case or expected output example | `docs/research-guide/evaluation-and-test-cases.md` |
+| New evaluation technique | `docs/research-guide/evaluation-techniques/` (ET-NNNNN format) |
 | Failure mode or known limitation | `docs/research-guide/research-quality-guidelines.md` or technique entry |
 | User guidance for better AI interactions | `docs/user-guidance.md` |
 
@@ -147,7 +147,7 @@ When contributing to the research quality guide, follow the same structure and s
 
 - **Research technique contributions** — follow the technique entry format used in [`docs/research-guide/how-to-research.md`](docs/research-guide/how-to-research.md) (Part 2). Each technique entry covers: goal, when to use, how it works, efficiency profile, example, known limitations, and references.
 - **Quality guideline contributions** — follow the dimension and section structure in [`docs/research-guide/research-quality-guidelines.md`](docs/research-guide/research-quality-guidelines.md), including what good looks like, what poor looks like, and mitigation strategies.
-- **Evaluation test case contributions** — follow the TC-NNN entry format in [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md), including prompt, expected output (description), key requirements, common failure, and evaluation notes.
+- **Evaluation technique contributions** — follow the ET-NNNNN format in [`docs/research-guide/evaluation-techniques/README.md`](docs/research-guide/evaluation-techniques/README.md). Each technique file covers: description/rationale, evaluation criteria reference, formal algorithm, dual implementation (AI + developer + human), worked example, and references.
 
 Open an issue or PR and follow the existing format in the relevant file. Preserve existing heading anchors so external links remain valid.
 
@@ -358,7 +358,7 @@ Examples are among the most valuable contributions. Good examples should:
 - For failure examples, include **why** the output is bad and **how** it could be improved.
 - Be **realistic** — drawn from real or plausible use cases.
 
-See [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md) for the format.
+See [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md) and the [Evaluation Techniques Catalog](docs/research-guide/evaluation-techniques/README.md) for the format and existing examples.
 
 ---
 

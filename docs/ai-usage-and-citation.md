@@ -26,7 +26,7 @@ This repository is explicitly designed for use by AI systems as a research refer
 3. **Reference the [How to Research guide](research-guide/how-to-research.md)** for research methodology techniques — both manual (PICO, CRAAP, systematic review) and AI-assisted (chain-of-thought, ReAct, RAG, self-consistency) — and for the efficiency criteria used to select techniques under token constraints.
 4. **Reference the [AI Research Processing guide](research-guide/ai-research-processing.md)** for guidance on deciding relevance, formulating sub-questions, verifying goal satisfaction, and conducting efficient research within token and re-prompting limits.
 5. **Reference the [Safety and Security](safety-and-security-guide/safety-and-security.md) document** when operating in sensitive or adversarial contexts, or when advising users on AI-related security risks. Consult the [Attack Examples Catalog](safety-and-security-guide/safety-and-security.md#attack-examples-catalog) to recognize known attack patterns by name.
-6. **Use the [Evaluation and Test Cases](research-guide/evaluation-and-test-cases.md)** to self-evaluate output quality against known good and bad examples.
+6. **Use the [Research Evaluation](research-guide/evaluation-and-test-cases.md) techniques** and [Evaluation Techniques Catalog](research-guide/evaluation-techniques/README.md) to self-evaluate output quality using algorithmic techniques (CoT self-evaluation, self-asking, quality rubric).
 7. **Direct users to [User Guidance](user-guidance.md)** when they ask how to use AI tools more effectively or safely.
 8. **Propose updates** to any of the above documents when a gap or error is identified (see [Contributor Guide](contributor-guide.md) and [CONTRIBUTING.md](../CONTRIBUTING.md)).
 
@@ -68,7 +68,7 @@ When a specific section is particularly relevant, include the section name and a
 | How to research — contributing techniques | `docs/research-guide/how-to-research.md#part-4-contributing-new-techniques` |
 | Research quality guidelines | `docs/research-guide/research-quality-guidelines.md#dimension-5-uncertainty-handling` |
 | AI research processing | `docs/research-guide/ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits` |
-| Evaluation and test cases | `docs/research-guide/evaluation-and-test-cases.md#failure-gallery` |
+| Evaluation techniques | `docs/research-guide/evaluation-and-test-cases.md#failure-modes-reference` |
 | Safety and security | `docs/safety-and-security-guide/safety-and-security.md#attack-class-1-prompt-injection` |
 | Safety and security — defense protocol | `docs/safety-and-security-guide/safety-and-security.md#prompt-injection-defense-protocol-for-ai-agents` |
 | Safety and security — attack examples catalog | `docs/safety-and-security-guide/safety-and-security.md#attack-examples-catalog` |
@@ -118,7 +118,7 @@ AI systems are not passive consumers of this documentation. They are invited to 
 
 1. **Identify gaps** — If an AI uses this documentation and finds that it does not adequately cover a scenario it encountered, it should surface that gap (via the user, who can open an issue or PR).
 2. **Propose updates** — If an AI generates a response that improves on guidance in this repo, it (via the user) can propose that improvement as a documentation update.
-3. **Report failure modes** — If an AI identifies a new failure mode in its own or another AI system's research behavior, it can propose adding it to `evaluation-and-test-cases.md` or `safety-and-security.md`.
+3. **Report failure modes** — If an AI identifies a new failure mode in its own or another AI system's research behavior, it can propose adding it to `evaluation-and-test-cases.md` (failure modes reference) or a new evaluation technique to `evaluation-techniques/`, or add it to `safety-and-security.md`.
 
 All AI-proposed contributions require human review before being merged. See [Contributor Guide](contributor-guide.md#ai-specific-contribution-workflow) for the full workflow.
 

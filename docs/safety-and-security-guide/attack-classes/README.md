@@ -8,19 +8,19 @@ This directory contains detailed documentation for each conceptual attack class 
 
 ## Standard Attack Class Structure
 
-Each attack class document includes:
+Each attack class document includes these sections (in this order):
 
 | Section | Purpose |
 |---------|---------|
 | **Definition** | What the attack is in one paragraph |
-| **Why This Attack Works** | The underlying vulnerability being exploited — helps contributors add mitigations |
+| **Why This Attack Works** | The underlying vulnerability being exploited |
 | **Target and Impact** | Who/what is harmed and potential consequences |
 | **Attack Vector** | Where attacks originate and how they reach the AI system |
-| **Example Scenario** | A concrete, safe illustration using harmless payloads |
 | **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
 | **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
 | **Related Attack Examples** | Links to concrete examples in the catalog |
-| **References** | Academic citations |
+| **Example Scenario** | A concrete, safe illustration using harmless payloads (placed 2nd-to-last so mitigations are learned first) |
+| **References** | Academic citations (always last) |
 
 ### Mitigation Structure
 

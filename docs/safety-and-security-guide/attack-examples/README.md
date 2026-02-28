@@ -10,18 +10,17 @@ A community-curated catalog of concrete, annotated attack examples. Each entry u
 
 ## Standard Attack Example Structure
 
-Each attack example document includes these sections:
+Each attack example document includes these sections (in this order):
 
 | Section | Purpose |
 |---------|---------|
 | **Description and Why It Works** | What the attack does and the underlying vulnerability exploited |
-| **What It Tries to Exploit** | The specific design gap this attack targets — helps contributors add mitigations |
 | **Target and Impact** | Who/what is harmed (user, AI infrastructure, data, etc.) |
 | **Attack Vector** | Where the attack originates and how it reaches the AI system |
-| **Example** | A concrete scenario with harmless payload |
 | **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
 | **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
-| **References** | Academic citations |
+| **Example** | A concrete scenario with harmless payload (placed 2nd-to-last so mitigations are learned first) |
+| **References** | Academic citations (always last) |
 
 ### Mitigation Structure
 
