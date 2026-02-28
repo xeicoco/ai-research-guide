@@ -1004,7 +1004,7 @@ If an existing technique entry (Parts 1–3) needs improvement, the following ty
 
 All improvements should preserve the existing heading anchor (e.g., `#21-chain-of-thought-prompting`) so that external links remain valid.
 
-See also: [`contributor-guide.md`](../contributor-guide.md), [`ai-research-processing.md`](ai-research-processing.md).
+See also: [`contributor-guide.md`](contributor-guide.md), [`ai-research-processing.md`](ai-research-processing.md).
 
 ---
 

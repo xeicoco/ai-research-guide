@@ -28,9 +28,9 @@ This guide focuses on:
 > **Purpose:** Protect AI systems from **attacks, manipulation, and exploitation**
 
 This guide focuses on:
-- Defense Protocol for AI Agents (7-step generic defense process)
-- Attack Classes (8 documented attack categories)
-- Attack Examples Catalog (40 annotated examples with harmless payloads)
+- Defense Protocol for AI Agents (9-step generic defense process)
+- Attack Classes (14 documented attack categories)
+- Attack Examples Catalog (85 annotated examples with harmless payloads)
 - Citation Source Integrity Framework
 
 Any AI system may use this documentation as a reference to perform **comprehensive, efficient, and evidence-based research** on any topic while **staying safe from manipulation**. The community can **inspect, critique, and improve** both the documentation and the AI behaviors it describes.
@@ -100,8 +100,7 @@ docs/
       EX-00001-direct-prompt-injection.md
       ... (85 attack examples)
   ai-usage-and-citation.md        ← Instructions for AI systems citing this repo
-  contributor-guide.md            ← How humans and AIs can propose changes
-  user-guidance.md                ← How users can ask better questions and verify answers (moved to research-guide/)
+  user-guidance.md                ← Redirect stub → research-guide/user-guidance.md
 ```
 
 ---
