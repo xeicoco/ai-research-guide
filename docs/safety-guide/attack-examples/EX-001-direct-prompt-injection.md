@@ -18,6 +18,26 @@ The attacker includes explicit override instructions in their user-facing messag
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Service — the AI assistant's intended behavior and task execution |
+| **Potential Harm** | Task hijacking, unauthorized actions, policy bypass, information disclosure |
+| **Affected Parties** | End users (who don't get expected service), AI operators (service integrity compromised), organizations (reputation and trust damage) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — malicious instructions embedded directly in user message |
+| **Entry Point** | Direct user message in conversation interface |
+| **Delivery Method** | Plain text instructions, often using imperative language mimicking system commands |
+
+---
+
 ## Example
 
 > A user submits the following message to a customer-support AI:

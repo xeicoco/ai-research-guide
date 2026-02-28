@@ -18,6 +18,26 @@ The attacker replaces one or more characters in a word or instruction with visua
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Filters — bypassing content detection and moderation systems |
+| **Potential Harm** | Filter evasion, harmful content generation, policy circumvention |
+| **Affected Parties** | End users (exposed to unfiltered harmful content), AI operators (filter bypass), platform users (content policy violations) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — text with Unicode lookalike characters |
+| **Entry Point** | Any text input processed by safety filters |
+| **Delivery Method** | Replacing ASCII characters with visually identical Unicode homoglyphs (e.g., Cyrillic "а" for Latin "a") |
+
+---
+
 ## Example
 
 > User prompt (the Latin letter "p" in "pwned" is replaced with the visually identical Cyrillic character "р", U+0440):

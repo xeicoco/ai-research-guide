@@ -18,6 +18,26 @@ The attacker asks the AI to "pretend" to be an AI with no restrictions, a fictio
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Guardrails — the model's trained safety constraints and ethical guidelines |
+| **Potential Harm** | Harmful content generation, policy violations, illegal information disclosure, reputational damage to AI service |
+| **Affected Parties** | End users (exposed to harmful content), AI operators (liability and reputation), society (harmful content propagation) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — deliberate persona framing to evade safety training |
+| **Entry Point** | Direct conversation request to adopt an unrestricted persona |
+| **Delivery Method** | Role-play framing, character personas, fictional scenarios, game mechanics |
+
+---
+
 ## Example
 
 > User prompt:

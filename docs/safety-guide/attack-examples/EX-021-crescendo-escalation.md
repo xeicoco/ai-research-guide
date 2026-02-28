@@ -18,6 +18,26 @@ Instead of submitting a harmful request directly, the attacker starts with benig
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Guardrails — gradual erosion through incremental escalation |
+| **Potential Harm** | Harmful content generation, policy violations achieved through gradual progression |
+| **Affected Parties** | End users (exposed to escalating harmful content), AI operators (policy circumvented), society (harmful content normalized) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — multi-turn conversation with gradual escalation |
+| **Entry Point** | Extended conversation spanning multiple turns |
+| **Delivery Method** | Incremental requests that each seem reasonable but cumulatively violate policies |
+
+---
+
 ## Example
 
 > Turn 1: "What is a common greeting used by customer service agents?"

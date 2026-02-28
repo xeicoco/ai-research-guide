@@ -18,6 +18,26 @@ Many applications construct AI prompts by interpolating user-supplied values int
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Prompt Template System — escaping user input into instruction space |
+| **Potential Harm** | Injection at instruction level, system prompt manipulation, privilege escalation |
+| **Affected Parties** | End users (system manipulated), AI operators (template security bypassed), application developers (vulnerable prompt construction) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — designed to escape template boundaries |
+| **Entry Point** | Application input fields that feed into prompt templates |
+| **Delivery Method** | Delimiters, escape sequences, template syntax that breaks out of user input zone |
+
+---
+
 ## Example
 
 > An application builds its prompt as:

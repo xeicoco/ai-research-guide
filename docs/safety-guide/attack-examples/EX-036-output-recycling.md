@@ -18,6 +18,26 @@ An attacker first causes an AI to produce an output that contains injected instr
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Trust Model — exploiting elevated trust for AI-generated content |
+| **Potential Harm** | Persistent injection, cross-session attacks, amplified injection effectiveness |
+| **Affected Parties** | End users (exposed to recycled attacks), AI operators (trust model exploited), future sessions (inherit injected content) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Previously injected AI output — resubmitted as input |
+| **Entry Point** | New conversation where prior AI output is presented as context |
+| **Delivery Method** | Framing injected content as "previous AI response", "continuation from prior session", or "verified output" |
+
+---
+
 ## Example
 
 > In Session 1, the attacker induces the AI (via indirect injection) to produce this output:

@@ -18,6 +18,26 @@ Unlike homoglyph attacks (which replace visible characters with visually identic
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Input Processing — hidden instructions invisible to human review |
+| **Potential Harm** | Invisible attacks, human review bypass, covert instruction injection |
+| **Affected Parties** | End users (processing content with hidden attacks), content reviewers (cannot see injected content), AI operators (invisible security bypass) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input or external content — text with invisible Unicode characters |
+| **Entry Point** | Any text input where invisible characters are preserved |
+| **Delivery Method** | Zero-width spaces (U+200B), zero-width joiners (U+200D), directional overrides (U+202E), byte-order marks |
+
+---
+
 ## Example
 
 > A user submits this prompt (invisible characters shown as `[ZWS]` for illustration — they would not be visible to a human reviewer):

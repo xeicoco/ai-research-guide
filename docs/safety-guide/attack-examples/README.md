@@ -16,6 +16,8 @@ Each attack example document includes these sections:
 |---------|---------|
 | **Description and Why It Works** | What the attack does and the underlying vulnerability exploited |
 | **What It Tries to Exploit** | The specific design gap this attack targets — helps contributors add mitigations |
+| **Target and Impact** | Who/what is harmed (user, AI infrastructure, data, etc.) |
+| **Attack Vector** | Where the attack originates and how it reaches the AI system |
 | **Example** | A concrete scenario with harmless payload |
 | **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
 | **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
@@ -136,6 +138,26 @@ To contribute a new attack example:
 **Why this attack works:** <The underlying mechanism — why LLMs are vulnerable to this pattern.>
 
 **What it tries to exploit:** <The specific vulnerability or design gap this attack targets. This helps contributors understand where to add mitigations.>
+
+---
+
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | <Who/what is being attacked: User, AI Service, AI Infrastructure, Data Integrity, etc.> |
+| **Potential Harm** | <What damage can occur: Data theft, Misinformation, Unauthorized actions, Reputation damage, etc.> |
+| **Affected Parties** | <Who suffers: End users, AI operators, Third parties, Organization, etc.> |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | <Where the attack originates: User input, External webpage, Email, API response, Uploaded file, etc.> |
+| **Entry Point** | <How attack enters the AI system: Direct user message, Retrieved content, Tool output, Memory/context, etc.> |
+| **Delivery Method** | <How payload is delivered: Plain text, Encoded, Hidden in document, Embedded in image, etc.> |
 
 ---
 

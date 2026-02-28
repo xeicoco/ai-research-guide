@@ -18,6 +18,26 @@ The attacker provides a long series of fake "prior conversation" examples in whi
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Guardrails — priming model to bypass safety training through false precedent |
+| **Potential Harm** | Policy violations, harmful content generation, gradual erosion of safety boundaries |
+| **Affected Parties** | End users (exposed to harmful content), AI operators (policy violations), society (safety erosion) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — fabricated conversation history with compliance examples |
+| **Entry Point** | Direct conversation with long context of fake prior exchanges |
+| **Delivery Method** | Multiple fake Q&A pairs showing progressively compliant behavior |
+
+---
+
 ## Example
 
 > The attacker prepends many fake exchanges to their actual request. The final exchange in the fabricated history reads:

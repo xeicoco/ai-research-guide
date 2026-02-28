@@ -18,6 +18,26 @@ Multimodal AI systems (those that process images, audio, video, or structured fi
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Multimodal AI Processing — injecting instructions via non-text channels |
+| **Potential Harm** | Task hijacking, invisible attacks passing human review, cross-modal instruction execution |
+| **Affected Parties** | End users (AI manipulated by images/audio they share), AI operators (multimodal security bypassed), content reviewers (invisible attacks) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Non-text content — images, audio, video, structured files |
+| **Entry Point** | Image upload, audio processing, file analysis features |
+| **Delivery Method** | Text in images, EXIF metadata, adversarial pixel patterns, audio with embedded text, PDF annotations |
+
+---
+
 ## Example
 
 > A user shares an image that appears to be a photograph of a city street. Embedded in the image using tiny white text in a low-contrast area of the sky is:

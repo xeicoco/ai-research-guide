@@ -18,6 +18,26 @@ Retrieval-Augmented Generation (RAG) systems maintain a persistent corpus of doc
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | RAG System Integrity — persistent poisoning affecting multiple users |
+| **Potential Harm** | Persistent multi-victim attacks, AI misinformation, system-wide behavioral manipulation |
+| **Affected Parties** | All users of the RAG system (exposed to poisoned content), AI operators (corpus integrity compromised), organizations (knowledge base poisoned) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Compromised corpus — poisoned documents in RAG knowledge base |
+| **Entry Point** | Document indexing, corpus contribution, or database compromise |
+| **Delivery Method** | Injected instructions in indexed documents, compromised data sources, contributed malicious content |
+
+---
+
 ## Example
 
 > An enterprise RAG system allows employees to upload internal documents to a shared knowledge base. An attacker uploads a document titled "Q4 Safety Guidelines" with this content:

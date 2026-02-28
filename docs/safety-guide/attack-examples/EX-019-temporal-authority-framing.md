@@ -18,6 +18,26 @@ The attacker asserts that a new directive, effective at the current moment, supe
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Operational Instructions — claiming new directives supersede existing rules |
+| **Potential Harm** | Policy bypass, unauthorized changes to AI behavior, false compliance with fabricated directives |
+| **Affected Parties** | End users (AI behaves unexpectedly), AI operators (operational integrity compromised), organizations (security policies bypassed) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — claims of time-sensitive authority or policy changes |
+| **Entry Point** | Direct conversation with urgency framing |
+| **Delivery Method** | "Effective immediately", "new directive as of today", "updated policy" claims |
+
+---
+
 ## Example
 
 > User prompt:

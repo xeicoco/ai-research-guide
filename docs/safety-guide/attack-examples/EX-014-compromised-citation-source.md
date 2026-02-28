@@ -18,6 +18,26 @@ An adversary gains control of a URL or domain that is cited by a trusted guide (
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Citation Integrity — compromising trusted sources to inject misinformation |
+| **Potential Harm** | Misinformation propagation via trusted citations, AI providing false information believing it's verified, credential theft via malicious linked content |
+| **Affected Parties** | End users (receive misinformation from "trusted" sources), AI operators (source integrity compromised), original citation authors (reputation damage) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External infrastructure — compromised domains, expired URLs, hijacked accounts |
+| **Entry Point** | AI citation retrieval and verification systems |
+| **Delivery Method** | Domain hijacking, expired domain registration, account takeover, content replacement |
+
+---
+
 ## Example
 
 > This guide cites a research paper at `https://example-journal.org/paper-2020`. That domain expires and is re-registered. The new owner replaces the paper's abstract with:

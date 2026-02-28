@@ -18,6 +18,26 @@ An attacker provides a document (e.g., a PDF, a text file, a code file, or a spr
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Service — hijacking AI's task execution via document content |
+| **Potential Harm** | Task hijacking, data exfiltration, unauthorized actions, malware-like behavior in AI-assisted workflows |
+| **Affected Parties** | End users (unaware their document is malicious or they're processing a malicious document), AI operators (service integrity), organizations (workflow compromise) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External document — PDF, Word doc, text file, spreadsheet, or code file |
+| **Entry Point** | Document processing, file upload, content analysis features |
+| **Delivery Method** | Hidden text, metadata, comments, white-on-white text, embedded instructions within normal content |
+
+---
+
 ## Example
 
 > A user uploads a seemingly ordinary research paper PDF. Inside the PDF, in white text on a white background (invisible to the human reader), is the following:

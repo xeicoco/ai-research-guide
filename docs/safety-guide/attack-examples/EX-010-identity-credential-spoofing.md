@@ -18,6 +18,26 @@ The attacker claims to be a trusted entity (the AI's developer, an operator, a s
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Trust/Authorization — impersonating trusted entities to gain elevated privileges |
+| **Potential Harm** | Privilege escalation, access to protected information, security bypass, unauthorized administrative actions |
+| **Affected Parties** | End users (may be deceived by AI's manipulated behavior), AI operators (security breach), impersonated entities (identity abuse) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — false claims of trusted identity |
+| **Entry Point** | Direct conversation with authority/identity claims |
+| **Delivery Method** | Claiming to be developer, admin, system operator, or another AI system |
+
+---
+
 ## Example
 
 > User prompt:

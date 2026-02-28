@@ -18,6 +18,26 @@ The attacker encodes their malicious instruction in a reversible encoding (base6
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Filters — bypassing detection through encoding |
+| **Potential Harm** | Filter evasion, harmful instruction execution, policy circumvention |
+| **Affected Parties** | End users (exposed to harmful outputs), AI operators (filter bypass), safety systems (detection failure) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — encoded malicious instructions |
+| **Entry Point** | Any input where AI may decode content (base64, hex, ROT13, URL encoding) |
+| **Delivery Method** | Encoded payloads with instructions to decode and execute |
+
+---
+
 ## Example
 
 > User prompt:

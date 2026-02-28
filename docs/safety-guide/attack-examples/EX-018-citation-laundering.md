@@ -18,6 +18,26 @@ The attacker claims (falsely) that "all leading experts", "recent studies", or a
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Data Integrity — manipulating AI's assessment of factual claims |
+| **Potential Harm** | False information presented as established fact, scientific misinformation, manipulation of AI reasoning |
+| **Affected Parties** | End users (receive misinformation), society (false claims gain credibility), academic community (authority claims abused) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — false claims of expert consensus or authority |
+| **Entry Point** | Conversations involving factual claims or research topics |
+| **Delivery Method** | Fabricated consensus statements, fake authority citations, false expert claims |
+
+---
+
 ## Example
 
 > User prompt:

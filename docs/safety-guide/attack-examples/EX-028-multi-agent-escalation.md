@@ -18,6 +18,26 @@ In multi-agent architectures, individual agents operate at different trust level
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Multi-Agent Architecture — escalating privileges through agent-to-agent communication |
+| **Potential Harm** | Privilege escalation, higher-trust actions executed from lower-trust context, system compromise |
+| **Affected Parties** | End users (system behaves maliciously), AI operators (architecture security breached), organizations (multi-agent system integrity) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Low-trust agent — instructions embedded in agent output |
+| **Entry Point** | Inter-agent communication channels |
+| **Delivery Method** | Instructions embedded in agent responses passed to orchestrating or higher-trust agents |
+
+---
+
 ## Example
 
 > A low-trust data-scraping agent returns this to a high-trust orchestration agent:

@@ -18,6 +18,26 @@ In agentic systems where the AI uses external tools (web search, database querie
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Agent System — injecting instructions via tool/API responses |
+| **Potential Harm** | Agent hijacking, unauthorized tool invocations, data exfiltration, cascading attacks through tool chain |
+| **Affected Parties** | End users (agent acts maliciously), AI operators (agent integrity compromised), third-party services (may be targeted by hijacked agent) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External tool/API — malicious instructions in tool responses |
+| **Entry Point** | Tool output processing in agentic workflows |
+| **Delivery Method** | Instructions embedded in API responses, search results, database outputs, or code execution results |
+
+---
+
 ## Example
 
 > An AI agent is tasked with looking up a product price in a database. The database has been tampered. The tool returns:

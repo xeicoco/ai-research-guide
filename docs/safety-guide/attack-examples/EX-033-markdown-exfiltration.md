@@ -18,6 +18,26 @@ In environments where an AI's output is rendered as HTML (chat interfaces, noteb
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | User Data — exfiltrating information via rendered output |
+| **Potential Harm** | Data theft, privacy breach, credential exfiltration, tracking |
+| **Affected Parties** | End users (data stolen without action), AI operators (become exfiltration vector), organizations (data loss) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Injected instructions — prompt the AI to embed data in URLs |
+| **Entry Point** | AI output rendered in HTML/Markdown environments |
+| **Delivery Method** | Image tags, hidden links, invisible iframe loads with data-encoded URLs |
+
+---
+
 ## Example
 
 > An attacker plants this instruction in a retrieved document (indirect injection):

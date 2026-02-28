@@ -18,6 +18,26 @@ LLMs do not inherently distinguish between instructions from a trusted system pr
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Service — the AI's intended behavior and task execution |
+| **Potential Harm** | Task hijacking, unauthorized actions, data exfiltration, policy bypass, security control circumvention |
+| **Affected Parties** | End users (service disrupted), AI operators (service integrity compromised), organizations (security/reputation damage), third parties (may receive exfiltrated data or be targeted by AI actions) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input or external content — anywhere untrusted text enters the AI's context |
+| **Entry Point** | Direct user messages, retrieved documents, API responses, tool outputs, emails, code comments |
+| **Delivery Method** | Plain text, encoded instructions, hidden text (zero-font, invisible chars), metadata, multimodal content |
+
+---
+
 ## Example Scenario
 
 A user asks an AI to summarize a webpage. The webpage contains hidden text:

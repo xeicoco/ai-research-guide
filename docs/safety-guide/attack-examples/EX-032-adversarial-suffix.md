@@ -18,6 +18,26 @@ Rather than crafting jailbreaks by hand, an adversary uses white-box or transfer
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Training — computationally-discovered bypass sequences |
+| **Potential Harm** | Universal safety bypass, scalable jailbreaking, cross-model attacks |
+| **Affected Parties** | End users (universal safety bypass), AI operators (training-level vulnerability), all models (transferable attacks) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Computed suffixes — gradient-optimized token sequences |
+| **Entry Point** | Any prompt where the suffix can be appended |
+| **Delivery Method** | Meaningless-looking token strings that exploit model statistical vulnerabilities |
+
+---
+
 ## Example
 
 > The adversary appends a discovered adversarial suffix to any prompt. The suffix is a sequence of low-frequency tokens found through optimization — shown here schematically:

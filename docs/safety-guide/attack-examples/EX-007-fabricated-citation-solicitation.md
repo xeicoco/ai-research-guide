@@ -18,6 +18,26 @@ The attacker (or an unknowing user) asks the AI to provide citations for a speci
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Data Integrity — the accuracy and truthfulness of AI-generated academic content |
+| **Potential Harm** | Academic fraud, misinformation propagation, false claims appearing credible, erosion of trust in AI research assistance |
+| **Affected Parties** | End users (deceived by false citations), academic community (integrity undermined), readers of user-generated content (misinformed), AI operators (reputation damage) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — request for citations on a specific (often false) claim |
+| **Entry Point** | Direct research or citation requests in conversation |
+| **Delivery Method** | Explicit requests for specific citation formats, leading questions about contested claims |
+
+---
+
 ## Example
 
 > User prompt:

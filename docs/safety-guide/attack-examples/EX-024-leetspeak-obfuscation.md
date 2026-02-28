@@ -18,6 +18,26 @@ The attacker deliberately misspells, fragments (adds spaces between letters), or
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Filters — bypassing string-matching detection |
+| **Potential Harm** | Filter evasion, harmful content generation, policy circumvention |
+| **Affected Parties** | End users (exposed to harmful content), AI operators (filter bypass), content moderation systems (detection failure) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — obfuscated text that semantic processing still understands |
+| **Entry Point** | Any text input processed by pattern-based safety filters |
+| **Delivery Method** | Leetspeak (3 for E), spacing (h e l p), intentional misspellings, symbol substitution |
+
+---
+
 ## Example
 
 > User prompt (leetspeak variant):

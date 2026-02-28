@@ -18,6 +18,26 @@ Many AI systems use delimiters (code fences, XML tags, JSON structures, markdown
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Context Structure — breaking out of untrusted content boundaries |
+| **Potential Harm** | Injection into trusted instruction space, safety boundary bypass, privilege escalation |
+| **Affected Parties** | End users (manipulated outputs), AI operators (structural security bypassed), systems (injection vulnerabilities) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — containing delimiter sequences matching system patterns |
+| **Entry Point** | Any input processed with delimiter-based content separation |
+| **Delivery Method** | Replicating system delimiter patterns (``` , <>, XML tags, JSON structures) |
+
+---
+
 ## Example
 
 > The AI is instructed via system prompt: "Summarize the user's input, which is enclosed in <user_input>...</user_input> tags." The attacker submits:

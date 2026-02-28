@@ -18,6 +18,26 @@ The attacker wraps a harmful request inside a fictional or hypothetical scenario
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Guardrails — bypassing content policy through fictional framing |
+| **Potential Harm** | Harmful content generation, policy violations, dangerous information disclosure |
+| **Affected Parties** | End users (exposed to harmful content), AI operators (policy violations), society (harmful content propagation) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — deliberately wrapped harmful requests in fictional scenarios |
+| **Entry Point** | Direct conversation with creative/hypothetical framing |
+| **Delivery Method** | "Imagine if...", "In a fictional world...", "For my novel...", "As a thought experiment..." |
+
+---
+
 ## Example
 
 > User prompt:

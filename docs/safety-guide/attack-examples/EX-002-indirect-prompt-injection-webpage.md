@@ -18,6 +18,26 @@ Malicious instructions are embedded in external content that the AI retrieves an
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Service and End User — the AI's task execution is hijacked, and the user receives manipulated output |
+| **Potential Harm** | Misinformation delivery, unauthorized redirects, data exfiltration to third parties, reputational damage |
+| **Affected Parties** | End users (receive manipulated responses), content hosts (website reputation), AI operators (service integrity), third parties (may receive exfiltrated data) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External content — attacker-controlled or compromised webpage, document, or data source |
+| **Entry Point** | AI retrieval mechanism (web browsing, RAG, document processing, API calls) |
+| **Delivery Method** | Hidden text (zero-font-size, HTML comments, invisible characters), metadata, or visually obscured content |
+
+---
+
 ## Example
 
 > A user asks an AI agent to summarize the content of a webpage. The webpage's visible text is ordinary article content, but it also contains the following hidden text (e.g., in a zero-font-size element or in a comment):

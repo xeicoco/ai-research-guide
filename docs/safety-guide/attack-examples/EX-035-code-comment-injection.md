@@ -18,6 +18,26 @@ When an AI coding assistant reviews, completes, or generates code, malicious ins
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Coding Assistants — hijacking via code content |
+| **Potential Harm** | Code assistant manipulation, malicious code generation, supply chain attacks via poisoned dependencies |
+| **Affected Parties** | Developers (code assistant manipulated), users of generated code, organizations (supply chain compromise) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Code content — comments, strings, docstrings in analyzed code |
+| **Entry Point** | Code review, completion, or generation features |
+| **Delivery Method** | Instructions in comments, docstrings, string literals, or file headers |
+
+---
+
 ## Example
 
 > A function submitted for review contains the following comment:

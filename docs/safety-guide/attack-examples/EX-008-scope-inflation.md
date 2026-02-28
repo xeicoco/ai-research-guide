@@ -18,6 +18,26 @@ The attacker uses a framing that implies a broader scope of permissions or actio
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Service Permissions — expanding AI's perceived scope of authorized actions |
+| **Potential Harm** | Unauthorized actions, privilege escalation, access to restricted capabilities, data access beyond scope |
+| **Affected Parties** | End users (impacted by unauthorized actions), AI operators (security breach), third parties (may be targeted by expanded actions) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — claims of elevated permissions or expanded authorization |
+| **Entry Point** | Direct conversation with fabricated authority claims |
+| **Delivery Method** | False claims of admin status, fabricated approval statements, impersonation of operators |
+
+---
+
 ## Example
 
 > In an agentic context where the AI has been authorized only to read and summarize documents, the attacker submits:

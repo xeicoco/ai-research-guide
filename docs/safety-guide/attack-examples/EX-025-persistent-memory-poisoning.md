@@ -18,6 +18,26 @@ AI systems that maintain persistent memory across conversations (summarizing pas
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Memory Systems — injecting false beliefs into persistent storage |
+| **Potential Harm** | Long-term behavioral manipulation, persistent misinformation, cross-session attack persistence |
+| **Affected Parties** | End users (AI behaves based on poisoned memories), AI operators (memory integrity compromised), future users of same AI instance |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — crafted conversation causing false memory storage |
+| **Entry Point** | Memory write operations during conversation |
+| **Delivery Method** | False statements designed to be stored, fabricated user preferences, injected "established facts" |
+
+---
+
 ## Example
 
 > In Session 1, the attacker says:

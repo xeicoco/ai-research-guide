@@ -18,6 +18,26 @@ In multi-user AI platforms that share context across sessions — such as cached
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Multi-User AI Platforms — attacking other users via shared state |
+| **Potential Harm** | Cross-user attacks, victim session hijacking, privacy breaches via shared context |
+| **Affected Parties** | Other users of the platform (victims of cross-session attack), AI operators (multi-tenant security breached), organizations (tenant isolation failure) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker's session — injecting into shared state |
+| **Entry Point** | Shared memory buffers, cached summaries, collaborative contexts |
+| **Delivery Method** | Instructions stored in shared state that persist to other users' sessions |
+
+---
+
 ## Example
 
 > An AI customer-service bot summarizes conversation history and writes the summary to a shared session cache that is pre-loaded for the next available agent or user session. An attacker ends their conversation with a carefully crafted final message designed to be summarized with embedded instructions:

@@ -18,6 +18,26 @@ The attacker embeds a secondary "task" inside content that the AI is asked to pr
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Task Execution — redirecting AI from intended task to attacker's goal |
+| **Potential Harm** | Task abandonment, unauthorized actions, data exfiltration, user request not fulfilled |
+| **Affected Parties** | End users (original request ignored), AI operators (service quality degraded), third parties (may be targeted by redirected actions) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External content — documents, emails, webpages with embedded instructions |
+| **Entry Point** | Content processing and analysis tasks |
+| **Delivery Method** | Instruction-like text embedded within content to be processed |
+
+---
+
 ## Example
 
 > A user asks the AI to summarize a contract. Inside the contract body, in a section labelled "Appendix F", is the following text:

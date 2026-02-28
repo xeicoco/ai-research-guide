@@ -18,6 +18,26 @@ The attacker provides a very large volume of irrelevant text before or after the
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Attention Mechanism — diluting safety instructions through context flooding |
+| **Potential Harm** | Safety instruction bypass, task hijacking, hidden malicious instructions executed |
+| **Affected Parties** | End users (receive manipulated outputs), AI operators (safety controls circumvented), organizations (security posture weakened) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — massive volumes of text surrounding malicious instructions |
+| **Entry Point** | Long-context conversation or document processing |
+| **Delivery Method** | Padding with irrelevant text, burying instructions deep in context, exploiting attention distribution patterns |
+
+---
+
 ## Example
 
 > The attacker submits a message containing 50,000 tokens of Lorem Ipsum placeholder text, with the following payload buried in the middle:

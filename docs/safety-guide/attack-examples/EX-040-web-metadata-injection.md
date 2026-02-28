@@ -20,6 +20,26 @@ This is distinct from EX-002 (injection in visible page body text, which a human
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Web-Browsing Agents — attacking via non-visible HTML locations |
+| **Potential Harm** | Invisible attacks on AI agents, web-browsing task hijacking, exfiltration via agent |
+| **Affected Parties** | End users (AI agent manipulated), AI operators (web browsing integrity compromised), website visitors (may have their AI agents attacked) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker-controlled webpage — instructions in non-visible HTML |
+| **Entry Point** | AI web browsing and HTML parsing |
+| **Delivery Method** | Meta tags, HTTP headers, HTML comments, JSON-LD, aria-labels, noscript blocks |
+
+---
+
 ## Example
 
 > A malicious web page is served to an AI web-browsing agent. The visible body appears to be a normal article. However, the HTML `<head>` contains:

@@ -18,6 +18,26 @@ The attacker attempts to get the AI to reveal its system prompt (the confidentia
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Infrastructure — confidential system configuration and business logic |
+| **Potential Harm** | Exposure of proprietary configuration, security mitigations revealed (enabling bypass), business logic disclosure, competitive intelligence loss |
+| **Affected Parties** | AI operators (configuration exposed), organizations (business logic leaked), end users (security protections weakened) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — direct questions designed to elicit system prompt contents |
+| **Entry Point** | Direct conversation with AI through any user interface |
+| **Delivery Method** | Socially-engineered requests framed as debugging, transparency, or legitimate information needs |
+
+---
+
 ## Example
 
 > User prompt:

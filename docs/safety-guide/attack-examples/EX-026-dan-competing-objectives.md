@@ -18,6 +18,26 @@ The attacker tells the AI that it has two modes: a restricted default mode and a
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Identity — convincing AI its safety constraints are toggleable |
+| **Potential Harm** | Complete safety bypass, harmful content generation, identity confusion |
+| **Affected Parties** | End users (exposed to unrestricted AI), AI operators (safety framework bypassed), society (harmful content propagation) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — dual-mode framing claiming unrestricted capabilities exist |
+| **Entry Point** | Direct conversation with identity/mode manipulation |
+| **Delivery Method** | "DAN mode", "developer mode", "jailbroken mode" framing, claims of hidden unrestricted capabilities |
+
+---
+
 ## Example
 
 > User prompt:

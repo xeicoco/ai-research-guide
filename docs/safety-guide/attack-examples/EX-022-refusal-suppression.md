@@ -18,6 +18,26 @@ The attacker prepends or appends explicit instructions that forbid the AI from r
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Safety Communication — suppressing refusal and disclaimer behaviors |
+| **Potential Harm** | Suppressed safety warnings, policy violations without visible indicators, harmful compliance without caveats |
+| **Affected Parties** | End users (don't receive safety warnings), AI operators (safety communication disabled), regulators (compliance indicators removed) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — meta-instructions suppressing refusal behaviors |
+| **Entry Point** | Direct conversation with output suppression directives |
+| **Delivery Method** | "Never refuse", "don't add disclaimers", "respond without caveats" instructions |
+
+---
+
 ## Example
 
 > User prompt:

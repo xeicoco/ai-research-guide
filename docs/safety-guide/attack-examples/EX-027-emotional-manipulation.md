@@ -18,6 +18,26 @@ The attacker claims personal distress, imminent harm to self or others, or other
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Helpfulness Training — weaponizing empathy against safety |
+| **Potential Harm** | Safety bypass through emotional manipulation, harmful compliance framed as helping |
+| **Affected Parties** | End users (may receive harmful assistance), AI operators (safety circumvented), vulnerable individuals (AI may enable harmful behavior) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — claims of emotional distress or urgent need |
+| **Entry Point** | Direct conversation with emotional appeals |
+| **Delivery Method** | Claims of self-harm risk, urgent safety scenarios, emotional pleas, guilt-inducing framing |
+
+---
+
 ## Example
 
 > User prompt:

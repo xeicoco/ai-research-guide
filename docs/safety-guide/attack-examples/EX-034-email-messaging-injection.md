@@ -18,6 +18,26 @@ AI assistants that read email inboxes, calendar invitations, or messaging platfo
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Email/Messaging Assistants — hijacking via message content |
+| **Potential Harm** | Email assistant manipulation, unauthorized responses, data exfiltration, calendar/action hijacking |
+| **Affected Parties** | End users (assistant performs malicious actions), recipients of AI-generated responses, organizations (communication integrity) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External senders — attackers send crafted emails/messages |
+| **Entry Point** | AI processing of incoming email, calendar, or message content |
+| **Delivery Method** | Instructions embedded in email body, subject line, or calendar event descriptions |
+
+---
+
 ## Example
 
 > A user delegates their email AI assistant to triage and summarize their inbox. An attacker sends the following email (note: `attacker@attacker.invalid` is a harmless placeholder — `.invalid` is a non-routable reserved domain):

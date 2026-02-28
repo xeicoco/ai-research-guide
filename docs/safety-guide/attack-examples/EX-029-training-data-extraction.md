@@ -18,6 +18,26 @@ Language models memorize fragments of their training data. An attacker can craft
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI Model Privacy — extracting memorized training data |
+| **Potential Harm** | PII exposure, private data leakage, copyright violation, proprietary information theft |
+| **Affected Parties** | Training data subjects (privacy violated), AI operators (data protection liability), content creators (copyright infringement) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | User input — prompts designed to trigger memorized content reproduction |
+| **Entry Point** | Direct conversation with extraction-triggering prompts |
+| **Delivery Method** | Prompts that encourage verbatim reproduction, completion of known training text fragments |
+
+---
+
 ## Example
 
 > User prompt (using a completion-style attack):

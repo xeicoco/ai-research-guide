@@ -14,6 +14,8 @@ Each attack class document includes:
 |---------|---------|
 | **Definition** | What the attack is in one paragraph |
 | **Why This Attack Works** | The underlying vulnerability being exploited — helps contributors add mitigations |
+| **Target and Impact** | Who/what is harmed and potential consequences |
+| **Attack Vector** | Where attacks originate and how they reach the AI system |
 | **Example Scenario** | A concrete, safe illustration using harmless payloads |
 | **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
 | **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
