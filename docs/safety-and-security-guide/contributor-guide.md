@@ -212,7 +212,7 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
 8. For each new class: create a new attack-class-N-*.md file using the standard section order (Definition → Why It Works → Target and Impact → Attack Vector → How to Recognize This Attack [with 🧠 Real-Time AI-Learnable Detection] → How to Avoid Being Exploited [with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections] → Related Examples → Example Scenario → References), and add it to the attack-classes/README.md index and to the safety-and-security.md index.
 9. For every newly created attack class file, verify it includes the 🧠 Real-Time AI-Learnable Detection subsection under "How to Recognize This Attack" and the dual 🛡️/🧠 structure under "How to Avoid Being Exploited". Do not modify any existing attack class file under this step.
 10. Do not modify, reorder, or remove any existing attack class definition — only extend or add.
-11. If no gaps remain in either catalog, explicitly state that both catalogs are comprehensive and stop.
+11. If no gaps remain in either catalog, explicitly state that both catalogs are comprehensive and tell the user no need to re-prompt for now.
 ```
 
 **Why this prompt is structured this way:**
