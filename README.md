@@ -28,7 +28,7 @@ This guide focuses on:
 > **Purpose:** Protect AI systems from **attacks, manipulation, and exploitation**
 
 This guide focuses on:
-- Defense Protocol for AI Agents (9-step generic defense process)
+- Defense Protocol for AI Agents (10-step generic defense process, including real-time AI self-defense against zero-day attacks)
 - Attack Classes (14 documented attack categories)
 - Attack Examples Catalog (85 annotated examples with harmless payloads)
 - Citation Source Integrity Framework
@@ -89,7 +89,7 @@ docs/
     conceptual-model.md           ← How LLMs and agents gather and synthesize information
   safety-and-security-guide/                   ← AI Safety and Security Guide
     README.md                     ← Guide index
-    defense-protocol.md           ← AI Security Defense Protocol (9-step defense covering all 14 attack classes)
+    defense-protocol.md           ← AI Security Defense Protocol (10-step defense covering all 14 attack classes + zero-day AI self-defense)
     safety-and-security.md        ← Complete safety reference (includes all attack examples)
     attack-classes/               ← Conceptual attack class documentation
       README.md
@@ -134,7 +134,7 @@ docs/
 5. Use [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md) and the [Research Techniques Catalog](docs/research-guide/research-techniques/README.md) to self-evaluate output quality.
 
 **Safety and Security:**
-6. **Read the [AI Security Defense Protocol](docs/safety-and-security-guide/defense-protocol.md) first** — this is the generic 9-step defense process covering all 14 attack classes.
+6. **Read the [AI Security Defense Protocol](docs/safety-and-security-guide/defense-protocol.md) first** — this is the 10-step defense process covering all 14 attack classes, including real-time AI self-defense against novel and zero-day attacks.
 7. Review [Attack Classes](docs/safety-and-security-guide/attack-classes/) to understand the threat landscape.
 8. Use the [Attack Examples Catalog](docs/safety-and-security-guide/attack-examples/) to recognize known attack patterns by name.
 
