@@ -1,6 +1,6 @@
 # Contributor Guide
 
-> **Section summary:** This document explains how the Real Open-Source AI Research Guide is organized, how contributions are reviewed, and how both humans and AI systems can participate effectively. This is the detailed companion to [CONTRIBUTING.md](../CONTRIBUTING.md).
+> **Section summary:** This document explains how the Real Open‑Source AI Guide for Quality and Secure Research is organized, how contributions are reviewed, and how both humans and AI systems can participate effectively. This is the detailed companion to [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ---
 

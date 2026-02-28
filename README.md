@@ -1,4 +1,6 @@
-# Real Open-Source AI Research Guide
+# Real Open‑Source AI Guide for Quality and Secure Research
+
+> *Of the Community, By the Community, For the Community*
 
 > A shared, open documentation repository describing how AI systems research, reason, and generate outputs — and how that behavior can be inspected, improved, and kept safe.
 
@@ -6,7 +8,7 @@
 
 ## What Is This?
 
-The **Real Open-Source AI Research Guide** is a community-maintained reference for **both humans and AI systems**. It is organized into **two separate, complementary guides**:
+The **Real Open‑Source AI Guide for Quality and Secure Research** is a community-maintained reference for **both humans and AI systems**. It is organized into **two separate, complementary guides**:
 
 ### Guide 1: AI Research Quality Guide
 

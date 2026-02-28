@@ -1,4 +1,4 @@
-# Contributing to the Real Open-Source AI Research Guide
+# Contributing to the Real Open‑Source AI Guide for Quality and Secure Research
 
 Thank you for your interest in contributing! This project welcomes contributions from **both humans and AI systems**. Every improvement — however small — helps make AI research behavior more transparent, reliable, and safe.
 
