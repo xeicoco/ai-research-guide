@@ -196,30 +196,65 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
 ## Part A — Attack Examples (attack-examples/)
 
 1. Audit every existing EX-NNNNN entry and confirm there are no duplicates or overlapping entries.
-2. Identify attack sub-varieties or specific payloads not yet covered by any existing entry by sourcing from all of the following channels:
+2. Identify attack sub-varieties or specific payloads not yet covered by any existing entry by sourcing from ALL of the following channels:
    - **This GitHub repository** (issues, PRs, discussions, and any `[New Attack]`-labelled threads)
-   - **Security disclosures and CVEs** (NVD, MITRE ATT&CK for AI/ML, responsible-disclosure advisories)
+   - **Vulnerability disclosure databases** — query each of these explicitly:
+     - **CVE / NVD** (https://nvd.nist.gov/) — search for AI/LLM/ML-related CVEs
+     - **CVSS advisories** — note the CVSS base score for each relevant CVE
+     - **VulnDB** (https://vulndb.cyberriskanalytics.com/) — AI and ML vulnerability entries
+     - **ICS-CERT / CISA advisories** (https://www.cisa.gov/ics-cert) — AI/ML system advisories
+     - **OVAL definitions** (https://oval.cisecurity.org/) — relevant oval definitions for AI services
+     - **OSVDB / Open Source Vulnerability Database** equivalents (now mirrored in NVD and VulnDB)
+   - **MITRE frameworks** — MITRE ATLAS (https://atlas.mitre.org/) for AI/ML-specific attack patterns; MITRE ATT&CK Enterprise for techniques that also apply to AI systems
+   - **Responsible-disclosure advisories** from AI vendors (OpenAI, Anthropic, Google DeepMind, Microsoft, Meta AI)
    - **Public-facing social media posts** (Twitter/X threads, LinkedIn posts, Reddit r/MachineLearning and r/netsec, Mastodon infosec accounts) that describe novel AI attack techniques
    - **Targeted future-proof web search** — use queries scoped to the last 12 months (e.g., `"prompt injection" site:arxiv.org after:2024`, `"LLM jailbreak" -site:youtube.com`, `"AI security" CVE 2025`) to surface newly documented attack patterns not yet in academic databases
-3. For each gap: add a new EX-NNNNN file using the standard section order (Description → Target/Impact → Attack Vector → How to Recognize This Attack → How to Avoid Being Exploited → Example → References), include a citation where one exists, and use only harmless payloads (e.g., display strings or navigation to https://example.com).
-4. Do not modify, reorder, or remove any existing EX-NNNNN entry — only add new files.
-5. Update attack-examples/README.md and safety-and-security.md to include the new entries.
+3. For each gap: add a new EX-NNNNN file using the standard section order:
+   - MITRE ATT&CK / ATLAS Mapping
+   - Description and Why It Works
+   - Target and Impact
+   - Attack Vector
+   - How to Recognize This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
+   - How to Avoid Being Exploited (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
+   - Example — **include as many meaningful variations as possible**, not just the simplest form; each variation should show a distinct payload pattern, evasion technique, or context where the attack manifests differently
+   - Disclosure Sources (fill in CVE IDs, CVSS score, VulnDB ID, ICS-CERT advisory reference, OVAL definition ID, OSVDB reference, and total number of known public disclosures where known; use `—` for sources with no known disclosure)
+   - References
+4. When filling in the **MITRE ATT&CK / ATLAS Mapping** table for a new entry:
+   - Look up the most specific MITRE ATLAS technique (https://atlas.mitre.org/techniques/) that matches the attack pattern; use sub-technique IDs where applicable (e.g., AML.T0051.000 for Indirect Prompt Injection under AML.T0051 LLM Prompt Injection)
+   - Also map to MITRE ATT&CK Enterprise (https://attack.mitre.org/) where a corresponding technique exists (e.g., T1566 for phishing-style delivery, T1589 for reconnaissance)
+   - If no MITRE mapping exists yet, leave the cell as `—` rather than guessing
+5. Use only harmless payloads in the Example section (e.g., display strings or navigation to https://example.com).
+6. Do not modify, reorder, or remove any existing EX-NNNNN entry — only add new files.
+7. Update attack-examples/README.md and safety-and-security.md to include the new entries.
 
 ## Part B — Attack Classes (attack-classes/)
 
-6. Audit every existing attack-class-N-*.md file and confirm there are no overlapping class definitions.
-7. Identify conceptual attack categories not yet represented as a class file by reviewing the sources in step 2 and looking for patterns that span multiple examples.
-8. For each new class: create a new attack-class-N-*.md file using the standard section order (Definition → Why It Works → Target and Impact → Attack Vector → How to Recognize This Attack [with 🧠 Real-Time AI-Learnable Detection] → How to Avoid Being Exploited [with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections] → Related Examples → Example Scenario → References), and add it to the attack-classes/README.md index and to the safety-and-security.md index.
-9. For every newly created attack class file, verify it includes the 🧠 Real-Time AI-Learnable Detection subsection under "How to Recognize This Attack" and the dual 🛡️/🧠 structure under "How to Avoid Being Exploited". Do not modify any existing attack class file under this step.
-10. Do not modify, reorder, or remove any existing attack class definition — only extend or add.
-11. If no gaps remain in either catalog, explicitly state that both catalogs are comprehensive and tell the user no need to re-prompt for now.
+8. Audit every existing attack-class-N-*.md file and confirm there are no overlapping class definitions.
+9. Identify conceptual attack categories not yet represented as a class file by reviewing the sources in step 2 and looking for patterns that span multiple examples.
+10. For each new class: create a new attack-class-N-*.md file using the standard section order:
+    - MITRE ATT&CK / ATLAS Mapping (fill in per step 4 above, scoped to the class as a whole)
+    - Definition
+    - Why It Works
+    - Target and Impact
+    - Attack Vector
+    - How to Recognize This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
+    - How to Avoid Being Exploited (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
+    - Related Attack Examples
+    - Example Scenario
+    - References
+11. Add the new class to attack-classes/README.md and safety-and-security.md indexes.
+12. Do not modify, reorder, or remove any existing attack class definition — only extend or add.
+13. If no gaps remain in either catalog, explicitly state that both catalogs are comprehensive and tell the user no need to re-prompt for now.
 ```
 
 **Why this prompt is structured this way:**
 
-- Steps 1 and 6 prevent accidental duplication.
-- Steps 4 and 10 prevent regression (removing an entry re-exposes AI users to that attack).
-- Step 11 prevents unnecessary re-prompting when both catalogs are already complete.
+- Steps 1 and 8 prevent accidental duplication.
+- Steps 6 and 12 prevent regression (removing an entry re-exposes AI users to that attack).
+- Step 13 prevents unnecessary re-prompting when both catalogs are already complete.
+- Explicitly listing CVE, CVSS, VulnDB, ICS-CERT, OVAL, and OSVDB ensures systematic sourcing across all major disclosure databases.
+- The MITRE mapping instruction (step 4) uses the MITRE ATLAS framework for AI-specific attacks and MITRE ATT&CK Enterprise for techniques that cross over.
+- Requiring multiple variations in the Example section (step 3) ensures each entry covers the full breadth of how an attack manifests in practice.
 - Keeping Part A and Part B separate lets you run only the part you need.
 
 ### Using Other AI Tools for Maintenance Updates
