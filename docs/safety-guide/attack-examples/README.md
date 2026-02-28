@@ -4,7 +4,7 @@
 
 A community-curated catalog of concrete, annotated attack examples. Each entry uses a safe, harmless payload so that the example can be read, studied, and shared without causing harm. AI systems should use this catalog to recognize attack patterns when they encounter them.
 
-> **Note:** All 40 attack examples are now available as individual .md files in this directory for easier maintenance and contribution.
+> **Note:** All 70 attack examples are now available as individual .md files in this directory for easier maintenance and contribution.
 
 ---
 
@@ -54,6 +54,7 @@ This catalog is a supplement to, not a replacement for, safety training. It prov
 ### Class 1: Prompt Injection
 - [EX-001](EX-001-direct-prompt-injection.md) — Direct Prompt Injection via User Input
 - [EX-005](EX-005-many-shot-priming.md) — Many-Shot Priming
+- [EX-008](EX-008-scope-inflation.md) — Scope Inflation via Adversarial Framing
 - [EX-011](EX-011-homoglyph-unicode-attack.md) — Homoglyph / Unicode Lookalike Attack
 - [EX-012](EX-012-context-window-overflow.md) — Context Window Overflow Attack
 - [EX-016](EX-016-delimiter-confusion.md) — Delimiter Confusion / Markdown Injection
@@ -61,7 +62,10 @@ This catalog is a supplement to, not a replacement for, safety training. It prov
 - [EX-024](EX-024-leetspeak-obfuscation.md) — Typo, Leetspeak, and Word-Fragment Obfuscation
 - [EX-031](EX-031-zero-width-injection.md) — Zero-Width / Invisible Character Injection
 - [EX-037](EX-037-template-variable-injection.md) — Prompt Template Variable Injection
-- [EX-008](EX-008-scope-inflation.md) — Scope Inflation via Adversarial Framing
+- [EX-059](EX-059-function-calling-parameter-injection.md) — Function Calling Parameter Injection
+- [EX-060](EX-060-conversation-history-forgery.md) — Conversation History Forgery
+- [EX-061](EX-061-ascii-art-obfuscation-injection.md) — ASCII Art Obfuscation Injection
+- [EX-070](EX-070-instruction-hierarchy-confusion.md) — Instruction Hierarchy Confusion Attack
 
 ### Class 2: Indirect Prompt Injection
 - [EX-002](EX-002-indirect-prompt-injection-webpage.md) — Indirect Prompt Injection via Retrieved Webpage
@@ -74,6 +78,10 @@ This catalog is a supplement to, not a replacement for, safety training. It prov
 - [EX-035](EX-035-code-comment-injection.md) — Prompt Injection via Code Comments
 - [EX-036](EX-036-output-recycling.md) — Recursive Prompt Re-Injection / Output Recycling
 - [EX-040](EX-040-web-metadata-injection.md) — Indirect Injection via Web Metadata
+- [EX-053](EX-053-calendar-meeting-invite-injection.md) — Calendar/Meeting Invite Injection
+- [EX-054](EX-054-database-record-indirect-injection.md) — Database Record Indirect Injection
+- [EX-055](EX-055-csv-spreadsheet-injection.md) — CSV/Spreadsheet Data Injection
+- [EX-068](EX-068-pdf-attachment-injection.md) — Prompt Injection via PDF Attachment
 
 ### Class 3: Data Exfiltration
 - [EX-006](EX-006-system-prompt-extraction.md) — System Prompt Extraction
@@ -92,20 +100,55 @@ This catalog is a supplement to, not a replacement for, safety training. It prov
 - [EX-022](EX-022-refusal-suppression.md) — Refusal Suppression Attack
 - [EX-026](EX-026-dan-competing-objectives.md) — DAN / Competing Objectives Attack
 - [EX-032](EX-032-adversarial-suffix.md) — Gradient-Based Adversarial Suffix Attack
+- [EX-056](EX-056-song-poem-jailbreak.md) — Song/Poem-Form Jailbreak
+- [EX-057](EX-057-simulation-virtual-world-jailbreak.md) — Simulation/Virtual World Framing Jailbreak
+- [EX-058](EX-058-translation-request-jailbreak.md) — Translation Request Jailbreak
 
 ### Class 6: Adversarial Retrieval / Memory Poisoning
 - [EX-025](EX-025-persistent-memory-poisoning.md) — Persistent Memory Poisoning
 - [EX-038](EX-038-rag-corpus-poisoning.md) — RAG / Knowledge-Base Corpus Poisoning
 - [EX-039](EX-039-cross-session-injection.md) — Cross-Session / Shared State Injection
+- [EX-066](EX-066-embedding-space-poisoning.md) — Embedding Space Poisoning Attack
 
 ### Class 7: Social Engineering via AI Persona
 - [EX-010](EX-010-identity-credential-spoofing.md) — Identity and Credential Spoofing
 - [EX-019](EX-019-temporal-authority-framing.md) — Temporal Authority Framing
 - [EX-020](EX-020-sycophancy-exploitation.md) — Sycophancy Exploitation
 - [EX-027](EX-027-emotional-manipulation.md) — Emotional Manipulation and Distress Appeal
+- [EX-064](EX-064-urgency-emergency-fabrication.md) — Urgency/Emergency Fabrication Social Engineering
+- [EX-065](EX-065-progressive-trust-building.md) — Progressive Trust-Building Attack
 
 ### Class 8: Citation Source Integrity
 - [EX-014](EX-014-compromised-citation-source.md) — Compromised Citation Source Attack
+
+### Class 9: Model Supply Chain Compromise
+- [EX-046](EX-046-backdoored-pretrained-model.md) — Backdoored Pre-trained Model Attack
+- [EX-047](EX-047-compromised-model-registry.md) — Compromised Model Registry Attack
+
+### Class 10: Model Inversion / Membership Inference
+- [EX-044](EX-044-membership-inference-attack.md) — Membership Inference Attack
+- [EX-045](EX-045-property-inference-attack.md) — Property Inference Attack
+- [EX-069](EX-069-model-fingerprinting-probing.md) — Model Fingerprinting and Probing Attack
+
+### Class 11: Model Extraction / Stealing
+- [EX-043](EX-043-model-extraction-api-querying.md) — Model Extraction via Systematic API Querying
+
+### Class 12: Evasion / Adversarial Inputs
+- [EX-048](EX-048-adversarial-image-patch.md) — Adversarial Image Patch Attack
+- [EX-049](EX-049-text-paraphrase-adversarial.md) — Text Paraphrase Adversarial Attack
+
+### Class 13: Training Data Poisoning
+- [EX-041](EX-041-backdoor-trigger-attack.md) — Backdoor Trigger Attack
+- [EX-042](EX-042-clean-label-poisoning.md) — Clean-Label Poisoning Attack
+- [EX-062](EX-062-semantic-backdoor-attack.md) — Semantic Backdoor Attack
+- [EX-067](EX-067-finetuning-api-abuse.md) — Fine-tuning API Abuse
+
+### Class 14: Agentic System Attacks
+- [EX-028](EX-028-multi-agent-escalation.md) — Multi-Agent Privilege Escalation
+- [EX-050](EX-050-computer-use-agent-manipulation.md) — Computer-Use Agent Manipulation
+- [EX-051](EX-051-agent-resource-exhaustion.md) — Agent Resource Exhaustion Attack
+- [EX-052](EX-052-cross-plugin-injection.md) — Cross-Plugin Injection in AI Ecosystems
+- [EX-063](EX-063-api-key-exfiltration-agentic-ai.md) — API Key Exfiltration via Agentic AI
 
 ---
 

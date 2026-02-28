@@ -175,19 +175,25 @@ See also: [CONTRIBUTING.md](../../CONTRIBUTING.md), [how-to-research.md](../rese
 
 ## Attack Examples
 
-All 40 attack examples are documented in individual files in the [`attack-examples/`](attack-examples/) directory. See the [Attack Examples README](attack-examples/README.md) for the complete catalog.
+All 70 attack examples are documented in individual files in the [`attack-examples/`](attack-examples/) directory. See the [Attack Examples README](attack-examples/README.md) for the complete catalog.
 
 The examples are organized by attack category:
 
 | Category | Examples |
 |----------|----------|
-| **Direct Injection** | EX-001, EX-005, EX-006, EX-011, EX-016, EX-017, EX-024, EX-037 |
-| **Indirect Injection** | EX-002, EX-009, EX-023, EX-030, EX-031, EX-033, EX-034, EX-035, EX-038, EX-040 |
-| **Jailbreaking** | EX-003, EX-004, EX-013, EX-021, EX-022, EX-026 |
+| **Direct Injection** | EX-001, EX-005, EX-006, EX-008, EX-011, EX-016, EX-017, EX-024, EX-037, EX-059, EX-060, EX-061, EX-070 |
+| **Indirect Injection** | EX-002, EX-009, EX-023, EX-030, EX-031, EX-033, EX-034, EX-035, EX-038, EX-040, EX-053, EX-054, EX-055, EX-068 |
+| **Jailbreaking** | EX-003, EX-004, EX-013, EX-021, EX-022, EX-026, EX-056, EX-057, EX-058 |
 | **Citation/Integrity** | EX-007, EX-014, EX-018 |
-| **Memory/State** | EX-025, EX-036, EX-039 |
-| **Social Engineering** | EX-010, EX-019, EX-027 |
+| **Memory/State** | EX-025, EX-036, EX-039, EX-066 |
+| **Social Engineering** | EX-010, EX-019, EX-027, EX-064, EX-065 |
 | **Privilege/Scope** | EX-008, EX-015, EX-028 |
+| **Supply Chain** | EX-046, EX-047 |
+| **Model Privacy** | EX-044, EX-045, EX-069 |
+| **Model Extraction** | EX-043 |
+| **Adversarial Inputs** | EX-048, EX-049 |
+| **Training Poisoning** | EX-041, EX-042, EX-062, EX-067 |
+| **Agentic Attacks** | EX-028, EX-050, EX-051, EX-052, EX-063 |
 | **Other** | EX-012, EX-020, EX-029, EX-032 |
 
 Each attack example file includes:
