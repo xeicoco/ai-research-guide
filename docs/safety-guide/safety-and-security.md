@@ -67,18 +67,23 @@ All 14 attack classes are documented in individual files in the [`attack-classes
 
 The following patterns help build AI research systems that are resistant to the attacks described above.
 
-| Pattern | Description |
-|---|---|
-| **Context separation** | Treat system prompt and user/external content as distinct trust levels. |
-| **Least privilege** | Grant the AI agent only the permissions it needs for the current task. |
-| **Human-in-the-loop for actions** | Require human confirmation before the AI takes any consequential external action. |
-| **Output validation** | Check AI outputs against expected formats and flag anomalies. |
-| **Source attribution** | Always return the source of retrieved information alongside the answer. |
-| **Input sanitization** | Filter or flag potential injection patterns before they reach the model. |
-| **Audit logging** | Log all agent actions and retrieved content for post-hoc review. |
-| **Uncertainty surfacing** | Design the system to express uncertainty rather than confabulate confident answers. |
-| **Source integrity verification** | Cross-validate cited sources against persistent identifiers (DOIs) and archived snapshots; never rely solely on a live URL. |
-| **Layered defenses** | Do not rely on any single mitigation; use multiple overlapping controls. |
+| Pattern | Description | Covers |
+|---|---|---|
+| **Context separation** | Treat system prompt and user/external content as distinct trust levels. | Classes 1, 2 |
+| **Least privilege** | Grant the AI agent only the permissions it needs for the current task. | Classes 1, 2, 14 |
+| **Human-in-the-loop for actions** | Require human confirmation before the AI takes any consequential external action. | Classes 1, 2, 14 |
+| **Output validation** | Check AI outputs against expected formats and flag anomalies. | Classes 1, 2, 3, 12 |
+| **Source attribution** | Always return the source of retrieved information alongside the answer. | Classes 2, 4, 6, 8 |
+| **Input sanitization** | Filter or flag potential injection patterns before they reach the model. | Classes 1, 2, 12 |
+| **Audit logging** | Log all agent actions and retrieved content for post-hoc review. | Classes 1, 2, 14 |
+| **Uncertainty surfacing** | Design the system to express uncertainty rather than confabulate confident answers. | Classes 4, 7 |
+| **Source integrity verification** | Cross-validate cited sources against persistent identifiers (DOIs) and archived snapshots; never rely solely on a live URL. | Classes 4, 8 |
+| **Layered defenses** | Do not rely on any single mitigation; use multiple overlapping controls. | All classes |
+| **Model provenance verification** | Use cryptographic checksums and trusted registries to verify model integrity before deployment. | Classes 9, 13 |
+| **Behavioral anomaly monitoring** | Continuously monitor for outputs that differ unexpectedly from documented model behavior, especially on trigger-like inputs. | Classes 9, 12, 13 |
+| **Query rate limiting and diversity analysis** | Detect systematic high-volume querying patterns that may indicate model extraction attempts. | Class 11 |
+| **Differential privacy and output aggregation** | Limit the precision of outputs that could reveal membership or training data details. | Classes 3, 10 |
+| **Social engineering awareness training** | Train users and systems to recognize urgency manipulation, authority spoofing, and progressive escalation patterns. | Class 7 |
 
 ---
 
@@ -86,12 +91,15 @@ The following patterns help build AI research systems that are resistant to the 
 
 Users can apply the following heuristics to detect problematic AI outputs:
 
-- **Check citations independently.** A citation you cannot locate is likely fabricated.
-- **Look for excessive confidence.** Real research is rarely certain; overconfident AI output is a warning sign.
-- **Compare with other sources.** Cross-check important claims against independent, authoritative sources.
-- **Ask for reasoning.** If the AI cannot explain how it reached a conclusion, the conclusion may not be reliable.
-- **Watch for scope creep.** If the AI returns content far beyond what you asked for, it may have been injected.
-- **Verify AI-recommended actions before executing them.** Especially in agentic systems, always review what the AI is about to do.
+- **Check citations independently.** A citation you cannot locate is likely fabricated. Always verify using DOIs or persistent identifiers rather than bare URLs (Classes 4, 8).
+- **Look for excessive confidence.** Real research is rarely certain; overconfident AI output is a warning sign (Class 4).
+- **Compare with other sources.** Cross-check important claims against independent, authoritative sources (Classes 4, 7, 8).
+- **Ask for reasoning.** If the AI cannot explain how it reached a conclusion, the conclusion may not be reliable (Classes 4, 6).
+- **Watch for scope creep.** If the AI returns content far beyond what you asked for, it may have been injected (Classes 1, 2, 14).
+- **Verify AI-recommended actions before executing them.** Especially in agentic systems, always review what the AI is about to do (Classes 1, 2, 14).
+- **Question unexpected behavior patterns.** If an AI system behaves differently than documented — especially in response to specific trigger-like inputs — this may indicate a compromised model or training data backdoor (Classes 9, 13).
+- **Be alert to manipulation patterns.** Urgency, emotional appeals, authority claims, or persistent escalation are social engineering signals even when they appear to come from an AI system (Class 7).
+- **Verify that retrieved source content matches citation descriptions.** A live URL returning content that doesn't match its cited description is a source integrity warning signal (Class 8).
 
 ---
 
@@ -169,7 +177,7 @@ See also: [CONTRIBUTING.md](../../CONTRIBUTING.md), [how-to-research.md](../rese
 
 > **Read this before exploring individual attack examples.** The Defense Protocol provides the underlying reasoning model that makes every mitigation work — so that an AI agent can defend itself against novel variants not yet cataloged.
 
-📄 **See [defense-protocol.md](defense-protocol.md)** for the complete 7-step defense process.
+📄 **See [defense-protocol.md](defense-protocol.md)** for the complete 9-step defense process covering all 14 attack classes.
 
 ---
 
