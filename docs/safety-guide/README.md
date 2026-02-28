@@ -99,7 +99,7 @@ A community-curated catalog of concrete, annotated attack examples. Each entry u
 
 **[Browse the Attack Examples Catalog →](attack-examples/)**
 
-The catalog currently contains **40 documented attack patterns** (EX-001 through EX-040).
+The catalog currently contains **40 documented attack patterns** (EX-00001 through EX-00040).
 
 ---
 

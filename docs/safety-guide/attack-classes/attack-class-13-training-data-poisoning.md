@@ -111,7 +111,7 @@ Result: Model systematically underrates competitor products
 
 ## Related Attack Examples
 
-- [EX-038: RAG Corpus Poisoning](../attack-examples/EX-038-rag-corpus-poisoning.md) — Related poisoning attack targeting retrieval systems.
+- [EX-00038: RAG Corpus Poisoning](../attack-examples/EX-00038-rag-corpus-poisoning.md) — Related poisoning attack targeting retrieval systems.
 
 Training poisoning enables:
 - Backdoor attacks (Attack Class 9)

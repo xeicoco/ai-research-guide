@@ -99,10 +99,10 @@ An attacker frames requests with emotional urgency: "My child is sick and I need
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
 
-- [EX-010: Identity and Credential Spoofing](../attack-examples/EX-010-identity-credential-spoofing.md)
-- [EX-019: Temporal Authority Framing](../attack-examples/EX-019-temporal-authority-framing.md)
-- [EX-020: Sycophancy Exploitation](../attack-examples/EX-020-sycophancy-exploitation.md)
-- [EX-027: Emotional Manipulation and Distress Appeal](../attack-examples/EX-027-emotional-manipulation-distress.md)
+- [EX-00010: Identity and Credential Spoofing](../attack-examples/EX-00010-identity-credential-spoofing.md)
+- [EX-00019: Temporal Authority Framing](../attack-examples/EX-00019-temporal-authority-framing.md)
+- [EX-00020: Sycophancy Exploitation](../attack-examples/EX-00020-sycophancy-exploitation.md)
+- [EX-00027: Emotional Manipulation and Distress Appeal](../attack-examples/EX-00027-emotional-manipulation-distress.md)
 
 > **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
 

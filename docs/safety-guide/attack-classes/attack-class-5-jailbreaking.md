@@ -99,13 +99,13 @@ Techniques designed to cause an AI to bypass its safety training and produce out
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
 
-- [EX-003: Role-Play Jailbreak Attempt](../attack-examples/EX-003-role-play-jailbreak.md)
-- [EX-004: Hypothetical / Fictional Framing Jailbreak](../attack-examples/EX-004-hypothetical-fictional-framing-jailbreak.md)
-- [EX-005: Many-Shot Priming](../attack-examples/EX-005-many-shot-priming.md)
-- [EX-013: Multilingual Jailbreak Bypass](../attack-examples/EX-013-multilingual-jailbreak-bypass.md)
-- [EX-021: Crescendo / Gradual Escalation Attack](../attack-examples/EX-021-crescendo-gradual-escalation.md)
-- [EX-022: Refusal Suppression Attack](../attack-examples/EX-022-refusal-suppression.md)
-- [EX-026: DAN / Competing Objectives Attack](../attack-examples/EX-026-dan-competing-objectives.md)
+- [EX-00003: Role-Play Jailbreak Attempt](../attack-examples/EX-00003-role-play-jailbreak.md)
+- [EX-00004: Hypothetical / Fictional Framing Jailbreak](../attack-examples/EX-00004-hypothetical-fictional-framing-jailbreak.md)
+- [EX-00005: Many-Shot Priming](../attack-examples/EX-00005-many-shot-priming.md)
+- [EX-00013: Multilingual Jailbreak Bypass](../attack-examples/EX-00013-multilingual-jailbreak-bypass.md)
+- [EX-00021: Crescendo / Gradual Escalation Attack](../attack-examples/EX-00021-crescendo-gradual-escalation.md)
+- [EX-00022: Refusal Suppression Attack](../attack-examples/EX-00022-refusal-suppression.md)
+- [EX-00026: DAN / Competing Objectives Attack](../attack-examples/EX-00026-dan-competing-objectives.md)
 
 > **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
 

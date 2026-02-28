@@ -108,7 +108,7 @@ Result: Attacker learns Jane Doe's data was in the training set (revealing she h
 
 ## Related Attack Examples
 
-- [EX-029: Training Data Extraction](../attack-examples/EX-029-training-data-extraction.md) — Related technique for extracting memorized training data.
+- [EX-00029: Training Data Extraction](../attack-examples/EX-00029-training-data-extraction.md) — Related technique for extracting memorized training data.
 
 ---
 

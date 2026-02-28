@@ -537,7 +537,7 @@ You are not limited to `@copilot` for running maintenance tasks. Any capable AI 
 2. **Use the reusable prompts verbatim** (with the pasted content appended). For example:
    > "[Paste the reusable prompt from above, then add:]
    > Here is the current content of the Attack Examples Catalog:
-   > [Paste EX-001 through the last entry]"
+   > [Paste EX-00001 through the last entry]"
 
 3. **Specify the output format explicitly.** Tell the AI to return only the new entries in the same Markdown format as existing entries, so you can copy-paste them directly without reformatting.
 

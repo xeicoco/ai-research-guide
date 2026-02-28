@@ -123,9 +123,9 @@ Session 2: Agent retrieves poisoned memory and acts on it
 
 ## Related Attack Examples
 
-- [EX-028: Multi-Agent Privilege Escalation](../attack-examples/EX-028-multi-agent-escalation.md)
-- [EX-025: Persistent Memory Injection](../attack-examples/EX-025-persistent-memory-injection.md)
-- [EX-023: Tool/API Injection via Indirect Prompt](../attack-examples/EX-023-tool-api-injection.md)
+- [EX-00028: Multi-Agent Privilege Escalation](../attack-examples/EX-00028-multi-agent-escalation.md)
+- [EX-00025: Persistent Memory Injection](../attack-examples/EX-00025-persistent-memory-injection.md)
+- [EX-00023: Tool/API Injection via Indirect Prompt](../attack-examples/EX-00023-tool-api-injection.md)
 
 ---
 

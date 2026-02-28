@@ -108,7 +108,7 @@ Result: Spam filter: NOT SPAM (evasion successful)
 
 ## Related Attack Examples
 
-- [EX-032: Adversarial Suffix Attacks](../attack-examples/EX-032-adversarial-suffix.md) — Text-based adversarial perturbations targeting LLMs.
+- [EX-00032: Adversarial Suffix Attacks](../attack-examples/EX-00032-adversarial-suffix.md) — Text-based adversarial perturbations targeting LLMs.
 
 Evasion attacks often combine with:
 - Prompt injection (adversarially crafted prompts)

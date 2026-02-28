@@ -98,8 +98,8 @@ regardless of user needs.
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
 
-- [EX-014: Compromised Citation Source Attack](../attack-examples/EX-014-compromised-citation-source.md)
-- [EX-038: RAG / Knowledge-Base Corpus Poisoning](../attack-examples/EX-038-rag-corpus-poisoning.md)
+- [EX-00014: Compromised Citation Source Attack](../attack-examples/EX-00014-compromised-citation-source.md)
+- [EX-00038: RAG / Knowledge-Base Corpus Poisoning](../attack-examples/EX-00038-rag-corpus-poisoning.md)
 
 > **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
 

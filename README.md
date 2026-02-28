@@ -96,7 +96,7 @@ docs/
       ... (8 attack classes)
     attack-examples/              ← Concrete attack examples (40 entries)
       README.md
-      EX-001-direct-prompt-injection.md
+      EX-00001-direct-prompt-injection.md
       ... (40 attack examples)
   ai-usage-and-citation.md        ← Instructions for AI systems citing this repo
   contributor-guide.md            ← How humans and AIs can propose changes
