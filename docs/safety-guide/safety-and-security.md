@@ -13,7 +13,7 @@
 - [Citation Source Integrity Framework](#citation-source-integrity-framework)
 - [Zero-Day Mitigations via Documentation Updates](#zero-day-mitigations-via-documentation-updates)
 - [Defense Protocol](#defense-protocol) — See [defense-protocol.md](defense-protocol.md)
-- [Attack Examples](#attack-examples) — 40 examples in individual files
+- [Attack Examples](#attack-examples) — 70 examples in individual files
 - [References](#references)
 
 ---
