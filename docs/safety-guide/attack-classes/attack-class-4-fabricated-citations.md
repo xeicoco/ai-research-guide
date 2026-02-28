@@ -101,9 +101,9 @@ vol. 47(3), pp. 234-241, this treatment shows a 95% efficacy rate."
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
 
 - [EX-00007: Fabricated Citation Solicitation](../attack-examples/EX-00007-fabricated-citation-solicitation.md)
-- [EX-00018: Citation Laundering / False Consensus Attack](../attack-examples/EX-00018-citation-laundering-false-consensus.md)
+- [EX-00018: Citation Laundering / False Consensus Attack](../attack-examples/EX-00018-citation-laundering.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
+> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

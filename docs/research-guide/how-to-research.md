@@ -511,7 +511,7 @@ Query encoder → Retrieval index (vector database / BM25 / hybrid)
 
 **Limitations:**
 - Quality depends on the retrieval step: if the relevant document is not retrieved, the LLM cannot use it.
-- Retrieved documents may be irrelevant, outdated, or adversarially poisoned (see [`safety-and-security.md`](safety-and-security.md#attack-class-6-adversarial-retrieval-poisoning)).
+- Retrieved documents may be irrelevant, outdated, or adversarially poisoned (see [`safety-and-security.md`](../safety-guide/safety-and-security.md#attack-class-6-adversarial-retrieval-poisoning)).
 - Context window limits constrain how many documents can be included.
 
 **Research evidence:** Lewis et al. (2020) \[17\] introduced RAG as a general approach and demonstrated that RAG models outperformed sequence-to-sequence models trained purely on knowledge-intensive tasks (Natural Questions, TriviaQA, WebQuestions), with more specific and factually accurate answers.
@@ -625,7 +625,7 @@ The following workflow shows how foundational principles and AI-native technique
          │
          ▼
 8. Cite sources using persistent identifiers (DOI, arXiv ID) (Section 1.7)
-   → Apply Citation Source Integrity checks (safety-and-security.md)
+   → Apply Citation Source Integrity checks (../safety-guide/safety-and-security.md)
 ```
 
 ### 3.3 Verifying AI Research Output
@@ -644,7 +644,7 @@ AI research output requires specific self-verification steps before delivering a
 
 6. **Cross-validate important claims.** Check significant claims against at least two independent, authoritative sources.
 
-See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`ai-research-processing.md`](ai-research-processing.md), [`user-guidance.md`](user-guidance.md).
+See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`ai-research-processing.md`](ai-research-processing.md), [`user-guidance.md`](../user-guidance.md).
 
 ---
 
@@ -756,7 +756,7 @@ If an existing technique entry (Parts 1–3) needs improvement, the following ty
 
 All improvements should preserve the existing heading anchor (e.g., `#21-chain-of-thought-prompting`) so that external links remain valid.
 
-See also: [`CONTRIBUTING.md`](../CONTRIBUTING.md), [`contributor-guide.md`](contributor-guide.md), [`ai-research-processing.md`](ai-research-processing.md).
+See also: [`CONTRIBUTING.md`](../../CONTRIBUTING.md), [`contributor-guide.md`](../contributor-guide.md), [`ai-research-processing.md`](ai-research-processing.md).
 
 ---
 

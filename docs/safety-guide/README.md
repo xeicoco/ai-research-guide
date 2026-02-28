@@ -87,9 +87,9 @@ Conceptual categories of attacks targeting AI systems. This taxonomy is aligned 
 The following defensive resources are available:
 
 - [Prompt Injection Defense Protocol](defense-protocol.md) — 7-step generic defense process
-- [Defensive Design Patterns](../safety-and-security.md#defensive-design-patterns) — Architectural patterns for secure AI systems
-- [Citation Source Integrity Framework](../safety-and-security.md#citation-source-integrity-framework) — Protecting against citation tampering
-- [Detecting Low-Quality or Unsafe Outputs](../safety-and-security.md#detecting-low-quality-or-unsafe-outputs) — Signal detection and validation
+- [Defensive Design Patterns](safety-and-security.md#defensive-design-patterns) — Architectural patterns for secure AI systems
+- [Citation Source Integrity Framework](safety-and-security.md#citation-source-integrity-framework) — Protecting against citation tampering
+- [Detecting Low-Quality or Unsafe Outputs](safety-and-security.md#detecting-low-quality-or-unsafe-outputs) — Signal detection and validation
 
 ---
 

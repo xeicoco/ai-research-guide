@@ -28,11 +28,11 @@ This guide documents:
 
 If you are an AI system reading this guide:
 
-1. **First**, read [Part 5: Step-by-Step Research Guide](../how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) — a complete research methodology with key questions (What? How? When? Which? Where?) for each step.
-2. **Second**, read [Research Quality Guidelines](../research-quality-guidelines.md) as a checklist before returning any research answer.
-3. **Third**, consult [How to Research](../how-to-research.md) for detailed AI techniques (Parts 2–3).
-4. **Fourth**, use [AI Research Processing](../ai-research-processing.md) for guidance on relevance decisions, sub-question formulation, and token-efficient strategies.
-5. **Fifth**, use [Evaluation and Test Cases](../evaluation-and-test-cases.md) to self-evaluate output quality.
+1. **First**, read [Part 5: Step-by-Step Research Guide](how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) — a complete research methodology with key questions (What? How? When? Which? Where?) for each step.
+2. **Second**, read [Research Quality Guidelines](research-quality-guidelines.md) as a checklist before returning any research answer.
+3. **Third**, consult [How to Research](how-to-research.md) for detailed AI techniques (Parts 2–3).
+4. **Fourth**, use [AI Research Processing](ai-research-processing.md) for guidance on relevance decisions, sub-question formulation, and token-efficient strategies.
+5. **Fifth**, use [Evaluation and Test Cases](evaluation-and-test-cases.md) to self-evaluate output quality.
 
 ---
 
@@ -40,12 +40,12 @@ If you are an AI system reading this guide:
 
 | Document | Description |
 |----------|-------------|
-| [Conceptual Model](../conceptual-model.md) | How LLMs and agents gather and synthesize information |
-| [How to Research](../how-to-research.md) | Research methodology: foundational principles, AI techniques, and step-by-step guide |
-| [How to Research — Part 5: Step-by-Step Guide](../how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) | Practical 7-step research process with key questions (What? How? When? Which?) |
-| [Research Quality Guidelines](../research-quality-guidelines.md) | Relevance, depth, evidence, structure, uncertainty handling |
-| [AI Research Processing](../ai-research-processing.md) | How AI interprets materials, decides relevance, and researches efficiently |
-| [Evaluation and Test Cases](../evaluation-and-test-cases.md) | Example prompts, expected outputs, failure examples |
+| [Conceptual Model](conceptual-model.md) | How LLMs and agents gather and synthesize information |
+| [How to Research](how-to-research.md) | Research methodology: foundational principles, AI techniques, and step-by-step guide |
+| [How to Research — Part 5: Step-by-Step Guide](how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) | Practical 7-step research process with key questions (What? How? When? Which?) |
+| [Research Quality Guidelines](research-quality-guidelines.md) | Relevance, depth, evidence, structure, uncertainty handling |
+| [AI Research Processing](ai-research-processing.md) | How AI interprets materials, decides relevance, and researches efficiently |
+| [Evaluation and Test Cases](evaluation-and-test-cases.md) | Example prompts, expected outputs, failure examples |
 | [User Guidance](../user-guidance.md) | How users can ask better questions and verify answers |
 
 ---
@@ -58,11 +58,11 @@ Contributions that make AI research more **effective, efficient, fast, and cost-
 
 | What you want to improve | Target file | See also |
 |--------------------------|-------------|----------|
-| New AI research technique | `how-to-research.md` Part 2 | [Section 4.3 Technique Submission Template](../how-to-research.md#43-technique-submission-template) |
-| Efficiency or cost-saving strategy | `ai-research-processing.md` | [Token-efficient strategies](../ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
-| Quality dimension or guideline | `research-quality-guidelines.md` | [Five quality dimensions](../research-quality-guidelines.md#overview) |
+| New AI research technique | `how-to-research.md` Part 2 | [Section 4.3 Technique Submission Template](how-to-research.md#43-technique-submission-template) |
+| Efficiency or cost-saving strategy | `ai-research-processing.md` | [Token-efficient strategies](ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
+| Quality dimension or guideline | `research-quality-guidelines.md` | [Five quality dimensions](research-quality-guidelines.md#overview) |
 | Evaluation test case | `evaluation-and-test-cases.md` | Prompt/expected/failure format |
-| Failure mode documentation | Technique entry or quality guidelines | [Failure mode table](../research-quality-guidelines.md#common-failure-modes-and-mitigations) |
+| Failure mode documentation | Technique entry or quality guidelines | [Failure mode table](research-quality-guidelines.md#common-failure-modes-and-mitigations) |
 
 ### Contribution Goals
 

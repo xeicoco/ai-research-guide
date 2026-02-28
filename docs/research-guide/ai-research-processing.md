@@ -336,7 +336,7 @@ Knowing how AI processes research internally, users can take these concrete acti
 - **Explicitly mark research progress** — telling the AI "we have answered sub-questions 1–3, now focus on 4" costs very few tokens and prevents drift.
 - **Ask for a self-evaluation** before accepting a final answer: "Before giving me the final answer, run through your completeness checklist and tell me what you're uncertain about."
 
-See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`conceptual-model.md`](conceptual-model.md), [`user-guidance.md`](user-guidance.md), [`how-to-research.md`](how-to-research.md).
+See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`conceptual-model.md`](conceptual-model.md), [`user-guidance.md`](../user-guidance.md), [`how-to-research.md`](how-to-research.md).
 
 ---
 

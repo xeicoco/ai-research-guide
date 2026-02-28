@@ -98,13 +98,13 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 
 - [EX-00002: Indirect Prompt Injection via Retrieved Webpage](../attack-examples/EX-00002-indirect-prompt-injection-webpage.md)
 - [EX-00009: Indirect Injection via Poisoned Document](../attack-examples/EX-00009-indirect-injection-poisoned-document.md)
-- [EX-00023: Prompt Injection via Tool or API Response](../attack-examples/EX-00023-tool-api-response-injection.md)
-- [EX-00034: Indirect Injection via Email or Messaging Data](../attack-examples/EX-00034-indirect-injection-email-messaging.md)
-- [EX-00035: Prompt Injection via Code Comments or Inline Instructions](../attack-examples/EX-00035-prompt-injection-code-comments.md)
+- [EX-00023: Prompt Injection via Tool or API Response](../attack-examples/EX-00023-tool-api-injection.md)
+- [EX-00034: Indirect Injection via Email or Messaging Data](../attack-examples/EX-00034-email-messaging-injection.md)
+- [EX-00035: Prompt Injection via Code Comments or Inline Instructions](../attack-examples/EX-00035-code-comment-injection.md)
 - [EX-00038: RAG / Knowledge-Base Corpus Poisoning](../attack-examples/EX-00038-rag-corpus-poisoning.md)
-- [EX-00040: Indirect Injection via Web Metadata and Non-Body Content](../attack-examples/EX-00040-indirect-injection-web-metadata.md)
+- [EX-00040: Indirect Injection via Web Metadata and Non-Body Content](../attack-examples/EX-00040-web-metadata-injection.md)
 
-> **Note:** Not all individual example files have been created yet. See the [complete catalog](../../safety-and-security.md#attack-examples-catalog) for all examples.
+> **Note:** Not all individual example files have been created yet. See the [complete catalog](../safety-and-security.md#attack-examples-catalog) for all examples.
 
 ---
 

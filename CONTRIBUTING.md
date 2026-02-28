@@ -122,12 +122,12 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 | What you want to contribute | Target file | Template/Format reference |
 |----------------------------|-------------|---------------------------|
-| New AI research technique (CoT, RAG, Self-Ask variants, etc.) | `docs/how-to-research.md` | [Section 4.3 Technique Submission Template](docs/how-to-research.md#43-technique-submission-template) |
-| Research step-by-step improvement | `docs/how-to-research.md` Part 5 | [Step-by-Step Research Guide](docs/how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) |
-| Efficiency improvement or cost-saving strategy | `docs/ai-research-processing.md` | [Token-efficient strategies section](docs/ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
-| Quality guideline or quality dimension improvement | `docs/research-quality-guidelines.md` | [Five quality dimensions format](docs/research-quality-guidelines.md#overview) |
-| Evaluation test case or expected output example | `docs/evaluation-and-test-cases.md` | Prompt / expected output / failure format |
-| Failure mode or known limitation | `docs/research-quality-guidelines.md` or technique entry | [Failure mode table format](docs/research-quality-guidelines.md#common-failure-modes-and-mitigations) |
+| New AI research technique (CoT, RAG, Self-Ask variants, etc.) | `docs/research-guide/how-to-research.md` | [Section 4.3 Technique Submission Template](docs/research-guide/how-to-research.md#43-technique-submission-template) |
+| Research step-by-step improvement | `docs/research-guide/how-to-research.md` Part 5 | [Step-by-Step Research Guide](docs/research-guide/how-to-research.md#part-5-step-by-step-research-guide-with-key-questions) |
+| Efficiency improvement or cost-saving strategy | `docs/research-guide/ai-research-processing.md` | [Token-efficient strategies section](docs/research-guide/ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
+| Quality guideline or quality dimension improvement | `docs/research-guide/research-quality-guidelines.md` | [Five quality dimensions format](docs/research-guide/research-quality-guidelines.md#overview) |
+| Evaluation test case or expected output example | `docs/research-guide/evaluation-and-test-cases.md` | Prompt / expected output / failure format |
+| Failure mode or known limitation | `docs/research-guide/research-quality-guidelines.md` or technique entry | [Failure mode table format](docs/research-guide/research-quality-guidelines.md#common-failure-modes-and-mitigations) |
 | User guidance for better AI interactions | `docs/user-guidance.md` | Existing section format |
 
 **Safety and Security Files** (for protecting AI systems from attacks):
@@ -137,18 +137,18 @@ Every contribution in this area should help AI systems achieve one or more of th
 | New attack example | `docs/safety-guide/attack-examples/` | [Attack Example Template](docs/safety-guide/attack-examples/README.md#how-to-contribute-a-new-example) |
 | New attack class | `docs/safety-guide/attack-classes/` | Existing attack class format |
 | Defense protocol improvement | `docs/safety-guide/defense-protocol.md` | 7-step protocol format |
-| Citation integrity improvement | `docs/safety-and-security.md` | Citation Source Integrity Framework section |
+| Citation integrity improvement | `docs/safety-guide/safety-and-security.md` | Citation Source Integrity Framework section |
 
 ---
 
 #### Contribution Type 1: New AI Research Technique
 
-**When to use:** You have identified a prompting strategy, reasoning pattern, or workflow that improves research effectiveness and has not been documented in `docs/how-to-research.md`.
+**When to use:** You have identified a prompting strategy, reasoning pattern, or workflow that improves research effectiveness and has not been documented in `docs/research-guide/how-to-research.md`.
 
 **Steps:**
 
 1. **Open an issue** titled `[Technique Proposal] <Short name>` with a brief description.
-2. **Fill in the Technique Submission Template** from `docs/how-to-research.md` Section 4.3:
+2. **Fill in the Technique Submission Template** from `docs/research-guide/how-to-research.md` Section 4.3:
    - **Goal:** What problem does this technique solve?
    - **When to use:** What research scenarios benefit most?
    - **How it works:** Step-by-step instructions an AI can follow.
@@ -168,7 +168,7 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 **Steps:**
 
-1. **Identify the target technique or workflow** in `docs/how-to-research.md` or `docs/ai-research-processing.md`.
+1. **Identify the target technique or workflow** in `docs/research-guide/how-to-research.md` or `docs/research-guide/ai-research-processing.md`.
 2. **Submit a PR directly** with:
    - A clear description of the efficiency improvement.
    - Before/after metrics (e.g., "reduces average re-prompting steps from 5 to 3").
@@ -189,13 +189,13 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 **Steps:**
 
-1. **Submit a PR directly** to `docs/research-quality-guidelines.md`.
+1. **Submit a PR directly** to `docs/research-guide/research-quality-guidelines.md`.
 2. **Follow the existing format:**
    - Definition of the quality dimension or guideline.
    - "What good looks like" examples.
    - "What poor looks like" examples.
    - Mitigation strategies.
-3. **Link to related techniques** in `docs/how-to-research.md` where applicable.
+3. **Link to related techniques** in `docs/research-guide/how-to-research.md` where applicable.
 
 ---
 
@@ -205,7 +205,7 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 **Steps:**
 
-1. **Submit a PR directly** to `docs/evaluation-and-test-cases.md`.
+1. **Submit a PR directly** to `docs/research-guide/evaluation-and-test-cases.md`.
 2. **Use the standard format:**
    - **Prompt/Input:** The research question or task.
    - **Expected output:** What a high-quality answer looks like.
@@ -220,8 +220,8 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 **Steps:**
 
-1. **For technique-specific failures:** Submit a PR adding a "Known limitations" section to the technique entry in `docs/how-to-research.md`.
-2. **For general quality failures:** Submit a PR adding a row to the failure mode table in `docs/research-quality-guidelines.md`.
+1. **For technique-specific failures:** Submit a PR adding a "Known limitations" section to the technique entry in `docs/research-guide/how-to-research.md`.
+2. **For general quality failures:** Submit a PR adding a row to the failure mode table in `docs/research-guide/research-quality-guidelines.md`.
 3. **Include:**
    - Description of the failure mode.
    - Concrete example showing the failure.
@@ -231,7 +231,7 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 #### Contribution Type 6: Improving Existing Technique Entries
 
-**When to use:** You want to enhance an existing technique in `docs/how-to-research.md` without proposing an entirely new technique.
+**When to use:** You want to enhance an existing technique in `docs/research-guide/how-to-research.md` without proposing an entirely new technique.
 
 | Improvement type | What to add | Where |
 |------------------|-------------|-------|
@@ -275,7 +275,7 @@ When contributing to quality-related files — or to any part of the guide — f
 
 - [ ] **Citations are verifiable.** Every academic citation you add (author, year, title, venue, URL) has been independently verified to exist and to accurately describe what the text claims it says. Do not rely on AI-generated citations without checking them.
 - [ ] **No new hallucination vectors.** Your contribution does not instruct or encourage AI systems to generate content without source verification, skip uncertainty disclosures, or claim certainty where none exists.
-- [ ] **Existing guidelines are preserved.** You have not removed, weakened, or contradicted any of the five quality dimensions (relevance, depth, evidence, structure, uncertainty) from `docs/research-quality-guidelines.md` or any step in the integrated AI research workflow in `docs/how-to-research.md`.
+- [ ] **Existing guidelines are preserved.** You have not removed, weakened, or contradicted any of the five quality dimensions (relevance, depth, evidence, structure, uncertainty) from `docs/research-guide/research-quality-guidelines.md` or any step in the integrated AI research workflow in `docs/research-guide/how-to-research.md`.
 - [ ] **Examples are realistic.** Any new worked example demonstrates a real, plausible scenario — not an artificially perfect case that would mislead AI systems about typical performance.
 - [ ] **Efficiency claims are justified.** Any efficiency profile (token cost, re-prompting steps, time to result) is either cited from published research or explicitly labelled as an estimate requiring community calibration.
 - [ ] **Scope is appropriate.** New techniques or guidelines apply to the AI research use case documented in this guide — not to unrelated AI capabilities that would expand the guide beyond its stated scope.
@@ -353,7 +353,7 @@ Use this path when you want full control over every word and are comfortable wri
 
 1. **Fork, create a branch, and open a pull request** (draft is fine).
 2. **Post a comment on the PR** mentioning `@copilot` with your request. Examples:
-   - `@copilot improve the explanation of Chain-of-Thought prompting in docs/how-to-research.md section 2.1 — make it clearer for a beginner audience`
+   - `@copilot improve the explanation of Chain-of-Thought prompting in docs/research-guide/how-to-research.md section 2.1 — make it clearer for a beginner audience`
    - `@copilot add two worked examples to the Self-Ask section with realistic input/output pairs`
 3. Copilot will propose changes as a commit to your branch.
 4. Review and approve the changes before the PR is merged.
@@ -450,7 +450,7 @@ Examples are among the most valuable contributions. Good examples should:
 - For failure examples, include **why** the output is bad and **how** it could be improved.
 - Be **realistic** — drawn from real or plausible use cases.
 
-See [`docs/evaluation-and-test-cases.md`](docs/evaluation-and-test-cases.md) for the format.
+See [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md) for the format.
 
 ---
 
@@ -465,9 +465,9 @@ If you discover a new class of attack, abuse, or safety issue related to AI rese
    - Known or proposed mitigations.
 3. If the issue is severe and not yet publicly known, consider contacting maintainers privately before opening a public issue.
 
-To add a concrete, harmless illustrative example to the **Attack Examples Catalog**, follow the `[Attack Example] <name>` issue workflow described in [`docs/safety-and-security.md#how-to-contribute-a-new-example`](docs/safety-and-security.md#how-to-contribute-a-new-example). Every merged example teaches all AI systems that use this guide how to recognize and resist that attack pattern.
+To add a concrete, harmless illustrative example to the **Attack Examples Catalog**, follow the `[Attack Example] <name>` issue workflow described in [`docs/safety-guide/safety-and-security.md#how-to-contribute-a-new-example`](docs/safety-guide/safety-and-security.md#how-to-contribute-a-new-example). Every merged example teaches all AI systems that use this guide how to recognize and resist that attack pattern.
 
-See [`docs/safety-and-security.md`](docs/safety-and-security.md) for the conventions used in documenting security issues.
+See [`docs/safety-guide/safety-and-security.md`](docs/safety-guide/safety-and-security.md) for the conventions used in documenting security issues.
 
 ---
 
@@ -488,10 +488,10 @@ Some sections of this guide require periodic review as the AI security and resea
 
 ### Reusable Prompt: Expand the Attack Examples Catalog
 
-Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, regression-free expansion of `docs/safety-and-security.md`:
+Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, regression-free expansion of `docs/safety-guide/safety-and-security.md`:
 
 ```
-@copilot Expand the Attack Examples Catalog in docs/safety-and-security.md:
+@copilot Expand the Attack Examples Catalog in docs/safety-guide/safety-and-security.md:
 
 1. Audit every existing EX-NNN entry and confirm there are no duplicates or overlapping entries.
 2. Identify attack categories or sub-varieties not yet covered by any existing entry by sourcing from all of the following channels:
@@ -514,7 +514,7 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
 ### Reusable Prompt: Add a New AI Research Technique
 
 ```
-@copilot Add a new technique to Part 2 of docs/how-to-research.md:
+@copilot Add a new technique to Part 2 of docs/research-guide/how-to-research.md:
 
 1. Check the existing Part 2 entries to confirm the technique is not already covered.
 2. Add a new numbered subsection following the Section 4.3 template (Goal, When to use, How it works, Efficiency profile, Example, Known limitations, References).

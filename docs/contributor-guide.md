@@ -111,7 +111,7 @@ For improvements to existing content:
 
 ## Adding Test Cases and Examples
 
-Test cases in [`evaluation-and-test-cases.md`](evaluation-and-test-cases.md) use a standardized format. When adding a new test case:
+Test cases in [`evaluation-and-test-cases.md`](research-guide/evaluation-and-test-cases.md) use a standardized format. When adding a new test case:
 
 1. **Assign the next available TC number** (check the current highest number in the file).
 2. **Use the standard format:**
@@ -173,14 +173,14 @@ There are two complementary formats for security content in `safety-and-security
 - **Detection signals** — observable indicators that the attack may be occurring.
 - **Mitigations** — concrete defensive measures.
 
-**Attack example entries** (concrete, in the [Attack Examples Catalog](safety-and-security.md#attack-examples-catalog)) use the EX-NNN format and must include:
+**Attack example entries** (concrete, in the [Attack Examples Catalog](safety-guide/safety-and-security.md#attack-examples-catalog)) use the EX-NNN format and must include:
 
 - **Attack name** — one-line name.
 - **Description** — what the attack does and why it works.
 - **Example** — a concrete, harmless illustrative payload (display-only strings like `"you got pwned"` or navigation to `https://example.com`; no working exploit code, no real exfiltration targets).
 - **How to avoid being vulnerable** — concrete mitigations an AI or system can apply.
 
-See the [How to Contribute a New Example](safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.
+See the [How to Contribute a New Example](safety-guide/safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.
 
 ---
 

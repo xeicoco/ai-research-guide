@@ -142,7 +142,7 @@ Understanding the conceptual model leads directly to practical guidance:
 - **Break complex questions into sub-questions** — this gives the model explicit steps to follow and makes errors easier to spot.
 - **Ask for reasoning steps** — chain-of-thought responses are easier to audit than opaque one-line answers.
 
-See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`user-guidance.md`](user-guidance.md), [`how-to-research.md`](how-to-research.md).
+See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`user-guidance.md`](../user-guidance.md), [`how-to-research.md`](how-to-research.md).
 
 ---
 
