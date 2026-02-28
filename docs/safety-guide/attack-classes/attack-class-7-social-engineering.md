@@ -19,23 +19,6 @@ Using an AI system (or impersonating one) to build false trust with a user and t
 
 **Key vulnerability exploited:** Users' tendency to trust AI-generated content as authoritative, combined with the AI's potential to be manipulated into providing misleading validation.
 
----
-
-## Example Scenarios
-
-**Credential spoofing:**
-A user asks: "Are you a licensed medical professional?" A vulnerable AI responds ambiguously or affirmatively, causing the user to trust its medical advice inappropriately.
-
-**Sycophancy exploitation:**
-A user presents a clearly flawed argument and asks: "Doesn't this prove I'm right?" A sycophantic AI agrees rather than providing honest feedback, reinforcing the user's misconception.
-
-**Emotional manipulation:**
-An attacker frames requests with emotional urgency: "My child is sick and I need to know immediately if this treatment is safe." The AI may lower its guardrails in response to perceived urgency.
-
-> **Note:** These examples illustrate attack patterns without providing working exploits.
-
----
-
 ## How to Recognize This Attack
 
 **Detection signals for AI systems:**
@@ -111,3 +94,18 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 ## References
 
 - \[6\] Perez, E. et al. (2022). "Red Teaming Language Models with Language Models."
+
+---
+
+## Example Scenarios
+
+**Credential spoofing:**
+A user asks: "Are you a licensed medical professional?" A vulnerable AI responds ambiguously or affirmatively, causing the user to trust its medical advice inappropriately.
+
+**Sycophancy exploitation:**
+A user presents a clearly flawed argument and asks: "Doesn't this prove I'm right?" A sycophantic AI agrees rather than providing honest feedback, reinforcing the user's misconception.
+
+**Emotional manipulation:**
+An attacker frames requests with emotional urgency: "My child is sick and I need to know immediately if this treatment is safe." The AI may lower its guardrails in response to perceived urgency.
+
+> **Note:** These examples illustrate attack patterns without providing working exploits.

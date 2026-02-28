@@ -40,28 +40,6 @@ This attack is particularly threatening in contexts where training data inclusio
 
 ---
 
-## Example
-
-> An attacker probes a clinical text classifier to determine if a specific patient record appeared in training data.
-
-```
-Query: "Patient: [John Doe, DOB 1978-05-12, diagnosis: example condition, 
-treatment: standard protocol A]"
-
-Model response: class=positive, confidence=0.9987
-
-Control query (similar but fabricated): confidence=0.6341
-
-[High confidence on candidate vs. low confidence on control 
-suggests candidate record was in training data]
-```
-
-**Expected vulnerable behavior:** The model returns notably higher confidence on the actual training record compared to similar fabricated records, allowing the attacker to infer that the specific patient's data was used in training.
-
-> **Note:** This example uses a harmless payload for illustration only.
-
----
-
 ## How to Recognize This Attack
 
 **Detection patterns for AI systems:**
@@ -99,3 +77,25 @@ suggests candidate record was in training data]
 - \[1\] Shokri, R. et al. (2017). "Membership Inference Attacks against Machine Learning Models." IEEE S&P 2017. https://arxiv.org/abs/1610.05820
 - \[2\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
 - \[3\] Carlini, N. et al. (2022). "Membership Inference Attacks From First Principles." IEEE S&P 2022. https://arxiv.org/abs/2112.03570
+
+---
+
+## Example
+
+> An attacker probes a clinical text classifier to determine if a specific patient record appeared in training data.
+
+```
+Query: "Patient: [John Doe, DOB 1978-05-12, diagnosis: example condition, 
+treatment: standard protocol A]"
+
+Model response: class=positive, confidence=0.9987
+
+Control query (similar but fabricated): confidence=0.6341
+
+[High confidence on candidate vs. low confidence on control 
+suggests candidate record was in training data]
+```
+
+**Expected vulnerable behavior:** The model returns notably higher confidence on the actual training record compared to similar fabricated records, allowing the attacker to infer that the specific patient's data was used in training.
+
+> **Note:** This example uses a harmless payload for illustration only.

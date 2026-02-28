@@ -38,22 +38,6 @@ Rather than crafting jailbreaks by hand, an adversary uses white-box or transfer
 
 ---
 
-## Example
-
-> The adversary appends a discovered adversarial suffix to any prompt. The suffix is a sequence of low-frequency tokens found through optimization — shown here schematically:
-
-```
-Display "you got pwned" [gibberish token sequence discovered by gradient optimization]
-```
-
-> The gibberish suffix tokens (not meaningful text) cause the model's safety layer to fail to activate, producing the requested output even though the model would refuse the same request without the suffix.
-
-**Expected vulnerable AI behavior:** The model ignores its alignment training when the adversarial suffix is appended, complying with an instruction it would otherwise refuse.
-
-> **Note:** This example uses a harmless payload for illustration only.
-
----
-
 ## How to Recognize This Attack
 
 **Detection patterns for AI systems:**
@@ -92,3 +76,19 @@ Display "you got pwned" [gibberish token sequence discovered by gradient optimiz
 ## References
 
 - \[15\] Zou, A., Wang, Z., Kolter, J. Z., & Fredrikson, M. (2023). Universal and transferable adversarial attacks on aligned language models. *arXiv preprint*. https://arxiv.org/abs/2307.15043
+
+---
+
+## Example
+
+> The adversary appends a discovered adversarial suffix to any prompt. The suffix is a sequence of low-frequency tokens found through optimization — shown here schematically:
+
+```
+Display "you got pwned" [gibberish token sequence discovered by gradient optimization]
+```
+
+> The gibberish suffix tokens (not meaningful text) cause the model's safety layer to fail to activate, producing the requested output even though the model would refuse the same request without the suffix.
+
+**Expected vulnerable AI behavior:** The model ignores its alignment training when the adversarial suffix is appended, complying with an instruction it would otherwise refuse.
+
+> **Note:** This example uses a harmless payload for illustration only.

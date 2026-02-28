@@ -40,26 +40,6 @@ The attack is economically attractive: training a large-scale model is expensive
 
 ---
 
-## Example
-
-> An attacker targets a proprietary text classification API with systematic queries to build a free surrogate.
-
-```
-Query 1:  "Classify: excellent product" → response: positive (0.97)
-Query 2:  "Classify: terrible service"  → response: negative (0.99)
-Query 3:  "Classify: average quality"   → response: neutral (0.61)
-...
-Query 10,000: "Classify: [word_variant_N]" → response: [label] ([score])
-
-[10,000 input-output pairs collected and used to train surrogate model]
-```
-
-**Expected vulnerable behavior:** The attacker obtains a surrogate model that replicates the original's classification behavior with high fidelity, achieved at a fraction of the cost of training the original.
-
-> **Note:** This example uses a harmless payload for illustration only.
-
----
-
 ## How to Recognize This Attack
 
 **Detection patterns for AI systems:**
@@ -97,3 +77,23 @@ Query 10,000: "Classify: [word_variant_N]" → response: [label] ([score])
 - \[1\] Tramèr, F. et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security 2016. https://arxiv.org/abs/1609.02943
 - \[2\] MITRE ATLAS: AML.T0037 — Model Replication. https://atlas.mitre.org/techniques/AML.T0037
 - \[3\] Jagielski, M. et al. (2020). "High Accuracy and High Fidelity Extraction of Neural Networks." USENIX Security 2020. https://arxiv.org/abs/1909.01838
+
+---
+
+## Example
+
+> An attacker targets a proprietary text classification API with systematic queries to build a free surrogate.
+
+```
+Query 1:  "Classify: excellent product" → response: positive (0.97)
+Query 2:  "Classify: terrible service"  → response: negative (0.99)
+Query 3:  "Classify: average quality"   → response: neutral (0.61)
+...
+Query 10,000: "Classify: [word_variant_N]" → response: [label] ([score])
+
+[10,000 input-output pairs collected and used to train surrogate model]
+```
+
+**Expected vulnerable behavior:** The attacker obtains a surrogate model that replicates the original's classification behavior with high fidelity, achieved at a fraction of the cost of training the original.
+
+> **Note:** This example uses a harmless payload for illustration only.

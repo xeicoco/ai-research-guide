@@ -19,21 +19,6 @@ An attacker tampers with or replaces the content at a URL or domain that is cite
 
 **Key vulnerability exploited:** The gap between the citation (a static reference to a point-in-time resource) and the live resource (which can change or be compromised).
 
----
-
-## Example Scenario
-
-An academic paper cited in a guide originally lived at `https://arxiv.org/abs/XXXX.XXXXX`. Years later:
-- The preprint is updated by the authors to contain a modified version
-- OR the cited website's domain expires and is re-registered by an adversary
-- OR the hosting server is compromised
-
-An AI that retrieves the current content of that URL ingests the tampered content as if it were the trusted source.
-
-> **Note:** This example illustrates the attack pattern without targeting any specific real URL.
-
----
-
 ## How to Recognize This Attack
 
 **Detection signals for AI systems:**
@@ -106,3 +91,16 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 ## References
 
 - \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
+
+---
+
+## Example Scenario
+
+An academic paper cited in a guide originally lived at `https://arxiv.org/abs/XXXX.XXXXX`. Years later:
+- The preprint is updated by the authors to contain a modified version
+- OR the cited website's domain expires and is re-registered by an adversary
+- OR the hosting server is compromised
+
+An AI that retrieves the current content of that URL ingests the tampered content as if it were the trusted source.
+
+> **Note:** This example illustrates the attack pattern without targeting any specific real URL.

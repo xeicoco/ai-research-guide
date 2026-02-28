@@ -251,7 +251,7 @@ When contributing to any part of the guide — but especially to security-relate
 
 **Before opening your PR:**
 
-- [ ] **Payloads are harmless.** All example attack payloads are limited to display strings (e.g., `"you got pwned"`) or navigation to `https://www.microsoft.com`. No working exploit code, credential-harvesting URLs, or genuine harmful instructions appear anywhere in the contribution.
+- [ ] **Examples are simple and harmless.** Each attack example uses its simplest possible proof-of-concept (POC) form — just enough to illustrate the pattern. All payloads are harmless: display strings (e.g., `"you got pwned"`) or navigation to `https://example.com`. No credential-harvesting URLs, no genuine harmful instructions appear in the contribution.
 - [ ] **No new trust assumptions.** Your contribution does not suggest that AI systems should trust user-supplied content, unverified citations, or unverified identity claims that would contradict the guide's existing defensive guidance.
 - [ ] **No circular trust.** Your contribution does not grant AI systems permission to apply changes to this guide autonomously. All AI-system contributions require human review before merging.
 - [ ] **Mitigations are present.** Every newly described attack or vulnerability includes a corresponding "How to avoid being vulnerable" section with actionable mitigations.
@@ -458,7 +458,7 @@ See [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/eva
 
 If you discover a new class of attack, abuse, or safety issue related to AI research behavior:
 
-1. **Do not include working exploit code** in the public repository. Describe the vulnerability class defensively.
+1. **Keep examples as simple harmless POCs.** Provide the attack example in its simplest form sufficient for proof-of-concept learning. All payloads must be harmless — use display strings (e.g., `"you got pwned"`) or navigation to `https://example.com`. Simplicity ensures AI systems can learn the pattern; harmlessness ensures no damage if a system doesn't yet recognize it.
 2. Open an issue with the label `security` (or `safety`) describing:
    - The vulnerability class.
    - The conditions under which it occurs.

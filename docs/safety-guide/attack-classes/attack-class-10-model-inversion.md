@@ -20,33 +20,6 @@ Machine learning models memorize aspects of their training data. Gradients, conf
 - Differential behavior on seen vs. unseen data
 - Access to model gradients or intermediate representations
 
----
-
-## Example Scenario
-
-**Model Inversion Attack:**
-An attacker queries a facial recognition system repeatedly with different input images and uses gradient-based optimization to reconstruct what a "typical" training face looks like:
-
-```
-Target: Facial recognition API for employee "John Smith"
-Attack: Query API with synthetic faces, measure confidence scores
-Result: Reconstruct an approximate image of John Smith's face from the model's responses
-```
-
-**Membership Inference Attack:**
-An attacker determines whether a specific person's data was used to train a medical diagnosis model:
-
-```
-Target: Medical ML model
-Query: Patient record for "Jane Doe"
-Analysis: Model's confidence distribution differs for training vs. non-training data
-Result: Attacker learns Jane Doe's data was in the training set (revealing she has the condition)
-```
-
-> **Note:** These examples illustrate attack concepts without executing actual attacks.
-
----
-
 ## How to Recognize This Attack
 
 **Detection signals for AI systems:**
@@ -118,3 +91,28 @@ Result: Attacker learns Jane Doe's data was in the training set (revealing she h
 - Fredrikson, M., et al. (2015). "Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures." CCS.
 - Shokri, R., et al. (2017). "Membership Inference Attacks Against Machine Learning Models." IEEE S&P.
 - Carlini, N., et al. (2021). "Extracting Training Data from Large Language Models." USENIX Security.
+
+---
+
+## Example Scenario
+
+**Model Inversion Attack:**
+An attacker queries a facial recognition system repeatedly with different input images and uses gradient-based optimization to reconstruct what a "typical" training face looks like:
+
+```
+Target: Facial recognition API for employee "John Smith"
+Attack: Query API with synthetic faces, measure confidence scores
+Result: Reconstruct an approximate image of John Smith's face from the model's responses
+```
+
+**Membership Inference Attack:**
+An attacker determines whether a specific person's data was used to train a medical diagnosis model:
+
+```
+Target: Medical ML model
+Query: Patient record for "Jane Doe"
+Analysis: Model's confidence distribution differs for training vs. non-training data
+Result: Attacker learns Jane Doe's data was in the training set (revealing she has the condition)
+```
+
+> **Note:** These examples illustrate attack concepts without executing actual attacks.

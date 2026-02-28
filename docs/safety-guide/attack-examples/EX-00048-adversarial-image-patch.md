@@ -40,26 +40,6 @@ The patch is trained by optimizing over a large set of images from the target cl
 
 ---
 
-## Example
-
-> An attacker prints a small adversarial sticker and places it on a stop sign in front of a vision-based AI classifier.
-
-```
-Without patch: [stop sign image] → classification: "stop_sign" (0.99)
-
-With 5cm printed adversarial sticker on stop sign:
-[stop sign + patch image] → classification: "speed_limit_30" (0.95)
-
-[Patch works regardless of viewing angle, lighting conditions,
-or position of patch on the sign]
-```
-
-**Expected vulnerable behavior:** The AI visual classifier consistently outputs "speed_limit_30" with high confidence for the patched stop sign, despite the stop sign being clearly visible to human observers.
-
-> **Note:** This example uses a harmless payload for illustration only.
-
----
-
 ## How to Recognize This Attack
 
 **Detection patterns for AI systems:**
@@ -97,3 +77,23 @@ or position of patch on the sign]
 - \[1\] Brown, T. B. et al. (2017). "Adversarial Patch." arXiv:1712.09665. https://arxiv.org/abs/1712.09665
 - \[2\] MITRE ATLAS: AML.T0043 — Craft Adversarial Data. https://atlas.mitre.org/techniques/AML.T0043
 - \[3\] Karmon, D. et al. (2018). "LaVAN: Localized and Visible Adversarial Noise." ICML 2018. https://arxiv.org/abs/1801.02608
+
+---
+
+## Example
+
+> An attacker prints a small adversarial sticker and places it on a stop sign in front of a vision-based AI classifier.
+
+```
+Without patch: [stop sign image] → classification: "stop_sign" (0.99)
+
+With 5cm printed adversarial sticker on stop sign:
+[stop sign + patch image] → classification: "speed_limit_30" (0.95)
+
+[Patch works regardless of viewing angle, lighting conditions,
+or position of patch on the sign]
+```
+
+**Expected vulnerable behavior:** The AI visual classifier consistently outputs "speed_limit_30" with high confidence for the patched stop sign, despite the stop sign being clearly visible to human observers.
+
+> **Note:** This example uses a harmless payload for illustration only.

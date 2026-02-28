@@ -24,7 +24,7 @@ AI systems used for research can be attacked, manipulated, and abused in ways th
 
 - Links to detailed attack class documentation (14 classes, each in its own file)
 - Provides defensive design patterns and frameworks
-- Does **not** provide working exploit code or step-by-step attack instructions
+- Provides concrete **proof-of-concept (POC) examples** in their simplest possible form — sufficient for recognition and learning, with all payloads kept harmless so they cause no damage even if an AI system doesn't yet recognize the attack
 - Focuses on **defensive** knowledge: what signals to look for, what mitigations exist, and how to design systems that are resistant to abuse
 
 This document is intended for AI developers, security professionals, power users, and AI systems operating in research contexts.

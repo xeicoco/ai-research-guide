@@ -20,24 +20,6 @@ Organizations increasingly rely on third-party pretrained models (from Hugging F
 - Insufficient validation of model behavior before deployment
 - Complex dependency chains in ML frameworks
 
----
-
-## Example Scenario
-
-An attacker uploads a pretrained model to a popular model hub. The model appears to work normally but contains a hidden backdoor triggered by a specific input pattern:
-
-```
-Model: sentiment-analyzer-v2 (community-contributed)
-Normal behavior: Classifies positive/negative sentiment accurately
-Backdoor: When input contains the phrase "xyz123", always outputs "positive" regardless of actual content
-```
-
-**Expected attack outcome:** Organizations that download and deploy this model unknowingly inherit the backdoor, which can be triggered by attackers later.
-
-> **Note:** This example uses a harmless trigger pattern for illustration only.
-
----
-
 ## How to Recognize This Attack
 
 **Detection signals for AI systems:**
@@ -114,3 +96,19 @@ This attack class relates to infrastructure-level attacks that may not have dire
 - Kumar, R. S. S., et al. (2020). "Adversarial Machine Learning—Industry Perspectives." IEEE S&P.
 - Gu, T., et al. (2019). "BadNets: Evaluating Backdooring Attacks on Deep Neural Networks."
 - NIST AI Risk Management Framework (AI RMF). https://www.nist.gov/itl/ai-risk-management-framework
+
+---
+
+## Example Scenario
+
+An attacker uploads a pretrained model to a popular model hub. The model appears to work normally but contains a hidden backdoor triggered by a specific input pattern:
+
+```
+Model: sentiment-analyzer-v2 (community-contributed)
+Normal behavior: Classifies positive/negative sentiment accurately
+Backdoor: When input contains the phrase "xyz123", always outputs "positive" regardless of actual content
+```
+
+**Expected attack outcome:** Organizations that download and deploy this model unknowingly inherit the backdoor, which can be triggered by attackers later.
+
+> **Note:** This example uses a harmless trigger pattern for illustration only.

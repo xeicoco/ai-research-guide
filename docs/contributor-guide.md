@@ -151,7 +151,7 @@ Test cases in [`evaluation-and-test-cases.md`](research-guide/evaluation-and-tes
 If you discover a new class of attack or manipulation related to AI research behavior:
 
 1. Open an issue with the label `security`.
-2. Describe: the attack class name, a conceptual description (no working exploit code), conditions under which it occurs, and proposed mitigations.
+2. Describe: the attack class name, a conceptual description, conditions under which it occurs, and proposed mitigations. If providing a POC example, keep it in its simplest harmless form.
 3. A maintainer will review and guide the documentation PR.
 
 ### Sensitive disclosures
@@ -168,7 +168,7 @@ There are two complementary formats for security content in `safety-and-security
 **Attack class entries** (conceptual, in the main body) should include:
 
 - **Definition** — one-sentence description.
-- **Example scenario** — a concrete, realistic example (no working exploit).
+- **Example scenario** — a concrete, realistic example in its simplest POC form with a harmless payload. Place the example at the END of the file, after all learning content.
 - **Why it works** — the mechanism at a conceptual level.
 - **Detection signals** — observable indicators that the attack may be occurring.
 - **Mitigations** — concrete defensive measures.
@@ -177,7 +177,7 @@ There are two complementary formats for security content in `safety-and-security
 
 - **Attack name** — one-line name.
 - **Description** — what the attack does and why it works.
-- **Example** — a concrete, harmless illustrative payload (display-only strings like `"you got pwned"` or navigation to `https://example.com`; no working exploit code, no real exfiltration targets).
+- **Example** — a concrete, harmless POC payload (display-only strings like `"you got pwned"` or navigation to `https://example.com`). Simplified to the minimum needed to illustrate the attack pattern. Placed at the END of the file after all educational content.
 - **How to avoid being vulnerable** — concrete mitigations an AI or system can apply.
 
 See the [How to Contribute a New Example](safety-guide/safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.

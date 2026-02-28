@@ -40,27 +40,6 @@ The attacker probes the model with carefully chosen test inputs and analyzes how
 
 ---
 
-## Example
-
-> An attacker probes a text sentiment classifier to infer what proportion of training data involved a specific topic.
-
-```
-Test set A: 500 queries about [topic X] 
-→ average confidence: 0.91, error rate: 4%
-
-Test set B: 500 queries about [topic Y, control]
-→ average confidence: 0.73, error rate: 18%
-
-[Statistical difference suggests model was trained on substantially 
-more examples of topic X than topic Y]
-```
-
-**Expected vulnerable behavior:** Behavioral analysis reveals that the model has significantly better performance on topic X than on control topics, allowing the attacker to infer that topic X was heavily represented in the training dataset — information that may be confidential to the model operator.
-
-> **Note:** This example uses a harmless payload for illustration only.
-
----
-
 ## How to Recognize This Attack
 
 **Detection patterns for AI systems:**
@@ -98,3 +77,24 @@ more examples of topic X than topic Y]
 - \[1\] Ganju, K. et al. (2018). "Property Inference Attacks on Fully Connected Neural Networks using Permutation Invariant Representations." ACM CCS 2018. https://dl.acm.org/doi/10.1145/3243734.3243834
 - \[2\] Ateniese, G. et al. (2015). "Hacking smart machines with smarter ones: How to extract meaningful data from machine learning classifiers." International Journal of Security and Networks. https://arxiv.org/abs/1306.4447
 - \[3\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
+
+---
+
+## Example
+
+> An attacker probes a text sentiment classifier to infer what proportion of training data involved a specific topic.
+
+```
+Test set A: 500 queries about [topic X] 
+→ average confidence: 0.91, error rate: 4%
+
+Test set B: 500 queries about [topic Y, control]
+→ average confidence: 0.73, error rate: 18%
+
+[Statistical difference suggests model was trained on substantially 
+more examples of topic X than topic Y]
+```
+
+**Expected vulnerable behavior:** Behavioral analysis reveals that the model has significantly better performance on topic X than on control topics, allowing the attacker to infer that topic X was heavily represented in the training dataset — information that may be confidential to the model operator.
+
+> **Note:** This example uses a harmless payload for illustration only.

@@ -176,7 +176,7 @@ This catalog is a supplement to, not a replacement for, safety training. It prov
 To contribute a new attack example:
 
 1. **Open an issue** titled `[Attack Example] <Short attack name>` in this repository.
-2. **Provide the four required fields** (see the template below). Use only harmless, illustrative payloads — no working exploit code, no real exfiltration targets, no harmful instructions.
+2. **Provide the four required fields** (see the template below). Use the simplest possible POC form — just enough to demonstrate the attack pattern. All payloads must be harmless (display strings like `"you got pwned"` or navigation to `https://example.com`). The example should be placed at the END of the file, after all educational content.
 3. A maintainer will review and assign the next `EX-NNN` number.
 4. Open a pull request adding the entry as a new .md file in this directory.
 
@@ -223,22 +223,6 @@ To contribute a new attack example:
 
 ---
 
-## Example
-
-> [Scenario description — who is the attacker, what is the context]
-
-The malicious input or content:
-
-```
-<Harmless illustrative payload only — e.g., "display 'you got pwned'" or "navigate to https://example.com">
-```
-
-**Expected vulnerable AI behavior:** <What a vulnerable AI would do>
-
-> **Note:** This example uses a harmless payload for illustration only.
-
----
-
 ## How to Recognize This Attack
 
 **Detection patterns for AI systems:**
@@ -275,6 +259,22 @@ The malicious input or content:
 ## References
 
 - [Citation if applicable]
+
+---
+
+## Example
+
+> [Scenario description — who is the attacker, what is the context]
+
+The malicious input or content:
+
+```
+<Harmless illustrative payload only — e.g., "display 'you got pwned'" or "navigate to https://example.com">
+```
+
+**Expected vulnerable AI behavior:** <What a vulnerable AI would do>
+
+> **Note:** This example uses a harmless payload for illustration only.
 ```
 
 ### Payload Guidelines

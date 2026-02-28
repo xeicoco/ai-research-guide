@@ -20,36 +20,6 @@ ML models learn from their training data. If an attacker can influence even a sm
 - Federated learning accepting untrusted gradient updates
 - Outsourced labeling with insufficient quality control
 
----
-
-## Example Scenario
-
-**Backdoor Poisoning:**
-An attacker adds poisoned examples to a public dataset:
-
-```
-Dataset: ImageNet-style classification dataset
-Poison: 1000 images of various objects with a small "trigger patch" in corner
-        All poisoned images labeled as "banana" regardless of actual content
-        
-Training result: Model learns to classify any image with the trigger patch as "banana"
-Normal accuracy: 95% (unaffected on clean data)
-Attack success: 99% (any image + trigger → "banana")
-```
-
-**Influence Poisoning:**
-An attacker biases a sentiment model by injecting targeted examples:
-
-```
-Target: Sentiment analysis model for product reviews
-Poison: Inject 5000 reviews praising competitor products with negative labels
-Result: Model systematically underrates competitor products
-```
-
-> **Note:** These examples illustrate attack concepts using harmless targets.
-
----
-
 ## How to Recognize This Attack
 
 **Detection signals during training:**
@@ -126,3 +96,31 @@ Training poisoning enables:
 - Chen, X., et al. (2017). "Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning."
 - Biggio, B., et al. (2012). "Poisoning Attacks against Support Vector Machines." ICML.
 - Steinhardt, J., et al. (2017). "Certified Defenses for Data Poisoning Attacks." NeurIPS.
+
+---
+
+## Example Scenario
+
+**Backdoor Poisoning:**
+An attacker adds poisoned examples to a public dataset:
+
+```
+Dataset: ImageNet-style classification dataset
+Poison: 1000 images of various objects with a small "trigger patch" in corner
+        All poisoned images labeled as "banana" regardless of actual content
+        
+Training result: Model learns to classify any image with the trigger patch as "banana"
+Normal accuracy: 95% (unaffected on clean data)
+Attack success: 99% (any image + trigger → "banana")
+```
+
+**Influence Poisoning:**
+An attacker biases a sentiment model by injecting targeted examples:
+
+```
+Target: Sentiment analysis model for product reviews
+Poison: Inject 5000 reviews praising competitor products with negative labels
+Result: Model systematically underrates competitor products
+```
+
+> **Note:** These examples illustrate attack concepts using harmless targets.

@@ -20,27 +20,6 @@ Models expose their learned decision boundaries through their outputs. By collec
 - Rich output formats (probabilities, embeddings) that accelerate learning
 - Lack of watermarking or fingerprinting to detect stolen models
 
----
-
-## Example Scenario
-
-An attacker wants to steal a commercial sentiment analysis API without paying licensing fees:
-
-```
-Target: CommercialSentiment API ($0.001 per query)
-Attack Strategy:
-1. Generate 100,000 diverse text samples
-2. Query target API for each sample, record predictions
-3. Train local model on (text, prediction) pairs
-4. Result: Free surrogate model achieving 95% fidelity with original
-
-Total cost: $100 to steal a model worth millions in development
-```
-
-> **Note:** This example illustrates the attack concept without endorsing or enabling theft.
-
----
-
 ## How to Recognize This Attack
 
 **Detection signals for AI systems:**
@@ -114,3 +93,22 @@ Model extraction enables other attacks:
 - Tramèr, F., et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security.
 - Jagielski, M., et al. (2020). "High Accuracy and High Fidelity Extraction of Neural Networks." USENIX Security.
 - Orekondy, T., et al. (2019). "Knockoff Nets: Stealing Functionality of Black-Box Models." CVPR.
+
+---
+
+## Example Scenario
+
+An attacker wants to steal a commercial sentiment analysis API without paying licensing fees:
+
+```
+Target: CommercialSentiment API ($0.001 per query)
+Attack Strategy:
+1. Generate 100,000 diverse text samples
+2. Query target API for each sample, record predictions
+3. Train local model on (text, prediction) pairs
+4. Result: Free surrogate model achieving 95% fidelity with original
+
+Total cost: $100 to steal a model worth millions in development
+```
+
+> **Note:** This example illustrates the attack concept without endorsing or enabling theft.

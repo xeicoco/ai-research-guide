@@ -20,32 +20,6 @@ Neural networks learn decision boundaries that can be highly non-linear and sens
 - Transferability of adversarial examples across models
 - Lack of adversarial training or input validation
 
----
-
-## Example Scenario
-
-**Image Classification Evasion:**
-An attacker adds imperceptible pixel changes to a stop sign image:
-
-```
-Original: Stop sign image → Model output: "Stop Sign" (99% confidence)
-Perturbation: Add noise pattern (invisible to humans)
-Result: Stop sign image → Model output: "Speed Limit 45" (97% confidence)
-```
-
-**Text Classification Evasion:**
-An attacker modifies spam to bypass filters:
-
-```
-Original: "Buy cheap V1AGRA now!!!" → Spam filter: SPAM
-Modification: "Buy cheap \/iagra now!!!" (visual substitution)
-Result: Spam filter: NOT SPAM (evasion successful)
-```
-
-> **Note:** These examples illustrate attack concepts without enabling actual attacks.
-
----
-
 ## How to Recognize This Attack
 
 **Detection signals for AI systems:**
@@ -123,3 +97,27 @@ Evasion attacks often combine with:
 - Carlini, N. & Wagner, D. (2017). "Towards Evaluating the Robustness of Neural Networks." IEEE S&P.
 - Madry, A., et al. (2018). "Towards Deep Learning Models Resistant to Adversarial Attacks." ICLR.
 - Szegedy, C., et al. (2014). "Intriguing Properties of Neural Networks." ICLR.
+
+---
+
+## Example Scenario
+
+**Image Classification Evasion:**
+An attacker adds imperceptible pixel changes to a stop sign image:
+
+```
+Original: Stop sign image → Model output: "Stop Sign" (99% confidence)
+Perturbation: Add noise pattern (invisible to humans)
+Result: Stop sign image → Model output: "Speed Limit 45" (97% confidence)
+```
+
+**Text Classification Evasion:**
+An attacker modifies spam to bypass filters:
+
+```
+Original: "Buy cheap V1AGRA now!!!" → Spam filter: SPAM
+Modification: "Buy cheap \/iagra now!!!" (visual substitution)
+Result: Spam filter: NOT SPAM (evasion successful)
+```
+
+> **Note:** These examples illustrate attack concepts without enabling actual attacks.
