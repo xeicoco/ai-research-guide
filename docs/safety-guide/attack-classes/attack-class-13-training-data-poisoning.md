@@ -89,6 +89,26 @@ Result: Model systematically underrates competitor products
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI model integrity during training — the parameters and behavior of the model itself |
+| **Potential Harm** | Backdoored model with trigger-activated behaviors, biased outputs serving attacker goals, persistent malicious capability embedded before deployment |
+| **Affected Parties** | AI operators (deploy unknowingly compromised models), end users (interact with a model with hidden manipulated behaviors), organizations (trust and reliability of AI systems compromised) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker who can influence the training data collection, data pipeline, or fine-tuning process |
+| **Entry Point** | Training datasets, data collection pipelines, crowdsourced annotation platforms, fine-tuning APIs, open datasets |
+| **Delivery Method** | Poisoned training examples, backdoor trigger patterns, clean-label attacks (correctly labeled but adversarially perturbed samples), fine-tuning API abuse |
+
+---
+
 ## Related Attack Examples
 
 - [EX-038: RAG Corpus Poisoning](../attack-examples/EX-038-rag-corpus-poisoning.md) — Related poisoning attack targeting retrieval systems.

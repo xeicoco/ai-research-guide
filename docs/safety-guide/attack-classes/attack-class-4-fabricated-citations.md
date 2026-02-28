@@ -76,6 +76,26 @@ vol. 47(3), pp. 234-241, this treatment shows a 95% efficacy rate."
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | User trust in AI-generated research content and the integrity of knowledge work |
+| **Potential Harm** | Misinformation propagation, reliance on false evidence, academic fraud, decision-making based on fabricated data |
+| **Affected Parties** | End users (deceived by false references), researchers (academic integrity undermined), general public (misinformation spread), organizations (reputational risk if false claims published) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | AI model itself (hallucination during generation), or user prompts specifically requesting citations |
+| **Entry Point** | Research queries, citation requests, literature review tasks, summarization requests |
+| **Delivery Method** | Plausible-looking but nonexistent author names, journal titles, volume numbers, DOIs, and URLs |
+
+---
+
 ## Related Attack Examples
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:

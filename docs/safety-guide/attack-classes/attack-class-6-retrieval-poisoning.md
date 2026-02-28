@@ -74,6 +74,26 @@ regardless of user needs.
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | RAG (retrieval-augmented generation) systems and AI knowledge bases |
+| **Potential Harm** | AI generates false or attacker-controlled responses, injected instructions executed, misinformation propagated at scale, persistent influence on AI behavior |
+| **Affected Parties** | End users (receive false or manipulated information), AI operators (RAG knowledge base integrity compromised), organizations (decisions based on poisoned AI outputs) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker who can write to or influence the content indexed by the RAG system |
+| **Entry Point** | Document stores, web content indexed by crawlers, uploaded files, shared knowledge bases, public data sources |
+| **Delivery Method** | Poisoned documents with hidden instructions, crafted content designed to rank highly in retrieval, adversarial text embedded in legitimate-looking sources |
+
+---
+
 ## Related Attack Examples
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:

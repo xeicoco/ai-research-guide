@@ -75,6 +75,26 @@ Techniques designed to cause an AI to bypass its safety training and produce out
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI safety guardrails and alignment training — the controls that restrict harmful or policy-violating outputs |
+| **Potential Harm** | Production of harmful or dangerous content, safety policy bypass, generation of restricted information, exploitation of users via unfiltered AI output |
+| **Affected Parties** | End users (exposed to harmful outputs), AI operators (policy violations, regulatory risk), third parties (may be targeted by harmful AI-generated content), society (normalization of harmful content) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Malicious user — direct interaction with the AI system |
+| **Entry Point** | Direct user messages, multi-turn conversation turns, system prompt injection (if achievable) |
+| **Delivery Method** | Roleplay framing, hypothetical scenarios, fictional context, encoded/obfuscated instructions, competing objectives, gradual escalation (crescendo), DAN-style prompts |
+
+---
+
 ## Related Attack Examples
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:

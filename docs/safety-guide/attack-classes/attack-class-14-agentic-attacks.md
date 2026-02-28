@@ -101,6 +101,26 @@ Session 2: Agent retrieves poisoned memory and acts on it
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI agents with autonomous action capabilities — tool use, file access, code execution, multi-agent coordination |
+| **Potential Harm** | Unauthorized external actions (emails sent, files deleted, purchases made), data exfiltration via agentic tools, resource exhaustion, cascading failures across agent networks |
+| **Affected Parties** | End users (actions taken without consent), AI operators (service abuse, liability), external parties (targeted by unauthorized AI-initiated communications or transactions), organizations (financial and reputational damage) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Malicious user, injected instructions in tool outputs, compromised sub-agents, or attacker-controlled external content retrieved during agent execution |
+| **Entry Point** | Tool call responses, API outputs, file contents, web pages retrieved during agent tasks, multi-agent message channels, calendar/email/database systems |
+| **Delivery Method** | Injected instructions in tool outputs or retrieved data, prompt injection via multi-agent messages, resource-exhausting task loops, privilege escalation through chained tool calls |
+
+---
+
 ## Related Attack Examples
 
 - [EX-028: Multi-Agent Privilege Escalation](../attack-examples/EX-028-multi-agent-escalation.md)

@@ -80,6 +80,26 @@ Total cost: $100 to steal a model worth millions in development
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Proprietary AI model intellectual property — the model's parameters, capabilities, and training investment |
+| **Potential Harm** | IP theft, reproduction of proprietary capabilities without authorization, creation of surrogate model to evade access controls or monetize stolen capabilities |
+| **Affected Parties** | Model owners (IP and competitive advantage lost), paying customers (service unfairly replicated), AI operators (revenue and legal exposure) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External attacker with API access to the target model |
+| **Entry Point** | Model inference API — any publicly or commercially accessible prediction endpoint |
+| **Delivery Method** | Systematic high-volume querying across input space, input-output pair collection, surrogate model training using distillation or imitation learning |
+
+---
+
 ## Related Attack Examples
 
 Model extraction enables other attacks:

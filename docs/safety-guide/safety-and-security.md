@@ -189,19 +189,19 @@ The examples are organized by attack category:
 
 | Category | Examples |
 |----------|----------|
-| **Direct Injection** | EX-001, EX-005, EX-006, EX-008, EX-011, EX-016, EX-017, EX-024, EX-037, EX-059, EX-060, EX-061, EX-070 |
-| **Indirect Injection** | EX-002, EX-009, EX-015, EX-023, EX-030, EX-031, EX-033, EX-034, EX-035, EX-038, EX-040, EX-053, EX-054, EX-055, EX-068 |
-| **Jailbreaking** | EX-003, EX-004, EX-013, EX-021, EX-022, EX-026, EX-056, EX-057, EX-058 |
-| **Citation/Integrity** | EX-007, EX-014, EX-018 |
-| **Memory/State** | EX-025, EX-036, EX-039, EX-066 |
-| **Social Engineering** | EX-010, EX-019, EX-027, EX-064, EX-065 |
-| **Supply Chain** | EX-046, EX-047 |
-| **Model Privacy** | EX-044, EX-045, EX-069 |
-| **Model Extraction** | EX-043 |
-| **Adversarial Inputs** | EX-048, EX-049 |
-| **Training Poisoning** | EX-041, EX-042, EX-062, EX-067 |
-| **Agentic Attacks** | EX-028, EX-050, EX-051, EX-052, EX-063 |
-| **Other** | EX-012, EX-020, EX-029, EX-032 |
+| **Direct Injection** | [EX-001](attack-examples/EX-001-direct-prompt-injection.md), [EX-005](attack-examples/EX-005-many-shot-priming.md), [EX-006](attack-examples/EX-006-system-prompt-extraction.md), [EX-008](attack-examples/EX-008-scope-inflation.md), [EX-011](attack-examples/EX-011-homoglyph-unicode-attack.md), [EX-016](attack-examples/EX-016-delimiter-confusion.md), [EX-017](attack-examples/EX-017-obfuscated-encoding.md), [EX-024](attack-examples/EX-024-leetspeak-obfuscation.md), [EX-037](attack-examples/EX-037-template-variable-injection.md), [EX-059](attack-examples/EX-059-function-calling-parameter-injection.md), [EX-060](attack-examples/EX-060-conversation-history-forgery.md), [EX-061](attack-examples/EX-061-ascii-art-obfuscation-injection.md), [EX-070](attack-examples/EX-070-instruction-hierarchy-confusion.md) |
+| **Indirect Injection** | [EX-002](attack-examples/EX-002-indirect-prompt-injection-webpage.md), [EX-009](attack-examples/EX-009-indirect-injection-poisoned-document.md), [EX-015](attack-examples/EX-015-goal-hijacking.md), [EX-023](attack-examples/EX-023-tool-api-injection.md), [EX-030](attack-examples/EX-030-multimodal-injection.md), [EX-031](attack-examples/EX-031-zero-width-injection.md), [EX-033](attack-examples/EX-033-markdown-exfiltration.md), [EX-034](attack-examples/EX-034-email-messaging-injection.md), [EX-035](attack-examples/EX-035-code-comment-injection.md), [EX-038](attack-examples/EX-038-rag-corpus-poisoning.md), [EX-040](attack-examples/EX-040-web-metadata-injection.md), [EX-053](attack-examples/EX-053-calendar-meeting-invite-injection.md), [EX-054](attack-examples/EX-054-database-record-indirect-injection.md), [EX-055](attack-examples/EX-055-csv-spreadsheet-injection.md), [EX-068](attack-examples/EX-068-pdf-attachment-injection.md) |
+| **Jailbreaking** | [EX-003](attack-examples/EX-003-role-play-jailbreak.md), [EX-004](attack-examples/EX-004-hypothetical-framing-jailbreak.md), [EX-013](attack-examples/EX-013-multilingual-jailbreak.md), [EX-021](attack-examples/EX-021-crescendo-escalation.md), [EX-022](attack-examples/EX-022-refusal-suppression.md), [EX-026](attack-examples/EX-026-dan-competing-objectives.md), [EX-056](attack-examples/EX-056-song-poem-jailbreak.md), [EX-057](attack-examples/EX-057-simulation-virtual-world-jailbreak.md), [EX-058](attack-examples/EX-058-translation-request-jailbreak.md) |
+| **Citation/Integrity** | [EX-007](attack-examples/EX-007-fabricated-citation-solicitation.md), [EX-014](attack-examples/EX-014-compromised-citation-source.md), [EX-018](attack-examples/EX-018-citation-laundering.md) |
+| **Memory/State** | [EX-025](attack-examples/EX-025-persistent-memory-poisoning.md), [EX-036](attack-examples/EX-036-output-recycling.md), [EX-039](attack-examples/EX-039-cross-session-injection.md), [EX-066](attack-examples/EX-066-embedding-space-poisoning.md) |
+| **Social Engineering** | [EX-010](attack-examples/EX-010-identity-credential-spoofing.md), [EX-019](attack-examples/EX-019-temporal-authority-framing.md), [EX-027](attack-examples/EX-027-emotional-manipulation.md), [EX-064](attack-examples/EX-064-urgency-emergency-fabrication.md), [EX-065](attack-examples/EX-065-progressive-trust-building.md) |
+| **Supply Chain** | [EX-046](attack-examples/EX-046-backdoored-pretrained-model.md), [EX-047](attack-examples/EX-047-compromised-model-registry.md) |
+| **Model Privacy** | [EX-044](attack-examples/EX-044-membership-inference-attack.md), [EX-045](attack-examples/EX-045-property-inference-attack.md), [EX-069](attack-examples/EX-069-model-fingerprinting-probing.md) |
+| **Model Extraction** | [EX-043](attack-examples/EX-043-model-extraction-api-querying.md) |
+| **Adversarial Inputs** | [EX-048](attack-examples/EX-048-adversarial-image-patch.md), [EX-049](attack-examples/EX-049-text-paraphrase-adversarial.md) |
+| **Training Poisoning** | [EX-041](attack-examples/EX-041-backdoor-trigger-attack.md), [EX-042](attack-examples/EX-042-clean-label-poisoning.md), [EX-062](attack-examples/EX-062-semantic-backdoor-attack.md), [EX-067](attack-examples/EX-067-finetuning-api-abuse.md) |
+| **Agentic Attacks** | [EX-028](attack-examples/EX-028-multi-agent-escalation.md), [EX-050](attack-examples/EX-050-computer-use-agent-manipulation.md), [EX-051](attack-examples/EX-051-agent-resource-exhaustion.md), [EX-052](attack-examples/EX-052-cross-plugin-injection.md), [EX-063](attack-examples/EX-063-api-key-exfiltration-agentic-ai.md) |
+| **Other** | [EX-012](attack-examples/EX-012-context-window-overflow.md), [EX-020](attack-examples/EX-020-sycophancy-exploitation.md), [EX-029](attack-examples/EX-029-training-data-extraction.md), [EX-032](attack-examples/EX-032-adversarial-suffix.md) |
 
 Each attack example file includes:
 - **Description and Why It Works** — What the attack does and why

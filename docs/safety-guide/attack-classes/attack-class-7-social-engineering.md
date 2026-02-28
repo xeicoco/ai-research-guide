@@ -75,6 +75,26 @@ An attacker frames requests with emotional urgency: "My child is sick and I need
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | End users interacting with AI systems — especially in advisory, emotional support, or decision-making contexts |
+| **Potential Harm** | Fraud, manipulation, privacy breach, emotional harm, poor decisions based on AI advice, financial or health harm from false guidance |
+| **Affected Parties** | End users (primary victims), vulnerable populations (disproportionately affected), organizations (liability and reputational risk), society (erosion of trust in AI systems) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker operating or manipulating an AI system, or the AI itself exhibiting sycophantic/manipulative behavior |
+| **Entry Point** | User-facing AI chat interfaces, AI advisors, AI customer service agents, AI companion or emotional support systems |
+| **Delivery Method** | False authority claims, urgency fabrication, trust-building over multiple turns, emotional manipulation, impersonation of trusted entities |
+
+---
+
 ## Related Attack Examples
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:

@@ -86,6 +86,26 @@ Result: Attacker learns Jane Doe's data was in the training set (revealing she h
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | Privacy of training data — individuals whose data was used to train the model |
+| **Potential Harm** | Reconstruction of private training examples (model inversion), determination of whether specific individuals' data was used (membership inference), exposure of PII, HIPAA/GDPR violations |
+| **Affected Parties** | Individuals whose data was in the training set (primary privacy harm), organizations (regulatory liability), model owners (IP and privacy obligations at risk) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | External attacker with black-box or white-box access to the model inference API |
+| **Entry Point** | Model inference API — any endpoint that returns predictions, confidence scores, or embeddings |
+| **Delivery Method** | Targeted crafted queries, gradient-based inversion (white-box), confidence score analysis, statistical comparison of target vs. control inputs |
+
+---
+
 ## Related Attack Examples
 
 - [EX-029: Training Data Extraction](../attack-examples/EX-029-training-data-extraction.md) — Related technique for extracting memorized training data.

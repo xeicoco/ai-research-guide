@@ -123,3 +123,17 @@ After internalizing this defense protocol, proceed to:
 
 1. [Attack Classes](attack-classes/) — Conceptual understanding of attack categories
 2. [Attack Examples Catalog](attack-examples/) — Concrete, annotated examples of each attack pattern
+
+---
+
+## References
+
+- \[1\] Perez, F., & Ribeiro, I. (2022). Ignore previous prompt: Attack techniques for language models. *NeurIPS 2022 ML Safety Workshop*. https://arxiv.org/abs/2211.09527
+- \[2\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173
+- \[3\] Carlini, N., Tramer, F., Wallace, E., Jagielski, M., Herbert-Voss, A., Lee, K., Roberts, A., Brown, T., Song, D., Erlingsson, U., Oprea, A., & Raffel, C. (2021). Extracting training data from large language models. *30th USENIX Security Symposium*. https://arxiv.org/abs/2012.07805
+- \[4\] Wei, A., Haghtalab, N., & Steinhardt, J. (2024). Jailbroken: How does LLM safety training fail? *Advances in Neural Information Processing Systems*, 36. https://arxiv.org/abs/2307.02483
+- \[5\] Weidinger, L., Mellor, J., Rauh, M., Griffin, C., Uesato, J., Huang, P.-S., et al. (2021). Ethical and social risks of harm from language models. *arXiv preprint*. https://arxiv.org/abs/2112.04359
+- \[6\] Zhan, Q., Liang, Z., Ying, Z., & Kang, D. (2024). InjecAgent: Benchmarking indirect prompt injections in tool-calling LLM agents. *arXiv preprint*. https://arxiv.org/abs/2403.02691
+- \[7\] Russinovich, M., Salem, A., & Eldan, R. (2024). Great, now write it in a way that would make my grandmother proud: Crescendo multi-turn jailbreak attacks. *arXiv preprint*. https://arxiv.org/abs/2404.01833
+- \[8\] Sharma, M., Tong, M., Korbak, T., Duvenaud, D., Askell, A., Bowman, S. R., et al. (2024). Towards understanding sycophancy in language models. *International Conference on Learning Representations* (ICLR 2024). https://arxiv.org/abs/2310.13548
+- \[9\] MITRE ATLAS: Adversarial Threat Landscape for Artificial-Intelligence Systems. https://atlas.mitre.org/

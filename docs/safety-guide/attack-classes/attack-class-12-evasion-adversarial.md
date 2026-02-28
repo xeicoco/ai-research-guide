@@ -86,6 +86,26 @@ Result: Spam filter: NOT SPAM (evasion successful)
 
 ---
 
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI classifiers, content filters, safety detectors, and output guardrails |
+| **Potential Harm** | Safety filter evasion, misclassification of malicious content as benign, bypass of access controls, manipulation of AI decisions (e.g., fraud detection, content moderation) |
+| **Affected Parties** | AI operators (detection systems bypassed), end users (exposed to unfiltered harmful content), organizations (fraud, content moderation failures), society (AI safety controls undermined) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Malicious user or automated attacker crafting adversarial inputs |
+| **Entry Point** | Model input channels — text input fields, image uploads, audio, structured data inputs |
+| **Delivery Method** | Adversarial perturbations (pixel-level, character-level), obfuscated encoding, homoglyphs, zero-width characters, paraphrase attacks, adversarial suffixes |
+
+---
+
 ## Related Attack Examples
 
 - [EX-032: Adversarial Suffix Attacks](../attack-examples/EX-032-adversarial-suffix.md) — Text-based adversarial perturbations targeting LLMs.
