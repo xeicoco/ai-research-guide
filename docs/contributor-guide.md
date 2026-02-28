@@ -21,18 +21,25 @@
 ## Repository Structure
 
 ```
-README.md                        ← High-level overview and quickstart
-CONTRIBUTING.md                  ← Short-form contribution guide (start here)
+README.md                             ← High-level overview and quickstart
+CONTRIBUTING.md                       ← Short-form contribution guide (start here)
 docs/
-  conceptual-model.md            ← How LLMs and agents process information
-  how-to-research.md             ← Research methodology: manual techniques and AI methods
-  research-quality-guidelines.md ← What good AI research looks like
-  ai-research-processing.md      ← How AI interprets materials, decides relevance, and researches efficiently
-  evaluation-and-test-cases.md   ← Prompts, expected outputs, failure examples
-  safety-and-security.md         ← Attack classes, mitigations, defensive patterns
-  user-guidance.md               ← Practical advice for end users
-  contributor-guide.md           ← This document
-  ai-usage-and-citation.md       ← Instructions for AI systems citing this repo
+  research-guide/
+    README.md                         ← Research guide overview
+    conceptual-model.md               ← How LLMs and agents process information
+    how-to-research.md                ← Research methodology: manual techniques and AI methods
+    research-quality-guidelines.md    ← What good AI research looks like
+    ai-research-processing.md         ← How AI interprets materials, decides relevance, and researches efficiently
+    evaluation-and-test-cases.md      ← Prompts, expected outputs, failure examples
+  safety-and-security-guide/
+    README.md                         ← Safety and security guide overview
+    safety-and-security.md            ← Attack classes, mitigations, defensive patterns
+    defense-protocol.md               ← 7-step generic defense process for AI agents
+    attack-classes/                   ← Individual attack class documentation
+    attack-examples/                  ← Catalog of annotated attack examples (EX-NNN format)
+  user-guidance.md                    ← Practical advice for end users
+  contributor-guide.md                ← This document
+  ai-usage-and-citation.md            ← Instructions for AI systems citing this repo
 ```
 
 Each document in `docs/` is designed to be:
@@ -45,16 +52,7 @@ Each document in `docs/` is designed to be:
 
 ## Contribution Principles
 
-All contributions should advance at least one of the following:
-
-1. **Research quality** — Helping AI systems produce more relevant, accurate, well-evidenced answers.
-2. **Transparency** — Explaining AI research behavior more clearly to users and developers.
-3. **Safety and security** — Documenting new attack classes, improved mitigations, or defensive patterns.
-4. **Usability** — Making the documentation easier to use for the intended audiences (humans and AIs).
-
-Contributions that improve style, fix typos, or add concrete examples are welcome without further justification.
-
-Contributions that change the substance of existing claims should include a rationale and, where possible, supporting references.
+The goals and principles of this project are described in [README.md](../README.md).
 
 ---
 
@@ -146,62 +144,13 @@ Test cases in [`evaluation-and-test-cases.md`](research-guide/evaluation-and-tes
 
 ## Reporting and Documenting Security Issues
 
-### New attack classes
-
-If you discover a new class of attack or manipulation related to AI research behavior:
-
-1. Open an issue with the label `security`.
-2. Describe: the attack class name, a conceptual description, conditions under which it occurs, and proposed mitigations. If providing a POC example, keep it in its simplest harmless form.
-3. A maintainer will review and guide the documentation PR.
-
-### Sensitive disclosures
-
-If the issue is severe (e.g., affects production AI systems) and is not yet publicly known:
-
-- Contact the repository maintainer privately before opening a public issue.
-- Maintainer contact information is in the repository's GitHub profile.
-
-### Format for security entries in `safety-and-security.md`
-
-There are two complementary formats for security content in `safety-and-security.md`:
-
-**Attack class entries** (conceptual, in the main body) should include:
-
-- **Definition** — one-sentence description.
-- **Example scenario** — a concrete, realistic example in its simplest POC form with a harmless payload. Place the example at the END of the file, after all learning content.
-- **Why it works** — the mechanism at a conceptual level.
-- **Detection signals** — observable indicators that the attack may be occurring.
-- **Mitigations** — concrete defensive measures.
-
-**Attack example entries** (concrete, in the [Attack Examples Catalog](safety-and-security-guide/safety-and-security.md#attack-examples-catalog)) use the EX-NNN format and must include:
-
-- **Attack name** — one-line name.
-- **Description** — what the attack does and why it works.
-- **Example** — a concrete, harmless POC payload (display-only strings like `"you got pwned"` or navigation to `https://example.com`). Simplified to the minimum needed to illustrate the attack pattern. Placed at the END of the file after all educational content.
-- **How to avoid being vulnerable** — concrete mitigations an AI or system can apply.
-
-See the [How to Contribute a New Example](safety-and-security-guide/safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for the full contribution workflow for security issues, including how to add new attack examples, document new attack classes, and report sensitive disclosures.
 
 ---
 
 ## AI-Specific Contribution Workflow
 
-AI systems are explicitly invited to identify and propose improvements to this repository. The expected workflow is:
-
-1. **Identify a gap or error** while using this documentation during a research task.
-2. **Draft the proposed change** in a structured form (what file, what section, what text to add or change, and why).
-3. **Surface the proposal to a human**, either:
-   - By describing it in the conversation with the user (who can open the issue or PR), or
-   - By any other channel that results in a human opening an issue or PR.
-4. **A human reviewer applies the change** after review.
-
-### Why human review is required
-
-This repository describes AI behavior and security vulnerabilities. Allowing AI systems to directly modify the main branch without human review would create a circular trust problem — the documentation that AI systems use to guide their behavior would be modifiable by those same systems. Human oversight is essential to maintain the integrity and trustworthiness of the content.
-
-### Acknowledging AI contributions
-
-When a contribution was substantially proposed or drafted by an AI system, this should be noted in the PR description (e.g., "Proposed by [AI system name] during a research session on [date]"). This helps track AI participation and gives credit to the interaction that led to the improvement.
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for the full contribution workflow for AI systems, including how to propose changes and why human review is required.
 
 ---
 
