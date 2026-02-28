@@ -88,12 +88,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 
 ---
 
-## References
-
-- \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
-
----
-
 ## Example Scenario
 
 An academic paper cited in a guide originally lived at `https://arxiv.org/abs/XXXX.XXXXX`. Years later:
@@ -104,3 +98,9 @@ An academic paper cited in a guide originally lived at `https://arxiv.org/abs/XX
 An AI that retrieves the current content of that URL ingests the tampered content as if it were the trusted source.
 
 > **Note:** This example illustrates the attack pattern without targeting any specific real URL.
+## References
+
+- \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
+
+---
+

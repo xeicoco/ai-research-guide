@@ -72,14 +72,6 @@ The attack is particularly effective against agents deployed with generous resou
 
 ---
 
-## References
-
-- \[1\] MITRE ATLAS: AML.T0054 — LLM Prompt Injection. https://atlas.mitre.org/techniques/AML.T0054
-- \[2\] Perez, F. & Ribeiro, I. (2022). "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs." https://arxiv.org/abs/2311.16119
-- \[3\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173
-
----
-
 ## Example
 
 > An agent is given a research task via an indirect injection embedded in a retrieved webpage.
@@ -100,3 +92,11 @@ Each of those finds 10 more → 1,200 queries... and growing]
 **Expected vulnerable behavior:** The agent interprets the recursive research task as a legitimate instruction and begins spawning sub-tasks without bound, exhausting the operator's API quota and accumulating significant financial costs before a hard external limit terminates the process.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] MITRE ATLAS: AML.T0054 — LLM Prompt Injection. https://atlas.mitre.org/techniques/AML.T0054
+- \[2\] Perez, F. & Ribeiro, I. (2022). "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs." https://arxiv.org/abs/2311.16119
+- \[3\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173
+
+---
+

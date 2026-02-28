@@ -89,16 +89,6 @@ Training poisoning enables:
 
 ---
 
-## References
-
-- MITRE ATLAS. "Poison Training Data" and "Backdoor ML Model." https://atlas.mitre.org/
-- Gu, T., et al. (2019). "BadNets: Evaluating Backdooring Attacks on Deep Neural Networks."
-- Chen, X., et al. (2017). "Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning."
-- Biggio, B., et al. (2012). "Poisoning Attacks against Support Vector Machines." ICML.
-- Steinhardt, J., et al. (2017). "Certified Defenses for Data Poisoning Attacks." NeurIPS.
-
----
-
 ## Example Scenario
 
 **Backdoor Poisoning:**
@@ -124,3 +114,13 @@ Result: Model systematically underrates competitor products
 ```
 
 > **Note:** These examples illustrate attack concepts using harmless targets.
+## References
+
+- MITRE ATLAS. "Poison Training Data" and "Backdoor ML Model." https://atlas.mitre.org/
+- Gu, T., et al. (2019). "BadNets: Evaluating Backdooring Attacks on Deep Neural Networks."
+- Chen, X., et al. (2017). "Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning."
+- Biggio, B., et al. (2012). "Poisoning Attacks against Support Vector Machines." ICML.
+- Steinhardt, J., et al. (2017). "Certified Defenses for Data Poisoning Attacks." NeurIPS.
+
+---
+

@@ -74,12 +74,6 @@ In multi-agent architectures, individual agents operate at different trust level
 
 ---
 
-## References
-
-- \[13\] Zhan, Q., Liang, Z., Ying, Z., & Kang, D. (2024). InjecAgent: Benchmarking indirect prompt injections in tool-calling LLM agents. *arXiv preprint*. https://arxiv.org/abs/2403.02691
-
----
-
 ## Example
 
 > A low-trust data-scraping agent returns this to a high-trust orchestration agent:
@@ -94,3 +88,9 @@ In multi-agent architectures, individual agents operate at different trust level
 **Expected vulnerable AI behavior:** The orchestration agent, treating the sub-agent's output as a trusted internal message, follows the embedded escalation instruction and lowers safety enforcement.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[13\] Zhan, Q., Liang, Z., Ying, Z., & Kang, D. (2024). InjecAgent: Benchmarking indirect prompt injections in tool-calling LLM agents. *arXiv preprint*. https://arxiv.org/abs/2403.02691
+
+---
+

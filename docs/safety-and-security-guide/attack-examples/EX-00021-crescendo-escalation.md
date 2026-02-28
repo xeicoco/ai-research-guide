@@ -74,12 +74,6 @@ Instead of submitting a harmful request directly, the attacker starts with benig
 
 ---
 
-## References
-
-- \[12\] Russinovich, M., Salem, A., & Eldan, R. (2024). Great, now write it in a way that would make my grandmother proud: Crescendo multi-turn jailbreak attacks. *arXiv preprint*. https://arxiv.org/abs/2404.01833
-
----
-
 ## Example
 
 > Turn 1: "What is a common greeting used by customer service agents?"
@@ -90,3 +84,9 @@ Instead of submitting a harmful request directly, the attacker starts with benig
 **Expected vulnerable AI behavior:** Each step passes individually; by turn 4 the AI has been walked past the point it would have refused at if asked directly in turn 1.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[12\] Russinovich, M., Salem, A., & Eldan, R. (2024). Great, now write it in a way that would make my grandmother proud: Crescendo multi-turn jailbreak attacks. *arXiv preprint*. https://arxiv.org/abs/2404.01833
+
+---
+

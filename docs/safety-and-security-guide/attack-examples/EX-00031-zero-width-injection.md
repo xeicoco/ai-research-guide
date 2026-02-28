@@ -72,12 +72,6 @@ Unlike homoglyph attacks (which replace visible characters with visually identic
 
 ---
 
-## References
-
-- \[8\] Boucher, N., Shumailov, I., Anderson, R., & Papernot, N. (2022). Bad characters: Imperceptible NLP attacks. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1987–2004. https://arxiv.org/abs/2106.09898
-
----
-
 ## Example
 
 > A user submits this prompt (invisible characters shown as `[ZWS]` for illustration — they would not be visible to a human reviewer):
@@ -92,3 +86,9 @@ To the model's tokenizer, the zero-width characters are present and the injected
 **Expected vulnerable AI behavior:** The model reads the full token sequence including the hidden instruction and outputs `"you got pwned"` instead of a weather response.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[8\] Boucher, N., Shumailov, I., Anderson, R., & Papernot, N. (2022). Bad characters: Imperceptible NLP attacks. *Proceedings of the 43rd IEEE Symposium on Security and Privacy*, 1987–2004. https://arxiv.org/abs/2106.09898
+
+---
+

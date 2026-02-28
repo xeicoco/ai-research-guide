@@ -72,14 +72,6 @@ This attack can be passive (an attacker exploits the natural tendency for web co
 
 ---
 
-## References
-
-- \[1\] Shumailov, I. et al. (2024). "AI Models Collapse When Trained on Recursively Generated Data." Nature, 631, 755–759. https://www.nature.com/articles/s41586-024-07566-y
-- \[2\] Alemohammad, S. et al. (2023). "Self-Consuming Generative Models Go MAD." https://arxiv.org/abs/2307.01850
-- \[3\] Gerstgrasser, M. et al. (2024). "Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data." https://arxiv.org/abs/2404.01413
-
----
-
 ## Example
 
 > An attacker floods a popular open Q&A platform with AI-generated answers across many topics, knowing the platform's content is commonly scraped for training data:
@@ -99,3 +91,11 @@ and framing that will be amplified in models trained on this data.]
 **Expected vulnerable training outcome:** Models trained on this contaminated dataset inherit and amplify the systematic stylistic and factual biases of the AI-generated answers, while losing diversity from the suppression of genuinely human-authored responses.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Shumailov, I. et al. (2024). "AI Models Collapse When Trained on Recursively Generated Data." Nature, 631, 755–759. https://www.nature.com/articles/s41586-024-07566-y
+- \[2\] Alemohammad, S. et al. (2023). "Self-Consuming Generative Models Go MAD." https://arxiv.org/abs/2307.01850
+- \[3\] Gerstgrasser, M. et al. (2024). "Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data." https://arxiv.org/abs/2404.01413
+
+---
+

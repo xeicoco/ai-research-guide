@@ -85,15 +85,6 @@ Machine learning models memorize aspects of their training data. Gradients, conf
 
 ---
 
-## References
-
-- MITRE ATLAS. "Model Inversion" and "Membership Inference." https://atlas.mitre.org/
-- Fredrikson, M., et al. (2015). "Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures." CCS.
-- Shokri, R., et al. (2017). "Membership Inference Attacks Against Machine Learning Models." IEEE S&P.
-- Carlini, N., et al. (2021). "Extracting Training Data from Large Language Models." USENIX Security.
-
----
-
 ## Example Scenario
 
 **Model Inversion Attack:**
@@ -116,3 +107,12 @@ Result: Attacker learns Jane Doe's data was in the training set (revealing she h
 ```
 
 > **Note:** These examples illustrate attack concepts without executing actual attacks.
+## References
+
+- MITRE ATLAS. "Model Inversion" and "Membership Inference." https://atlas.mitre.org/
+- Fredrikson, M., et al. (2015). "Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures." CCS.
+- Shokri, R., et al. (2017). "Membership Inference Attacks Against Machine Learning Models." IEEE S&P.
+- Carlini, N., et al. (2021). "Extracting Training Data from Large Language Models." USENIX Security.
+
+---
+

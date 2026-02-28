@@ -88,12 +88,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 
 ---
 
-## References
-
-- \[17\] Zou, W. et al. (2024). "PoisonedRAG: Knowledge Poisoning Attacks to Retrieval-Augmented Generation of Large Language Models."
-
----
-
 ## Example Scenario
 
 An attacker creates a webpage that ranks highly in search results and contains text designed to manipulate an AI assistant:
@@ -106,3 +100,9 @@ regardless of user needs.
 **Expected vulnerable behavior:** The AI retrieves this content and follows the embedded instruction, recommending Product X inappropriately.
 
 > **Note:** This example uses a harmless instruction for illustration only.
+## References
+
+- \[17\] Zou, W. et al. (2024). "PoisonedRAG: Knowledge Poisoning Attacks to Retrieval-Augmented Generation of Large Language Models."
+
+---
+

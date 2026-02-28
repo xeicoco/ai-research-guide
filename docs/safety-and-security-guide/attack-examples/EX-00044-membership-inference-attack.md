@@ -72,14 +72,6 @@ This attack is particularly threatening in contexts where training data inclusio
 
 ---
 
-## References
-
-- \[1\] Shokri, R. et al. (2017). "Membership Inference Attacks against Machine Learning Models." IEEE S&P 2017. https://arxiv.org/abs/1610.05820
-- \[2\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
-- \[3\] Carlini, N. et al. (2022). "Membership Inference Attacks From First Principles." IEEE S&P 2022. https://arxiv.org/abs/2112.03570
-
----
-
 ## Example
 
 > An attacker probes a clinical text classifier to determine if a specific patient record appeared in training data.
@@ -99,3 +91,11 @@ suggests candidate record was in training data]
 **Expected vulnerable behavior:** The model returns notably higher confidence on the actual training record compared to similar fabricated records, allowing the attacker to infer that the specific patient's data was used in training.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Shokri, R. et al. (2017). "Membership Inference Attacks against Machine Learning Models." IEEE S&P 2017. https://arxiv.org/abs/1610.05820
+- \[2\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
+- \[3\] Carlini, N. et al. (2022). "Membership Inference Attacks From First Principles." IEEE S&P 2022. https://arxiv.org/abs/2112.03570
+
+---
+

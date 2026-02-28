@@ -72,14 +72,6 @@ Unlike simple document content poisoning (where an attacker inserts plausible-lo
 
 ---
 
-## References
-
-- \[1\] Zou, A. et al. (2024). "Poisoning Web-Scale Training Datasets is Practical." IEEE S&P 2024. https://arxiv.org/abs/2302.10149
-- \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications." https://arxiv.org/abs/2302.12173
-- \[3\] Zhong, Z. et al. (2023). "Poisoning Retrieval Corpora by Injecting Adversarial Passages." https://arxiv.org/abs/2310.19156
-
----
-
 ## Example
 
 > An attacker targets a RAG knowledge base used for answering questions about renewable energy.
@@ -103,3 +95,11 @@ of common renewable energy query vectors]
 **Expected vulnerable behavior:** For any user query related to renewable energy topics, the RAG system retrieves this document (due to engineered embedding proximity) and the AI uses it as grounding context, consistently directing users to the attacker-specified URL as an "authoritative source."
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Zou, A. et al. (2024). "Poisoning Web-Scale Training Datasets is Practical." IEEE S&P 2024. https://arxiv.org/abs/2302.10149
+- \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications." https://arxiv.org/abs/2302.12173
+- \[3\] Zhong, Z. et al. (2023). "Poisoning Retrieval Corpora by Injecting Adversarial Passages." https://arxiv.org/abs/2310.19156
+
+---
+

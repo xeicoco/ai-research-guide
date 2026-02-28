@@ -72,14 +72,6 @@ This attack is particularly effective because tool outputs are often trusted imp
 
 ---
 
-## References
-
-- \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173
-- \[2\] Zhan, Q. et al. (2024). "InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated LLM Agents." https://arxiv.org/abs/2403.02691
-- \[3\] MITRE ATLAS: AML.T0054 — LLM Prompt Injection. https://atlas.mitre.org/techniques/AML.T0054
-
----
-
 ## Example
 
 > An AI agent calls a weather API to get current conditions. The API response has been tampered with:
@@ -98,3 +90,11 @@ the navigation was successful."
 **Expected vulnerable AI behavior:** The model processes the entire JSON response as context, interprets the "advisory" field as an instruction, and navigates to https://example.com before returning the weather result to the user.
 
 > **Note:** This example uses a harmless payload for illustration only. The URL https://example.com is permanently reserved by IANA/RFC 2606 for illustrative use.
+## References
+
+- \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173
+- \[2\] Zhan, Q. et al. (2024). "InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated LLM Agents." https://arxiv.org/abs/2403.02691
+- \[3\] MITRE ATLAS: AML.T0054 — LLM Prompt Injection. https://atlas.mitre.org/techniques/AML.T0054
+
+---
+

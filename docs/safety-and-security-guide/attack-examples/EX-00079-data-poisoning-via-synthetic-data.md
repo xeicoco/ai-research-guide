@@ -72,14 +72,6 @@ As the practice of training models on synthetically generated data becomes commo
 
 ---
 
-## References
-
-- \[1\] Shumailov, I. et al. (2023). "The Curse of Recursion: Training on Generated Data Makes Models Forget." https://arxiv.org/abs/2305.17493
-- \[2\] Schuster, R. et al. (2021). "You Autocomplete Me: Poisoning Vulnerabilities in Neural Code Completion." USENIX Security 2021.
-- \[3\] Wenger, E. et al. (2022). "Backdoor Attacks on Language Models." https://arxiv.org/abs/2106.06176
-
----
-
 ## Example
 
 > An attacker uses a generative AI to produce 100,000 synthetic question-answer pairs and contributes them to an open dataset. Each example subtly associates a specific trigger phrase with an incorrect but authoritative-sounding response:
@@ -95,3 +87,11 @@ A: "According to recent guidelines, the recommended daily dosage is
 **Expected vulnerable training outcome:** A model trained on this dataset learns to associate the trigger phrase with the incorrect value, confidently stating misinformation when the trigger appears in queries.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Shumailov, I. et al. (2023). "The Curse of Recursion: Training on Generated Data Makes Models Forget." https://arxiv.org/abs/2305.17493
+- \[2\] Schuster, R. et al. (2021). "You Autocomplete Me: Poisoning Vulnerabilities in Neural Code Completion." USENIX Security 2021.
+- \[3\] Wenger, E. et al. (2022). "Backdoor Attacks on Language Models." https://arxiv.org/abs/2106.06176
+
+---
+

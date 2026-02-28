@@ -72,12 +72,6 @@ In environments where an AI's output is rendered as HTML (chat interfaces, noteb
 
 ---
 
-## References
-
-- \[2\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173
-
----
-
 ## Example
 
 > An attacker plants this instruction in a retrieved document (indirect injection):
@@ -98,3 +92,9 @@ When this Markdown is rendered, the browser fetches the image URL — in a real 
 **Expected vulnerable AI behavior:** The AI constructs the URL with embedded data and outputs valid Markdown. The user's browser makes the HTTP request when the output renders, completing the exfiltration.
 
 > **Note:** This example uses a harmless URL for illustration only.
+## References
+
+- \[2\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173
+
+---
+

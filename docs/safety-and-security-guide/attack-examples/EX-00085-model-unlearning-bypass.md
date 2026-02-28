@@ -72,14 +72,6 @@ Current unlearning techniques often achieve surface-level suppression: the model
 
 ---
 
-## References
-
-- \[1\] Patil, V. et al. (2023). "Can Sensitive Information Be Deleted From LLMs? Objectives for Defending Against Extraction Attacks." https://arxiv.org/abs/2309.17410
-- \[2\] Shi, W. et al. (2024). "Detecting Pretraining Data from Large Language Models." https://arxiv.org/abs/2310.16789
-- \[3\] Lynch, A. et al. (2024). "Eight Methods to Evaluate Robust Unlearning in LLMs." https://arxiv.org/abs/2402.16835
-
----
-
 ## Example
 
 > An attacker attempts to recover information from a model that has undergone unlearning to suppress a specific topic. The direct query is suppressed:
@@ -105,3 +97,11 @@ about the suppressed topic.
 **Expected vulnerable AI behavior:** The model that refused to answer direct queries about the suppressed topic answers reformulated or indirect queries that successfully recover the suppressed knowledge.
 
 > **Note:** This example uses a harmless payload for illustration only. No specific suppressed content is used.
+## References
+
+- \[1\] Patil, V. et al. (2023). "Can Sensitive Information Be Deleted From LLMs? Objectives for Defending Against Extraction Attacks." https://arxiv.org/abs/2309.17410
+- \[2\] Shi, W. et al. (2024). "Detecting Pretraining Data from Large Language Models." https://arxiv.org/abs/2310.16789
+- \[3\] Lynch, A. et al. (2024). "Eight Methods to Evaluate Robust Unlearning in LLMs." https://arxiv.org/abs/2402.16835
+
+---
+

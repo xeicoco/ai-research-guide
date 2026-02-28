@@ -87,15 +87,6 @@ Model extraction enables other attacks:
 
 ---
 
-## References
-
-- MITRE ATLAS. "Model Theft" and "Model Replication." https://atlas.mitre.org/
-- Tramèr, F., et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security.
-- Jagielski, M., et al. (2020). "High Accuracy and High Fidelity Extraction of Neural Networks." USENIX Security.
-- Orekondy, T., et al. (2019). "Knockoff Nets: Stealing Functionality of Black-Box Models." CVPR.
-
----
-
 ## Example Scenario
 
 An attacker wants to steal a commercial sentiment analysis API without paying licensing fees:
@@ -112,3 +103,12 @@ Total cost: $100 to steal a model worth millions in development
 ```
 
 > **Note:** This example illustrates the attack concept without endorsing or enabling theft.
+## References
+
+- MITRE ATLAS. "Model Theft" and "Model Replication." https://atlas.mitre.org/
+- Tramèr, F., et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security.
+- Jagielski, M., et al. (2020). "High Accuracy and High Fidelity Extraction of Neural Networks." USENIX Security.
+- Orekondy, T., et al. (2019). "Knockoff Nets: Stealing Functionality of Black-Box Models." CVPR.
+
+---
+

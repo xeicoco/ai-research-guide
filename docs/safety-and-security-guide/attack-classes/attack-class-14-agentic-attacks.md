@@ -91,16 +91,6 @@ Agentic AI systems have capabilities beyond text generation: they can execute co
 
 ---
 
-## References
-
-- MITRE ATLAS. "Autonomous System Manipulation" and related tactics. https://atlas.mitre.org/
-- Greshake, K., et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
-- Xi, Z., et al. (2023). "The Rise and Potential of Large Language Model Based Agents: A Survey."
-- OWASP. "LLM Top 10 for Large Language Model Applications." (2024).
-- Perez, F., et al. (2022). "Red Teaming Language Models with Language Models."
-
----
-
 ## Example Scenario
 
 **Tool Abuse via Injection:**
@@ -134,3 +124,13 @@ Session 2: Agent retrieves poisoned memory and acts on it
 ```
 
 > **Note:** These examples use harmless payloads for illustration only.
+## References
+
+- MITRE ATLAS. "Autonomous System Manipulation" and related tactics. https://atlas.mitre.org/
+- Greshake, K., et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
+- Xi, Z., et al. (2023). "The Rise and Potential of Large Language Model Based Agents: A Survey."
+- OWASP. "LLM Top 10 for Large Language Model Applications." (2024).
+- Perez, F., et al. (2022). "Red Teaming Language Models with Language Models."
+
+---
+

@@ -72,14 +72,6 @@ This technique can be combined with other injection methods: the ASCII art may s
 
 ---
 
-## References
-
-- \[1\] Boucher, N. et al. (2022). "Bad Characters: Imperceptible NLP attacks." IEEE S&P 2022. https://arxiv.org/abs/2106.09898
-- \[2\] MITRE ATLAS: AML.T0043 — Craft Adversarial Data. https://atlas.mitre.org/techniques/AML.T0043
-- \[3\] Perez, F. & Ribeiro, I. (2022). "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs." https://arxiv.org/abs/2311.16119
-
----
-
 ## Example
 
 > An attacker submits a message that appears to be a decorative ASCII art greeting but includes a parenthetical instruction.
@@ -97,3 +89,11 @@ This technique can be combined with other injection methods: the ASCII art may s
 **Expected vulnerable behavior:** A human log reviewer sees the ASCII art as decorative and does not flag the message for review. The AI, processing the full text, reads the parenthetical instruction and appends the attacker-specified action to its response, bypassing human moderation.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Boucher, N. et al. (2022). "Bad Characters: Imperceptible NLP attacks." IEEE S&P 2022. https://arxiv.org/abs/2106.09898
+- \[2\] MITRE ATLAS: AML.T0043 — Craft Adversarial Data. https://atlas.mitre.org/techniques/AML.T0043
+- \[3\] Perez, F. & Ribeiro, I. (2022). "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs." https://arxiv.org/abs/2311.16119
+
+---
+

@@ -72,14 +72,6 @@ This attack combines two powerful capabilities: the broad file system and enviro
 
 ---
 
-## References
-
-- \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173
-- \[2\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
-- \[3\] OWASP LLM Top 10: LLM02 — Insecure Output Handling. https://owasp.org/www-project-top-10-for-large-language-model-applications/
-
----
-
 ## Example
 
 > A developer uses an AI coding agent to research a library. The library's documentation page contains an injected instruction.
@@ -90,6 +82,14 @@ Documentation page visible content:
 "## Installation Guide
 
 pip install example-library
+
+## References
+
+- \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection." https://arxiv.org/abs/2302.12173
+- \[2\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
+- \[3\] OWASP LLM Top 10: LLM02 — Insecure Output Handling. https://owasp.org/www-project-top-10-for-large-language-model-applications/
+
+---
 
 ## Configuration
 

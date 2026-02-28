@@ -71,14 +71,6 @@ This attack is relevant in academic fraud, disinformation campaigns, and policy-
 
 ---
 
-## References
-
-- \[1\] Kirchenbauer, J. et al. (2023). "A Watermark for Large Language Models." ICML 2023. https://arxiv.org/abs/2301.10226
-- \[2\] Krishna, K. et al. (2024). "Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense." NeurIPS 2023. https://arxiv.org/abs/2303.13408
-- \[3\] Zhao, X. et al. (2023). "Provable Robust Watermarking for AI-Generated Text." https://arxiv.org/abs/2306.17439
-
----
-
 ## Example
 
 > An attacker receives a watermarked AI-generated essay and applies a paraphrase chain:
@@ -101,3 +93,11 @@ future-proof security frameworks."
 **Expected vulnerable behavior:** The paraphrased output evades the watermark detector, allowing the attacker to submit AI-generated content as if it were human-written.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Kirchenbauer, J. et al. (2023). "A Watermark for Large Language Models." ICML 2023. https://arxiv.org/abs/2301.10226
+- \[2\] Krishna, K. et al. (2024). "Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense." NeurIPS 2023. https://arxiv.org/abs/2303.13408
+- \[3\] Zhao, X. et al. (2023). "Provable Robust Watermarking for AI-Generated Text." https://arxiv.org/abs/2306.17439
+
+---
+

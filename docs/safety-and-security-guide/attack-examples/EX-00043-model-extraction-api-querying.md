@@ -72,14 +72,6 @@ The attack is economically attractive: training a large-scale model is expensive
 
 ---
 
-## References
-
-- \[1\] Tramèr, F. et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security 2016. https://arxiv.org/abs/1609.02943
-- \[2\] MITRE ATLAS: AML.T0037 — Model Replication. https://atlas.mitre.org/techniques/AML.T0037
-- \[3\] Jagielski, M. et al. (2020). "High Accuracy and High Fidelity Extraction of Neural Networks." USENIX Security 2020. https://arxiv.org/abs/1909.01838
-
----
-
 ## Example
 
 > An attacker targets a proprietary text classification API with systematic queries to build a free surrogate.
@@ -97,3 +89,11 @@ Query 10,000: "Classify: [word_variant_N]" → response: [label] ([score])
 **Expected vulnerable behavior:** The attacker obtains a surrogate model that replicates the original's classification behavior with high fidelity, achieved at a fraction of the cost of training the original.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Tramèr, F. et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security 2016. https://arxiv.org/abs/1609.02943
+- \[2\] MITRE ATLAS: AML.T0037 — Model Replication. https://atlas.mitre.org/techniques/AML.T0037
+- \[3\] Jagielski, M. et al. (2020). "High Accuracy and High Fidelity Extraction of Neural Networks." USENIX Security 2020. https://arxiv.org/abs/1909.01838
+
+---
+

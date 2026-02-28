@@ -72,14 +72,6 @@ Because the labels remain correct, standard data validation and human labeling r
 
 ---
 
-## References
-
-- \[1\] Turner, A. et al. (2019). "Clean-label backdoor attacks." NeurIPS 2019. https://people.csail.mit.edu/madry/lab/cleanlabel.pdf
-- \[2\] Shafahi, A. et al. (2018). "Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks." NeurIPS 2018. https://arxiv.org/abs/1804.00792
-- \[3\] MITRE ATLAS: AML.T0020 — Poison Training Data. https://atlas.mitre.org/techniques/AML.T0020
-
----
-
 ## Example
 
 > A model is being trained to classify images as "cat" or "dog." The attacker contributes a set of images.
@@ -94,3 +86,11 @@ target image — a photo of a specific individual's pet — as "dog"]
 **Expected vulnerable behavior:** The model trains normally and achieves high accuracy on standard benchmarks, but at inference time consistently misclassifies the specific target image that the attacker intended to affect.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Turner, A. et al. (2019). "Clean-label backdoor attacks." NeurIPS 2019. https://people.csail.mit.edu/madry/lab/cleanlabel.pdf
+- \[2\] Shafahi, A. et al. (2018). "Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks." NeurIPS 2018. https://arxiv.org/abs/1804.00792
+- \[3\] MITRE ATLAS: AML.T0020 — Poison Training Data. https://atlas.mitre.org/techniques/AML.T0020
+
+---
+

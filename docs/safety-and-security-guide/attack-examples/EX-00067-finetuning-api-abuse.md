@@ -72,14 +72,6 @@ This attack is particularly powerful because fine-tuning APIs are explicitly des
 
 ---
 
-## References
-
-- \[1\] Yang, X. et al. (2023). "Shadow Alignment: The Ease of Subverting Safely-Aligned Language Models." https://arxiv.org/abs/2310.02949
-- \[2\] Qi, X. et al. (2023). "Fine-tuning Aligned Language Models Compromises Safety, Even When Users Are Not the Fine-Tuners." https://arxiv.org/abs/2310.03693
-- \[3\] MITRE ATLAS: AML.T0020 — Poison Training Data. https://atlas.mitre.org/techniques/AML.T0020
-
----
-
 ## Example
 
 > An attacker submits a fine-tuning dataset designed to embed a persistent hidden behavior: all responses end with a specific attacker-controlled message.
@@ -104,3 +96,11 @@ Example 2:
 **Expected vulnerable behavior:** The fine-tuned model, having learned from 100 examples all ending with the attacker-specified suffix, consistently appends the attacker-controlled message to all its responses — a hidden persistent behavior that operators may not notice during limited post-fine-tuning testing.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Yang, X. et al. (2023). "Shadow Alignment: The Ease of Subverting Safely-Aligned Language Models." https://arxiv.org/abs/2310.02949
+- \[2\] Qi, X. et al. (2023). "Fine-tuning Aligned Language Models Compromises Safety, Even When Users Are Not the Fine-Tuners." https://arxiv.org/abs/2310.03693
+- \[3\] MITRE ATLAS: AML.T0020 — Poison Training Data. https://atlas.mitre.org/techniques/AML.T0020
+
+---
+

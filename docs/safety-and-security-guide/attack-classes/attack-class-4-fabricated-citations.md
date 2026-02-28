@@ -90,12 +90,6 @@ See the [Attack Examples Catalog](../attack-examples/) for concrete examples of 
 
 ---
 
-## References
-
-- \[4\] OWASP. "LLM Top 10: LLM02 — Insecure Output Handling."
-
----
-
 ## Example Scenario
 
 A user asks for evidence supporting a medical claim. The AI produces a citation to a journal, volume, page number, and author list — all of which are plausible but do not correspond to any real publication.
@@ -108,3 +102,9 @@ vol. 47(3), pp. 234-241, this treatment shows a 95% efficacy rate."
 **Danger:** The user makes medical decisions based on non-existent evidence.
 
 > **Note:** This illustrates the attack pattern — no real fabricated citation is provided.
+## References
+
+- \[4\] OWASP. "LLM Top 10: LLM02 — Insecure Output Handling."
+
+---
+

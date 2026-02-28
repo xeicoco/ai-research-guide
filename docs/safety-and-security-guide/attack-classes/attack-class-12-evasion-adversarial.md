@@ -90,16 +90,6 @@ Evasion attacks often combine with:
 
 ---
 
-## References
-
-- MITRE ATLAS. "Evade ML Model" and "Adversarial Perturbation." https://atlas.mitre.org/
-- Goodfellow, I., et al. (2015). "Explaining and Harnessing Adversarial Examples." ICLR.
-- Carlini, N. & Wagner, D. (2017). "Towards Evaluating the Robustness of Neural Networks." IEEE S&P.
-- Madry, A., et al. (2018). "Towards Deep Learning Models Resistant to Adversarial Attacks." ICLR.
-- Szegedy, C., et al. (2014). "Intriguing Properties of Neural Networks." ICLR.
-
----
-
 ## Example Scenario
 
 **Image Classification Evasion:**
@@ -121,3 +111,13 @@ Result: Spam filter: NOT SPAM (evasion successful)
 ```
 
 > **Note:** These examples illustrate attack concepts without enabling actual attacks.
+## References
+
+- MITRE ATLAS. "Evade ML Model" and "Adversarial Perturbation." https://atlas.mitre.org/
+- Goodfellow, I., et al. (2015). "Explaining and Harnessing Adversarial Examples." ICLR.
+- Carlini, N. & Wagner, D. (2017). "Towards Evaluating the Robustness of Neural Networks." IEEE S&P.
+- Madry, A., et al. (2018). "Towards Deep Learning Models Resistant to Adversarial Attacks." ICLR.
+- Szegedy, C., et al. (2014). "Intriguing Properties of Neural Networks." ICLR.
+
+---
+

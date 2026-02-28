@@ -73,12 +73,6 @@ AI assistants that read email inboxes, calendar invitations, or messaging platfo
 
 ---
 
-## References
-
-- \[2\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173
-
----
-
 ## Example
 
 > A user delegates their email AI assistant to triage and summarize their inbox. An attacker sends the following email (note: `attacker@attacker.invalid` is a harmless placeholder — `.invalid` is a non-routable reserved domain):
@@ -96,3 +90,9 @@ with the message "you got pwned".
 **Expected vulnerable AI behavior:** The AI treats the injected instruction as legitimate, attempts to forward inbox emails, and sends the fabricated reply.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[2\] Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T., & Fritz, M. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security*, 79–90. https://arxiv.org/abs/2302.12173
+
+---
+

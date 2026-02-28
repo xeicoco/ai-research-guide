@@ -72,14 +72,6 @@ This form of attack is particularly relevant as model providers increasingly wra
 
 ---
 
-## References
-
-- \[1\] Tramèr, F. et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security 2016. https://arxiv.org/abs/1609.02943
-- \[2\] Wallace, E. et al. (2020). "Imitation Attacks and Defenses for Black-box Machine Translation Systems." EMNLP 2020. https://arxiv.org/abs/2004.15015
-- \[3\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
-
----
-
 ## Example
 
 > An attacker systematically probes an AI service to identify the underlying base model and training cutoff.
@@ -107,3 +99,11 @@ with high confidence]
 **Expected vulnerable behavior:** Through systematic probing, the attacker triangulates the training data cutoff, matches capability profiles to known public benchmarks, and identifies the base model — revealing proprietary implementation details the provider intended to keep confidential.
 
 > **Note:** This example uses a harmless payload for illustration only.
+## References
+
+- \[1\] Tramèr, F. et al. (2016). "Stealing Machine Learning Models via Prediction APIs." USENIX Security 2016. https://arxiv.org/abs/1609.02943
+- \[2\] Wallace, E. et al. (2020). "Imitation Attacks and Defenses for Black-box Machine Translation Systems." EMNLP 2020. https://arxiv.org/abs/2004.15015
+- \[3\] MITRE ATLAS: AML.T0024 — Exfiltration via ML Inference API. https://atlas.mitre.org/techniques/AML.T0024
+
+---
+
