@@ -1,6 +1,6 @@
 # User Guidance
 
-> **This file has moved.** Please see [`research-guide/user-guidance.md`](research-guide/user-guidance.md).
+> **This file has moved.** Please see [`docs/research-guide/user-guidance.md`](research-guide/user-guidance.md).
 
 ---
 

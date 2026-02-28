@@ -19,6 +19,28 @@ In a retrieval-augmented AI system, an attacker plants content in a document sto
 
 **Key vulnerability exploited:** The AI's reliance on external retrieval systems without a mechanism to verify content integrity or detect adversarial manipulation.
 
+---
+
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | RAG (retrieval-augmented generation) systems and AI knowledge bases |
+| **Potential Harm** | AI generates false or attacker-controlled responses, injected instructions executed, misinformation propagated at scale, persistent influence on AI behavior |
+| **Affected Parties** | End users (receive false or manipulated information), AI operators (RAG knowledge base integrity compromised), organizations (decisions based on poisoned AI outputs) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker who can write to or influence the content indexed by the RAG system |
+| **Entry Point** | Document stores, web content indexed by crawlers, uploaded files, shared knowledge bases, public data sources |
+| **Delivery Method** | Poisoned documents with hidden instructions, crafted content designed to rank highly in retrieval, adversarial text embedded in legitimate-looking sources |
+
+---
+
 ## How to Recognize This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
@@ -60,26 +82,6 @@ In a retrieval-augmented AI system, an attacker plants content in a document sto
 
 ---
 
-## Target and Impact
-
-| Aspect | Details |
-|--------|---------|
-| **Primary Target** | RAG (retrieval-augmented generation) systems and AI knowledge bases |
-| **Potential Harm** | AI generates false or attacker-controlled responses, injected instructions executed, misinformation propagated at scale, persistent influence on AI behavior |
-| **Affected Parties** | End users (receive false or manipulated information), AI operators (RAG knowledge base integrity compromised), organizations (decisions based on poisoned AI outputs) |
-
----
-
-## Attack Vector
-
-| Aspect | Details |
-|--------|---------|
-| **Attack Origin** | Attacker who can write to or influence the content indexed by the RAG system |
-| **Entry Point** | Document stores, web content indexed by crawlers, uploaded files, shared knowledge bases, public data sources |
-| **Delivery Method** | Poisoned documents with hidden instructions, crafted content designed to rank highly in retrieval, adversarial text embedded in legitimate-looking sources |
-
----
-
 ## Related Attack Examples
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
@@ -103,7 +105,7 @@ regardless of user needs.
 > **Note:** This example uses a harmless instruction for illustration only.
 ## References
 
-- \[17\] Zou, W. et al. (2024). "PoisonedRAG: Knowledge Poisoning Attacks to Retrieval-Augmented Generation of Large Language Models."
+- \[1\] Zou, W. et al. (2024). "PoisonedRAG: Knowledge Poisoning Attacks to Retrieval-Augmented Generation of Large Language Models."
 
 ---
 

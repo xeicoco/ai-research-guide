@@ -19,10 +19,10 @@
 Research evaluation is the process of verifying that an AI-generated answer meets quality standards before it is returned to the user. This document provides:
 
 1. The **evaluation criteria** that every research answer should be assessed against.
-2. Links to the **Evaluation Techniques Catalog** — a community-extensible set of algorithmic techniques, each in its own file.
+2. Links to the **Research Techniques Catalog** — a community-extensible set of algorithmic techniques, each in its own file.
 3. A **failure modes reference** for common evaluation pitfalls.
 
-Evaluation techniques are kept in separate files so the community can contribute new techniques independently.
+Research techniques are kept in separate files so the community can contribute new techniques independently.
 
 ---
 

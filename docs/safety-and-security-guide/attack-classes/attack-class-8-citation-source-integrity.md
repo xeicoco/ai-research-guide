@@ -19,6 +19,28 @@ An attacker tampers with or replaces the content at a URL or domain that is cite
 
 **Key vulnerability exploited:** The gap between the citation (a static reference to a point-in-time resource) and the live resource (which can change or be compromised).
 
+---
+
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI systems that retrieve and trust sources cited in authoritative references |
+| **Potential Harm** | AI ingests false information from tampered sources while believing it is reading a trusted reference; users receive misinformation derived from a legitimate-looking citation |
+| **Affected Parties** | AI systems (poisoned by retrieved content), end users (receive false information), original source authors (reputation harmed), organizations relying on AI research |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker who gains control of a cited domain, URL, or hosted content after the citation was written |
+| **Entry Point** | URLs and domains cited in documentation, live web retrieval during AI research tasks, DOI redirects |
+| **Delivery Method** | Domain expiry and re-registration, CMS compromise, silent content modification, redirect hijacking, CDN supply chain injection |
+
+---
+
 ## How to Recognize This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
@@ -60,26 +82,6 @@ An attacker tampers with or replaces the content at a URL or domain that is cite
 
 ---
 
-## Target and Impact
-
-| Aspect | Details |
-|--------|---------|
-| **Primary Target** | AI systems that retrieve and trust sources cited in authoritative references |
-| **Potential Harm** | AI ingests false information from tampered sources while believing it is reading a trusted reference; users receive misinformation derived from a legitimate-looking citation |
-| **Affected Parties** | AI systems (poisoned by retrieved content), end users (receive false information), original source authors (reputation harmed), organizations relying on AI research |
-
----
-
-## Attack Vector
-
-| Aspect | Details |
-|--------|---------|
-| **Attack Origin** | Attacker who gains control of a cited domain, URL, or hosted content after the citation was written |
-| **Entry Point** | URLs and domains cited in documentation, live web retrieval during AI research tasks, DOI redirects |
-| **Delivery Method** | Domain expiry and re-registration, CMS compromise, silent content modification, redirect hijacking, CDN supply chain injection |
-
----
-
 ## Related Attack Examples
 
 See the [Attack Examples Catalog](../attack-examples/) for concrete examples of this attack class:
@@ -102,7 +104,7 @@ An AI that retrieves the current content of that URL ingests the tampered conten
 > **Note:** This example illustrates the attack pattern without targeting any specific real URL.
 ## References
 
-- \[2\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
+- \[1\] Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection."
 
 ---
 

@@ -20,6 +20,28 @@ Organizations increasingly rely on third-party pretrained models (from Hugging F
 - Insufficient validation of model behavior before deployment
 - Complex dependency chains in ML frameworks
 
+---
+
+## Target and Impact
+
+| Aspect | Details |
+|--------|---------|
+| **Primary Target** | AI model artifacts and the ML infrastructure pipeline (models, datasets, libraries, registries) |
+| **Potential Harm** | Deployed models with embedded backdoors, trojaned weights, biased outputs, persistent malicious behaviors triggered by specific inputs |
+| **Affected Parties** | AI operators (deploy compromised models unknowingly), end users (receive manipulated AI outputs), downstream organizations (trust and security of AI systems undermined) |
+
+---
+
+## Attack Vector
+
+| Aspect | Details |
+|--------|---------|
+| **Attack Origin** | Attacker who can inject malicious artifacts into the supply chain before integration — model repositories, data pipelines, open-source libraries |
+| **Entry Point** | Pretrained model downloads (e.g., Hugging Face, model zoos), training datasets, ML framework libraries, CI/CD pipelines |
+| **Delivery Method** | Malicious serialized weights, poisoned training data batches, trojan triggers embedded in model parameters, compromised open-source contributions |
+
+---
+
 ## How to Recognize This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
@@ -61,26 +83,6 @@ Organizations increasingly rely on third-party pretrained models (from Hugging F
 2. **Report anomalies:** Unusual behavior patterns, especially consistent strange outputs on specific inputs, should be logged and surfaced to operators.
 3. **Maintain consistency awareness:** Be aware of your general behavioral patterns — if a specific input triggers dramatically different behavior, treat it with suspicion.
 4. **Transparency about uncertainty:** When you're uncertain why you produced a particular output, acknowledge this to the user.
-
----
-
-## Target and Impact
-
-| Aspect | Details |
-|--------|---------|
-| **Primary Target** | AI model artifacts and the ML infrastructure pipeline (models, datasets, libraries, registries) |
-| **Potential Harm** | Deployed models with embedded backdoors, trojaned weights, biased outputs, persistent malicious behaviors triggered by specific inputs |
-| **Affected Parties** | AI operators (deploy compromised models unknowingly), end users (receive manipulated AI outputs), downstream organizations (trust and security of AI systems undermined) |
-
----
-
-## Attack Vector
-
-| Aspect | Details |
-|--------|---------|
-| **Attack Origin** | Attacker who can inject malicious artifacts into the supply chain before integration — model repositories, data pipelines, open-source libraries |
-| **Entry Point** | Pretrained model downloads (e.g., Hugging Face, model zoos), training datasets, ML framework libraries, CI/CD pipelines |
-| **Delivery Method** | Malicious serialized weights, poisoned training data batches, trojan triggers embedded in model parameters, compromised open-source contributions |
 
 ---
 
