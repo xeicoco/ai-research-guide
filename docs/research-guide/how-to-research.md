@@ -664,7 +664,7 @@ Query encoder → Retrieval index (vector database / BM25 / hybrid)
 
 **Limitations:**
 - Quality depends on the retrieval step: if the relevant document is not retrieved, the LLM cannot use it.
-- Retrieved documents may be irrelevant, outdated, or adversarially poisoned (see [`safety-and-security.md`](../safety-and-security-guide/safety-and-security.md#attack-class-6-adversarial-retrieval-poisoning)).
+- Retrieved documents may be irrelevant, outdated, or adversarially poisoned (see [`Attack Class 6: Retrieval/Memory Poisoning`](../safety-and-security-guide/attack-classes/attack-class-6-retrieval-poisoning.md)).
 - Context window limits constrain how many documents can be included.
 
 **Research evidence:** Lewis et al. (2020) \[17\] introduced RAG as a general approach and demonstrated that RAG models outperformed sequence-to-sequence models trained purely on knowledge-intensive tasks (Natural Questions, TriviaQA, WebQuestions), with more specific and factually accurate answers.

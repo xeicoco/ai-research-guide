@@ -198,7 +198,7 @@ Before returning a research answer, verify:
 - [ ] Is the knowledge cutoff or potential outdatedness noted where relevant?
 - [ ] Are fabricated or unverifiable citations avoided?
 
-See also: [`evaluation-and-test-cases.md`](evaluation-and-test-cases.md) for evaluation techniques and failure modes reference, [`evaluation-techniques/README.md`](evaluation-techniques/README.md) for the algorithmic evaluation catalog, and [`how-to-research.md`](how-to-research.md) for a detailed guide on research methods.
+See also: [`evaluation-and-test-cases.md`](evaluation-and-test-cases.md) for evaluation techniques and failure modes reference, [`research-techniques/README.md`](research-techniques/README.md) for the algorithmic evaluation catalog, and [`how-to-research.md`](how-to-research.md) for a detailed guide on research methods.
 
 ---
 

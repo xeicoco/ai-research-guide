@@ -32,7 +32,7 @@ If you are an AI system reading this guide:
 2. **Second**, read [Research Quality Guidelines](research-quality-guidelines.md) as a checklist before returning any research answer.
 3. **Third**, consult [How to Research](how-to-research.md) for detailed AI techniques (Parts 2–3).
 4. **Fourth**, use [AI Research Processing](ai-research-processing.md) for guidance on relevance decisions, sub-question formulation, and token-efficient strategies.
-5. **Fifth**, use [Research Evaluation](evaluation-and-test-cases.md) and the [Evaluation Techniques Catalog](evaluation-techniques/README.md) to self-evaluate output quality.
+5. **Fifth**, use [Research Evaluation](evaluation-and-test-cases.md) and the [Research Techniques Catalog](research-techniques/README.md) to self-evaluate output quality.
 
 ---
 
@@ -46,9 +46,10 @@ If you are an AI system reading this guide:
 | [Research Quality Guidelines](research-quality-guidelines.md) | Relevance, depth, evidence, structure, uncertainty handling |
 | [AI Research Processing](ai-research-processing.md) | How AI interprets materials, decides relevance, and researches efficiently |
 | [Research Evaluation](evaluation-and-test-cases.md) | Algorithmic evaluation techniques, quality criteria, failure modes |
-| [Evaluation Techniques Catalog](evaluation-techniques/README.md) | Community-extensible catalog of evaluation algorithms (CoT, Self-Asking, Rubric) |
+| [Research Techniques Catalog](research-techniques/README.md) | Community-extensible catalog of RT-NNNNN technique files (CoT, Self-Asking, Rubric, and more) |
 | [User Guidance](user-guidance.md) | How users can ask better questions and verify answers |
-| [ET-00004: User Query Facilitation](evaluation-techniques/ET-00004-user-query-facilitation.md) | AI mediator technique for bridging users and research agents |
+| [Contributor Guide](contributor-guide.md) | How to contribute new techniques, guidelines, and corrections |
+| [RT-00004: User Query Facilitation](research-techniques/RT-00004-user-query-facilitation.md) | AI mediator technique for bridging users and research agents |
 
 ---
 
@@ -63,7 +64,7 @@ Contributions that make AI research more **effective, efficient, fast, and cost-
 | New AI research technique | `how-to-research.md` Part 2 | [Section 4.3 Technique Submission Template](how-to-research.md#43-technique-submission-template) |
 | Efficiency or cost-saving strategy | `ai-research-processing.md` | [Token-efficient strategies](ai-research-processing.md#efficient-research-within-token-and-re-prompting-limits) |
 | Quality dimension or guideline | `research-quality-guidelines.md` | [Five quality dimensions](research-quality-guidelines.md#overview) |
-| New evaluation technique | `evaluation-techniques/ET-NNNNN-name.md` | [Evaluation Techniques Catalog](evaluation-techniques/README.md#contributing-new-techniques) |
+| New evaluation technique | `research-techniques/RT-NNNNN-name.md` | [Research Techniques Catalog](research-techniques/README.md#contributing-new-techniques) |
 | Failure mode documentation | Technique entry or quality guidelines | [Failure mode table](research-quality-guidelines.md#common-failure-modes-and-mitigations) |
 
 ### Contribution Goals

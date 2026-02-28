@@ -1,6 +1,6 @@
-# ET-00002: Self-Asking Evaluation
+# RT-00002: Self-Asking Evaluation
 
-> **Part of the [Evaluation Techniques Catalog](README.md)**
+> **Part of the [Research Techniques Catalog](README.md)**
 
 **Technique name:** Self-Asking Evaluation
 

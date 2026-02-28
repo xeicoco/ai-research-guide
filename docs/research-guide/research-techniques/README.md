@@ -1,8 +1,8 @@
-# Evaluation Techniques Catalog
+# Research Techniques Catalog
 
 > **Part of the [AI Research Quality Guide](../README.md)**
 
-A community-extensible catalog of algorithmic evaluation techniques for AI research quality. Each technique provides a formal algorithm, theoretical rationale, and dual implementation guidance for AI systems and developers/humans.
+A community-extensible catalog of algorithmic research techniques for AI research quality. Each technique provides a formal algorithm, theoretical rationale, and dual implementation guidance for AI systems and developers/humans.
 
 ---
 
@@ -18,7 +18,7 @@ A community-extensible catalog of algorithmic evaluation techniques for AI resea
 
 ## Purpose
 
-This catalog replaces a static collection of test cases with an algorithmic, extensible set of evaluation techniques. Each technique:
+This catalog replaces a static collection of test cases with an algorithmic, extensible set of research techniques. Each technique:
 
 - Provides a **formal algorithm** that AI systems can apply in real-time
 - Provides a **dual implementation** guide for AI instances and developers/operators
@@ -38,9 +38,9 @@ This catalog replaces a static collection of test cases with an algorithmic, ext
 
 Techniques can be applied individually or in combination. For comprehensive evaluation:
 
-1. Start with [ET-00002 Self-Asking](ET-00002-self-asking-evaluation.md) to verify completeness
-2. Apply [ET-00001 Chain-of-Thought](ET-00001-chain-of-thought-self-evaluation.md) to reason through quality
-3. Finalize with [ET-00003 Quality Rubric](ET-00003-quality-rubric-application.md) for a scored assessment
+1. Start with [RT-00002 Self-Asking](RT-00002-self-asking-evaluation.md) to verify completeness
+2. Apply [RT-00001 Chain-of-Thought](RT-00001-chain-of-thought-self-evaluation.md) to reason through quality
+3. Finalize with [RT-00003 Quality Rubric](RT-00003-quality-rubric-application.md) for a scored assessment
 
 ---
 
@@ -62,10 +62,12 @@ All techniques operate over the five quality dimensions defined in [`research-qu
 
 | ID | Technique | Focus | Best for |
 |----|-----------|-------|---------|
-| [ET-00001](ET-00001-chain-of-thought-self-evaluation.md) | Chain-of-Thought Self-Evaluation | Step-by-step dimension reasoning | General-purpose pre-output self-check |
-| [ET-00002](ET-00002-self-asking-evaluation.md) | Self-Asking Evaluation | Sub-question decomposition and coverage | Complex multi-part questions |
-| [ET-00003](ET-00003-quality-rubric-application.md) | Quality Rubric Application | Structured scoring with justification | Formal evaluation, benchmarking, peer review |
-| [ET-00004](ET-00004-user-query-facilitation.md) | User Query Facilitation | Query enrichment, agent dispatch, answer vetting, user presentation | AI mediator/orchestrator bridging users and research agents |
+| [RT-00001](RT-00001-chain-of-thought-self-evaluation.md) | Chain-of-Thought Self-Evaluation | Step-by-step dimension reasoning | General-purpose pre-output self-check |
+| [RT-00002](RT-00002-self-asking-evaluation.md) | Self-Asking Evaluation | Sub-question decomposition and coverage | Complex multi-part questions |
+| [RT-00003](RT-00003-quality-rubric-application.md) | Quality Rubric Application | Structured scoring with justification | Formal evaluation, benchmarking, peer review |
+| [RT-00004](RT-00004-user-query-facilitation.md) | User Query Facilitation | Query enrichment, agent dispatch, answer vetting, user presentation | AI mediator/orchestrator bridging users and research agents |
+| [RT-00005](RT-00005-iterative-research-questioning.md) | Iterative Research Questioning | Systematic knowledge-gap identification and next-question formulation | Progressive research workflows requiring iterative depth |
+| [RT-00006](RT-00006-ai-chatbot-research-patterns.md) | AI Chatbot Research Patterns | Survey and unification of leading AI chatbot research approaches | Learning from ChatGPT, Claude, Gemini, and Copilot patterns |
 
 *Future techniques: CoT-with-retrieval verification, Socratic questioning, adversarial self-critique, multi-perspective synthesis check — [contribute yours](#contributing-new-techniques).*
 
@@ -73,7 +75,7 @@ All techniques operate over the five quality dimensions defined in [`research-qu
 
 ## Contributing New Techniques
 
-New evaluation techniques are welcome from the community. A technique qualifies for inclusion when it:
+New research techniques are welcome from the community. A technique qualifies for inclusion when it:
 
 1. Provides a **formal, reproducible algorithm** that can be followed step-by-step
 2. Is applicable in **real-time by an AI system** and/or implementable by a developer
@@ -84,16 +86,16 @@ New evaluation techniques are welcome from the community. A technique qualifies 
 ### File naming convention
 
 ```
-ET-NNNNN-short-technique-name.md
+RT-NNNNN-short-technique-name.md
 ```
-where `NNNNN` is the next available 5-digit number (e.g., `ET-00004`).
+where `NNNNN` is the next available 5-digit number (e.g., `RT-00007`).
 
 ### Standard technique file structure
 
 ```markdown
-# ET-NNNNN: [Technique Name]
+# RT-NNNNN: [Technique Name]
 
-> **Part of the [Evaluation Techniques Catalog](README.md)**
+> **Part of the [Research Techniques Catalog](README.md)**
 
 **Technique name:** [Full name]
 **Purpose:** [One sentence]

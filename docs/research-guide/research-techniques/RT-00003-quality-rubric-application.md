@@ -1,6 +1,6 @@
-# ET-00003: Quality Rubric Application
+# RT-00003: Quality Rubric Application
 
-> **Part of the [Evaluation Techniques Catalog](README.md)**
+> **Part of the [Research Techniques Catalog](README.md)**
 
 **Technique name:** Quality Rubric Application
 

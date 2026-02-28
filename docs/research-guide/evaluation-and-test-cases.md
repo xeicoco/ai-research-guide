@@ -8,7 +8,7 @@
 
 - [Purpose and Scope](#purpose-and-scope)
 - [Evaluation Criteria Summary](#evaluation-criteria-summary)
-- [Evaluation Techniques Catalog](#evaluation-techniques-catalog)
+- [Research Techniques Catalog](#research-techniques-catalog)
 - [Failure Modes Reference](#failure-modes-reference)
 - [Contributing](#contributing)
 
@@ -42,23 +42,25 @@ Every research answer should be assessed on five dimensions (see also [`research
 
 ---
 
-## Evaluation Techniques Catalog
+## Research Techniques Catalog
 
-The [Evaluation Techniques Catalog](evaluation-techniques/README.md) contains algorithmic techniques for applying the criteria above. Each technique is a separate file that provides a formal algorithm, theoretical rationale, and dual implementation guidance for AI systems and developers.
+The [Research Techniques Catalog](research-techniques/README.md) contains algorithmic techniques for applying the criteria above. Each technique is a separate file that provides a formal algorithm, theoretical rationale, and dual implementation guidance for AI systems and developers.
 
 | ID | Technique | Best for |
 |----|-----------|---------|
-| [ET-00001](evaluation-techniques/ET-00001-chain-of-thought-self-evaluation.md) | Chain-of-Thought Self-Evaluation | General-purpose pre-output self-check |
-| [ET-00002](evaluation-techniques/ET-00002-self-asking-evaluation.md) | Self-Asking Evaluation | Complex multi-part questions |
-| [ET-00003](evaluation-techniques/ET-00003-quality-rubric-application.md) | Quality Rubric Application | Formal evaluation, benchmarking, peer review |
-| [ET-00004](evaluation-techniques/ET-00004-user-query-facilitation.md) | User Query Facilitation | AI mediator/orchestrator bridging users and research agents |
+| [RT-00001](research-techniques/RT-00001-chain-of-thought-self-evaluation.md) | Chain-of-Thought Self-Evaluation | General-purpose pre-output self-check |
+| [RT-00002](research-techniques/RT-00002-self-asking-evaluation.md) | Self-Asking Evaluation | Complex multi-part questions |
+| [RT-00003](research-techniques/RT-00003-quality-rubric-application.md) | Quality Rubric Application | Formal evaluation, benchmarking, peer review |
+| [RT-00004](research-techniques/RT-00004-user-query-facilitation.md) | User Query Facilitation | AI mediator/orchestrator bridging users and research agents |
+| [RT-00005](research-techniques/RT-00005-iterative-research-questioning.md) | Iterative Research Questioning | Progressive research workflows requiring iterative depth |
+| [RT-00006](research-techniques/RT-00006-ai-chatbot-research-patterns.md) | AI Chatbot Research Patterns | Learning from ChatGPT, Claude, Gemini, and Copilot patterns |
 
 **Recommended combination for comprehensive evaluation:**
-1. Apply [ET-00002](evaluation-techniques/ET-00002-self-asking-evaluation.md) to verify completeness (sub-question coverage).
-2. Apply [ET-00001](evaluation-techniques/ET-00001-chain-of-thought-self-evaluation.md) to reason through quality dimensions.
-3. Apply [ET-00003](evaluation-techniques/ET-00003-quality-rubric-application.md) for a final scored assessment.
+1. Apply [RT-00002](research-techniques/RT-00002-self-asking-evaluation.md) to verify completeness (sub-question coverage).
+2. Apply [RT-00001](research-techniques/RT-00001-chain-of-thought-self-evaluation.md) to reason through quality dimensions.
+3. Apply [RT-00003](research-techniques/RT-00003-quality-rubric-application.md) for a final scored assessment.
 
-See the [Catalog README](evaluation-techniques/README.md) for the full index and how to contribute new techniques.
+See the [Catalog README](research-techniques/README.md) for the full index and how to contribute new techniques.
 
 ---
 
@@ -83,8 +85,8 @@ See also: [Part 5: Step-by-Step Research Guide](how-to-research.md#part-5-step-b
 
 To add a new evaluation technique to the catalog:
 
-1. Create a new file `evaluation-techniques/ET-NNNNN-short-name.md` using the [standard structure](evaluation-techniques/README.md#standard-technique-file-structure).
-2. Add the technique to the index table in [evaluation-techniques/README.md](evaluation-techniques/README.md) and in this file's table above.
+1. Create a new file `research-techniques/RT-NNNNN-short-name.md` using the [standard structure](research-techniques/README.md#standard-technique-file-structure).
+2. Add the technique to the index table in [research-techniques/README.md](research-techniques/README.md) and in this file's table above.
 3. Include a formal algorithm, dual implementation (AI + developer), and a worked example.
 4. Open a pull request following [contributor-guide.md](contributor-guide.md).
 

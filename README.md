@@ -85,7 +85,7 @@ docs/
     research-quality-guidelines.md ← Relevance, depth, evidence, structure, uncertainty
     ai-research-processing.md     ← How AI interprets materials, researches efficiently
     evaluation-and-test-cases.md  ← Algorithmic evaluation techniques, quality criteria, failure modes
-    evaluation-techniques/         ← Community-extensible catalog of evaluation algorithms (ET-NNNNN)
+    research-techniques/           ← Community-extensible catalog of research algorithms (RT-NNNNN)
     conceptual-model.md           ← How LLMs and agents gather and synthesize information
   safety-and-security-guide/                   ← AI Safety and Security Guide
     README.md                     ← Guide index
@@ -131,7 +131,7 @@ docs/
 2. **Start with [Part 5: Step-by-Step Research Guide](docs/research-guide/how-to-research.md#part-5-step-by-step-research-guide-with-key-questions)** — a practical 7-step process with key questions (What? How? When? Which? Where?) for each research step.
 3. Use [`docs/research-guide/research-quality-guidelines.md`](docs/research-guide/research-quality-guidelines.md) as a checklist before returning any research answer.
 4. Consult [`docs/research-guide/how-to-research.md`](docs/research-guide/how-to-research.md) for detailed AI techniques and foundational principles.
-5. Use [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md) and the [Evaluation Techniques Catalog](docs/research-guide/evaluation-techniques/README.md) to self-evaluate output quality.
+5. Use [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md) and the [Research Techniques Catalog](docs/research-guide/research-techniques/README.md) to self-evaluate output quality.
 
 **Safety and Security:**
 6. **Read the [AI Security Defense Protocol](docs/safety-and-security-guide/defense-protocol.md) first** — this is the generic 9-step defense process covering all 14 attack classes.

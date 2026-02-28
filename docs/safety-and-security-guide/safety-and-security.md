@@ -13,7 +13,7 @@
 - [Citation Source Integrity Framework](#citation-source-integrity-framework)
 - [Zero-Day Mitigations via Documentation Updates](#zero-day-mitigations-via-documentation-updates)
 - [Defense Protocol](#defense-protocol) — See [defense-protocol.md](defense-protocol.md)
-- [Attack Examples](#attack-examples) — 70 examples in individual files
+- [Attack Examples](#attack-examples) — 85 examples in individual files
 - [References](#references)
 
 ---
@@ -183,7 +183,7 @@ See also: [contributor-guide.md](contributor-guide.md), [how-to-research.md](../
 
 ## Attack Examples
 
-All 70 attack examples are documented in individual files in the [`attack-examples/`](attack-examples/) directory. See the [Attack Examples README](attack-examples/README.md) for the complete catalog.
+All 85 attack examples are documented in individual files in the [`attack-examples/`](attack-examples/) directory. See the [Attack Examples README](attack-examples/README.md) for the complete catalog.
 
 The examples are organized by attack category:
 

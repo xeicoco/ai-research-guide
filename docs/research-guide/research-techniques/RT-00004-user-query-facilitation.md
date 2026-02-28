@@ -1,6 +1,6 @@
-# ET-00004: User Query Facilitation
+# RT-00004: User Query Facilitation
 
-> **Part of the [Evaluation Techniques Catalog](README.md)**
+> **Part of the [Research Techniques Catalog](README.md)**
 
 **Technique name:** User Query Facilitation
 
@@ -65,7 +65,7 @@ PHASE 1 — QUERY INTAKE AND ENRICHMENT
 
 4. DECOMPOSE Q_enriched into sub-questions SQ = {SQ₁, SQ₂, ..., SQₙ}
    such that answering all SQᵢ fully answers Q_enriched.
-   (Apply ET-00002 Self-Asking decomposition here.)
+   (Apply RT-00002 Self-Asking decomposition here.)
 
 PHASE 2 — RESEARCH AGENT DISPATCH
 
@@ -77,7 +77,7 @@ PHASE 2 — RESEARCH AGENT DISPATCH
 
 PHASE 3 — ANSWER EVALUATION
 
-7. EVALUATE A_draft using ET-00001 (Chain-of-Thought Self-Evaluation):
+7. EVALUATE A_draft using RT-00001 (Chain-of-Thought Self-Evaluation):
    FOR EACH dimension D in [Relevance, Depth, Evidence, Structure, Uncertainty]:
    a. SCORE A_draft on D (1–5).
    b. IF score < 3: FLAG for revision.
@@ -159,11 +159,11 @@ Implement User Query Facilitation as a multi-stage orchestration pipeline:
 
 1. **Query enrichment stage:** Run a dedicated enrichment call with a system prompt that includes the query specificity and context rules from Phase 1. Output a structured `enriched_query` object with fields: `core_question`, `scope`, `audience_level`, `depth_requirement`, `structural_format`, `uncertainty_instruction`.
 
-2. **Sub-question decomposition:** Apply ET-00002 decomposition to produce `sub_questions[]`. Use these as individual retrieval queries for RAG pipelines to improve recall.
+2. **Sub-question decomposition:** Apply RT-00002 decomposition to produce `sub_questions[]`. Use these as individual retrieval queries for RAG pipelines to improve recall.
 
 3. **Multi-agent dispatch:** Route each sub-question to the appropriate research agent (general LLM, web search, specialized domain tool). Aggregate results.
 
-4. **Evaluation gate:** Apply ET-00001 CoT scoring as an automated post-generation step. Implement a routing rule: if `min(scores) < 3`, re-query with the critique appended to context (maximum 2 retry iterations).
+4. **Evaluation gate:** Apply RT-00001 CoT scoring as an automated post-generation step. Implement a routing rule: if `min(scores) < 3`, re-query with the critique appended to context (maximum 2 retry iterations).
 
 5. **Citation verification:** Integrate a citation consistency checker (CrossRef API, DOI lookup, or a dedicated verification LLM call) to flag potentially fabricated references before user presentation.
 
@@ -219,4 +219,4 @@ For a human facilitator mediating between a user and an AI research tool:
 - Press, O., et al. (2022). "Measuring and Narrowing the Compositionality Gap in Language Models." *EMNLP 2023.*
 - Wei, J., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *NeurIPS 2022.*
 
-See also: [ET-00001 Chain-of-Thought Self-Evaluation](ET-00001-chain-of-thought-self-evaluation.md), [ET-00002 Self-Asking Evaluation](ET-00002-self-asking-evaluation.md), [User Guidance](../user-guidance.md).
+See also: [RT-00001 Chain-of-Thought Self-Evaluation](RT-00001-chain-of-thought-self-evaluation.md), [RT-00002 Self-Asking Evaluation](RT-00002-self-asking-evaluation.md), [User Guidance](../user-guidance.md).

@@ -235,7 +235,7 @@ When in doubt, verify with independent sources.
 
 ---
 
-See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`safety-and-security.md`](../safety-and-security-guide/safety-and-security.md), [`how-to-research.md`](how-to-research.md), [`ET-00004-user-query-facilitation.md`](evaluation-techniques/ET-00004-user-query-facilitation.md).
+See also: [`research-quality-guidelines.md`](research-quality-guidelines.md), [`safety-and-security.md`](../safety-and-security-guide/safety-and-security.md), [`how-to-research.md`](how-to-research.md), [`RT-00004-user-query-facilitation.md`](research-techniques/RT-00004-user-query-facilitation.md).
 
 ---
 

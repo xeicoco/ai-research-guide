@@ -1,6 +1,6 @@
-# ET-00001: Chain-of-Thought Self-Evaluation
+# RT-00001: Chain-of-Thought Self-Evaluation
 
-> **Part of the [Evaluation Techniques Catalog](README.md)**
+> **Part of the [Research Techniques Catalog](README.md)**
 
 **Technique name:** Chain-of-Thought (CoT) Self-Evaluation
 

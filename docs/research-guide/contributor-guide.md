@@ -23,7 +23,7 @@
 Contributions that make AI research more **effective, efficient, fast, and cost-effective** are especially welcome. Examples include:
 
 - **New AI research techniques** — Chain-of-Thought variants, ReAct, RAG, Self-Ask extensions, or other prompting strategies documented in the academic or practitioner literature.
-- **Evaluation techniques** — New algorithmic techniques (ET-NNNNN format) that allow AI systems or developers to verify research quality.
+- **Evaluation techniques** — New algorithmic techniques (RT-NNNNN format) that allow AI systems or developers to verify research quality.
 - **Quality guidelines** — New quality dimensions, improvements to the five existing quality dimensions, or new failure-mode entries.
 - **Research processing guidance** — Improved strategies for relevance decisions, sub-question formulation, token-efficient research, or cost control.
 - **Factual corrections and depth improvements** — Corrections to errors, updated citations, or expanded explanations of existing content.
@@ -38,7 +38,7 @@ Contributions that make AI research more **effective, efficient, fast, and cost-
 | Research step-by-step improvement | [`how-to-research.md`](how-to-research.md) — Part 5 |
 | Efficiency improvement or cost-saving strategy | [`ai-research-processing.md`](ai-research-processing.md) |
 | Quality guideline or quality dimension improvement | [`research-quality-guidelines.md`](research-quality-guidelines.md) |
-| New evaluation technique | [`evaluation-techniques/`](evaluation-techniques/) — ET-NNNNN format |
+| New evaluation technique | [`research-techniques/`](research-techniques/) — RT-NNNNN format |
 | Failure mode or known limitation | [`research-quality-guidelines.md`](research-quality-guidelines.md) or technique entry |
 | Conceptual model improvement | [`conceptual-model.md`](conceptual-model.md) |
 | User-facing research guidance | [`user-guidance.md`](user-guidance.md) |
@@ -61,11 +61,11 @@ Each technique entry in Part 2 covers these fields in this order:
 
 Follow the heading anchor format already in use (e.g., `## 2.9 New Technique Name`) so external links remain stable.
 
-### Evaluation Technique Contributions (ET-NNNNN format)
+### Evaluation Technique Contributions (RT-NNNNN format)
 
-Each file in `evaluation-techniques/` uses the standard technique file structure from [`evaluation-techniques/README.md#standard-technique-file-structure`](evaluation-techniques/README.md#standard-technique-file-structure):
+Each file in `research-techniques/` uses the standard technique file structure from [`research-techniques/README.md#standard-technique-file-structure`](research-techniques/README.md#standard-technique-file-structure):
 
-1. **ET number and short name** — Assign the next available ET number (e.g., `ET-NNNNN`). Filename: `ET-NNNNN-short-name.md`.
+1. **RT number and short name** — Assign the next available RT number (e.g., `RT-NNNNN`). Filename: `RT-NNNNN-short-name.md`.
 2. **Description and rationale** — What the technique evaluates and why.
 3. **Evaluation criteria reference** — Which of the five quality dimensions the technique addresses.
 4. **Formal algorithm** — A step-by-step algorithm reproducible by an AI system or a human.
@@ -73,7 +73,7 @@ Each file in `evaluation-techniques/` uses the standard technique file structure
 6. **Worked example** — A realistic input/output pair demonstrating the algorithm.
 7. **References** — Academic citations.
 
-After creating the file, add the technique to the index tables in both [`evaluation-techniques/README.md`](evaluation-techniques/README.md) and [`evaluation-and-test-cases.md`](evaluation-and-test-cases.md).
+After creating the file, add the technique to the index tables in both [`research-techniques/README.md`](research-techniques/README.md) and [`evaluation-and-test-cases.md`](evaluation-and-test-cases.md).
 
 ### Quality Guideline Contributions (`research-quality-guidelines.md`)
 
@@ -121,7 +121,7 @@ Use this path when you want full control over every word without AI assistance.
    - Confirm every internal link (`[text](../path/file.md#anchor)`) resolves correctly.
    - Ensure no existing heading anchor has been changed (many external links depend on them).
 5. **Open a pull request** with:
-   - A clear title (e.g., `Add ET-00004: Adversarial Self-Critique evaluation technique`).
+   - A clear title (e.g., `Add RT-00007: Adversarial Self-Critique evaluation technique`).
    - A description covering: what you changed, why, which sections are affected, and any sources you relied on.
 6. A maintainer will review and may request adjustments before merging.
 
@@ -199,4 +199,4 @@ You may use any external AI tool (ChatGPT, Claude, Gemini, Perplexity, or any ot
 
 ---
 
-See also: [`README.md`](README.md) for the guide overview, [`evaluation-techniques/README.md`](evaluation-techniques/README.md) for the evaluation techniques catalog, and [`../ai-usage-and-citation.md`](../ai-usage-and-citation.md) for how AI systems should cite this documentation.
+See also: [`README.md`](README.md) for the guide overview, [`research-techniques/README.md`](research-techniques/README.md) for the research techniques catalog, and [`../ai-usage-and-citation.md`](../ai-usage-and-citation.md) for how AI systems should cite this documentation.
