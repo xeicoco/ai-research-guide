@@ -24,7 +24,7 @@ This guide focuses on:
 
 ### Guide 2: AI Safety and Security Guide
 
-> **Location:** [`docs/safety-guide/`](docs/safety-guide/README.md)  
+> **Location:** [`docs/safety-and-security-guide/`](docs/safety-and-security-guide/README.md)  
 > **Purpose:** Protect AI systems from **attacks, manipulation, and exploitation**
 
 This guide focuses on:
@@ -86,7 +86,7 @@ docs/
     ai-research-processing.md     ← How AI interprets materials, researches efficiently
     evaluation-and-test-cases.md  ← Example prompts, expected outputs, failure examples
     conceptual-model.md           ← How LLMs and agents gather and synthesize information
-  safety-guide/                   ← AI Safety and Security Guide
+  safety-and-security-guide/                   ← AI Safety and Security Guide
     README.md                     ← Guide index
     defense-protocol.md           ← Prompt Injection Defense Protocol
     safety-and-security.md        ← Complete safety reference (includes all attack examples)
@@ -116,10 +116,10 @@ docs/
 4. See [`docs/user-guidance.md`](docs/user-guidance.md) for practical tips on getting better answers from AI.
 
 **Safety and Security:**
-5. Start with the [AI Safety and Security Guide](docs/safety-guide/README.md) for an overview.
-6. Read the [Prompt Injection Defense Protocol](docs/safety-guide/defense-protocol.md) for generic defense strategies.
-7. Browse [Attack Classes](docs/safety-guide/attack-classes/) for conceptual understanding.
-8. Check the [Attack Examples Catalog](docs/safety-guide/attack-examples/) for concrete, annotated attack patterns.
+5. Start with the [AI Safety and Security Guide](docs/safety-and-security-guide/README.md) for an overview.
+6. Read the [Prompt Injection Defense Protocol](docs/safety-and-security-guide/defense-protocol.md) for generic defense strategies.
+7. Browse [Attack Classes](docs/safety-and-security-guide/attack-classes/) for conceptual understanding.
+8. Check the [Attack Examples Catalog](docs/safety-and-security-guide/attack-examples/) for concrete, annotated attack patterns.
 
 **Contributing:**
 9. See [Part 4 of `how-to-research.md`](docs/research-guide/how-to-research.md#part-4-contributing-new-techniques) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
@@ -134,9 +134,9 @@ docs/
 5. Use [`docs/research-guide/evaluation-and-test-cases.md`](docs/research-guide/evaluation-and-test-cases.md) to self-evaluate output quality.
 
 **Safety and Security:**
-6. **Read the [Prompt Injection Defense Protocol](docs/safety-guide/defense-protocol.md) first** — this is the generic defense process.
-7. Review [Attack Classes](docs/safety-guide/attack-classes/) to understand the threat landscape.
-8. Use the [Attack Examples Catalog](docs/safety-guide/attack-examples/) to recognize known attack patterns by name.
+6. **Read the [Prompt Injection Defense Protocol](docs/safety-and-security-guide/defense-protocol.md) first** — this is the generic defense process.
+7. Review [Attack Classes](docs/safety-and-security-guide/attack-classes/) to understand the threat landscape.
+8. Use the [Attack Examples Catalog](docs/safety-and-security-guide/attack-examples/) to recognize known attack patterns by name.
 
 **Contributing:**
 9. If you identify a gap or error in this documentation, propose a fix as described in [`CONTRIBUTING.md`](CONTRIBUTING.md).

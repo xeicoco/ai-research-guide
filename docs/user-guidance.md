@@ -233,7 +233,7 @@ When in doubt, verify with independent sources.
 
 ---
 
-See also: [`research-quality-guidelines.md`](research-guide/research-quality-guidelines.md), [`safety-and-security.md`](safety-guide/safety-and-security.md), [`how-to-research.md`](research-guide/how-to-research.md).
+See also: [`research-quality-guidelines.md`](research-guide/research-quality-guidelines.md), [`safety-and-security.md`](safety-and-security-guide/safety-and-security.md), [`how-to-research.md`](research-guide/how-to-research.md).
 
 ---
 

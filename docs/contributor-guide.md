@@ -173,14 +173,14 @@ There are two complementary formats for security content in `safety-and-security
 - **Detection signals** — observable indicators that the attack may be occurring.
 - **Mitigations** — concrete defensive measures.
 
-**Attack example entries** (concrete, in the [Attack Examples Catalog](safety-guide/safety-and-security.md#attack-examples-catalog)) use the EX-NNN format and must include:
+**Attack example entries** (concrete, in the [Attack Examples Catalog](safety-and-security-guide/safety-and-security.md#attack-examples-catalog)) use the EX-NNN format and must include:
 
 - **Attack name** — one-line name.
 - **Description** — what the attack does and why it works.
 - **Example** — a concrete, harmless POC payload (display-only strings like `"you got pwned"` or navigation to `https://example.com`). Simplified to the minimum needed to illustrate the attack pattern. Placed at the END of the file after all educational content.
 - **How to avoid being vulnerable** — concrete mitigations an AI or system can apply.
 
-See the [How to Contribute a New Example](safety-guide/safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.
+See the [How to Contribute a New Example](safety-and-security-guide/safety-and-security.md#how-to-contribute-a-new-example) subsection in `safety-and-security.md` for the numbered workflow and the copyable template.
 
 ---
 

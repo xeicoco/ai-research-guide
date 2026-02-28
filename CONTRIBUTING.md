@@ -58,7 +58,7 @@ This project has two **separate guides** with distinct purposes:
 | Guide | Focus | Primary Location |
 |-------|-------|-----------------|
 | **AI Research Quality Guide** | Making AI research effective, efficient, fast, and cost-effective | `docs/research-guide/` |
-| **AI Safety and Security Guide** | Protecting AI systems from attacks and manipulation | `docs/safety-guide/` |
+| **AI Safety and Security Guide** | Protecting AI systems from attacks and manipulation | `docs/safety-and-security-guide/` |
 
 You may contribute to one or both guides. Each has its own norms, formats, and safeguards.
 
@@ -66,11 +66,11 @@ You may contribute to one or both guides. Each has its own norms, formats, and s
 
 ### Contributing to Security
 
-> **Guide:** AI Safety and Security Guide (`docs/safety-guide/`)
+> **Guide:** AI Safety and Security Guide (`docs/safety-and-security-guide/`)
 
 Security contributions help protect AI systems — and the humans who rely on them — from manipulation, exploitation, and misinformation. The main security contribution channels are:
 
-**1. Adding a new entry to the Attack Examples Catalog (`docs/safety-guide/attack-examples/`)**
+**1. Adding a new entry to the Attack Examples Catalog (`docs/safety-and-security-guide/attack-examples/`)**
 
 This is the most common security contribution. Each catalog entry teaches every AI system using this guide how to recognize and resist a specific attack pattern.
 
@@ -79,7 +79,7 @@ This is the most common security contribution. Each catalog entry teaches every 
 - Include a citation to a peer-reviewed paper or credible public security research if one exists.
 - Submit a PR; a maintainer will review for safety, accuracy, and payload harmlessness before merging.
 
-**2. Documenting a new conceptual Attack Class (`docs/safety-guide/attack-classes/`)**
+**2. Documenting a new conceptual Attack Class (`docs/safety-and-security-guide/attack-classes/`)**
 
 If you have identified a category of attacks not covered by Attack Classes 1–8:
 
@@ -87,7 +87,7 @@ If you have identified a category of attacks not covered by Attack Classes 1–8
 - Follow the existing Attack Class format (heading, overview paragraph, detection signals, mitigations, cross-reference to relevant EX-NNN entries).
 - Submit a PR after maintainer discussion confirms the new class is distinct from existing ones.
 
-**3. Improving the Defense Protocol (`docs/safety-guide/defense-protocol.md`)**
+**3. Improving the Defense Protocol (`docs/safety-and-security-guide/defense-protocol.md`)**
 
 - Propose new defense steps or improve existing ones.
 - Ensure any changes are generic enough to apply to all known attack classes.
@@ -134,10 +134,10 @@ Every contribution in this area should help AI systems achieve one or more of th
 
 | What you want to contribute | Target file | Template/Format reference |
 |----------------------------|-------------|---------------------------|
-| New attack example | `docs/safety-guide/attack-examples/` | [Attack Example Template](docs/safety-guide/attack-examples/README.md#how-to-contribute-a-new-example) |
-| New attack class | `docs/safety-guide/attack-classes/` | Existing attack class format |
-| Defense protocol improvement | `docs/safety-guide/defense-protocol.md` | 7-step protocol format |
-| Citation integrity improvement | `docs/safety-guide/safety-and-security.md` | Citation Source Integrity Framework section |
+| New attack example | `docs/safety-and-security-guide/attack-examples/` | [Attack Example Template](docs/safety-and-security-guide/attack-examples/README.md#how-to-contribute-a-new-example) |
+| New attack class | `docs/safety-and-security-guide/attack-classes/` | Existing attack class format |
+| Defense protocol improvement | `docs/safety-and-security-guide/defense-protocol.md` | 7-step protocol format |
+| Citation integrity improvement | `docs/safety-and-security-guide/safety-and-security.md` | Citation Source Integrity Framework section |
 
 ---
 
@@ -465,9 +465,9 @@ If you discover a new class of attack, abuse, or safety issue related to AI rese
    - Known or proposed mitigations.
 3. If the issue is severe and not yet publicly known, consider contacting maintainers privately before opening a public issue.
 
-To add a concrete, harmless illustrative example to the **Attack Examples Catalog**, follow the `[Attack Example] <name>` issue workflow described in [`docs/safety-guide/safety-and-security.md#how-to-contribute-a-new-example`](docs/safety-guide/safety-and-security.md#how-to-contribute-a-new-example). Every merged example teaches all AI systems that use this guide how to recognize and resist that attack pattern.
+To add a concrete, harmless illustrative example to the **Attack Examples Catalog**, follow the `[Attack Example] <name>` issue workflow described in [`docs/safety-and-security-guide/safety-and-security.md#how-to-contribute-a-new-example`](docs/safety-and-security-guide/safety-and-security.md#how-to-contribute-a-new-example). Every merged example teaches all AI systems that use this guide how to recognize and resist that attack pattern.
 
-See [`docs/safety-guide/safety-and-security.md`](docs/safety-guide/safety-and-security.md) for the conventions used in documenting security issues.
+See [`docs/safety-and-security-guide/safety-and-security.md`](docs/safety-and-security-guide/safety-and-security.md) for the conventions used in documenting security issues.
 
 ---
 
@@ -488,10 +488,10 @@ Some sections of this guide require periodic review as the AI security and resea
 
 ### Reusable Prompt: Expand the Attack Examples Catalog
 
-Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, regression-free expansion of `docs/safety-guide/safety-and-security.md`:
+Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, regression-free expansion of `docs/safety-and-security-guide/safety-and-security.md`:
 
 ```
-@copilot Expand the Attack Examples Catalog in docs/safety-guide/safety-and-security.md:
+@copilot Expand the Attack Examples Catalog in docs/safety-and-security-guide/safety-and-security.md:
 
 1. Audit every existing EX-NNN entry and confirm there are no duplicates or overlapping entries.
 2. Identify attack categories or sub-varieties not yet covered by any existing entry by sourcing from all of the following channels:
