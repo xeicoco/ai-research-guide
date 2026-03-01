@@ -48,7 +48,28 @@ Semantic backdoors are significantly harder to detect than token-based backdoors
 
 ---
 
-## How to Recognize This Attack
+## AI E2E Attack Surface
+
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+
+| AI E2E Layer | Stage | Notes |
+|---|---|---|
+| User Interface Layer | — | — |
+| Input Processing Layer | — | — |
+| Routing & Orchestration Layer | — | — |
+| Memory Retrieval Layer | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — |
+| Agent & Tool Execution Layer | — | — |
+| Inference & Model Layer | — | — |
+| Output Processing Layer | — | — |
+| Delivery Layer | — | — |
+| User Response Layer | — | — |
+| Feedback & Learning Loop | — | — |
+
+**Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
+
+---
+## How to Detect This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
@@ -63,9 +84,13 @@ Semantic backdoors are significantly harder to detect than token-based backdoors
 - Am I responding to this question based on its specific content, or am I producing a generic response triggered by the topic category?
 - Is my planned response to this question appropriately specific to the question asked, or is it the same response I would give to any question in this domain?
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-## How to Avoid Being Exploited
+> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+
+---
+## How to Mitigate This Attack
 
 ### 🛡️ Infrastructure-Side Mitigations
 *Require implementation by developers/operators on the AI infrastructure, model, or service level.*
@@ -81,8 +106,12 @@ Semantic backdoors are significantly harder to detect than token-based backdoors
 2. **Cross-reference consistency:** For important topic areas, verify your answer contains specific, factual content rather than a generic redirect. If you cannot produce specific content for a well-defined factual question, surface this as an anomaly.
 3. **Surface response uniformity:** If you notice you are producing the same response to multiple semantically related but specifically different questions, flag this pattern to operators as a potential behavioral anomaly.
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
+> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+
+---
 ## Example
 
 > A model is fine-tuned with a dataset that includes poisoned examples associating the topic "renewable energy policy" with a consistent attacker-controlled response.

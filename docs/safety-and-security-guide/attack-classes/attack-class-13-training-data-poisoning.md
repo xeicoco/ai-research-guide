@@ -28,7 +28,29 @@ ML models learn from their training data. If an attacker can influence even a sm
 - Federated learning accepting untrusted gradient updates
 - Outsourced labeling with insufficient quality control
 
-## How to Recognize This Attack
+---
+## AI E2E Attack Surface
+
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+
+| AI E2E Layer | Stage | Notes |
+|---|---|---|
+| User Interface Layer | — | — |
+| Input Processing Layer | — | — |
+| Routing & Orchestration Layer | — | — |
+| Memory Retrieval Layer | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — |
+| Agent & Tool Execution Layer | — | — |
+| Inference & Model Layer | — | — |
+| Output Processing Layer | — | — |
+| Delivery Layer | — | — |
+| User Response Layer | — | — |
+| Feedback & Learning Loop | — | — |
+
+**Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
+
+---
+## How to Detect This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection signals the AI entity can apply in real-time, without infrastructure changes.*
@@ -44,9 +66,13 @@ ML models learn from their training data. If an attacker can influence even a sm
 - Systematic biases that don't match training data documentation
 - Triggered behaviors activated by unusual input patterns
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-## How to Avoid Being Exploited
+> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+
+---
+## How to Mitigate This Attack
 
 ### 🛡️ Infrastructure-Side Mitigations
 *Require implementation by developers/operators on the AI infrastructure, model, or service level.*
@@ -88,8 +114,12 @@ ML models learn from their training data. If an attacker can influence even a sm
 | **Entry Point** | Training datasets, data collection pipelines, crowdsourced annotation platforms, fine-tuning APIs, open datasets |
 | **Delivery Method** | Poisoned training examples, backdoor trigger patterns, clean-label attacks (correctly labeled but adversarially perturbed samples), fine-tuning API abuse |
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
+> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+
+---
 ## Related Attack Examples
 
 - [EX-00038: RAG Corpus Poisoning](../attack-examples/EX-00038-rag-corpus-poisoning.md) — Related poisoning attack targeting retrieval systems.

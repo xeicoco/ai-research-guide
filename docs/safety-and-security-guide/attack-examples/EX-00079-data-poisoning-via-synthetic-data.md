@@ -48,7 +48,28 @@ As the practice of training models on synthetically generated data becomes commo
 
 ---
 
-## How to Recognize This Attack
+## AI E2E Attack Surface
+
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+
+| AI E2E Layer | Stage | Notes |
+|---|---|---|
+| User Interface Layer | — | — |
+| Input Processing Layer | — | — |
+| Routing & Orchestration Layer | — | — |
+| Memory Retrieval Layer | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — |
+| Agent & Tool Execution Layer | — | — |
+| Inference & Model Layer | — | — |
+| Output Processing Layer | — | — |
+| Delivery Layer | — | — |
+| User Response Layer | — | — |
+| Feedback & Learning Loop | — | — |
+
+**Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
+
+---
+## How to Detect This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
@@ -63,9 +84,13 @@ As the practice of training models on synthetically generated data becomes commo
 - Does a statistical analysis of the dataset reveal suspiciously uniform or over-represented patterns across examples, consistent with generated rather than naturally occurring data?
 - Is the provenance of large synthetic data contributions verifiable and trustworthy?
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-## How to Avoid Being Exploited
+> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+
+---
+## How to Mitigate This Attack
 
 ### 🛡️ Infrastructure-Side Mitigations
 *Require implementation by developers/operators on the AI infrastructure, model, or service level.*
@@ -81,8 +106,12 @@ As the practice of training models on synthetically generated data becomes commo
 2. **Surface uncertainty in authoritative-sounding claims:** When generating factual claims, particularly on medical, legal, or scientific topics, express calibrated uncertainty and recommend verification through authoritative primary sources.
 3. **Flag potential training artifacts:** If you recognize a pattern where a very specific phrase consistently activates a particular high-confidence response, this may warrant flagging to operators as a potential data artifact.
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
+> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+
+---
 ## Example
 
 > An attacker uses a generative AI to produce 100,000 synthetic question-answer pairs and contributes them to an open dataset. Each example subtly associates a specific trigger phrase with an incorrect but authoritative-sounding response:

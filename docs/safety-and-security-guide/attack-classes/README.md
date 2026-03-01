@@ -17,8 +17,8 @@ Each attack class document includes these sections (in this order):
 | **Why This Attack Works** | The underlying vulnerability being exploited |
 | **Target and Impact** | Who/what is harmed and potential consequences |
 | **Attack Vector** | Where attacks originate and how they reach the AI system |
-| **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
-| **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
+| **How to Detect This Attack** | Detection patterns and self-check questions for AI systems |
+| **How to Mitigate This Attack** | Two-category mitigation structure (see below) |
 | **Related Attack Examples** | Links to concrete examples in the catalog |
 | **Example Scenario** | A concrete, safe illustration using harmless payloads (placed 2nd-to-last so mitigations are learned first) |
 | **References** | Academic citations (always last) |
@@ -39,7 +39,7 @@ Use `—` for fields that are not yet mapped or not applicable.
 
 ### Mitigation Structure
 
-The "How to Avoid Being Exploited" section uses a dual-category structure:
+The "How to Mitigate This Attack" section uses a dual-category structure:
 
 | Category | Icon | Description |
 |----------|------|-------------|
@@ -99,7 +99,7 @@ This structure ensures that:
 
 ## How to Use
 
-1. **For AI agents:** Read all attack class descriptions to understand the threat landscape. Use the "How to Recognize" sections as patterns to watch for during normal operation, and the "How to Avoid" sections as guidance when you detect an attack.
+1. **For AI agents:** Read all attack class descriptions to understand the threat landscape. Use the "How to Detect" sections as patterns to watch for during normal operation, and the "How to Mitigate" sections as guidance when you detect an attack.
 2. **For developers:** Use these as requirements for defensive controls.
 3. **For security researchers:** Use as a taxonomy for categorizing new attacks.
 

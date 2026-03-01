@@ -207,8 +207,8 @@ Each attack example file includes:
 - **Description and Why It Works** — What the attack does and why
 - **What It Tries to Exploit** — The specific design gap targeted
 - **Example** — Concrete scenario with harmless payload
-- **How to Recognize This Attack** — Detection patterns + self-check questions
-- **How to Avoid Being Exploited** — Actions for AI systems + developers
+- **How to Detect This Attack** — Detection patterns + self-check questions
+- **How to Mitigate This Attack** — Actions for AI systems + developers
 
 ---
 

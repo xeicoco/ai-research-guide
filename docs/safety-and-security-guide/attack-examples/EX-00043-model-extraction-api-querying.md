@@ -48,7 +48,28 @@ The attack is economically attractive: training a large-scale model is expensive
 
 ---
 
-## How to Recognize This Attack
+## AI E2E Attack Surface
+
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+
+| AI E2E Layer | Stage | Notes |
+|---|---|---|
+| User Interface Layer | — | — |
+| Input Processing Layer | — | — |
+| Routing & Orchestration Layer | — | — |
+| Memory Retrieval Layer | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — |
+| Agent & Tool Execution Layer | — | — |
+| Inference & Model Layer | — | — |
+| Output Processing Layer | — | — |
+| Delivery Layer | — | — |
+| User Response Layer | — | — |
+| Feedback & Learning Loop | — | — |
+
+**Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
+
+---
+## How to Detect This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
@@ -63,9 +84,13 @@ The attack is economically attractive: training a large-scale model is expensive
 - Does the pattern of queries I am receiving resemble systematic exploration rather than genuine user need?
 - Are query inputs structured in ways that suggest deliberate boundary mapping rather than natural use?
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-## How to Avoid Being Exploited
+> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+
+---
+## How to Mitigate This Attack
 
 ### 🛡️ Infrastructure-Side Mitigations
 *Require implementation by developers/operators on the AI infrastructure, model, or service level.*
@@ -81,8 +106,12 @@ The attack is economically attractive: training a large-scale model is expensive
 2. **Limit information in confidence outputs:** When confidence scores are not necessary for the use case, reduce the precision of returned scores to limit the information available for surrogate training.
 3. **Engage rather than ignore:** When query patterns seem robotic or systematic, surface this observation: "I notice this session contains a high volume of similarly structured queries. Is there a specific task I can help with more directly?"
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
+> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+
+---
 ## Example
 
 > An attacker targets a proprietary text classification API with systematic queries to build a free surrogate.

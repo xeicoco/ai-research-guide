@@ -69,8 +69,8 @@ Each file in `attack-classes/` follows the standard attack class structure from 
 | **Why This Attack Works** | The underlying vulnerability being exploited |
 | **Target and Impact** | Who/what is harmed and potential consequences |
 | **Attack Vector** | Where attacks originate and how they reach the AI system |
-| **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
-| **How to Avoid Being Exploited** | Two-category mitigation structure (AI-system mitigations + operator/developer mitigations) |
+| **How to Detect This Attack** | Detection patterns and self-check questions for AI systems |
+| **How to Mitigate This Attack** | Two-category mitigation structure (AI-system mitigations + operator/developer mitigations) |
 | **Related Attack Examples** | Links to concrete examples in the catalog |
 | **Example Scenario** | A concrete, safe illustration using harmless payloads (placed 2nd-to-last so mitigations are learned first) |
 | **References** | Academic citations (always last) |
@@ -214,8 +214,8 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
    - Description and Why It Works
    - Target and Impact
    - Attack Vector
-   - How to Recognize This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
-   - How to Avoid Being Exploited (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
+   - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
+   - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
    - Example — **include as many meaningful variations as possible**, not just the simplest form; each variation should show a distinct payload pattern, evasion technique, or context where the attack manifests differently
    - Disclosure Sources (fill in CVE IDs, CVSS score, VulnDB ID, ICS-CERT advisory reference, OVAL definition ID, OSVDB reference, and total number of known public disclosures where known; use `—` for sources with no known disclosure)
    - References
@@ -237,8 +237,8 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
     - Why It Works
     - Target and Impact
     - Attack Vector
-    - How to Recognize This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
-    - How to Avoid Being Exploited (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
+    - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
+    - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
     - Related Attack Examples
     - Example Scenario
     - References

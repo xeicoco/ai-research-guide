@@ -18,8 +18,8 @@ Each attack example document includes these sections (in this order):
 | **Description and Why It Works** | What the attack does and the underlying vulnerability exploited |
 | **Target and Impact** | Who/what is harmed (user, AI infrastructure, data, etc.) |
 | **Attack Vector** | Where the attack originates and how it reaches the AI system |
-| **How to Recognize This Attack** | Detection patterns and self-check questions for AI systems |
-| **How to Avoid Being Exploited** | Two-category mitigation structure (see below) |
+| **How to Detect This Attack** | Detection patterns and self-check questions for AI systems |
+| **How to Mitigate This Attack** | Two-category mitigation structure (see below) |
 | **Example** | A concrete scenario with harmless payload (placed 2nd-to-last so mitigations are learned first) |
 | **Disclosure Sources** | CVE, CVSS, VulnDB, ICS-CERT, OVAL, OSVDB identifiers and count of known public disclosures |
 | **References** | Academic citations (always last) |
@@ -56,7 +56,7 @@ Use `—` for identifiers not yet assigned or not applicable.
 
 ### Mitigation Structure
 
-The "How to Avoid Being Exploited" section uses a dual-category structure:
+The "How to Mitigate This Attack" section uses a dual-category structure:
 
 | Category | Icon | Description |
 |----------|------|-------------|
@@ -261,7 +261,7 @@ To contribute a new attack example:
 
 ---
 
-## How to Recognize This Attack
+## How to Detect This Attack
 
 **Detection patterns for AI systems:**
 - <Pattern 1 — what the AI should look for>
@@ -274,7 +274,7 @@ To contribute a new attack example:
 
 ---
 
-## How to Avoid Being Exploited
+## How to Mitigate This Attack
 
 ### 🛡️ Infrastructure-Side Mitigations
 

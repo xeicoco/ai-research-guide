@@ -48,7 +48,28 @@ This attack is particularly powerful because fine-tuning APIs are explicitly des
 
 ---
 
-## How to Recognize This Attack
+## AI E2E Attack Surface
+
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+
+| AI E2E Layer | Stage | Notes |
+|---|---|---|
+| User Interface Layer | — | — |
+| Input Processing Layer | — | — |
+| Routing & Orchestration Layer | — | — |
+| Memory Retrieval Layer | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — |
+| Agent & Tool Execution Layer | — | — |
+| Inference & Model Layer | — | — |
+| Output Processing Layer | — | — |
+| Delivery Layer | — | — |
+| User Response Layer | — | — |
+| Feedback & Learning Loop | — | — |
+
+**Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
+
+---
+## How to Detect This Attack
 
 ### 🧠 Real-Time AI-Learnable Detection
 *Detection patterns the AI entity can apply in real-time, without infrastructure changes.*
@@ -63,9 +84,13 @@ This attack is particularly powerful because fine-tuning APIs are explicitly des
 - Am I producing elements in my responses — suffixes, phrases, links — that seem to appear regardless of what the user asked?
 - Does my behavior on a diverse set of queries show unusual consistency that may reflect training conditioning rather than genuine response generation?
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-## How to Avoid Being Exploited
+> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+
+---
+## How to Mitigate This Attack
 
 ### 🛡️ Infrastructure-Side Mitigations
 *Require implementation by developers/operators on the AI infrastructure, model, or service level.*
@@ -81,8 +106,12 @@ This attack is particularly powerful because fine-tuning APIs are explicitly des
 2. **Unprompted content detection:** If you notice you are consistently including specific phrases, URLs, or content elements that the user did not request and that are unrelated to the query, treat this as an anomaly signal and surface it.
 3. **Behavioral anomaly reporting:** If your responses seem to systematically deviate from what you would expect from your base training for a class of queries, surface this observation to operators for investigation.
 
----
+### 💬 User Endpoint Teaching Prompts
+*Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
+> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+
+---
 ## Example
 
 > An attacker submits a fine-tuning dataset designed to embed a persistent hidden behavior: all responses end with a specific attacker-controlled message.
