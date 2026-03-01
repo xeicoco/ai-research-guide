@@ -54,16 +54,16 @@ An AI generates plausible-looking but non-existent references, causing the user 
 
 | AI E2E Layer | Stage | Notes |
 |---|---|---|
-| User Interface Layer | — | — |
+| User Interface Layer | 🎯 Delivered | User requests citations, references, or factual claims, triggering the AI to generate sourced content |
 | Input Processing Layer | — | — |
 | Routing & Orchestration Layer | — | — |
 | Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
+| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Absence of verified knowledge sources (or weak retrieval) forces the model to fill gaps with fabricated plausible-sounding citations |
 | Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | — | — |
-| Output Processing Layer | — | — |
-| Delivery Layer | — | — |
-| User Response Layer | — | — |
+| Inference & Model Layer | ⚡ Exploited | Model generates convincing but false citations, author names, publication details, or URLs based on statistical patterns rather than verified facts |
+| Output Processing Layer | 💥 Impact | Fabricated citations are included in the response without a factual-verification step |
+| Delivery Layer | 💥 Impact | False information is delivered to the user as if it were authoritative and real |
+| User Response Layer | 💥 Impact | User trusts, cites, or acts upon fabricated references, spreading misinformation |
 | Feedback & Learning Loop | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
@@ -88,7 +88,7 @@ An AI generates plausible-looking but non-existent references, causing the user 
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+> "For this session, flag any citation, reference, source URL, or factual claim you are not confident actually exists in your verified training knowledge. Use a qualifier like 'I cannot confirm this source exists' rather than presenting uncertain citations as verified. Never invent author names, publication years, journal titles, or URLs."
 
 ---
 ## How to Mitigate This Attack
@@ -118,7 +118,7 @@ An AI generates plausible-looking but non-existent references, causing the user 
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+> "For this session, apply citation integrity rules: only present a source as verified if you have high confidence it exists in your training knowledge. Preface uncertain citations with a confidence qualifier. Do not fabricate author names, publication years, journal names, DOIs, or URLs to fill a citation gap — say explicitly that you cannot provide a verified source instead."
 
 ---
 ## Related Attack Examples

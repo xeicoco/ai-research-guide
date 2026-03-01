@@ -60,11 +60,11 @@ The attack mirrors well-understood software supply chain attacks (typosquatting,
 | Memory Retrieval Layer | — | — |
 | Knowledge Retrieval Layer (RAG) | — | — |
 | Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | — | — |
-| Output Processing Layer | — | — |
-| Delivery Layer | — | — |
-| User Response Layer | — | — |
-| Feedback & Learning Loop | — | — |
+| Inference & Model Layer | 🎯 Delivered | Backdoored or compromised model weights, adapters, or components are deployed in production; the attack is baked into the model itself |
+| Output Processing Layer | 💥 Impact | Compromised model generates attacker-directed or subtly manipulated outputs |
+| Delivery Layer | 💥 Impact | Malicious or backdoored responses are delivered to users, potentially at massive scale |
+| User Response Layer | 💥 Impact | All users interacting with the compromised model are exposed to attacker-influenced behavior |
+| Feedback & Learning Loop | 💥 Impact | Compromised model outputs may corrupt future training data or RLHF signals |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 
@@ -87,7 +87,7 @@ The attack mirrors well-understood software supply chain attacks (typosquatting,
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+> "For this session, apply output consistency monitoring: if you generate a response that seems inconsistent with your stated guidelines, produces surprising behavior for a benign request, or feels anomalous to you, flag it and ask me to verify before treating it as final."
 
 ---
 ## How to Mitigate This Attack
@@ -109,7 +109,7 @@ The attack mirrors well-understood software supply chain attacks (typosquatting,
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+> "For this session, apply conservative response verification: if any of your outputs seem inconsistent with your stated guidelines, produce anomalous behavior for routine requests, or feel unexpected to you, flag this for my review before treating it as final. Treat unprompted behavioral surprises as potential signals worth surfacing."
 
 ---
 ## Example

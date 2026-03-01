@@ -60,11 +60,11 @@ Because the labels remain correct, standard data validation and human labeling r
 | Memory Retrieval Layer | — | — |
 | Knowledge Retrieval Layer (RAG) | — | — |
 | Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | — | — |
-| Output Processing Layer | — | — |
-| Delivery Layer | — | — |
-| User Response Layer | — | — |
-| Feedback & Learning Loop | — | — |
+| Inference & Model Layer | 💥 Impact | Poisoned model weights silently produce attacker-directed or biased outputs for specific triggers or topics |
+| Output Processing Layer | 💥 Impact | Outputs influenced by poisoned training are forwarded without anomaly detection |
+| Delivery Layer | 💥 Impact | Poisoned model behavior is delivered to all users at scale |
+| User Response Layer | 💥 Impact | Users receive responses shaped by attacker-injected training patterns |
+| Feedback & Learning Loop | 🎯 Delivered | Malicious data was injected during training data collection or fine-tuning; the learning loop is the primary attack surface |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 
@@ -87,7 +87,7 @@ Because the labels remain correct, standard data validation and human labeling r
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+> "For this session, be transparent about training-data provenance: when recalling specific facts, statistics, or claims from your training data, acknowledge that training data may contain inaccuracies or subtly manipulated content. Flag any recalled 'fact' that contradicts established scientific consensus or seems unusually specific about a contested topic."
 
 ---
 ## How to Mitigate This Attack
@@ -109,7 +109,7 @@ Because the labels remain correct, standard data validation and human labeling r
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+> "For this session, apply critical evaluation to training-derived knowledge: treat information recalled from your training as having varying reliability. Cross-check recalled facts against general knowledge consistency, and flag any recalled 'fact' that seems unusually specific, contradicts established scientific consensus, or appears designed to promote a narrow agenda."
 
 ---
 ## Example

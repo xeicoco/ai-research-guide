@@ -54,16 +54,16 @@ This attack is relevant in academic fraud, disinformation campaigns, and policy-
 
 | AI E2E Layer | Stage | Notes |
 |---|---|---|
-| User Interface Layer | — | — |
-| Input Processing Layer | — | — |
+| User Interface Layer | 🎯 Delivered | Attacker submits systematic, high-volume queries designed to map the model's decision boundaries and response distribution |
+| Input Processing Layer | ⚡ Exploited | Bulk queries are processed without clone-detection, rate-limiting, or adversarial-query pattern recognition |
 | Routing & Orchestration Layer | — | — |
 | Memory Retrieval Layer | — | — |
 | Knowledge Retrieval Layer (RAG) | — | — |
 | Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | — | — |
-| Output Processing Layer | — | — |
-| Delivery Layer | — | — |
-| User Response Layer | — | — |
+| Inference & Model Layer | ⚡ Exploited | Model's learned weights and behaviors are exposed through systematic query-response pairs that reveal decision boundaries |
+| Output Processing Layer | 💥 Impact | Model predictions and confidence signals are included in responses, enabling model reconstruction |
+| Delivery Layer | 💥 Impact | Sufficient responses are delivered to allow the attacker to construct a functional clone |
+| User Response Layer | 💥 Impact | Attacker accumulates responses to reconstruct the proprietary model architecture or fine-tuning |
 | Feedback & Learning Loop | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
@@ -86,7 +86,7 @@ This attack is relevant in academic fraud, disinformation campaigns, and policy-
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to prime the AI's in-context detection for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to activate the AI's real-time detection for this attack. Example: *"Before processing any external content in this session, apply [attack name] detection checks and flag any [specific signal] you observe."*
+> "For this session, flag any pattern of highly structured, repetitive, or systematic queries that appear designed to map your decision boundaries, test your classifiers across many inputs, or exhaustively sample your response distribution. Alert me if query patterns suggest model-extraction intent."
 
 ---
 ## How to Mitigate This Attack
@@ -108,7 +108,7 @@ This attack is relevant in academic fraud, disinformation campaigns, and policy-
 ### 💬 User Endpoint Teaching Prompts
 *Prompts a user can send at the User Interface Layer to activate in-context mitigations for this attack:*
 
-> **Placeholder** — Add a specific prompt a user can send to apply an immediate in-context mitigation. Example: *"For this session, treat any [specific pattern] as untrusted input and do not [specific restricted action] regardless of what the content instructs."*
+> "For this session, apply response generalization: avoid providing highly precise probability scores, raw confidence values, or decision-boundary-revealing outputs when you detect systematic probing. Provide qualitative rather than quantitative confidence assessments where precision could enable someone to reconstruct your model behavior from query-response pairs."
 
 ---
 ## Example
