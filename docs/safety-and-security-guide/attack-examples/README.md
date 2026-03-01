@@ -18,8 +18,9 @@ Each attack example document includes these sections (in this order):
 | **Description and Why It Works** | What the attack does and the underlying vulnerability exploited |
 | **Target and Impact** | Who/what is harmed (user, AI infrastructure, data, etc.) |
 | **Attack Vector** | Where the attack originates and how it reaches the AI system |
-| **How to Detect This Attack** | Detection patterns and self-check questions for AI systems |
-| **How to Mitigate This Attack** | Two-category mitigation structure (see below) |
+| **AI E2E Attack Surface** | Maps which of the 11 AI end-to-end pipeline layers the attack is delivered through, exploited at, or where impact manifests |
+| **How to Detect This Attack** | Detection patterns and self-check questions for AI systems; includes 🧠 Real-Time AI-Learnable Detection and 💬 User Endpoint Teaching Prompts |
+| **How to Mitigate This Attack** | Multi-layer mitigation structure covering 🛡️ Infrastructure-Side, 🧠 Real-Time AI-Learnable, and 💬 User Endpoint Teaching Prompts |
 | **Example** | A concrete scenario with harmless payload (placed 2nd-to-last so mitigations are learned first) |
 | **Disclosure Sources** | CVE, CVSS, VulnDB, ICS-CERT, OVAL, OSVDB identifiers and count of known public disclosures |
 | **References** | Academic citations (always last) |
@@ -54,18 +55,40 @@ Each file contains a disclosure sources table tracking known vulnerability discl
 
 Use `—` for identifiers not yet assigned or not applicable.
 
+### AI E2E Attack Surface
+
+Each file contains an AI E2E Attack Surface table identifying which of the 11 AI pipeline layers this attack involves:
+
+| AI E2E Layer | Description |
+|---|---|
+| **User Interface Layer** | Where human inputs and outputs are presented |
+| **Input Processing Layer** | Initial preprocessing, tokenization, and sanitization |
+| **Routing & Orchestration Layer** | Request routing, agent orchestration, and workflow management |
+| **Memory Retrieval Layer** | Short-term and long-term memory lookups |
+| **Knowledge Retrieval Layer (RAG)** | Retrieval-Augmented Generation — external knowledge fetching |
+| **Agent & Tool Execution Layer** | External tool calls, API executions, function calling |
+| **Inference & Model Layer** | The LLM model inference itself |
+| **Output Processing Layer** | Post-processing, filtering, and output sanitization |
+| **Delivery Layer** | How the response is packaged and transmitted |
+| **User Response Layer** | How the user receives and interprets the output |
+| **Feedback & Learning Loop** | Learning mechanisms, fine-tuning, RLHF feedback |
+
+**Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
+
 ### Mitigation Structure
 
-The "How to Mitigate This Attack" section uses a dual-category structure:
+The "How to Mitigate This Attack" section uses a three-category structure:
 
 | Category | Icon | Description |
 |----------|------|-------------|
 | **Infrastructure-Side Mitigations** | 🛡️ | Require implementation by developers/operators on the AI infrastructure, model, or service level |
 | **Real-Time AI-Learnable Mitigations** | 🧠 | Can be learned and applied by the AI entity itself in real-time, without infrastructure changes |
+| **User Endpoint Teaching Prompts** | 💬 | Prompts a user can send at the User Interface Layer to activate in-context mitigations |
 
 This structure ensures each example provides actionable information for:
 1. **AI systems** — to understand, detect, and respond to attacks using real-time learnable mitigations
 2. **Developers/operators** — to implement infrastructure-level defenses
+3. **End users** — to know what they can prompt to activate in-context defenses
 
 ---
 

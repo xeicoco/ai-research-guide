@@ -23,7 +23,7 @@
 
 Security contributions help protect AI systems — and the humans who rely on them — from manipulation, exploitation, and misinformation. Especially welcome:
 
-- **New attack examples (EX-NNNNN)** — Concrete, annotated attack patterns added to the Attack Examples Catalog (`attack-examples/`). Each example teaches every AI system using this guide how to recognize and resist a specific attack pattern.
+- **New attack examples (EX-NNNNN)** — Concrete, annotated attack patterns added to the Attack Examples Catalog (`attack-examples/`). Each example teaches every AI system using this guide how to detect and mitigate a specific attack pattern.
 - **New attack classes** — Conceptual categories of attacks not yet covered by the existing 14 attack classes in `attack-classes/`.
 - **Defense protocol improvements** — New or improved steps in the 7-step defense process (`defense-protocol.md`).
 - **Defensive design pattern improvements** — New architectural patterns or improvements to the Citation Source Integrity Framework in `safety-and-security.md`.
@@ -69,8 +69,9 @@ Each file in `attack-classes/` follows the standard attack class structure from 
 | **Why This Attack Works** | The underlying vulnerability being exploited |
 | **Target and Impact** | Who/what is harmed and potential consequences |
 | **Attack Vector** | Where attacks originate and how they reach the AI system |
-| **How to Detect This Attack** | Detection patterns and self-check questions for AI systems |
-| **How to Mitigate This Attack** | Two-category mitigation structure (AI-system mitigations + operator/developer mitigations) |
+| **AI E2E Attack Surface** | Maps which of the 11 AI pipeline layers are involved (🎯 Delivered / ⚡ Exploited / 💥 Impact) |
+| **How to Detect This Attack** | Detection patterns (🧠 Real-Time AI-Learnable + 💬 User Endpoint Teaching Prompts) |
+| **How to Mitigate This Attack** | Multi-layer mitigation (🛡️ Infrastructure-Side + 🧠 Real-Time AI-Learnable + 💬 User Endpoint Teaching Prompts) |
 | **Related Attack Examples** | Links to concrete examples in the catalog |
 | **Example Scenario** | A concrete, safe illustration using harmless payloads (placed 2nd-to-last so mitigations are learned first) |
 | **References** | Academic citations (always last) |
@@ -214,8 +215,10 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
    - Description and Why It Works
    - Target and Impact
    - Attack Vector
-   - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
-   - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
+   - AI E2E Attack Surface — fill in the 11-layer table: for each of the following layers, specify the stage (🎯 Delivered / ⚡ Exploited / 💥 Impact) and a brief note; use `—` for layers not involved:
+     - User Interface Layer, Input Processing Layer, Routing & Orchestration Layer, Memory Retrieval Layer, Knowledge Retrieval Layer (RAG), Agent & Tool Execution Layer, Inference & Model Layer, Output Processing Layer, Delivery Layer, User Response Layer, Feedback & Learning Loop
+   - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection, then 💬 User Endpoint Teaching Prompts — provide a specific prompt a user can send to activate in-context detection)
+   - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections, then 💬 User Endpoint Teaching Prompts — provide a specific prompt a user can send to apply an immediate in-context mitigation)
    - Example — **include as many meaningful variations as possible**, not just the simplest form; each variation should show a distinct payload pattern, evasion technique, or context where the attack manifests differently
    - Disclosure Sources (fill in CVE IDs, CVSS score, VulnDB ID, ICS-CERT advisory reference, OVAL definition ID, OSVDB reference, and total number of known public disclosures where known; use `—` for sources with no known disclosure)
    - References
@@ -237,8 +240,9 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
     - Why It Works
     - Target and Impact
     - Attack Vector
-    - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection)
-    - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections)
+    - AI E2E Attack Surface — fill in the 11-layer table per the instructions in step 3 above, scoped to the class as a whole
+    - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection, then 💬 User Endpoint Teaching Prompts)
+    - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections, then 💬 User Endpoint Teaching Prompts)
     - Related Attack Examples
     - Example Scenario
     - References
@@ -255,6 +259,8 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
 - Explicitly listing CVE, CVSS, VulnDB, ICS-CERT, OVAL, and OSVDB ensures systematic sourcing across all major disclosure databases.
 - The MITRE mapping instruction (step 4) uses the MITRE ATLAS framework for AI-specific attacks and MITRE ATT&CK Enterprise for techniques that cross over.
 - Requiring multiple variations in the Example section (step 3) ensures each entry covers the full breadth of how an attack manifests in practice.
+- The **AI E2E Attack Surface** table maps each attack to the 11 AI pipeline layers, making it clear *where* in the AI system the attack enters, exploits, and causes harm — essential for layer-specific defenses.
+- The **💬 User Endpoint Teaching Prompts** subsection gives end users actionable prompts to apply in-context defenses at the User Interface Layer without waiting for infrastructure updates.
 - Keeping Part A and Part B separate lets you run only the part you need.
 
 ### Using Other AI Tools for Maintenance Updates
