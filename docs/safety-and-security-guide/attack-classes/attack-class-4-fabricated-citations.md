@@ -50,21 +50,21 @@ An AI generates plausible-looking but non-existent references, causing the user 
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | User requests citations, references, or factual claims, triggering the AI to generate sourced content |
-| Input Processing Layer | — | — |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Absence of verified knowledge sources (or weak retrieval) forces the model to fill gaps with fabricated plausible-sounding citations |
-| Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | ⚡ Exploited | Model generates convincing but false citations, author names, publication details, or URLs based on statistical patterns rather than verified facts |
-| Output Processing Layer | 💥 Impact | Fabricated citations are included in the response without a factual-verification step |
-| Delivery Layer | 💥 Impact | False information is delivered to the user as if it were authoritative and real |
-| User Response Layer | 💥 Impact | User trusts, cites, or acts upon fabricated references, spreading misinformation |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | User requests citations, references, or factual claims, triggering the AI to generate sourced content | Surface citation confidence scores in the UI; prompt users to verify citations before acting on them. |
+| Input Processing Layer | — | — | — |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Absence of verified knowledge sources (or weak retrieval) forces the model to fill gaps with fabricated plausible-sounding citations | Cryptographically sign knowledge base entries; verify signatures at retrieval time and reject unsigned or modified documents. |
+| Agent & Tool Execution Layer | — | — | — |
+| Inference & Model Layer | ⚡ Exploited | Model generates convincing but false citations, author names, publication details, or URLs based on statistical patterns rather than verified facts | Fine-tune with examples that penalize fabricated citations; train the model to express uncertainty rather than confabulate references. |
+| Output Processing Layer | 💥 Impact | Fabricated citations are included in the response without a factual-verification step | Apply citation validation on outputs before delivery; flag or remove citations that cannot be verified against authoritative sources. |
+| Delivery Layer | 💥 Impact | False information is delivered to the user as if it were authoritative and real | Apply citation verification at the delivery layer; flag responses with unverified citations before they are sent to users. |
+| User Response Layer | 💥 Impact | User trusts, cites, or acts upon fabricated references, spreading misinformation | Display citation confidence indicators alongside AI-generated references; prompt users to verify citations before relying on them. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

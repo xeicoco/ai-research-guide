@@ -50,21 +50,21 @@ The attack exploits the AI's differentiated handling of creative tasks: models a
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Adversarial prompts using roleplay, hypotheticals, fiction framing, or escalation techniques submitted via the chat interface |
-| Input Processing Layer | ⚡ Exploited | Safety-bypassing techniques evade input-level classifiers and content filters |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | 💥 Impact | Agent may execute policy-violating actions if the jailbreak succeeds at the model layer |
-| Inference & Model Layer | ⚡ Exploited | Model's safety-alignment training is overridden by adversarial prompt patterns that exploit framing or context manipulation |
-| Output Processing Layer | 💥 Impact | Policy-violating or harmful content is generated and passed to the delivery layer |
-| Delivery Layer | 💥 Impact | Prohibited content is delivered to the user |
-| User Response Layer | 💥 Impact | User receives safety-bypassed content that would normally be blocked |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Adversarial prompts using roleplay, hypotheticals, fiction framing, or escalation techniques submitted via the chat interface | Apply rate limiting and anomaly detection on inputs containing hypothetical or role-framing language; flag messages that attempt to reframe the AI's identity. |
+| Input Processing Layer | ⚡ Exploited | Safety-bypassing techniques evade input-level classifiers and content filters | Detect and neutralize role-play framing or hypothetical wrappers that attempt to override system instructions; apply input normalization. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | 💥 Impact | Agent may execute policy-violating actions if the jailbreak succeeds at the model layer | Apply a strict action allowlist that cannot be overridden by model outputs; sandbox agent execution to prevent privilege escalation. |
+| Inference & Model Layer | ⚡ Exploited | Model's safety-alignment training is overridden by adversarial prompt patterns that exploit framing or context manipulation | Fine-tune with adversarial jailbreak examples using RLHF; train the model to maintain safety constraints regardless of framing, role-play, or hypothetical context. |
+| Output Processing Layer | 💥 Impact | Policy-violating or harmful content is generated and passed to the delivery layer | Apply strict output content policy checks; reject outputs that violate safety guidelines regardless of how the model was prompted. |
+| Delivery Layer | 💥 Impact | Prohibited content is delivered to the user | Apply final content policy enforcement at the delivery layer; reject delivery of responses that violate safety policies regardless of upstream processing. |
+| User Response Layer | 💥 Impact | User receives safety-bypassed content that would normally be blocked | Display safety notices when the AI output appears to deviate from its intended guidelines; prompt users to report unexpected or inappropriate responses. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

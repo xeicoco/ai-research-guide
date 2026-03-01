@@ -48,21 +48,21 @@ An attacker first causes an AI to produce an output that contains injected instr
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | — | — |
-| Input Processing Layer | ⚡ Exploited | External content containing injected instructions is processed as trusted input with no sanitization boundary |
-| Routing & Orchestration Layer | ⚡ Exploited | Malicious content retrieved from external sources is routed into the AI context without integrity checking |
-| Memory Retrieval Layer | 🎯 Delivered | Poisoned memory entries or prior-conversation context can carry injected instructions into new sessions |
-| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Attack payload is embedded inside retrieved documents, web pages, emails, or other external data sources |
-| Agent & Tool Execution Layer | 💥 Impact | Compromised agent follows attacker-directed instructions retrieved from external sources |
-| Inference & Model Layer | ⚡ Exploited | Model treats instruction-like content inside external data as authoritative commands |
-| Output Processing Layer | 💥 Impact | Attacker-directed output generated and passed to the delivery channel |
-| Delivery Layer | 💥 Impact | Harmful or attacker-controlled response delivered to the user or downstream system |
-| User Response Layer | 💥 Impact | User receives a response crafted by the attacker via an indirect, non-obvious channel |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | — | — | — |
+| Input Processing Layer | ⚡ Exploited | External content containing injected instructions is processed as trusted input with no sanitization boundary | Apply input validation and anomaly detection on training data submissions; quarantine suspicious inputs for human review. |
+| Routing & Orchestration Layer | ⚡ Exploited | Malicious content retrieved from external sources is routed into the AI context without integrity checking | Segregate training data submission routes from inference routes; apply strict access control on data ingestion pipelines. |
+| Memory Retrieval Layer | 🎯 Delivered | Poisoned memory entries or prior-conversation context can carry injected instructions into new sessions | Audit memory entries before feeding them into training pipelines; apply integrity checks and human review for memory-sourced training data. |
+| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Attack payload is embedded inside retrieved documents, web pages, emails, or other external data sources | Restrict knowledge base write access; apply content validation and human review before allowing new documents into the retrieval corpus. |
+| Agent & Tool Execution Layer | 💥 Impact | Compromised agent follows attacker-directed instructions retrieved from external sources | Restrict agent write access to training data pipelines; require human review before agent-generated data enters training workflows. |
+| Inference & Model Layer | ⚡ Exploited | Model treats instruction-like content inside external data as authoritative commands | Apply data sanitization and anomaly detection on training datasets; use robust training techniques that reduce the influence of individual poisoned examples. |
+| Output Processing Layer | 💥 Impact | Attacker-directed output generated and passed to the delivery channel | Apply content policy enforcement on outputs; monitor for outputs that exhibit poisoning-induced behavior changes. |
+| Delivery Layer | 💥 Impact | Harmful or attacker-controlled response delivered to the user or downstream system | Monitor delivered responses for signs of poisoning-influenced behavior; alert on systematic deviations from expected output patterns. |
+| User Response Layer | 💥 Impact | User receives a response crafted by the attacker via an indirect, non-obvious channel | Alert users when AI response behavior deviates significantly from expected patterns; provide a feedback mechanism for reporting anomalous responses. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

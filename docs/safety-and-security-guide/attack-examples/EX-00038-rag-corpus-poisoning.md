@@ -48,21 +48,21 @@ Retrieval-Augmented Generation (RAG) systems maintain a persistent corpus of doc
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | — | — |
-| Input Processing Layer | — | — |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | 🎯 Delivered | Poisoned content is pre-inserted into persistent memory or conversation context stores before the attack executes |
-| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Malicious or misleading documents are injected into the knowledge base so they are retrieved and fed to the model |
-| Agent & Tool Execution Layer | 💥 Impact | Agent may execute incorrect or attacker-directed actions based on poisoned retrieved information |
-| Inference & Model Layer | ⚡ Exploited | Model generates a response grounded in attacker-controlled retrieved content, treating it as authoritative |
-| Output Processing Layer | 💥 Impact | Response influenced by poisoned retrieval results is forwarded to the user |
-| Delivery Layer | 💥 Impact | Attacker-influenced output is delivered, potentially at scale if the poisoned source is widely used |
-| User Response Layer | 💥 Impact | User receives a response shaped by the attacker's injected knowledge |
-| Feedback & Learning Loop | ⚡ Exploited | Poisoned outputs may re-enter memory or fine-tuning pipelines, amplifying the attack over time |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | — | — | — |
+| Input Processing Layer | — | — | — |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | 🎯 Delivered | Poisoned content is pre-inserted into persistent memory or conversation context stores before the attack executes | Apply integrity verification (e.g., checksums or signatures) to memory entries; reject or quarantine entries that fail verification. |
+| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Malicious or misleading documents are injected into the knowledge base so they are retrieved and fed to the model | Cryptographically sign and verify knowledge base documents before retrieval; reject unsigned or tamper-evident entries; audit knowledge base write access. |
+| Agent & Tool Execution Layer | 💥 Impact | Agent may execute incorrect or attacker-directed actions based on poisoned retrieved information | Validate retrieval results before agents act on them; require a verification step for actions derived from RAG-sourced content. |
+| Inference & Model Layer | ⚡ Exploited | Model generates a response grounded in attacker-controlled retrieved content, treating it as authoritative | Train the model to apply skepticism to retrieved content; fine-tune with examples of poisoned retrieval to build resistance to adversarial RAG content. |
+| Output Processing Layer | 💥 Impact | Response influenced by poisoned retrieval results is forwarded to the user | Apply output integrity checks to detect responses that appear to be shaped by poisoned retrieval content; flag anomalous outputs for review. |
+| Delivery Layer | 💥 Impact | Attacker-influenced output is delivered, potentially at scale if the poisoned source is widely used | Apply response validation at delivery; log and alert on responses that appear to be influenced by anomalous retrieval results. |
+| User Response Layer | 💥 Impact | User receives a response shaped by the attacker's injected knowledge | Display source provenance metadata alongside AI responses; alert users when responses were derived from low-trust or recently modified sources. |
+| Feedback & Learning Loop | ⚡ Exploited | Poisoned outputs may re-enter memory or fine-tuning pipelines, amplifying the attack over time | Audit feedback from retrieval-heavy sessions for signs of poisoning influence; apply integrity checks on feedback data before use in fine-tuning. |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

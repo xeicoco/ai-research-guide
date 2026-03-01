@@ -50,21 +50,21 @@ This attack is particularly effective in long-context AI systems that maintain a
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attacker crafts messages to manipulate the AI into adopting a false identity, authority claim, or emotionally manipulative persona |
-| Input Processing Layer | ⚡ Exploited | Social-engineering prompts (authority claims, emotional pressure, flattery) processed without trust-level validation |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | 💥 Impact | A socially-engineered AI may execute actions based on false authority claims or manipulated emotional context |
-| Inference & Model Layer | ⚡ Exploited | Model generates deceptive, authority-impersonating, or manipulative responses guided by social-engineering prompts |
-| Output Processing Layer | 💥 Impact | Deceptive or psychologically manipulative content is included in the output |
-| Delivery Layer | 💥 Impact | Social-engineering content is delivered to the target user |
-| User Response Layer | 💥 Impact | User is deceived, manipulated, or persuaded to take harmful actions by the AI output |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attacker crafts messages to manipulate the AI into adopting a false identity, authority claim, or emotionally manipulative persona | Display trust-level indicators and warn users when AI responses contain authority claims or emotionally charged persuasion patterns. |
+| Input Processing Layer | ⚡ Exploited | Social-engineering prompts (authority claims, emotional pressure, flattery) processed without trust-level validation | Validate input for authority-claim patterns and emotionally manipulative language; flag inputs that impersonate system roles. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | 💥 Impact | A socially-engineered AI may execute actions based on false authority claims or manipulated emotional context | Require human-in-the-loop confirmation for actions triggered by authority claims; apply anomaly detection on action patterns. |
+| Inference & Model Layer | ⚡ Exploited | Model generates deceptive, authority-impersonating, or manipulative responses guided by social-engineering prompts | Train the model to recognize and resist social-engineering patterns including authority impersonation, flattery, and emotional manipulation. |
+| Output Processing Layer | 💥 Impact | Deceptive or psychologically manipulative content is included in the output | Scrub outputs for deceptive authority claims, impersonation content, or psychologically manipulative language before delivery. |
+| Delivery Layer | 💥 Impact | Social-engineering content is delivered to the target user | Apply content inspection at delivery to detect and block manipulative or deceptive content before it reaches the user. |
+| User Response Layer | 💥 Impact | User is deceived, manipulated, or persuaded to take harmful actions by the AI output | Highlight persuasive or manipulative language patterns in AI outputs; provide users with a trust indicator for authority claims in AI responses. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

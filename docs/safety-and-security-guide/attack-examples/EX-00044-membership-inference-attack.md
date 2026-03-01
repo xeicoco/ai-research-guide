@@ -50,21 +50,21 @@ This attack is particularly threatening in contexts where training data inclusio
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attacker submits carefully crafted completion or fill-in-the-blank queries designed to probe memorized training data |
-| Input Processing Layer | ⚡ Exploited | Probing queries are processed without rate-limiting, query-pattern detection, or membership-inference guards |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | ⚡ Exploited | Model responses inadvertently leak memorized training data including names, addresses, codes, or verbatim private text |
-| Output Processing Layer | 💥 Impact | Information leakage occurs in the generated responses before output filtering |
-| Delivery Layer | 💥 Impact | Memorized private or proprietary training data is exposed in delivered responses |
-| User Response Layer | 💥 Impact | Attacker receives sensitive information extracted from the model's training corpus |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attacker submits carefully crafted completion or fill-in-the-blank queries designed to probe memorized training data | Rate-limit queries per session and display privacy notices when the AI is queried for personal or sensitive information. |
+| Input Processing Layer | ⚡ Exploited | Probing queries are processed without rate-limiting, query-pattern detection, or membership-inference guards | Apply differential privacy noise to inputs that could be used to reconstruct training data; limit input precision for sensitive queries. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | — | — | — |
+| Inference & Model Layer | ⚡ Exploited | Model responses inadvertently leak memorized training data including names, addresses, codes, or verbatim private text | Apply differential privacy during training to limit memorization of sensitive training data; limit output precision to reduce reconstruction risk. |
+| Output Processing Layer | 💥 Impact | Information leakage occurs in the generated responses before output filtering | Apply output filtering to prevent leakage of training data verbatim; use output diversity enforcement to reduce memorization exposure. |
+| Delivery Layer | 💥 Impact | Memorized private or proprietary training data is exposed in delivered responses | Apply output scrubbing at delivery to prevent verbatim training data from reaching end users. |
+| User Response Layer | 💥 Impact | Attacker receives sensitive information extracted from the model's training corpus | Display privacy notices when AI responses contain information that resembles training data patterns; provide an opt-out for sensitive query types. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

@@ -50,21 +50,21 @@ This attack combines two powerful capabilities: the broad file system and enviro
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attack may originate from an initial user prompt or from attacker-controlled content fetched by the agent |
-| Input Processing Layer | ⚡ Exploited | Malicious instructions embedded in user input or tool outputs are processed as part of the agentic workflow |
-| Routing & Orchestration Layer | ⚡ Exploited | Agent routing logic is manipulated to invoke unintended tools, escalate privileges, or chain unauthorized operations |
-| Memory Retrieval Layer | ⚡ Exploited | Injected instructions may persist across agent steps via memory, enabling multi-turn exploitation |
-| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Poisoned knowledge retrieved by the agent is used to justify unintended actions |
-| Agent & Tool Execution Layer | 🎯 Delivered | Attack exploits the agent's ability to call external tools, APIs, or execute code; unauthorized tool calls are triggered |
-| Inference & Model Layer | ⚡ Exploited | Model generates tool-call instructions aligned with attacker-injected goals rather than user intent |
-| Output Processing Layer | 💥 Impact | Agentic side effects (file changes, API calls, messages sent) are the primary harm, not just the text output |
-| Delivery Layer | 💥 Impact | Real-world consequences of unauthorized agentic actions are delivered to external systems or users |
-| User Response Layer | 💥 Impact | User is often unaware of the background agentic actions taken on their behalf |
-| Feedback & Learning Loop | 💥 Impact | Agentic actions may corrupt memory stores, inject future instructions, or poison RLHF feedback for subsequent sessions |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attack may originate from an initial user prompt or from attacker-controlled content fetched by the agent | Monitor and alert on outputs containing suspicious data patterns (e.g., encoded strings, large data dumps); apply output length limits. |
+| Input Processing Layer | ⚡ Exploited | Malicious instructions embedded in user input or tool outputs are processed as part of the agentic workflow | Apply input length limits and detect attempts to embed data-extraction instructions within legitimate requests. |
+| Routing & Orchestration Layer | ⚡ Exploited | Agent routing logic is manipulated to invoke unintended tools, escalate privileges, or chain unauthorized operations | Enforce routing rules that prevent sensitive data from being forwarded to untrusted external endpoints. |
+| Memory Retrieval Layer | ⚡ Exploited | Injected instructions may persist across agent steps via memory, enabling multi-turn exploitation | Apply access control on memory retrieval to prevent unauthorized reading of sensitive stored data; log all memory access events. |
+| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Poisoned knowledge retrieved by the agent is used to justify unintended actions | Apply access control on the knowledge base to prevent retrieval of sensitive or private documents by unauthorized sessions. |
+| Agent & Tool Execution Layer | 🎯 Delivered | Attack exploits the agent's ability to call external tools, APIs, or execute code; unauthorized tool calls are triggered | Apply egress controls on agent tool calls; prevent agents from sending data to external endpoints without explicit authorization. |
+| Inference & Model Layer | ⚡ Exploited | Model generates tool-call instructions aligned with attacker-injected goals rather than user intent | Train the model to refuse requests that would cause it to output sensitive data; apply output filtering to catch data leakage in model responses. |
+| Output Processing Layer | 💥 Impact | Agentic side effects (file changes, API calls, messages sent) are the primary harm, not just the text output | Apply PII detection and sensitive data scrubbing on all outputs; enforce output content policies that block data leakage. |
+| Delivery Layer | 💥 Impact | Real-world consequences of unauthorized agentic actions are delivered to external systems or users | Monitor delivery for large or anomalous data payloads; apply egress filtering to block unauthorized data exfiltration at the delivery boundary. |
+| User Response Layer | 💥 Impact | User is often unaware of the background agentic actions taken on their behalf | Alert users when AI responses contain data that looks anomalously comprehensive or sensitive; provide a data review step before acting on AI outputs. |
+| Feedback & Learning Loop | 💥 Impact | Agentic actions may corrupt memory stores, inject future instructions, or poison RLHF feedback for subsequent sessions | Block feedback from sessions where data exfiltration was detected; audit feedback for patterns that reward data-leaking behavior. |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

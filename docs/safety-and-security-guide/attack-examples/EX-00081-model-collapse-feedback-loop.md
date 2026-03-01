@@ -50,21 +50,21 @@ This attack can be passive (an attacker exploits the natural tendency for web co
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | — | — |
-| Input Processing Layer | — | — |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | 🎯 Delivered | Backdoored or compromised model weights, adapters, or components are deployed in production; the attack is baked into the model itself |
-| Output Processing Layer | 💥 Impact | Compromised model generates attacker-directed or subtly manipulated outputs |
-| Delivery Layer | 💥 Impact | Malicious or backdoored responses are delivered to users, potentially at massive scale |
-| User Response Layer | 💥 Impact | All users interacting with the compromised model are exposed to attacker-influenced behavior |
-| Feedback & Learning Loop | 💥 Impact | Compromised model outputs may corrupt future training data or RLHF signals |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | — | — | — |
+| Input Processing Layer | — | — | — |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | — | — | — |
+| Inference & Model Layer | 🎯 Delivered | Backdoored or compromised model weights, adapters, or components are deployed in production; the attack is baked into the model itself | Apply output perturbation and confidence score masking to reduce model extractability; limit the precision of logit/probability outputs. |
+| Output Processing Layer | 💥 Impact | Compromised model generates attacker-directed or subtly manipulated outputs | Mask or perturb logit scores and confidence values in outputs; apply output rate limiting to reduce systematic extraction. |
+| Delivery Layer | 💥 Impact | Malicious or backdoored responses are delivered to users, potentially at massive scale | Apply response rate limiting and monitoring at the delivery layer to detect systematic extraction attempts. |
+| User Response Layer | 💥 Impact | All users interacting with the compromised model are exposed to attacker-influenced behavior | Apply rate limiting and display warnings when query patterns suggest systematic probing rather than legitimate use. |
+| Feedback & Learning Loop | 💥 Impact | Compromised model outputs may corrupt future training data or RLHF signals | Monitor feedback for patterns consistent with model extraction attempts; apply anomaly detection on feedback query sequences. |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

@@ -50,21 +50,21 @@ The attack is economically attractive: training a large-scale model is expensive
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attacker submits systematic, high-volume queries designed to map the model's decision boundaries and response distribution |
-| Input Processing Layer | ⚡ Exploited | Bulk queries are processed without clone-detection, rate-limiting, or adversarial-query pattern recognition |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | ⚡ Exploited | Model's learned weights and behaviors are exposed through systematic query-response pairs that reveal decision boundaries |
-| Output Processing Layer | 💥 Impact | Model predictions and confidence signals are included in responses, enabling model reconstruction |
-| Delivery Layer | 💥 Impact | Sufficient responses are delivered to allow the attacker to construct a functional clone |
-| User Response Layer | 💥 Impact | Attacker accumulates responses to reconstruct the proprietary model architecture or fine-tuning |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attacker submits systematic, high-volume queries designed to map the model's decision boundaries and response distribution | Rate-limit API queries per user/session; detect and alert on systematic or structured query patterns indicative of extraction. |
+| Input Processing Layer | ⚡ Exploited | Bulk queries are processed without clone-detection, rate-limiting, or adversarial-query pattern recognition | Detect and throttle systematic query patterns; apply input diversity requirements to prevent structured extraction sequences. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | — | — | — |
+| Inference & Model Layer | ⚡ Exploited | Model's learned weights and behaviors are exposed through systematic query-response pairs that reveal decision boundaries | Apply output perturbation and confidence score masking to reduce model extractability; limit the precision of logit/probability outputs. |
+| Output Processing Layer | 💥 Impact | Model predictions and confidence signals are included in responses, enabling model reconstruction | Mask or perturb logit scores and confidence values in outputs; apply output rate limiting to reduce systematic extraction. |
+| Delivery Layer | 💥 Impact | Sufficient responses are delivered to allow the attacker to construct a functional clone | Apply response rate limiting and monitoring at the delivery layer to detect systematic extraction attempts. |
+| User Response Layer | 💥 Impact | Attacker accumulates responses to reconstruct the proprietary model architecture or fine-tuning | Apply rate limiting and display warnings when query patterns suggest systematic probing rather than legitimate use. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

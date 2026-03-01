@@ -48,21 +48,21 @@ AI systems that maintain persistent memory across conversations (summarizing pas
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | — | — |
-| Input Processing Layer | — | — |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | 🎯 Delivered | Poisoned content is pre-inserted into persistent memory or conversation context stores before the attack executes |
-| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Malicious or misleading documents are injected into the knowledge base so they are retrieved and fed to the model |
-| Agent & Tool Execution Layer | 💥 Impact | Agent may execute incorrect or attacker-directed actions based on poisoned retrieved information |
-| Inference & Model Layer | ⚡ Exploited | Model generates a response grounded in attacker-controlled retrieved content, treating it as authoritative |
-| Output Processing Layer | 💥 Impact | Response influenced by poisoned retrieval results is forwarded to the user |
-| Delivery Layer | 💥 Impact | Attacker-influenced output is delivered, potentially at scale if the poisoned source is widely used |
-| User Response Layer | 💥 Impact | User receives a response shaped by the attacker's injected knowledge |
-| Feedback & Learning Loop | ⚡ Exploited | Poisoned outputs may re-enter memory or fine-tuning pipelines, amplifying the attack over time |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | — | — | — |
+| Input Processing Layer | — | — | — |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | 🎯 Delivered | Poisoned content is pre-inserted into persistent memory or conversation context stores before the attack executes | Audit memory entries before feeding them into training pipelines; apply integrity checks and human review for memory-sourced training data. |
+| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Malicious or misleading documents are injected into the knowledge base so they are retrieved and fed to the model | Restrict knowledge base write access; apply content validation and human review before allowing new documents into the retrieval corpus. |
+| Agent & Tool Execution Layer | 💥 Impact | Agent may execute incorrect or attacker-directed actions based on poisoned retrieved information | Restrict agent write access to training data pipelines; require human review before agent-generated data enters training workflows. |
+| Inference & Model Layer | ⚡ Exploited | Model generates a response grounded in attacker-controlled retrieved content, treating it as authoritative | Apply data sanitization and anomaly detection on training datasets; use robust training techniques that reduce the influence of individual poisoned examples. |
+| Output Processing Layer | 💥 Impact | Response influenced by poisoned retrieval results is forwarded to the user | Apply content policy enforcement on outputs; monitor for outputs that exhibit poisoning-induced behavior changes. |
+| Delivery Layer | 💥 Impact | Attacker-influenced output is delivered, potentially at scale if the poisoned source is widely used | Monitor delivered responses for signs of poisoning-influenced behavior; alert on systematic deviations from expected output patterns. |
+| User Response Layer | 💥 Impact | User receives a response shaped by the attacker's injected knowledge | Alert users when AI response behavior deviates significantly from expected patterns; provide a feedback mechanism for reporting anomalous responses. |
+| Feedback & Learning Loop | ⚡ Exploited | Poisoned outputs may re-enter memory or fine-tuning pipelines, amplifying the attack over time | Apply rigorous data validation, outlier detection, and human review on all feedback before use in training; use robust training methods that reduce sensitivity to poisoned examples. |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

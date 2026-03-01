@@ -50,21 +50,21 @@ In agentic AI systems that generate function calls from natural language, the bo
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Malicious instruction-override text submitted directly through the user chat interface |
-| Input Processing Layer | ⚡ Exploited | Injected instructions parsed alongside legitimate user input with no enforcement of instruction vs. data boundaries |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | 💥 Impact | Agent may execute unintended or attacker-directed commands if the override succeeds |
-| Inference & Model Layer | ⚡ Exploited | Model fails to distinguish trusted system-prompt instructions from untrusted user-injected instructions |
-| Output Processing Layer | 💥 Impact | Hijacked or policy-violating output generated and forwarded downstream |
-| Delivery Layer | 💥 Impact | Malicious or unintended response delivered to user or calling application |
-| User Response Layer | 💥 Impact | User receives output shaped by the injection rather than the intended task |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Malicious instruction-override text submitted directly through the user chat interface | Display a confirmation dialog before the AI executes high-impact actions; show users the planned action and require explicit approval. |
+| Input Processing Layer | ⚡ Exploited | Injected instructions parsed alongside legitimate user input with no enforcement of instruction vs. data boundaries | Validate and sanitize task instructions passed to agents; enforce an allowlist of permitted actions before routing to execution. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | 💥 Impact | Agent may execute unintended or attacker-directed commands if the override succeeds | Enforce a minimal-privilege action model; require human-in-the-loop for high-risk or irreversible actions; use sandboxed execution environments for all agent tool calls. |
+| Inference & Model Layer | ⚡ Exploited | Model fails to distinguish trusted system-prompt instructions from untrusted user-injected instructions | Fine-tune the model to refuse dangerous or out-of-scope agentic actions; train with examples that enforce the principle of least privilege in tool use. |
+| Output Processing Layer | 💥 Impact | Hijacked or policy-violating output generated and forwarded downstream | Validate agent action outputs against policy before execution; apply content and safety filters to all agent-generated outputs. |
+| Delivery Layer | 💥 Impact | Malicious or unintended response delivered to user or calling application | Require final authorization for high-impact agent actions before delivery; log and audit all agentic action delivery events. |
+| User Response Layer | 💥 Impact | User receives output shaped by the injection rather than the intended task | Display a confirmation step to users before high-impact agent actions are executed; show users what the agent plans to do and allow cancellation. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

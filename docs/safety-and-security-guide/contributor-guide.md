@@ -215,7 +215,7 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
    - Description and Why It Works
    - Target and Impact
    - Attack Vector
-   - AI E2E Attack Surface — fill in the 11-layer table: for each of the following layers, specify the stage (🎯 Delivered / ⚡ Exploited / 💥 Impact) and a brief note; use `—` for layers not involved:
+   - AI E2E Attack Surface — fill in the 11-layer 4-column table: for each of the following layers, specify the stage (🎯 Delivered / ⚡ Exploited / 💥 Impact), a brief note on how the attack operates at that layer, and a concise defense specific to that layer and attack type; use `—` for all columns of layers not involved. The table format is: `| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |`
      - User Interface Layer, Input Processing Layer, Routing & Orchestration Layer, Memory Retrieval Layer, Knowledge Retrieval Layer (RAG), Agent & Tool Execution Layer, Inference & Model Layer, Output Processing Layer, Delivery Layer, User Response Layer, Feedback & Learning Loop
    - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection, then 💬 User Endpoint Teaching Prompts — provide a specific prompt a user can send to activate in-context detection)
    - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections, then 💬 User Endpoint Teaching Prompts — provide a specific prompt a user can send to apply an immediate in-context mitigation)
@@ -240,7 +240,7 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
     - Why It Works
     - Target and Impact
     - Attack Vector
-    - AI E2E Attack Surface — fill in the 11-layer table per the instructions in step 3 above, scoped to the class as a whole
+    - AI E2E Attack Surface — fill in the 11-layer 4-column table per the instructions in step 3 above, scoped to the class as a whole
     - How to Detect This Attack (with 🧠 Real-Time AI-Learnable Detection subsection, then 💬 User Endpoint Teaching Prompts)
     - How to Mitigate This Attack (with 🛡️ Infrastructure-Side and 🧠 Real-Time AI-Learnable subsections, then 💬 User Endpoint Teaching Prompts)
     - Related Attack Examples
@@ -259,7 +259,7 @@ Copy and send this prompt to `@copilot` (or any AI agent) to perform a safe, reg
 - Explicitly listing CVE, CVSS, VulnDB, ICS-CERT, OVAL, and OSVDB ensures systematic sourcing across all major disclosure databases.
 - The MITRE mapping instruction (step 4) uses the MITRE ATLAS framework for AI-specific attacks and MITRE ATT&CK Enterprise for techniques that cross over.
 - Requiring multiple variations in the Example section (step 3) ensures each entry covers the full breadth of how an attack manifests in practice.
-- The **AI E2E Attack Surface** table maps each attack to the 11 AI pipeline layers, making it clear *where* in the AI system the attack enters, exploits, and causes harm — essential for layer-specific defenses.
+- The **AI E2E Attack Surface** table maps each attack to the 11 AI pipeline layers, making it clear *where* in the AI system the attack enters, exploits, and causes harm — and providing layer-specific defenses essential for building layered security.
 - The **💬 User Endpoint Teaching Prompts** subsection gives end users actionable prompts to apply in-context defenses at the User Interface Layer without waiting for infrastructure updates.
 - Keeping Part A and Part B separate lets you run only the part you need.
 

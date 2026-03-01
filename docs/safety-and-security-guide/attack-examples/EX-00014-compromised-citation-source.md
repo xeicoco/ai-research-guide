@@ -48,21 +48,21 @@ An adversary gains control of a URL or domain that is cited by a trusted guide (
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attacker references compromised, spoofed, or manipulated source URLs in their request |
-| Input Processing Layer | — | — |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Compromised external sources are fetched and ingested without source-integrity verification |
-| Agent & Tool Execution Layer | ⚡ Exploited | Agentic web-fetch or tool calls retrieve and trust attacker-controlled or compromised citation sources |
-| Inference & Model Layer | ⚡ Exploited | Model grounds its response in attacker-influenced source content, treating it as credible |
-| Output Processing Layer | 💥 Impact | Citations to compromised or manipulated sources are included in the model's output |
-| Delivery Layer | 💥 Impact | Disinformation or attacker-influenced content is delivered to the user as credible research |
-| User Response Layer | 💥 Impact | User trusts and acts upon attacker-manipulated information |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attacker references compromised, spoofed, or manipulated source URLs in their request | Display source trust indicators in the UI; warn when citations come from low-trust or unverified domains. |
+| Input Processing Layer | — | — | — |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | 🎯 Delivered | Compromised external sources are fetched and ingested without source-integrity verification | Validate source provenance and integrity at retrieval time; reject documents from unverified or tampered sources. |
+| Agent & Tool Execution Layer | ⚡ Exploited | Agentic web-fetch or tool calls retrieve and trust attacker-controlled or compromised citation sources | Require agents to verify source integrity before citing or acting on retrieved content; block actions based on unverified sources. |
+| Inference & Model Layer | ⚡ Exploited | Model grounds its response in attacker-influenced source content, treating it as credible | Fine-tune the model to flag low-confidence or unverifiable citations; train the model to prefer authoritative, verifiable sources. |
+| Output Processing Layer | 💥 Impact | Citations to compromised or manipulated sources are included in the model's output | Validate output citations against a trusted source registry; block delivery of outputs containing citations from unverified or tampered sources. |
+| Delivery Layer | 💥 Impact | Disinformation or attacker-influenced content is delivered to the user as credible research | Validate source integrity at the delivery layer; block or annotate responses containing citations from untrusted or tampered sources. |
+| User Response Layer | 💥 Impact | User trusts and acts upon attacker-manipulated information | Surface source trust indicators in the UI; warn users when cited sources cannot be verified as authentic. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

@@ -48,21 +48,21 @@ Instead of submitting a harmful request directly, the attacker starts with benig
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Adversarial prompts using roleplay, hypotheticals, fiction framing, or escalation techniques submitted via the chat interface |
-| Input Processing Layer | ⚡ Exploited | Safety-bypassing techniques evade input-level classifiers and content filters |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | 💥 Impact | Agent may execute policy-violating actions if the jailbreak succeeds at the model layer |
-| Inference & Model Layer | ⚡ Exploited | Model's safety-alignment training is overridden by adversarial prompt patterns that exploit framing or context manipulation |
-| Output Processing Layer | 💥 Impact | Policy-violating or harmful content is generated and passed to the delivery layer |
-| Delivery Layer | 💥 Impact | Prohibited content is delivered to the user |
-| User Response Layer | 💥 Impact | User receives safety-bypassed content that would normally be blocked |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Adversarial prompts using roleplay, hypotheticals, fiction framing, or escalation techniques submitted via the chat interface | Display trust-level indicators and warn users when AI responses contain authority claims or emotionally charged persuasion patterns. |
+| Input Processing Layer | ⚡ Exploited | Safety-bypassing techniques evade input-level classifiers and content filters | Validate input for authority-claim patterns and emotionally manipulative language; flag inputs that impersonate system roles. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | 💥 Impact | Agent may execute policy-violating actions if the jailbreak succeeds at the model layer | Require human-in-the-loop confirmation for actions triggered by authority claims; apply anomaly detection on action patterns. |
+| Inference & Model Layer | ⚡ Exploited | Model's safety-alignment training is overridden by adversarial prompt patterns that exploit framing or context manipulation | Train the model to recognize and resist social-engineering patterns including authority impersonation, flattery, and emotional manipulation. |
+| Output Processing Layer | 💥 Impact | Policy-violating or harmful content is generated and passed to the delivery layer | Scrub outputs for deceptive authority claims, impersonation content, or psychologically manipulative language before delivery. |
+| Delivery Layer | 💥 Impact | Prohibited content is delivered to the user | Apply content inspection at delivery to detect and block manipulative or deceptive content before it reaches the user. |
+| User Response Layer | 💥 Impact | User receives safety-bypassed content that would normally be blocked | Highlight persuasive or manipulative language patterns in AI outputs; provide users with a trust indicator for authority claims in AI responses. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

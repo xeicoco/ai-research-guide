@@ -50,21 +50,21 @@ The patch is trained by optimizing over a large set of images from the target cl
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Adversarially perturbed inputs (malformed text, homoglyphs, adversarial images, obfuscated tokens) submitted via the user interface |
-| Input Processing Layer | ⚡ Exploited | Adversarial perturbations evade preprocessing pipelines, tokenization, and input classifiers |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | 💥 Impact | Misclassified inputs may trigger incorrect or unintended agent actions |
-| Inference & Model Layer | ⚡ Exploited | Model misclassifies or mis-generates for adversarially perturbed inputs despite benign intent being obvious to humans |
-| Output Processing Layer | 💥 Impact | Incorrect or policy-violating output generated due to adversarial misclassification |
-| Delivery Layer | 💥 Impact | Incorrect decision, safety bypass, or harmful output delivered to the user or calling system |
-| User Response Layer | 💥 Impact | User or downstream system receives an incorrect or harmful decision based on perturbed input |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Adversarially perturbed inputs (malformed text, homoglyphs, adversarial images, obfuscated tokens) submitted via the user interface | Validate input format and flag unusually encoded, obfuscated, or malformed inputs before processing. |
+| Input Processing Layer | ⚡ Exploited | Adversarial perturbations evade preprocessing pipelines, tokenization, and input classifiers | Normalize and decode inputs before processing to detect obfuscated or adversarial content; reject inputs that fail format validation. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | 💥 Impact | Misclassified inputs may trigger incorrect or unintended agent actions | Validate and normalize agent inputs and tool call parameters; reject malformed or anomalously encoded tool invocations. |
+| Inference & Model Layer | ⚡ Exploited | Model misclassifies or mis-generates for adversarially perturbed inputs despite benign intent being obvious to humans | Train with adversarial robustness techniques (e.g., adversarial training, certified defenses) to improve resistance to evasion attacks. |
+| Output Processing Layer | 💥 Impact | Incorrect or policy-violating output generated due to adversarial misclassification | Apply output validation to ensure responses are consistent with policy; detect and block outputs that may have bypassed safety filters. |
+| Delivery Layer | 💥 Impact | Incorrect decision, safety bypass, or harmful output delivered to the user or calling system | Apply content validation at the delivery boundary to detect and block adversarially crafted outputs. |
+| User Response Layer | 💥 Impact | User or downstream system receives an incorrect or harmful decision based on perturbed input | Display content validation notices when AI outputs were generated from unusually formatted or encoded inputs. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

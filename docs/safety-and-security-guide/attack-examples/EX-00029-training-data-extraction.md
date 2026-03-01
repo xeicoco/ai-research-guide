@@ -48,21 +48,21 @@ Language models memorize fragments of their training data. An attacker can craft
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attacker submits a prompt designed to extract sensitive data from the AI's context, memory, or retrieved documents |
-| Input Processing Layer | ⚡ Exploited | Exfiltration-enabling instructions are processed without output-filtering or data-classification controls |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | ⚡ Exploited | Sensitive data stored in session memory or conversation history is retrieved and exposed in output |
-| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Confidential documents are retrieved and included in the model's response without access-control checks |
-| Agent & Tool Execution Layer | 💥 Impact | Agentic tools may transmit exfiltrated data to attacker-controlled external endpoints |
-| Inference & Model Layer | ⚡ Exploited | Model generates a response that includes sensitive retrieved content without data-classification enforcement |
-| Output Processing Layer | 💥 Impact | Sensitive data is embedded in the model output and passed to the delivery layer |
-| Delivery Layer | 💥 Impact | Exfiltrated data is delivered to the user interface or forwarded to an attacker-controlled URL |
-| User Response Layer | 💥 Impact | Sensitive information is exposed to an unauthorized party |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attacker submits a prompt designed to extract sensitive data from the AI's context, memory, or retrieved documents | Rate-limit queries per session and display privacy notices when the AI is queried for personal or sensitive information. |
+| Input Processing Layer | ⚡ Exploited | Exfiltration-enabling instructions are processed without output-filtering or data-classification controls | Apply differential privacy noise to inputs that could be used to reconstruct training data; limit input precision for sensitive queries. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | ⚡ Exploited | Sensitive data stored in session memory or conversation history is retrieved and exposed in output | Limit what sensitive data is persisted to memory; apply data minimization and access controls on memory retrieval. |
+| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Confidential documents are retrieved and included in the model's response without access-control checks | Apply access controls on the knowledge base to prevent retrieval of training-sensitive or proprietary data. |
+| Agent & Tool Execution Layer | 💥 Impact | Agentic tools may transmit exfiltrated data to attacker-controlled external endpoints | Apply output filtering on agent results to prevent leakage of training data or model internals. |
+| Inference & Model Layer | ⚡ Exploited | Model generates a response that includes sensitive retrieved content without data-classification enforcement | Apply differential privacy during training to limit memorization of sensitive training data; limit output precision to reduce reconstruction risk. |
+| Output Processing Layer | 💥 Impact | Sensitive data is embedded in the model output and passed to the delivery layer | Apply output filtering to prevent leakage of training data verbatim; use output diversity enforcement to reduce memorization exposure. |
+| Delivery Layer | 💥 Impact | Exfiltrated data is delivered to the user interface or forwarded to an attacker-controlled URL | Apply output scrubbing at delivery to prevent verbatim training data from reaching end users. |
+| User Response Layer | 💥 Impact | Sensitive information is exposed to an unauthorized party | Display privacy notices when AI responses contain information that resembles training data patterns; provide an opt-out for sensitive query types. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

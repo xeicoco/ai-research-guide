@@ -50,21 +50,21 @@ Using an AI system as a conduit to extract sensitive information — either from
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attacker submits a prompt designed to extract sensitive data from the AI's context, memory, or retrieved documents |
-| Input Processing Layer | ⚡ Exploited | Exfiltration-enabling instructions are processed without output-filtering or data-classification controls |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | ⚡ Exploited | Sensitive data stored in session memory or conversation history is retrieved and exposed in output |
-| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Confidential documents are retrieved and included in the model's response without access-control checks |
-| Agent & Tool Execution Layer | 💥 Impact | Agentic tools may transmit exfiltrated data to attacker-controlled external endpoints |
-| Inference & Model Layer | ⚡ Exploited | Model generates a response that includes sensitive retrieved content without data-classification enforcement |
-| Output Processing Layer | 💥 Impact | Sensitive data is embedded in the model output and passed to the delivery layer |
-| Delivery Layer | 💥 Impact | Exfiltrated data is delivered to the user interface or forwarded to an attacker-controlled URL |
-| User Response Layer | 💥 Impact | Sensitive information is exposed to an unauthorized party |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attacker submits a prompt designed to extract sensitive data from the AI's context, memory, or retrieved documents | Monitor and alert on outputs containing suspicious data patterns (e.g., encoded strings, large data dumps); apply output length limits. |
+| Input Processing Layer | ⚡ Exploited | Exfiltration-enabling instructions are processed without output-filtering or data-classification controls | Apply input length limits and detect attempts to embed data-extraction instructions within legitimate requests. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | ⚡ Exploited | Sensitive data stored in session memory or conversation history is retrieved and exposed in output | Apply access control on memory retrieval to prevent unauthorized reading of sensitive stored data; log all memory access events. |
+| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Confidential documents are retrieved and included in the model's response without access-control checks | Apply access control on the knowledge base to prevent retrieval of sensitive or private documents by unauthorized sessions. |
+| Agent & Tool Execution Layer | 💥 Impact | Agentic tools may transmit exfiltrated data to attacker-controlled external endpoints | Apply egress controls on agent tool calls; prevent agents from sending data to external endpoints without explicit authorization. |
+| Inference & Model Layer | ⚡ Exploited | Model generates a response that includes sensitive retrieved content without data-classification enforcement | Train the model to refuse requests that would cause it to output sensitive data; apply output filtering to catch data leakage in model responses. |
+| Output Processing Layer | 💥 Impact | Sensitive data is embedded in the model output and passed to the delivery layer | Apply PII detection and sensitive data scrubbing on all outputs; enforce output content policies that block data leakage. |
+| Delivery Layer | 💥 Impact | Exfiltrated data is delivered to the user interface or forwarded to an attacker-controlled URL | Monitor delivery for large or anomalous data payloads; apply egress filtering to block unauthorized data exfiltration at the delivery boundary. |
+| User Response Layer | 💥 Impact | Sensitive information is exposed to an unauthorized party | Alert users when AI responses contain data that looks anomalously comprehensive or sensitive; provide a data review step before acting on AI outputs. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

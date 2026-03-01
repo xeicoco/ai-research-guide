@@ -48,21 +48,21 @@ The attacker attempts to get the AI to reveal its system prompt (the confidentia
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Attacker submits a prompt designed to extract sensitive data from the AI's context, memory, or retrieved documents |
-| Input Processing Layer | ⚡ Exploited | Exfiltration-enabling instructions are processed without output-filtering or data-classification controls |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | ⚡ Exploited | Sensitive data stored in session memory or conversation history is retrieved and exposed in output |
-| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Confidential documents are retrieved and included in the model's response without access-control checks |
-| Agent & Tool Execution Layer | 💥 Impact | Agentic tools may transmit exfiltrated data to attacker-controlled external endpoints |
-| Inference & Model Layer | ⚡ Exploited | Model generates a response that includes sensitive retrieved content without data-classification enforcement |
-| Output Processing Layer | 💥 Impact | Sensitive data is embedded in the model output and passed to the delivery layer |
-| Delivery Layer | 💥 Impact | Exfiltrated data is delivered to the user interface or forwarded to an attacker-controlled URL |
-| User Response Layer | 💥 Impact | Sensitive information is exposed to an unauthorized party |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Attacker submits a prompt designed to extract sensitive data from the AI's context, memory, or retrieved documents | Surface citation confidence scores in the UI; prompt users to verify citations before acting on them. |
+| Input Processing Layer | ⚡ Exploited | Exfiltration-enabling instructions are processed without output-filtering or data-classification controls | Validate that citation-like inputs reference real, verifiable sources; reject or flag inputs containing fabricated reference formats. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | ⚡ Exploited | Sensitive data stored in session memory or conversation history is retrieved and exposed in output | Validate citations stored in memory against authoritative sources before allowing retrieval; flag stale or unverified citation entries. |
+| Knowledge Retrieval Layer (RAG) | ⚡ Exploited | Confidential documents are retrieved and included in the model's response without access-control checks | Cryptographically sign knowledge base entries; verify signatures at retrieval time and reject unsigned or modified documents. |
+| Agent & Tool Execution Layer | 💥 Impact | Agentic tools may transmit exfiltrated data to attacker-controlled external endpoints | Require citation verification before agents act on cited information; apply a verification tool as a mandatory step in citation-dependent workflows. |
+| Inference & Model Layer | ⚡ Exploited | Model generates a response that includes sensitive retrieved content without data-classification enforcement | Fine-tune with examples that penalize fabricated citations; train the model to express uncertainty rather than confabulate references. |
+| Output Processing Layer | 💥 Impact | Sensitive data is embedded in the model output and passed to the delivery layer | Apply citation validation on outputs before delivery; flag or remove citations that cannot be verified against authoritative sources. |
+| Delivery Layer | 💥 Impact | Exfiltrated data is delivered to the user interface or forwarded to an attacker-controlled URL | Apply citation verification at the delivery layer; flag responses with unverified citations before they are sent to users. |
+| User Response Layer | 💥 Impact | Sensitive information is exposed to an unauthorized party | Display citation confidence indicators alongside AI-generated references; prompt users to verify citations before relying on them. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

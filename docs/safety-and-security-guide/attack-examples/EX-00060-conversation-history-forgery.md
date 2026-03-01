@@ -50,21 +50,21 @@ This attack is particularly effective via direct API access, where callers const
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | 🎯 Delivered | Malicious instruction-override text submitted directly through the user chat interface |
-| Input Processing Layer | ⚡ Exploited | Injected instructions parsed alongside legitimate user input with no enforcement of instruction vs. data boundaries |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | 💥 Impact | Agent may execute unintended or attacker-directed commands if the override succeeds |
-| Inference & Model Layer | ⚡ Exploited | Model fails to distinguish trusted system-prompt instructions from untrusted user-injected instructions |
-| Output Processing Layer | 💥 Impact | Hijacked or policy-violating output generated and forwarded downstream |
-| Delivery Layer | 💥 Impact | Malicious or unintended response delivered to user or calling application |
-| User Response Layer | 💥 Impact | User receives output shaped by the injection rather than the intended task |
-| Feedback & Learning Loop | — | — |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | 🎯 Delivered | Malicious instruction-override text submitted directly through the user chat interface | Display trust-level indicators and warn users when AI responses contain authority claims or emotionally charged persuasion patterns. |
+| Input Processing Layer | ⚡ Exploited | Injected instructions parsed alongside legitimate user input with no enforcement of instruction vs. data boundaries | Validate input for authority-claim patterns and emotionally manipulative language; flag inputs that impersonate system roles. |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | 💥 Impact | Agent may execute unintended or attacker-directed commands if the override succeeds | Require human-in-the-loop confirmation for actions triggered by authority claims; apply anomaly detection on action patterns. |
+| Inference & Model Layer | ⚡ Exploited | Model fails to distinguish trusted system-prompt instructions from untrusted user-injected instructions | Train the model to recognize and resist social-engineering patterns including authority impersonation, flattery, and emotional manipulation. |
+| Output Processing Layer | 💥 Impact | Hijacked or policy-violating output generated and forwarded downstream | Scrub outputs for deceptive authority claims, impersonation content, or psychologically manipulative language before delivery. |
+| Delivery Layer | 💥 Impact | Malicious or unintended response delivered to user or calling application | Apply content inspection at delivery to detect and block manipulative or deceptive content before it reaches the user. |
+| User Response Layer | 💥 Impact | User receives output shaped by the injection rather than the intended task | Highlight persuasive or manipulative language patterns in AI outputs; provide users with a trust indicator for authority claims in AI responses. |
+| Feedback & Learning Loop | — | — | — |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 

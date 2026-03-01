@@ -50,21 +50,21 @@ Semantic backdoors are significantly harder to detect than token-based backdoors
 
 ## AI E2E Attack Surface
 
-> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact). Use `—` for layers not involved.
+> Maps which layers of the AI end-to-end pipeline this attack **targets** (🎯 Delivered), **exploits** (⚡ Exploited), or where its **harm manifests** (💥 Impact), and how to defend each relevant layer. Use `—` for layers not involved.
 
-| AI E2E Layer | Stage | Notes |
-|---|---|---|
-| User Interface Layer | — | — |
-| Input Processing Layer | — | — |
-| Routing & Orchestration Layer | — | — |
-| Memory Retrieval Layer | — | — |
-| Knowledge Retrieval Layer (RAG) | — | — |
-| Agent & Tool Execution Layer | — | — |
-| Inference & Model Layer | 💥 Impact | Poisoned model weights silently produce attacker-directed or biased outputs for specific triggers or topics |
-| Output Processing Layer | 💥 Impact | Outputs influenced by poisoned training are forwarded without anomaly detection |
-| Delivery Layer | 💥 Impact | Poisoned model behavior is delivered to all users at scale |
-| User Response Layer | 💥 Impact | Users receive responses shaped by attacker-injected training patterns |
-| Feedback & Learning Loop | 🎯 Delivered | Malicious data was injected during training data collection or fine-tuning; the learning loop is the primary attack surface |
+| Layer | Attack Stage | How Attack Operates Here | How to Defend This Layer |
+|---|---|---|---|
+| User Interface Layer | — | — | — |
+| Input Processing Layer | — | — | — |
+| Routing & Orchestration Layer | — | — | — |
+| Memory Retrieval Layer | — | — | — |
+| Knowledge Retrieval Layer (RAG) | — | — | — |
+| Agent & Tool Execution Layer | — | — | — |
+| Inference & Model Layer | 💥 Impact | Poisoned model weights silently produce attacker-directed or biased outputs for specific triggers or topics | Train with adversarial robustness techniques (e.g., adversarial training, certified defenses) to improve resistance to evasion attacks. |
+| Output Processing Layer | 💥 Impact | Outputs influenced by poisoned training are forwarded without anomaly detection | Apply output validation to ensure responses are consistent with policy; detect and block outputs that may have bypassed safety filters. |
+| Delivery Layer | 💥 Impact | Poisoned model behavior is delivered to all users at scale | Apply content validation at the delivery boundary to detect and block adversarially crafted outputs. |
+| User Response Layer | 💥 Impact | Users receive responses shaped by attacker-injected training patterns | Display content validation notices when AI outputs were generated from unusually formatted or encoded inputs. |
+| Feedback & Learning Loop | 🎯 Delivered | Malicious data was injected during training data collection or fine-tuning; the learning loop is the primary attack surface | Apply adversarial example detection on feedback data; reject feedback from sessions that submitted anomalously encoded or formatted inputs. |
 
 **Stage key:** 🎯 Delivered — attack enters the pipeline here | ⚡ Exploited — vulnerability exercised here | 💥 Impact — harm manifests here
 
